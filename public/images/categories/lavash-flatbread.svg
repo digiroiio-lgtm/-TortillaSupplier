@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bg-lv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6F0E6"/>
+      <stop offset="100%" style="stop-color:#EDE4D0"/>
+    </linearGradient>
+    <linearGradient id="lavash-main" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4E8CC"/>
+      <stop offset="100%" style="stop-color:#E0CC98"/>
+    </linearGradient>
+    <linearGradient id="lavash-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EAD9B0"/>
+      <stop offset="100%" style="stop-color:#D4BC80"/>
+    </linearGradient>
+    <linearGradient id="lavash-3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0CC94"/>
+      <stop offset="100%" style="stop-color:#C8A85C"/>
+    </linearGradient>
+    <filter id="shadow-lv">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bg-lv)" rx="0"/>
+  <!-- Lavash flatbreads - thin, slightly wavy, stacked sheets -->
+  <!-- Shadow -->
+  <ellipse cx="200" cy="218" rx="140" ry="12" fill="#00000015"/>
+  <!-- Sheet 5 (bottom, most baked) -->
+  <path d="M55,205 Q130,200 200,205 Q270,210 345,205 L345,215 Q270,220 200,215 Q130,210 55,215 Z"
+        fill="url(#lavash-3)" filter="url(#shadow-lv)"/>
+  <!-- Sheet 4 -->
+  <path d="M60,188 Q130,183 200,188 Q270,193 340,187 L340,198 Q270,203 200,198 Q130,193 60,198 Z"
+        fill="url(#lavash-2)" filter="url(#shadow-lv)"/>
+  <!-- Sheet 3 -->
+  <path d="M60,171 Q135,165 200,170 Q265,175 340,169 L340,180 Q265,186 200,181 Q135,176 60,182 Z"
+        fill="url(#lavash-main)" filter="url(#shadow-lv)"/>
+  <!-- Sheet 2 -->
+  <path d="M62,153 Q135,147 200,153 Q265,158 338,151 L338,163 Q265,169 200,163 Q135,158 62,164 Z"
+        fill="url(#lavash-2)" filter="url(#shadow-lv)"/>
+  <!-- Top sheet (lightest, most detail) -->
+  <path d="M64,134 Q136,128 200,134 Q264,140 336,132 L336,144 Q264,152 200,146 Q136,140 64,146 Z"
+        fill="url(#lavash-main)"/>
+  <!-- Top sheet surface texture (sesame seed dots for lavash) -->
+  <circle cx="130" cy="138" r="2" fill="#C8A05035"/>
+  <circle cx="155" cy="135" r="1.5" fill="#C8A05040"/>
+  <circle cx="180" cy="140" r="2" fill="#C8A05030"/>
+  <circle cx="205" cy="137" r="1.5" fill="#C8A05035"/>
+  <circle cx="230" cy="141" r="2" fill="#C8A05030"/>
+  <circle cx="255" cy="136" r="1.5" fill="#C8A05040"/>
+  <circle cx="280" cy="139" r="2" fill="#C8A05025"/>
+  <circle cx="143" cy="144" r="1.5" fill="#C8A05030"/>
+  <circle cx="218" cy="144" r="1.5" fill="#C8A05035"/>
+  <circle cx="267" cy="143" r="2" fill="#C8A05025"/>
+  <!-- Subtle char/bake spots on top sheet -->
+  <ellipse cx="160" cy="137" rx="12" ry="3" fill="#9A780025" transform="rotate(-5 160 137)"/>
+  <ellipse cx="240" cy="140" rx="10" ry="2.5" fill="#9A780020" transform="rotate(3 240 140)"/>
+  <ellipse cx="195" cy="135" rx="8" ry="2" fill="#9A780030" transform="rotate(-2 195 135)"/>
+  <!-- Light sheen/highlight -->
+  <path d="M64,134 Q136,128 200,134 Q264,140 336,132 L336,137 Q264,136 200,136 Q136,136 64,136 Z" fill="#FFFFFF30"/>
+  <!-- Label -->
+  <rect x="60" y="30" width="280" height="38" rx="6" fill="#ffffff60"/>
+  <text x="200" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#5C3D0A" text-anchor="middle">LAVASH FLATBREADS</text>
+  <text x="200" y="63" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#8B5A20" text-anchor="middle">Thin · Kebab & Wrap Format · Export Grade</text>
+</svg>

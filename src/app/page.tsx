@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import StatsStrip from '@/components/StatsStrip';
 import ProductSpecTable from '@/components/ProductSpecTable';
@@ -15,11 +16,11 @@ export const metadata: Metadata = {
 };
 
 const categories = [
-  { title: 'Flour Tortillas', description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.', type: 'flour' as const, icon: '🌾' },
-  { title: 'Corn Tortillas', description: 'Traditional corn tortillas for authentic preparations and retail packs.', type: 'corn' as const, icon: '🌽' },
-  { title: 'Frozen Tortillas', description: 'Extended shelf life frozen tortillas for export and long-haul distribution.', type: 'frozen' as const, icon: '❄️' },
-  { title: 'Wrap Flatbreads', description: 'Premium wrap flatbreads for sandwich operations and foodservice.', type: 'wrap' as const, icon: '🫓' },
-  { title: 'Lavash Flatbreads', description: 'Thin lavash-style flatbreads for kebab, wrap and snack applications.', type: 'flatbread' as const, icon: '🫓' },
+  { title: 'Flour Tortillas', description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.', type: 'flour' as const, image: '/images/categories/flour-tortilla.svg' },
+  { title: 'Corn Tortillas', description: 'Traditional corn tortillas for authentic preparations and retail packs.', type: 'corn' as const, image: '/images/categories/corn-tortilla.svg' },
+  { title: 'Frozen Tortillas', description: 'Extended shelf life frozen tortillas for export and long-haul distribution.', type: 'frozen' as const, image: '/images/categories/frozen-tortilla.svg' },
+  { title: 'Wrap Flatbreads', description: 'Premium wrap flatbreads for sandwich operations and foodservice.', type: 'wrap' as const, image: '/images/categories/wrap-flatbread.svg' },
+  { title: 'Lavash Flatbreads', description: 'Thin lavash-style flatbreads for kebab, wrap and snack applications.', type: 'flatbread' as const, image: '/images/categories/lavash-flatbread.svg' },
 ];
 
 const benefits = [
@@ -57,10 +58,20 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {categories.map((cat) => (
               <Link key={cat.type} href="/products"
-                className="bg-[#FAFAF8] border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow group">
-                <div className="text-3xl mb-3">{cat.icon}</div>
-                <h3 className="font-semibold text-[#1a1a1a] mb-1 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
-                <p className="text-xs text-gray-500">{cat.description}</p>
+                className="bg-[#FAFAF8] border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow group">
+                <div className="relative w-full h-40 overflow-hidden">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-semibold text-[#1a1a1a] mb-1 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
+                  <p className="text-xs text-gray-500">{cat.description}</p>
+                </div>
               </Link>
             ))}
           </div>

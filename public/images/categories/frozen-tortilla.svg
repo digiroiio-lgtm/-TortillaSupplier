@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bg-fz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF4F8"/>
+      <stop offset="100%" style="stop-color:#DCE8F0"/>
+    </linearGradient>
+    <linearGradient id="box-fz" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D0E4F0"/>
+      <stop offset="100%" style="stop-color:#A8C8E0"/>
+    </linearGradient>
+    <linearGradient id="box-face" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8D8EC"/>
+      <stop offset="100%" style="stop-color:#90BCDA"/>
+    </linearGradient>
+    <linearGradient id="box-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C8E0EF"/>
+      <stop offset="100%" style="stop-color:#A0C4DC"/>
+    </linearGradient>
+    <filter id="shadow-fz">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#00000025"/>
+    </filter>
+    <linearGradient id="frost" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF60"/>
+      <stop offset="100%" style="stop-color:#FFFFFF05"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bg-fz)" rx="0"/>
+  <!-- Frost/ice crystals background -->
+  <polygon points="340,30 344,40 354,40 346,46 349,56 340,50 331,56 334,46 326,40 336,40" fill="#A0C4DC30"/>
+  <polygon points="55,180 57,186 63,186 58,190 60,196 55,192 50,196 52,190 47,186 53,186" fill="#A0C4DC25"/>
+  <!-- Frozen product box (isometric-style) -->
+  <!-- Shadow -->
+  <ellipse cx="200" cy="218" rx="110" ry="14" fill="#00000018"/>
+  <!-- Box front face -->
+  <rect x="95" y="110" width="170" height="100" rx="4" fill="url(#box-fz)" filter="url(#shadow-fz)"/>
+  <!-- Box right face (isometric depth) -->
+  <polygon points="265,110 310,80 310,180 265,210" fill="url(#box-face)"/>
+  <!-- Box top face -->
+  <polygon points="95,110 140,80 310,80 265,110" fill="url(#box-top)"/>
+  <!-- Frost sheen on front -->
+  <rect x="95" y="110" width="170" height="100" rx="4" fill="url(#frost)"/>
+  <!-- Box label area on front -->
+  <rect x="108" y="128" width="144" height="64" rx="3" fill="#FFFFFF40"/>
+  <!-- Snowflake icon on box -->
+  <g transform="translate(180, 148)">
+    <line x1="0" y1="-16" x2="0" y2="16" stroke="#5090B8" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-16" y1="0" x2="16" y2="0" stroke="#5090B8" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-11" y1="-11" x2="11" y2="11" stroke="#5090B8" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="11" y1="-11" x2="-11" y2="11" stroke="#5090B8" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Snowflake branches -->
+    <line x1="-6" y1="-13" x2="0" y2="-16" stroke="#5090B8" stroke-width="1.5"/>
+    <line x1="6" y1="-13" x2="0" y2="-16" stroke="#5090B8" stroke-width="1.5"/>
+    <line x1="-6" y1="13" x2="0" y2="16" stroke="#5090B8" stroke-width="1.5"/>
+    <line x1="6" y1="13" x2="0" y2="16" stroke="#5090B8" stroke-width="1.5"/>
+  </g>
+  <!-- -18°C text on box -->
+  <text x="180" y="184" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#3A6E90" text-anchor="middle">-18°C</text>
+  <!-- Tortillas peeking out from top suggestion -->
+  <ellipse cx="200" cy="86" rx="60" ry="9" fill="#F0E4C060"/>
+  <ellipse cx="200" cy="83" rx="60" ry="9" fill="#EDD8A080"/>
+  <!-- Box edge highlights -->
+  <line x1="95" y1="110" x2="265" y2="110" stroke="#FFFFFF50" stroke-width="1.5"/>
+  <line x1="265" y1="110" x2="310" y2="80" stroke="#FFFFFF40" stroke-width="1"/>
+  <!-- Label -->
+  <rect x="60" y="30" width="280" height="38" rx="6" fill="#ffffff60"/>
+  <text x="200" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#2A5A78" text-anchor="middle">FROZEN TORTILLAS</text>
+  <text x="200" y="63" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4A7A98" text-anchor="middle">Extended Shelf Life · Export Ready · -18°C</text>
+</svg>
