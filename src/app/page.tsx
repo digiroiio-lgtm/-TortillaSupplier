@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import StatsStrip from '@/components/StatsStrip';
-import ProductCard from '@/components/ProductCard';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import CertificationCard from '@/components/CertificationCard';
 import BuyerTypeCard from '@/components/BuyerTypeCard';
 import RegionCTASection from '@/components/RegionCTASection';
 import TrustBadgeStrip from '@/components/TrustBadgeStrip';
 import Link from 'next/link';
-import { products } from '@/data/products';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
