@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@TortillaSupply',
+    creator: '@TortillaSupply',
     title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
     description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
     images: ['/images/og-default.png'],

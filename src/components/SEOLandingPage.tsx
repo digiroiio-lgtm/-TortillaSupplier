@@ -37,6 +37,18 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
     })),
   };
 
+  // Build breadcrumb items (2 or 3 levels)
+  const breadcrumbItems = page.parentSlug
+    ? [
+        { label: 'Home', href: '/' },
+        { label: page.parentLabel ?? slugToLabel(page.parentSlug), href: `/${page.parentSlug}` },
+        { label: page.heroTitle },
+      ]
+    : [
+        { label: 'Home', href: '/' },
+        { label: page.heroTitle },
+      ];
+
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -45,23 +57,45 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
     url: `${BASE_URL}/${page.slug}`,
     breadcrumb: {
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-        { '@type': 'ListItem', position: 2, name: page.heroTitle, item: `${BASE_URL}/${page.slug}` },
-      ],
+      itemListElement: breadcrumbItems.map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: item.label,
+        ...(item.href ? { item: `${BASE_URL}${item.href}` } : { item: `${BASE_URL}/${page.slug}` }),
+      })),
     },
   };
+
+  const productSchema = page.isProductPage
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: page.heroTitle,
+        description: page.heroSubtitle,
+        url: `${BASE_URL}/${page.slug}`,
+        brand: {
+          '@type': 'Brand',
+          name: 'TortillaSupplier',
+        },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          priceCurrency: 'GBP',
+          seller: {
+            '@type': 'Organization',
+            name: 'TortillaSupplier',
+            url: BASE_URL,
+          },
+        },
+      }
+    : null;
 
   return (
     <>
       <JsonLd data={faqSchema} />
       <JsonLd data={webPageSchema} />
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: page.heroTitle },
-        ]}
-      />
+      {productSchema && <JsonLd data={productSchema} />}
+      <Breadcrumb items={breadcrumbItems} />
       <HeroSection
         title={page.heroTitle}
         subtitle={page.heroSubtitle}

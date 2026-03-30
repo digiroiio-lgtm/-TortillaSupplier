@@ -23,6 +23,9 @@ export interface SEOPageData {
   relatedSlugs: string[];
   showSpecTable?: boolean;
   specTableFilter?: 'flour' | 'corn' | 'frozen' | 'wrap' | 'flatbread';
+  parentSlug?: string;
+  parentLabel?: string;
+  isProductPage?: boolean;
 }
 
 const seoPages: SEOPageData[] = [
@@ -227,6 +230,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-wholesale', 'bulk-tortilla-supplier', 'flour-tortilla-distributor', 'corn-tortilla-distributor'],
     showSpecTable: true,
+    parentSlug: 'tortilla-wholesale',
+    parentLabel: 'Tortilla Wholesale Supply',
   },
 
   // ─── FLOUR TORTILLA CLUSTER ───────────────────────────────────────────────────
@@ -258,6 +263,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-25cm-10-inch', 'flour-tortilla-wholesale', 'wrap-bread-supplier'],
     showSpecTable: true,
     specTableFilter: 'flour',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
+    isProductPage: true,
   },
   {
     slug: 'flour-tortilla-25cm-10-inch',
@@ -287,6 +295,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flour-tortilla-30cm-12-inch', 'flour-tortilla-20cm-8-inch', 'flour-tortilla-supplier', 'flour-tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'flour',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
+    isProductPage: true,
   },
   {
     slug: 'flour-tortilla-20cm-8-inch',
@@ -315,6 +326,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-25cm-10-inch', 'corn-tortilla-15cm-6-inch', 'flour-tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'flour',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
+    isProductPage: true,
   },
   {
     slug: 'flour-tortilla-wholesale',
@@ -343,6 +357,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-30cm-12-inch', 'tortilla-wholesale', 'bulk-tortilla-supplier'],
     showSpecTable: true,
     specTableFilter: 'flour',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
   },
   {
     slug: 'frozen-flour-tortilla-supplier',
@@ -371,6 +387,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['frozen-tortilla-supplier', 'flour-tortilla-supplier', 'frozen-corn-tortilla-supplier', 'flour-tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'frozen',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
   },
   {
     slug: 'flour-tortilla-distributor',
@@ -398,6 +416,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-wholesale', 'tortilla-distributor', 'corn-tortilla-distributor'],
     showSpecTable: true,
     specTableFilter: 'flour',
+    parentSlug: 'flour-tortilla-supplier',
+    parentLabel: 'Wholesale Flour Tortilla Supplier',
   },
 
   // ─── CORN TORTILLA CLUSTER ────────────────────────────────────────────────────
@@ -428,6 +448,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['corn-tortilla-supplier', 'corn-tortilla-20cm-8-inch', 'corn-tortilla-wholesale', 'flour-tortilla-20cm-8-inch'],
     showSpecTable: true,
     specTableFilter: 'corn',
+    parentSlug: 'corn-tortilla-supplier',
+    parentLabel: 'Wholesale Corn Tortilla Supplier',
+    isProductPage: true,
   },
   {
     slug: 'corn-tortilla-20cm-8-inch',
@@ -455,6 +478,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['corn-tortilla-15cm-6-inch', 'corn-tortilla-supplier', 'corn-tortilla-wholesale', 'flour-tortilla-20cm-8-inch'],
     showSpecTable: true,
     specTableFilter: 'corn',
+    parentSlug: 'corn-tortilla-supplier',
+    parentLabel: 'Wholesale Corn Tortilla Supplier',
+    isProductPage: true,
   },
   {
     slug: 'corn-tortilla-wholesale',
@@ -482,6 +508,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['corn-tortilla-supplier', 'corn-tortilla-15cm-6-inch', 'corn-tortilla-20cm-8-inch', 'tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'corn',
+    parentSlug: 'corn-tortilla-supplier',
+    parentLabel: 'Wholesale Corn Tortilla Supplier',
   },
   {
     slug: 'frozen-corn-tortilla-supplier',
@@ -509,6 +537,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['frozen-tortilla-supplier', 'corn-tortilla-supplier', 'frozen-flour-tortilla-supplier', 'corn-tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'frozen',
+    parentSlug: 'corn-tortilla-supplier',
+    parentLabel: 'Wholesale Corn Tortilla Supplier',
   },
   {
     slug: 'corn-tortilla-distributor',
@@ -536,6 +566,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['corn-tortilla-supplier', 'corn-tortilla-wholesale', 'tortilla-distributor', 'flour-tortilla-distributor'],
     showSpecTable: true,
     specTableFilter: 'corn',
+    parentSlug: 'corn-tortilla-supplier',
+    parentLabel: 'Wholesale Corn Tortilla Supplier',
   },
 
   // ─── WRAP TORTILLA CLUSTER ────────────────────────────────────────────────────
@@ -566,6 +598,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['tortilla-wrap-25cm-10-inch', 'wrap-bread-supplier', 'flour-tortilla-30cm-12-inch', 'wrap-bread-wholesale'],
     showSpecTable: true,
     specTableFilter: 'wrap',
+    parentSlug: 'wrap-bread-supplier',
+    parentLabel: 'Wholesale Wrap Bread Supplier',
+    isProductPage: true,
   },
   {
     slug: 'tortilla-wrap-25cm-10-inch',
@@ -593,6 +628,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['tortilla-wrap-30cm-12-inch', 'wrap-bread-supplier', 'flour-tortilla-25cm-10-inch', 'wrap-bread-wholesale'],
     showSpecTable: true,
     specTableFilter: 'wrap',
+    parentSlug: 'wrap-bread-supplier',
+    parentLabel: 'Wholesale Wrap Bread Supplier',
+    isProductPage: true,
   },
   {
     slug: 'wrap-bread-wholesale',
@@ -620,6 +658,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['wrap-bread-supplier', 'tortilla-wrap-30cm-12-inch', 'tortilla-wrap-25cm-10-inch', 'tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'wrap',
+    parentSlug: 'wrap-bread-supplier',
+    parentLabel: 'Wholesale Wrap Bread Supplier',
   },
   {
     slug: 'wrap-flatbread-supplier',
@@ -647,6 +687,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['wrap-bread-supplier', 'flatbread-supplier', 'tortilla-wrap-30cm-12-inch', 'lavash-flatbread-supplier'],
     showSpecTable: true,
     specTableFilter: 'wrap',
+    parentSlug: 'flatbread-supplier',
+    parentLabel: 'Wholesale Flatbread Supplier',
   },
 
   // ─── FLATBREAD CLUSTER ────────────────────────────────────────────────────────
@@ -677,6 +719,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flatbread-supplier', 'lavash-flatbread-wholesale', 'wrap-flatbread-supplier', 'tortilla-supplier'],
     showSpecTable: true,
     specTableFilter: 'flatbread',
+    parentSlug: 'flatbread-supplier',
+    parentLabel: 'Wholesale Flatbread Supplier',
   },
   {
     slug: 'lavash-flatbread-wholesale',
@@ -704,6 +748,8 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['lavash-flatbread-supplier', 'flatbread-supplier', 'wrap-bread-wholesale', 'tortilla-wholesale'],
     showSpecTable: true,
     specTableFilter: 'flatbread',
+    parentSlug: 'flatbread-supplier',
+    parentLabel: 'Wholesale Flatbread Supplier',
   },
   {
     slug: 'flatbread-25cm-10-inch',
@@ -731,6 +777,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flatbread-supplier', 'flatbread-30cm-12-inch', 'lavash-flatbread-supplier', 'wrap-flatbread-supplier'],
     showSpecTable: true,
     specTableFilter: 'flatbread',
+    parentSlug: 'flatbread-supplier',
+    parentLabel: 'Wholesale Flatbread Supplier',
+    isProductPage: true,
   },
   {
     slug: 'flatbread-30cm-12-inch',
@@ -758,6 +807,9 @@ const seoPages: SEOPageData[] = [
     relatedSlugs: ['flatbread-supplier', 'flatbread-25cm-10-inch', 'lavash-flatbread-supplier', 'wrap-bread-supplier'],
     showSpecTable: true,
     specTableFilter: 'flatbread',
+    parentSlug: 'flatbread-supplier',
+    parentLabel: 'Wholesale Flatbread Supplier',
+    isProductPage: true,
   },
 
   // ─── COUNTRY PAGES ────────────────────────────────────────────────────────────
@@ -787,6 +839,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-germany', 'tortilla-supplier-france', 'tortilla-wholesale'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier-europe',
+    parentLabel: 'Tortilla Supplier Europe',
   },
   {
     slug: 'tortilla-supplier-germany',
@@ -814,6 +868,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-netherlands', 'tortilla-supplier-france', 'tortilla-wholesale'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier-europe',
+    parentLabel: 'Tortilla Supplier Europe',
   },
   {
     slug: 'tortilla-supplier-france',
@@ -837,9 +893,14 @@ const seoPages: SEOPageData[] = [
     faqs: [
       { question: 'Do you supply tortillas to French food distributors?', answer: 'Yes. We supply flour tortillas, corn tortillas and flatbreads to French importers with full EU export documentation.' },
       { question: 'Is halal-certified tortilla supply available for France?', answer: 'Yes. Halal-certified production is available across all product lines, relevant for French halal distributors.' },
+      { question: 'What certifications do you hold for French retail supply?', answer: 'We hold BRCGS and IFS Food certifications, which are widely accepted by French retailers and foodservice chains.' },
+      { question: 'Can you provide private label tortillas with French-language labelling?', answer: 'Yes. Private label production with French-language labelling is available. Our team can assist with label compliance for French retail regulations.' },
+      { question: 'What is the minimum order for tortilla supply to France?', answer: 'MOQ varies by product and format. Contact us with your requirements for a tailored quote and logistics plan for France.' },
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-spain', 'tortilla-supplier-germany', 'tortilla-wholesale'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier-europe',
+    parentLabel: 'Tortilla Supplier Europe',
   },
   {
     slug: 'tortilla-supplier-netherlands',
@@ -863,9 +924,14 @@ const seoPages: SEOPageData[] = [
     faqs: [
       { question: 'Do you supply to Dutch food importers?', answer: 'Yes. We supply tortillas and flatbreads to Dutch importers and distributors with full EU export documentation.' },
       { question: 'Can you supply to Dutch distribution centres for European redistribution?', answer: 'Yes. We work with Dutch importers who redistribute across Europe from Rotterdam and other Dutch logistics hubs.' },
+      { question: 'What EU certifications do you hold for supply to the Netherlands?', answer: 'We hold BRCGS and IFS Food certifications accepted across EU markets, including Dutch retail and food industry requirements.' },
+      { question: 'Do you supply frozen tortillas to Dutch importers?', answer: 'Yes. Frozen flour and corn tortillas are available with full cold chain documentation for Dutch import and European distribution.' },
+      { question: 'Is private label available for Dutch market supply?', answer: 'Yes. Private label production with custom branding is available for Dutch importers and distributors.' },
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-germany', 'tortilla-supplier-france', 'tortilla-wholesale'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier-europe',
+    parentLabel: 'Tortilla Supplier Europe',
   },
   {
     slug: 'tortilla-supplier-italy',
@@ -889,9 +955,14 @@ const seoPages: SEOPageData[] = [
     faqs: [
       { question: 'Do you supply tortillas to Italian food distributors?', answer: 'Yes. We supply flour tortillas, corn tortillas and flatbreads to Italian importers with full EU documentation.' },
       { question: 'Is private label available with Italian labelling?', answer: 'Yes. Private label production with Italian-language labelling is available.' },
+      { question: 'What certifications do you hold for Italian market supply?', answer: 'We hold BRCGS and IFS Food certifications, which meet the compliance requirements of Italian retailers and foodservice operators.' },
+      { question: 'Can you supply frozen tortillas to Italy?', answer: 'Yes. Frozen flour and corn tortillas are available with a 12-month shelf life at -18°C, suitable for Italian import and distribution.' },
+      { question: 'What is the minimum order for tortilla supply to Italy?', answer: 'MOQ varies by product format. Contact us with your requirements for a tailored Italy supply quote.' },
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-spain', 'tortilla-supplier-france', 'tortilla-wholesale'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier-europe',
+    parentLabel: 'Tortilla Supplier Europe',
   },
 
   // ─── WHOLESALE INTENT CLUSTER ─────────────────────────────────────────────────
@@ -921,6 +992,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-wholesale', 'tortilla-distributor', 'tortilla-wholesale-supplier', 'private-label-tortilla-manufacturer'],
     showSpecTable: true,
+    parentSlug: 'tortilla-wholesale',
+    parentLabel: 'Tortilla Wholesale Supply',
   },
   {
     slug: 'tortilla-wholesale-supplier',
@@ -948,6 +1021,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-wholesale', 'bulk-tortilla-supplier', 'tortilla-distributor', 'tortilla-supplier'],
     showSpecTable: true,
+    parentSlug: 'tortilla-wholesale',
+    parentLabel: 'Tortilla Wholesale Supply',
   },
   {
     slug: 'private-label-tortilla-manufacturer',
@@ -976,6 +1051,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-wholesale-supplier', 'tortilla-distributor', 'bulk-tortilla-supplier', 'tortilla-supplier'],
     showSpecTable: false,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
   },
   {
     slug: 'tortilla-importer-supply',
@@ -1003,6 +1080,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['bulk-tortilla-supplier', 'tortilla-wholesale-supplier', 'tortilla-wholesale', 'tortilla-distributor'],
     showSpecTable: true,
+    parentSlug: 'tortilla-wholesale',
+    parentLabel: 'Tortilla Wholesale Supply',
   },
   {
     slug: 'tortilla-foodservice-supplier',
@@ -1030,6 +1109,8 @@ const seoPages: SEOPageData[] = [
     ],
     relatedSlugs: ['tortilla-supplier', 'tortilla-wholesale-supplier', 'bulk-tortilla-supplier', 'flour-tortilla-supplier'],
     showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
   },
 ];
 

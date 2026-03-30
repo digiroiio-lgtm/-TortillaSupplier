@@ -2,17 +2,43 @@ import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import ProductCard from '@/components/ProductCard';
+import JsonLd from '@/components/JsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 import { products } from '@/data/products';
 import Link from 'next/link';
+
+const BASE_URL = 'https://www.tortillasupplier.com';
 
 export const metadata: Metadata = {
   title: 'Products | Wholesale Tortillas & Flatbreads',
   description: 'Full range of wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads. Private label available.',
+  openGraph: {
+    title: 'Products | Wholesale Tortillas & Flatbreads',
+    description: 'Full range of wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads. Private label available.',
+    url: `${BASE_URL}/products`,
+  },
+  alternates: { canonical: `${BASE_URL}/products` },
+};
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Wholesale Tortilla & Flatbread Products',
+  url: `${BASE_URL}/products`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Flour Tortillas', url: `${BASE_URL}/flour-tortilla-supplier` },
+    { '@type': 'ListItem', position: 2, name: 'Corn Tortillas', url: `${BASE_URL}/corn-tortilla-supplier` },
+    { '@type': 'ListItem', position: 3, name: 'Frozen Tortillas', url: `${BASE_URL}/frozen-flour-tortilla-supplier` },
+    { '@type': 'ListItem', position: 4, name: 'Wrap Bread', url: `${BASE_URL}/wrap-bread-supplier` },
+    { '@type': 'ListItem', position: 5, name: 'Flatbreads', url: `${BASE_URL}/flatbread-supplier` },
+  ],
 };
 
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd data={itemListSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Products' }]} />
       <HeroSection
         title="Wholesale Tortilla & Flatbread Products"
         subtitle="Complete range of flour tortillas, corn tortillas, frozen tortillas and flatbreads for export and B2B supply."
