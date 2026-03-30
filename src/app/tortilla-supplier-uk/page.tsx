@@ -34,7 +34,7 @@ export default function UKPage() {
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Wholesale Tortilla Supply for UK Buyers</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              We supply wholesale flour tortillas, corn tortillas and flatbreads to UK importers, foodservice distributors and retail buyers. Our UK-focused range includes chilled ambient and frozen formats suitable for all distribution channels.
+              We supply wholesale flour tortillas, corn tortillas and flatbreads to UK importers, foodservice distributors and retail buyers. Our UK-focused range includes chilled, ambient and frozen formats suitable for all distribution channels.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Private label packaging with UK-compliant labelling is available across all SKUs. We provide full export documentation including BRCGS certificates, health certificates and allergen declarations.
