@@ -3,11 +3,19 @@ import HeroSection from '@/components/HeroSection';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Tortilla Supplier USA | Wholesale Frozen & Fresh Tortillas',
   description: 'Wholesale tortilla supplier for USA buyers. Frozen flour and corn tortillas for US foodservice, QSR and private label distributors.',
+  openGraph: {
+    title: 'Tortilla Supplier USA | Wholesale Frozen & Fresh Tortillas',
+    description: 'Wholesale tortilla supplier for USA buyers. Frozen flour and corn tortillas for US foodservice, QSR and private label distributors.',
+    url: 'https://www.tortillasupplier.com/tortilla-supplier-usa',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-usa' },
 };
 
 const usaFAQs = [
@@ -18,9 +26,21 @@ const usaFAQs = [
   { question: 'Can you handle private label for US brands?', answer: 'Yes. We offer full private label service including custom packaging, US-compliant allergen labelling and brand design support.' },
 ];
 
+const usaFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: usaFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
 export default function USAPage() {
   return (
     <>
+      <JsonLd data={usaFaqSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Tortilla Supplier USA' }]} />
       <HeroSection
         title="Wholesale Tortilla Supply for USA Buyers"
         subtitle="Frozen flour and corn tortillas for US foodservice chains, QSR operators and private label distributors. FDA documentation available."

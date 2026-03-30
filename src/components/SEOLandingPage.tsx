@@ -3,7 +3,11 @@ import HeroSection from '@/components/HeroSection';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 import { SEOPageData } from '@/data/seoPages';
+
+const BASE_URL = 'https://www.tortillasupplier.com';
 
 // Map slug labels to human-readable text for related links
 function slugToLabel(slug: string): string {
@@ -20,8 +24,44 @@ interface SEOLandingPageProps {
 }
 
 export default function SEOLandingPage({ page }: SEOLandingPageProps) {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: page.heroTitle,
+    description: page.heroSubtitle,
+    url: `${BASE_URL}/${page.slug}`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+        { '@type': 'ListItem', position: 2, name: page.heroTitle, item: `${BASE_URL}/${page.slug}` },
+      ],
+    },
+  };
+
   return (
     <>
+      <JsonLd data={faqSchema} />
+      <JsonLd data={webPageSchema} />
+      <Breadcrumb
+        items={[
+          { label: 'Home', href: '/' },
+          { label: page.heroTitle },
+        ]}
+      />
       <HeroSection
         title={page.heroTitle}
         subtitle={page.heroSubtitle}

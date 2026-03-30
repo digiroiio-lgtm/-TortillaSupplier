@@ -3,11 +3,19 @@ import HeroSection from '@/components/HeroSection';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Tortilla Supplier UK | Wholesale Tortillas & Frozen Wraps',
   description: 'Wholesale tortilla supplier for the UK market. Chilled and frozen flour tortillas, corn tortillas and wraps for UK foodservice and retail.',
+  openGraph: {
+    title: 'Tortilla Supplier UK | Wholesale Tortillas & Frozen Wraps',
+    description: 'Wholesale tortilla supplier for the UK market. Chilled and frozen flour tortillas, corn tortillas and wraps for UK foodservice and retail.',
+    url: 'https://www.tortillasupplier.com/tortilla-supplier-uk',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-uk' },
 };
 
 const ukFAQs = [
@@ -18,9 +26,21 @@ const ukFAQs = [
   { question: 'Can you supply frozen tortillas to UK cold stores?', answer: 'Yes. We have frozen logistics capability for UK delivery. Products are exported at -18°C with full cold chain documentation.' },
 ];
 
+const ukFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: ukFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
 export default function UKPage() {
   return (
     <>
+      <JsonLd data={ukFaqSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Tortilla Supplier UK' }]} />
       <HeroSection
         title="Tortilla Supplier for the UK Market"
         subtitle="Wholesale chilled and frozen tortillas, wraps and flatbreads for UK foodservice, retail and food manufacturing buyers."

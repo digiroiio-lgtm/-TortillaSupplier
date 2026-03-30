@@ -6,14 +6,36 @@ export default function ContactForm() {
     name: '', company: '', country: '', email: '', phone: '', product: '', volume: '', message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error ?? 'Submission failed. Please try again.');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Submission failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -78,9 +100,16 @@ export default function ContactForm() {
         <textarea name="message" value={form.message} onChange={handleChange} rows={4}
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
       </div>
-      <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-[#2d7a3a] text-white font-semibold rounded-md hover:bg-[#245f2d] transition-colors text-sm">
-        Send Inquiry
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full sm:w-auto px-8 py-3 bg-[#2d7a3a] text-white font-semibold rounded-md hover:bg-[#245f2d] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {loading ? 'Sending…' : 'Send Inquiry'}
       </button>
+      {error && (
+        <p className="text-sm text-red-600 mt-2">{error}</p>
+      )}
     </form>
   );
 }

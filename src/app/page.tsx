@@ -13,14 +13,20 @@ import { certifications } from '@/data/certifications';
 export const metadata: Metadata = {
   title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
   description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+  openGraph: {
+    title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
+    description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+    url: 'https://www.tortillasupplier.com',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com' },
 };
 
 const categories = [
-  { title: 'Flour Tortillas', description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.', type: 'flour' as const, image: '/images/categories/flour-tortilla.svg' },
-  { title: 'Corn Tortillas', description: 'Traditional corn tortillas for authentic preparations and retail packs.', type: 'corn' as const, image: '/images/categories/corn-tortilla.svg' },
-  { title: 'Frozen Tortillas', description: 'Extended shelf life frozen tortillas for export and long-haul distribution.', type: 'frozen' as const, image: '/images/categories/frozen-tortilla.svg' },
-  { title: 'Wrap Flatbreads', description: 'Premium wrap flatbreads for sandwich operations and foodservice.', type: 'wrap' as const, image: '/images/categories/wrap-flatbread.svg' },
-  { title: 'Lavash Flatbreads', description: 'Thin lavash-style flatbreads for kebab, wrap and snack applications.', type: 'flatbread' as const, image: '/images/categories/lavash-flatbread.svg' },
+  { title: 'Flour Tortillas', description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.', href: '/flour-tortilla-supplier', image: '/images/categories/flour-tortilla.svg' },
+  { title: 'Corn Tortillas', description: 'Traditional corn tortillas for authentic preparations and retail packs.', href: '/corn-tortilla-supplier', image: '/images/categories/corn-tortilla.svg' },
+  { title: 'Frozen Tortillas', description: 'Extended shelf life frozen tortillas for export and long-haul distribution.', href: '/frozen-tortilla-supplier', image: '/images/categories/frozen-tortilla.svg' },
+  { title: 'Wrap Flatbreads', description: 'Premium wrap flatbreads for sandwich operations and foodservice.', href: '/wrap-bread-supplier', image: '/images/categories/wrap-flatbread.svg' },
+  { title: 'Lavash Flatbreads', description: 'Thin lavash-style flatbreads for kebab, wrap and snack applications.', href: '/flatbread-supplier', image: '/images/categories/lavash-flatbread.svg' },
 ];
 
 const benefits = [
@@ -57,7 +63,7 @@ export default function HomePage() {
           <p className="text-gray-500 text-sm mb-8">Wholesale tortillas and flatbreads for every application.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {categories.map((cat) => (
-              <Link key={cat.type} href="/products"
+              <Link key={cat.href} href={cat.href}
                 className="bg-[#FAFAF8] border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow group">
                 <div className="relative w-full h-40 overflow-hidden">
                   <Image

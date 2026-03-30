@@ -1,14 +1,22 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Contact | Wholesale Tortilla Inquiry',
   description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
+  openGraph: {
+    title: 'Contact | Wholesale Tortilla Inquiry',
+    description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
+    url: 'https://www.tortillasupplier.com/contact',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com/contact' },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
       <section className="bg-[#FAFAF8] border-b border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-[#1a1a1a] mb-2">Contact Our Export Team</h1>

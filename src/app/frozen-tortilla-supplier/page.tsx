@@ -3,11 +3,19 @@ import HeroSection from '@/components/HeroSection';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Frozen Tortilla Supplier | Wholesale Frozen Tortillas & Wraps',
   description: 'Wholesale frozen tortilla supplier. Frozen flour and corn tortillas, wraps and flatbreads with 12-month shelf life at -18°C.',
+  openGraph: {
+    title: 'Frozen Tortilla Supplier | Wholesale Frozen Tortillas & Wraps',
+    description: 'Wholesale frozen tortilla supplier. Frozen flour and corn tortillas, wraps and flatbreads with 12-month shelf life at -18°C.',
+    url: 'https://www.tortillasupplier.com/frozen-tortilla-supplier',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com/frozen-tortilla-supplier' },
 };
 
 const frozenFAQs = [
@@ -25,9 +33,21 @@ const whyFrozen = [
   { title: 'Export Compliant', description: 'Full cold chain documentation, health certificates and temperature records provided for all frozen shipments.' },
 ];
 
+const frozenFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: frozenFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
 export default function FrozenPage() {
   return (
     <>
+      <JsonLd data={frozenFaqSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Frozen Tortilla Supplier' }]} />
       <HeroSection
         title="Frozen Tortilla Supplier for Wholesale Buyers"
         subtitle="Frozen flour and corn tortillas, wraps and flatbreads with 12-month shelf life. Export-ready cold chain logistics for UK, USA and Europe."

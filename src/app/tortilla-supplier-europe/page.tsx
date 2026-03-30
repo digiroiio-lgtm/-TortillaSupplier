@@ -4,12 +4,20 @@ import ProductSpecTable from '@/components/ProductSpecTable';
 import FAQAccordion from '@/components/FAQAccordion';
 import ContactForm from '@/components/ContactForm';
 import CertificationCard from '@/components/CertificationCard';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 import { certifications } from '@/data/certifications';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Tortilla Supplier Europe | Wholesale Flatbread & Tortilla Supply',
   description: 'Wholesale tortilla and flatbread supplier for European distributors and importers. IFS, BRCGS and ISO 22000 certified. Export documentation included.',
+  openGraph: {
+    title: 'Tortilla Supplier Europe | Wholesale Flatbread & Tortilla Supply',
+    description: 'Wholesale tortilla and flatbread supplier for European distributors and importers. IFS, BRCGS and ISO 22000 certified. Export documentation included.',
+    url: 'https://www.tortillasupplier.com/tortilla-supplier-europe',
+  },
+  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-europe' },
 };
 
 const europeFAQs = [
@@ -20,9 +28,21 @@ const europeFAQs = [
   { question: 'Do you supply frozen products for European distribution?', answer: 'Yes. Our frozen tortilla and flatbread range has a 12-month shelf life at -18°C, suitable for European import and distribution timelines.' },
 ];
 
+const europeFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: europeFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
 export default function EuropePage() {
   return (
     <>
+      <JsonLd data={europeFaqSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Tortilla Supplier Europe' }]} />
       <HeroSection
         title="Tortilla & Flatbread Supplier for Europe"
         subtitle="Wholesale supply for European distributors, food importers and regional buyers. IFS and BRCGS certified. Full EU documentation package."
