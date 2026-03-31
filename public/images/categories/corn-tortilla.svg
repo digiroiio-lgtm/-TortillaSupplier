@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bg-cn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5EEE0"/>
+      <stop offset="100%" style="stop-color:#EBE0CC"/>
+    </linearGradient>
+    <linearGradient id="tortilla-cn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C880"/>
+      <stop offset="100%" style="stop-color:#C8A050"/>
+    </linearGradient>
+    <linearGradient id="tortilla-cn2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DDB870"/>
+      <stop offset="100%" style="stop-color:#B88A3A"/>
+    </linearGradient>
+    <linearGradient id="tortilla-cn3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AC60"/>
+      <stop offset="100%" style="stop-color:#AA7C28"/>
+    </linearGradient>
+    <filter id="shadow-cn">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bg-cn)" rx="0"/>
+  <!-- Corn texture hints -->
+  <circle cx="340" cy="40" r="12" fill="#C8A05018"/>
+  <circle cx="348" cy="55" r="8" fill="#C8A05015"/>
+  <circle cx="355" cy="42" r="6" fill="#C8A05012"/>
+  <!-- Stack of corn tortillas (smaller diameter, golden color) -->
+  <ellipse cx="200" cy="208" rx="105" ry="15" fill="#00000015"/>
+  <!-- Tortilla 5 (bottom) -->
+  <ellipse cx="200" cy="200" rx="102" ry="14" fill="url(#tortilla-cn3)" filter="url(#shadow-cn)"/>
+  <ellipse cx="200" cy="197" rx="102" ry="7" fill="#AA7C2840"/>
+  <!-- Tortilla 4 -->
+  <ellipse cx="200" cy="182" rx="102" ry="14" fill="url(#tortilla-cn2)" filter="url(#shadow-cn)"/>
+  <ellipse cx="200" cy="179" rx="102" ry="7" fill="#B88A3A35"/>
+  <!-- Tortilla 3 -->
+  <ellipse cx="200" cy="164" rx="102" ry="14" fill="url(#tortilla-cn)" filter="url(#shadow-cn)"/>
+  <ellipse cx="200" cy="161" rx="102" ry="7" fill="#C8A05030"/>
+  <!-- Tortilla 2 -->
+  <ellipse cx="200" cy="146" rx="102" ry="14" fill="url(#tortilla-cn2)" filter="url(#shadow-cn)"/>
+  <ellipse cx="200" cy="143" rx="102" ry="7" fill="#B88A3A30"/>
+  <!-- Top tortilla -->
+  <ellipse cx="200" cy="126" rx="102" ry="14" fill="url(#tortilla-cn)"/>
+  <!-- Top face of top tortilla - slightly lighter, grainy corn texture -->
+  <ellipse cx="200" cy="121" rx="100" ry="12" fill="#EDD080"/>
+  <!-- Corn grain texture dots on top -->
+  <circle cx="175" cy="118" r="2" fill="#C8A05035"/>
+  <circle cx="190" cy="115" r="1.5" fill="#C8A05040"/>
+  <circle cx="210" cy="122" r="2" fill="#C8A05030"/>
+  <circle cx="225" cy="117" r="1.5" fill="#C8A05035"/>
+  <circle cx="165" cy="124" r="1.5" fill="#C8A05025"/>
+  <circle cx="235" cy="124" r="2" fill="#C8A05030"/>
+  <!-- Char marks -->
+  <ellipse cx="185" cy="118" rx="10" ry="3" fill="#AA703015" transform="rotate(-15 185 118)"/>
+  <ellipse cx="215" cy="122" rx="8" ry="2.5" fill="#AA703020" transform="rotate(10 215 122)"/>
+  <!-- Label -->
+  <rect x="60" y="38" width="280" height="52" rx="6" fill="#ffffff60"/>
+  <text x="200" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#5C3A0A" text-anchor="middle">CORN TORTILLAS</text>
+  <text x="200" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8B5A20" text-anchor="middle">Authentic · Wholesale · Export Grade</text>
+</svg>

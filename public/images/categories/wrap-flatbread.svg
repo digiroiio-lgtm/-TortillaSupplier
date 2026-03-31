@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bg-wr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4F0E8"/>
+      <stop offset="100%" style="stop-color:#EAE4D4"/>
+    </linearGradient>
+    <linearGradient id="wrap-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0E2BE"/>
+      <stop offset="100%" style="stop-color:#D8C080"/>
+    </linearGradient>
+    <linearGradient id="wrap-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8D09A"/>
+      <stop offset="100%" style="stop-color:#C8A84C"/>
+    </linearGradient>
+    <filter id="shadow-wr">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#00000028"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bg-wr)" rx="0"/>
+  <!-- Rolled wrap sandwich - side view, slight angle -->
+  <!-- Shadow -->
+  <ellipse cx="200" cy="210" rx="130" ry="16" fill="#00000018"/>
+  <!-- The rolled wrap cylinder body -->
+  <!-- Back half of cylinder -->
+  <rect x="80" y="120" width="240" height="80" rx="0" fill="#C8A84C"/>
+  <!-- Main cylinder front -->
+  <rect x="80" y="118" width="240" height="76" fill="url(#wrap-main)" filter="url(#shadow-wr)"/>
+  <!-- Cylinder end cap - right -->
+  <ellipse cx="320" cy="156" rx="12" ry="38" fill="#D8C080"/>
+  <!-- Cylinder end cap - left -->
+  <ellipse cx="80" cy="156" rx="12" ry="38" fill="#E8D09A"/>
+  <!-- Wrap spiral lines suggesting rolled texture -->
+  <line x1="80" y1="118" x2="320" y2="118" stroke="#C8A04820" stroke-width="1"/>
+  <line x1="80" y1="194" x2="320" y2="194" stroke="#C8A04820" stroke-width="1"/>
+  <!-- Diagonal wrap lines (suggests rolled flatbread) -->
+  <line x1="100" y1="118" x2="140" y2="194" stroke="#C8A04825" stroke-width="1.5"/>
+  <line x1="155" y1="118" x2="195" y2="194" stroke="#C8A04825" stroke-width="1.5"/>
+  <line x1="210" y1="118" x2="250" y2="194" stroke="#C8A04825" stroke-width="1.5"/>
+  <line x1="265" y1="118" x2="305" y2="194" stroke="#C8A04825" stroke-width="1.5"/>
+  <!-- Cut cross-section showing filling at left end -->
+  <ellipse cx="80" cy="156" rx="10" ry="36" fill="#EDD09A"/>
+  <!-- Filling peek - greens and colors in cross-section -->
+  <ellipse cx="80" cy="148" rx="6" ry="8" fill="#5A9A4A50"/>
+  <ellipse cx="80" cy="162" rx="5" ry="6" fill="#D06030" opacity="0.3"/>
+  <ellipse cx="80" cy="155" rx="4" ry="5" fill="#F0D040" opacity="0.25"/>
+  <!-- Top surface highlight -->
+  <rect x="80" y="118" width="240" height="20" fill="#FFFFFF20"/>
+  <!-- Stack hint - second wrap slightly visible behind -->
+  <rect x="85" y="100" width="230" height="20" rx="3" fill="#D8C07050"/>
+  <rect x="88" y="85" width="224" height="18" rx="3" fill="#C8A84C30"/>
+  <!-- Label -->
+  <rect x="60" y="30" width="280" height="38" rx="6" fill="#ffffff60"/>
+  <text x="200" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#5C3D0A" text-anchor="middle">WRAP FLATBREADS</text>
+  <text x="200" y="63" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#8B5A20" text-anchor="middle">Foodservice · Sandwich · QSR · Private Label</text>
+</svg>
