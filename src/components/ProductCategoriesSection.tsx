@@ -235,13 +235,13 @@ export default function ProductCategoriesSection() {
                 href="/products"
                 className="block w-full text-center bg-white text-gray-900 text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-gray-100 transition-colors"
               >
-                View All Products
+                View Products
               </Link>
               <Link
                 href="/contact"
                 className="block w-full text-center border border-white/20 text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-white/8 transition-colors"
               >
-                Request a Quote
+                Request Samples
               </Link>
             </div>
           </div>

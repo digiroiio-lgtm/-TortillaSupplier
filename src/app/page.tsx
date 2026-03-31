@@ -68,7 +68,8 @@ export default function HomePage() {
         subtitle="Frozen flour, corn and specialty tortillas. Private label available, EU & UK certified, export ready from 20ft container."
         badges={['BRCGS / IFS Certified', 'Private Label Available', '40ft Container Supply', 'EU & UK Export Ready']}
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
-        secondaryCTA={{ label: 'Request Container Quote', href: '/bulk-tortilla-supplier' }}
+        secondaryCTA={{ label: 'Request Samples', href: '/contact' }}
+        ctaNote="Sample delivery in 3–5 days (EU & UK)"
         galleryImages={[
           '/images/IMG_3011.jpg',
           '/images/IMG_3012.jpg',
@@ -127,6 +128,15 @@ export default function HomePage() {
             <p className="text-base text-gray-500">Full specification overview — diameter, weight, pack size and pallet quantities for our entire range.</p>
           </div>
           <ProductSpecTable />
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="px-5 py-2.5 bg-[#2d7a3a] text-white text-sm font-semibold rounded-lg hover:bg-[#245f2d] transition-colors"
+            >
+              Request Product Samples
+            </Link>
+            <span className="flex items-center text-xs text-gray-400">Sample delivery in 3–5 days (EU &amp; UK)</span>
+          </div>
         </div>
       </section>
 
@@ -171,7 +181,7 @@ export default function HomePage() {
               href="/contact"
               className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
             >
-              Request a Quote
+              Request Container Quote
             </Link>
             <a
               href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"

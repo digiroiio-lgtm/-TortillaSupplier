@@ -7,11 +7,12 @@ interface HeroSectionProps {
   badges?: string[];
   primaryCTA?: { label: string; href: string };
   secondaryCTA?: { label: string; href: string };
+  ctaNote?: string;
   eyebrow?: string;
   galleryImages?: string[];
 }
 
-export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, eyebrow, galleryImages }: HeroSectionProps) {
+export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, ctaNote, eyebrow, galleryImages }: HeroSectionProps) {
   return (
     <section className="relative bg-[#0a0a0a] overflow-hidden">
       {/* Radial glow */}
@@ -65,22 +66,27 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-3 justify-center">
-          {primaryCTA && (
-            <Link
-              href={primaryCTA.href}
-              className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
-            >
-              {primaryCTA.label}
-            </Link>
-          )}
-          {secondaryCTA && (
-            <Link
-              href={secondaryCTA.href}
-              className="px-6 py-3 bg-transparent border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 hover:border-white/30 transition-colors text-sm"
-            >
-              {secondaryCTA.label}
-            </Link>
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {primaryCTA && (
+              <Link
+                href={primaryCTA.href}
+                className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
+              >
+                {primaryCTA.label}
+              </Link>
+            )}
+            {secondaryCTA && (
+              <Link
+                href={secondaryCTA.href}
+                className="px-6 py-3 bg-transparent border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 hover:border-white/30 transition-colors text-sm"
+              >
+                {secondaryCTA.label}
+              </Link>
+            )}
+          </div>
+          {ctaNote && (
+            <p className="text-xs text-gray-500 mt-1">{ctaNote}</p>
           )}
         </div>
 
