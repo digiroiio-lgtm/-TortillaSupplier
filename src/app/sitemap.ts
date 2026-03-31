@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
+import blogPosts from '@/data/blogPosts';
 
 const BASE_URL = 'https://www.tortillasupplier.com';
 const LAST_MODIFIED = new Date('2025-01-01');
@@ -38,11 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE_URL, lastModified: LAST_MODIFIED, priority: 1.0, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/products`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/contact`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/blog`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/tortilla-supplier-uk`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/tortilla-supplier-usa`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/tortilla-supplier-europe`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/frozen-tortilla-supplier`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
   ];
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.publishDate),
+    priority: 0.7,
+    changeFrequency: 'monthly' as const,
+  }));
 
   const dynamicPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
     url: `${BASE_URL}/${page.slug}`,
@@ -51,5 +60,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
   }));
 
-  return [...staticPages, ...dynamicPages];
+  return [...staticPages, ...blogPages, ...dynamicPages];
 }

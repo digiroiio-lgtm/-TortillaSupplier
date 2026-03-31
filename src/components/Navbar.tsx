@@ -110,6 +110,9 @@ export default function Navbar() {
             <Link href="/tortilla-supplier-europe" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
               Europe
             </Link>
+            <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
+              Blog
+            </Link>
             <Link href="/contact" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
               Contact
             </Link>
@@ -189,6 +192,7 @@ export default function Navbar() {
           <Link href="/tortilla-supplier-usa" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>USA</Link>
           <Link href="/tortilla-supplier-europe" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Europe</Link>
           <Link href="/contact" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link href="/blog" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Blog</Link>
           <div className="pt-2 pb-1">
             <Link href="/contact" className="block px-4 py-2.5 bg-[#0a0a0a] text-white text-sm font-medium rounded-lg text-center" onClick={() => setMenuOpen(false)}>
               Get Distributor Pricing

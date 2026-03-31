@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import blogPosts from '@/data/blogPosts';
 
 const productLinks = [
   { label: 'Flour Tortilla 30cm', href: '/flour-tortilla-30cm-12-inch' },
@@ -62,13 +63,17 @@ function FooterColumn({ title, links }: { title: string; links: { label: string;
 }
 
 export default function Footer() {
+  const blogLinks = [
+    { label: 'All Articles', href: '/blog' },
+    ...blogPosts.map((p) => ({ label: p.title, href: `/blog/${p.slug}` })),
+  ];
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main grid */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-16">
           {/* Brand */}
-          <div className="col-span-2">
+          <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
               <span className="w-6 h-6 bg-[#2d7a3a] rounded-md flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-xs">T</span>
@@ -96,6 +101,7 @@ export default function Footer() {
           <FooterColumn title="Suppliers" links={supplierLinks} />
           <FooterColumn title="Wholesale" links={wholesaleLinks} />
           <FooterColumn title="Regions" links={regionLinks} />
+          <FooterColumn title="Blog" links={blogLinks} />
         </div>
 
         {/* Bottom bar */}
