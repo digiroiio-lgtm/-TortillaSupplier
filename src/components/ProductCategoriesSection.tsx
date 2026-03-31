@@ -99,7 +99,7 @@ const featuredCards = [
     title: 'Flour Tortillas',
     subtitle: 'Wholesale · Export Grade · Private Label',
     description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.',
-    image: '/images/categories/flour-tortilla.svg',
+    image: '/images/img176.jpg',
     imageBg: 'bg-[#f5f0e8]',
     href: '/flour-tortilla-supplier',
   },
@@ -109,7 +109,7 @@ const featuredCards = [
     title: 'Corn Tortillas',
     subtitle: 'Authentic · Wholesale · Export Grade',
     description: 'Traditional corn tortillas for authentic preparations and retail packs.',
-    image: '/images/categories/corn-tortilla.svg',
+    image: '/images/img186.jpg',
     imageBg: 'bg-[#f3ede0]',
     href: '/corn-tortilla-supplier',
   },
@@ -119,7 +119,7 @@ const featuredCards = [
     title: 'Frozen Tortillas',
     subtitle: 'Extended Shelf Life · Export Ready · -18°C',
     description: 'Extended shelf life frozen tortillas for export and long-haul distribution.',
-    image: '/images/categories/frozen-tortilla.svg',
+    image: '/images/img200.jpg',
     imageBg: 'bg-[#e8f0f8]',
     href: '/frozen-tortilla-supplier',
   },
@@ -183,22 +183,15 @@ export default function ProductCategoriesSection() {
               {/* Image area */}
               <div className={`relative flex-1 min-h-[180px] flex items-end justify-center ${card.imageBg} overflow-hidden`}>
                 {/* Badge */}
-                <span className={`absolute top-3 left-3 text-xs font-semibold px-2 py-0.5 rounded-md ${card.badgeColor}`}>
+                <span className={`absolute top-3 left-3 z-10 text-xs font-semibold px-2 py-0.5 rounded-md ${card.badgeColor}`}>
                   {card.badge}
                 </span>
-                {/* Category label */}
-                <div className="absolute top-0 left-0 right-0 text-center pt-3 pb-1">
-                  <p className="text-xs font-bold text-gray-700 tracking-wide uppercase leading-none">
-                    {card.title}
-                  </p>
-                  <p className="text-[10px] text-gray-400 mt-0.5 leading-none">{card.subtitle}</p>
-                </div>
                 <div className="relative w-full h-full">
                   <Image
                     src={card.image}
                     alt={card.title}
                     fill
-                    className="object-contain p-8 pt-12 group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 50vw, 20vw"
                   />
                 </div>
@@ -256,21 +249,32 @@ export default function ProductCategoriesSection() {
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Foodservice Formats</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
-              { title: 'Burrito Tortillas', description: 'Large 30cm flour tortillas for burrito wrapping — QSR and foodservice supply.', href: '/burrito-tortilla-supplier' },
-              { title: 'Wrap Tortillas', description: 'Mid-size wrap tortillas for sandwich wraps, paninis and cold food-to-go applications.', href: '/wrap-tortilla-supplier' },
-              { title: 'Street Taco Tortillas', description: 'Small corn and flour tortillas for authentic street taco and taqueria operations.', href: '/street-taco-tortilla-wholesale' },
-              { title: 'Frying Tortillas', description: 'Tostada and frying-grade corn tortillas suitable for deep fry and flat-grill applications.', href: '/frying-tortilla-supplier' },
+              { title: 'Burrito Tortillas', description: 'Large 30cm flour tortillas for burrito wrapping — QSR and foodservice supply.', href: '/burrito-tortilla-supplier', image: '/images/img202.jpg' },
+              { title: 'Wrap Tortillas', description: 'Mid-size wrap tortillas for sandwich wraps, paninis and cold food-to-go applications.', href: '/wrap-tortilla-supplier', image: '/images/img204.jpg' },
+              { title: 'Street Taco Tortillas', description: 'Small corn and flour tortillas for authentic street taco and taqueria operations.', href: '/street-taco-tortilla-wholesale', image: '/images/img211.jpg' },
+              { title: 'Frying Tortillas', description: 'Tostada and frying-grade corn tortillas suitable for deep fry and flat-grill applications.', href: '/frying-tortilla-supplier', image: '/images/img229.jpg' },
             ].map((cat) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md hover:border-gray-200 transition-all group"
+                className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-gray-200 transition-all group"
               >
-                <h3 className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">
-                  {cat.title}
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed mb-3">{cat.description}</p>
-                <span className="text-xs font-medium text-[#2d7a3a]">View supply options →</span>
+                <div className="relative w-full h-28 bg-gray-50">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">
+                    {cat.title}
+                  </h3>
+                  <p className="text-xs text-gray-400 leading-relaxed mb-3">{cat.description}</p>
+                  <span className="text-xs font-medium text-[#2d7a3a]">View supply options →</span>
+                </div>
               </Link>
             ))}
           </div>

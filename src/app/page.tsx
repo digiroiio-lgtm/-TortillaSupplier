@@ -69,6 +69,15 @@ export default function HomePage() {
         badges={['BRCGS / IFS Certified', 'Private Label Available', '40ft Container Supply', 'EU & UK Export Ready']}
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
         secondaryCTA={{ label: 'Request Container Quote', href: '/bulk-tortilla-supplier' }}
+        galleryImages={[
+          '/images/img240.jpg',
+          '/images/img251.jpg',
+          '/images/img262.jpg',
+          '/images/img272.jpg',
+          '/images/img280.jpg',
+          '/images/img288.jpg',
+          '/images/img294.jpg',
+        ]}
       />
 
       {/* Stats */}

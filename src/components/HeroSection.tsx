@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface HeroSectionProps {
@@ -7,9 +8,10 @@ interface HeroSectionProps {
   primaryCTA?: { label: string; href: string };
   secondaryCTA?: { label: string; href: string };
   eyebrow?: string;
+  galleryImages?: string[];
 }
 
-export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, eyebrow }: HeroSectionProps) {
+export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, eyebrow, galleryImages }: HeroSectionProps) {
   return (
     <section className="relative bg-[#0a0a0a] overflow-hidden">
       {/* Radial glow */}
@@ -91,6 +93,28 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 {badge}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Product gallery mosaic */}
+        {galleryImages && galleryImages.length > 0 && (
+          <div className="mt-14 grid grid-cols-4 sm:grid-cols-6 gap-2 max-w-3xl mx-auto">
+            {galleryImages.map((src, i) => (
+              <div
+                key={src}
+                className={`relative rounded-xl overflow-hidden bg-white/5 border border-white/10 ${
+                  i === 0 ? 'col-span-2 row-span-2 aspect-square' : 'aspect-square'
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={`Product ${i + 1}`}
+                  fill
+                  className="object-cover opacity-80"
+                  sizes="(max-width: 640px) 25vw, 16vw"
+                />
               </div>
             ))}
           </div>
