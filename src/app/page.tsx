@@ -70,13 +70,18 @@ export default function HomePage() {
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
         secondaryCTA={{ label: 'Request Container Quote', href: '/bulk-tortilla-supplier' }}
         galleryImages={[
-          '/images/img240.jpg',
-          '/images/img251.jpg',
-          '/images/img262.jpg',
-          '/images/img272.jpg',
-          '/images/img280.jpg',
-          '/images/img288.jpg',
-          '/images/img294.jpg',
+          '/images/IMG_3011.jpg',
+          '/images/IMG_3012.jpg',
+          '/images/IMG_3013.jpg',
+          '/images/IMG_3014.jpg',
+          '/images/IMG_3015.jpg',
+          '/images/IMG_3016.jpg',
+          '/images/IMG_3017.jpg',
+          '/images/IMG_3018.jpg',
+          '/images/IMG_3019.jpg',
+          '/images/IMG_3020.jpg',
+          '/images/IMG_3021.jpg',
+          '/images/IMG_3023.jpg',
         ]}
       />
 

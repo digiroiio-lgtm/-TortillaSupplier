@@ -100,7 +100,7 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
 
         {/* Product gallery mosaic */}
         {galleryImages && galleryImages.length > 0 && (
-          <div className="mt-14 grid grid-cols-4 sm:grid-cols-6 gap-2 max-w-3xl mx-auto">
+          <div className="mt-14 grid grid-cols-4 sm:grid-cols-6 gap-2 max-w-4xl mx-auto">
             {galleryImages.map((src, i) => (
               <div
                 key={src}
@@ -110,7 +110,20 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
               >
                 <Image
                   src={src}
-                  alt={`Tortilla wholesale product gallery — ${['flour tortillas production', 'corn tortillas export', 'burrito tortillas bulk', 'wrap tortillas supply', 'frozen tortillas cold chain', 'street taco tortillas', 'foodservice tortillas'][i] ?? 'tortilla supplier'}`}
+                  alt={`Tortilla wholesale product gallery — ${[
+                    'flour tortillas on production line — wholesale tortilla manufacturer',
+                    'gourmet tortilla wrap with fresh toppings — foodservice supply',
+                    'spinach tortilla wrap with grilled chicken — specialty tortilla wholesale',
+                    'street tacos with fresh salsa — corn tortilla bulk supply',
+                    'burrito wrap with beef and vegetables — large format tortilla supply',
+                    'purple tortilla wrap — coloured specialty tortilla exporter',
+                    'loaded tortilla wrap sandwich — foodservice format tortillas',
+                    'classic flour tortilla quesadilla — standard tortilla wholesale',
+                    'chicken burrito with rice — bulk tortilla supply for QSR',
+                    'tortilla pinwheel canapés — catering and retail tortilla formats',
+                    'fresh veggie wrap in flour tortilla — export grade tortillas',
+                    'tortilla flatbread with toppings — private label tortilla supplier',
+                  ][i] ?? 'tortilla wholesale supplier product'}`}
                   fill
                   className="object-cover opacity-80"
                   sizes="(max-width: 640px) 25vw, 16vw"
