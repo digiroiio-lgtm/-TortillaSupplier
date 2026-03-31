@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact | Request Wholesale Tortilla Pricing | TortillaSupplier' },
+  title: { absolute: 'Contact | Wholesale Tortilla Pricing | TortillaSupplier' },
   description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
   openGraph: {
     title: 'Contact | Request Wholesale Tortilla Pricing | TortillaSupplier',

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const author = authors.find((a) => a.slug === slug);
   if (!author) return {};
   return {
-    title: `${author.name} — ${author.jobTitle} | TortillaSupplier`,
+    title: { absolute: author.pageTitle },
     description: author.bio,
     alternates: { canonical: `${BASE_URL}/author/${slug}` },
   };

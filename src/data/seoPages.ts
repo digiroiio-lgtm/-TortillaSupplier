@@ -32,7 +32,7 @@ const seoPages: SEOPageData[] = [
   // ─── PILLAR PAGES ────────────────────────────────────────────────────────────
   {
     slug: 'tortilla-supplier',
-    metaTitle: 'Wholesale Tortilla Supplier for Distributors | TortillaSupplier',
+    metaTitle: 'Wholesale Tortilla Supplier for Importers | TortillaSupplier',
     metaDescription: 'Leading tortilla supplier for wholesale buyers. Flour tortillas, corn tortillas, frozen wraps and flatbreads. Export-ready, BRCGS certified, private label available.',
     heroTitle: 'Wholesale Tortilla Supplier',
     heroSubtitle: 'Flour and corn tortillas, frozen wraps and flatbreads for global B2B buyers. Export-ready, BRCGS certified, private label manufacturing available.',
@@ -119,7 +119,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flatbread-supplier',
-    metaTitle: 'Flatbread Supplier | Wholesale Lavash & Wraps | TortillaSupplier',
+    metaTitle: 'Flatbread Supplier | Lavash & Wraps | TortillaSupplier',
     metaDescription: 'Wholesale flatbread supplier. Lavash, wrap flatbreads and thin flatbreads in 25cm and 30cm for foodservice and retail. Export ready, BRCGS certified.',
     heroTitle: 'Wholesale Flatbread Supplier',
     heroSubtitle: 'Lavash flatbreads, wrap flatbreads and thin-style flatbreads for kebab, wrap and snack applications. Foodservice and retail wholesale supply.',
@@ -237,7 +237,7 @@ const seoPages: SEOPageData[] = [
   // ─── FLOUR TORTILLA CLUSTER ───────────────────────────────────────────────────
   {
     slug: 'flour-tortilla-30cm-12-inch',
-    metaTitle: 'Flour Tortilla 30cm (12") Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Flour Tortilla 30cm (12") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 30cm (12") flour tortillas for burrito and wrap applications. Large-format flour tortillas for QSR, foodservice and retail. Export ready.',
     heroTitle: 'Flour Tortilla 30cm (12") — Wholesale Supply',
     heroSubtitle: 'Large-format 30cm flour tortillas for burritos, wraps and large sandwich applications. QSR and foodservice wholesale supply with private label available.',
@@ -269,7 +269,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-25cm-10-inch',
-    metaTitle: 'Flour Tortilla 25cm (10") Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Flour Tortilla 25cm (10") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 25cm (10") flour tortillas for foodservice and retail. Standard medium-format tortillas for wraps, quesadillas and sandwich applications.',
     heroTitle: 'Flour Tortilla 25cm (10") — Wholesale Supply',
     heroSubtitle: 'Medium-format 25cm flour tortillas for wraps, quesadillas and sandwich applications. Wholesale supply for foodservice and retail buyers.',
@@ -301,7 +301,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-20cm-8-inch',
-    metaTitle: 'Flour Tortilla 20cm (8") Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Flour Tortilla 20cm (8") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 20cm (8") flour tortillas for fajitas and small wrap applications. Compact foodservice format for restaurant and retail supply.',
     heroTitle: 'Flour Tortilla 20cm (8") — Wholesale Supply',
     heroSubtitle: 'Compact 20cm flour tortillas for fajitas, street food and small wrap applications. Wholesale foodservice and retail supply.',
@@ -362,7 +362,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'frozen-flour-tortilla-supplier',
-    metaTitle: 'Frozen Flour Tortilla Supplier | Export Ready | TortillaSupplier',
+    metaTitle: 'Frozen Flour Tortilla Supplier | TortillaSupplier',
     metaDescription: 'Wholesale frozen flour tortilla supplier. 12-month shelf life at -18°C. All sizes available. Export-ready cold chain logistics.',
     heroTitle: 'Frozen Flour Tortilla Supplier',
     heroSubtitle: 'Wholesale frozen flour tortillas in all sizes with 12-month shelf life. Export-ready cold chain logistics for UK, USA and European buyers.',
@@ -423,7 +423,7 @@ const seoPages: SEOPageData[] = [
   // ─── CORN TORTILLA CLUSTER ────────────────────────────────────────────────────
   {
     slug: 'corn-tortilla-15cm-6-inch',
-    metaTitle: 'Corn Tortilla 15cm (6") Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Corn Tortilla 15cm (6") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 15cm (6") corn tortillas for tacos and street food. Traditional corn tortilla supplier for foodservice and retail buyers.',
     heroTitle: 'Corn Tortilla 15cm (6") — Wholesale Supply',
     heroSubtitle: 'Traditional 15cm corn tortillas for tacos, street food and authentic Mexican foodservice. Wholesale supply with export documentation.',
@@ -454,7 +454,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'corn-tortilla-20cm-8-inch',
-    metaTitle: 'Corn Tortilla 20cm (8") Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Corn Tortilla 20cm (8") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 20cm (8") corn tortillas for enchiladas and large taco applications. Foodservice and retail corn tortilla supply. Export ready.',
     heroTitle: 'Corn Tortilla 20cm (8") — Wholesale Supply',
     heroSubtitle: 'Medium-format 20cm corn tortillas for enchiladas, large tacos and street food. Wholesale supply for foodservice and retail buyers.',
@@ -513,7 +513,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'frozen-corn-tortilla-supplier',
-    metaTitle: 'Frozen Corn Tortilla Supplier | Export Ready | TortillaSupplier',
+    metaTitle: 'Frozen Corn Tortilla Supplier | TortillaSupplier',
     metaDescription: 'Wholesale frozen corn tortilla supplier. 15cm and 20cm formats with 12-month shelf life at -18°C. Export-ready cold chain supply.',
     heroTitle: 'Frozen Corn Tortilla Supplier',
     heroSubtitle: 'Wholesale frozen corn tortillas in 15cm and 20cm. 12-month shelf life at -18°C. Export-ready with full cold chain documentation.',
@@ -844,7 +844,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-supplier-germany',
-    metaTitle: 'Tortilla Supplier Germany | Frozen & Flour | TortillaSupplier',
+    metaTitle: 'Tortilla Supplier Germany | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Germany. Flour and corn tortillas, wraps and flatbreads for German food distributors. IFS certified, EU export.',
     heroTitle: 'Tortilla Supplier for the German Market',
     heroSubtitle: 'Wholesale tortillas and flatbreads for German food distributors and importers. IFS certified manufacturing with full EU documentation.',
@@ -968,7 +968,7 @@ const seoPages: SEOPageData[] = [
   // ─── WHOLESALE INTENT CLUSTER ─────────────────────────────────────────────────
   {
     slug: 'bulk-tortilla-supplier',
-    metaTitle: 'Bulk Tortilla Supplier | Pallet & Container | TortillaSupplier',
+    metaTitle: 'Bulk Tortilla Supplier | Pallet Supply | TortillaSupplier',
     metaDescription: 'Bulk tortilla supplier for importers and distributors. Container and pallet quantities for all tortilla formats. Competitive pricing, BRCGS certified.',
     heroTitle: 'Bulk Tortilla Supplier',
     heroSubtitle: 'Container and pallet quantity tortilla supply for importers, buying groups and wholesale distributors. All formats, competitive bulk pricing.',
@@ -1056,7 +1056,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-importer-supply',
-    metaTitle: 'Tortilla Importer Supply | Wholesale Export | TortillaSupplier',
+    metaTitle: 'Tortilla Importer Supply | Wholesale | TortillaSupplier',
     metaDescription: 'Tortilla supply for food importers. Bulk tortilla and flatbread supply with full export documentation for UK, European and global importers.',
     heroTitle: 'Tortilla Supply for Importers',
     heroSubtitle: 'Wholesale tortilla and flatbread supply for food importers. Full export documentation, container quantities and competitive importer pricing.',
@@ -1085,7 +1085,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-foodservice-supplier',
-    metaTitle: 'Foodservice Tortilla Supplier | QSR Supply | TortillaSupplier',
+    metaTitle: 'Foodservice Tortilla Supplier | QSR | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for foodservice. QSR chains, restaurants, catering and hospitality tortilla supply. All sizes, bulk packs, BRCGS certified.',
     heroTitle: 'Foodservice Tortilla Supplier',
     heroSubtitle: 'Wholesale tortilla supply for QSR chains, restaurants, catering operations and hospitality. Bulk catering packs, all sizes and private label options.',
@@ -1118,7 +1118,7 @@ const seoPages: SEOPageData[] = [
 seoPages.push(
   {
     slug: 'burrito-tortilla-supplier',
-    metaTitle: 'Burrito Tortilla Supplier | 30cm Wholesale | TortillaSupplier',
+    metaTitle: 'Burrito Tortilla Supplier | 30cm Bulk | TortillaSupplier',
     metaDescription: 'Wholesale burrito tortilla supplier. Large-format 30cm flour tortillas for QSR chains, restaurants and foodservice distributors. BRCGS certified, export ready.',
     heroTitle: 'Burrito Tortilla Supplier',
     heroSubtitle: 'Wholesale 30cm flour tortillas for burrito wrapping and large-format foodservice applications. QSR chain supply, private label and export ready.',
@@ -1184,7 +1184,7 @@ seoPages.push(
   },
   {
     slug: 'street-taco-tortilla-wholesale',
-    metaTitle: 'Street Taco Tortilla Wholesale | 15cm Bulk | TortillaSupplier',
+    metaTitle: 'Street Taco Tortilla Wholesale | 15cm | TortillaSupplier',
     metaDescription: 'Wholesale street taco tortillas. Small 15cm corn and flour tortillas for authentic taco operations, Mexican restaurants and QSR taco formats. Export ready.',
     heroTitle: 'Street Taco Tortilla Wholesale Supplier',
     heroSubtitle: 'Wholesale small-format corn and flour tortillas for authentic street taco, taqueria and restaurant taco applications. Bulk catering supply, private label available.',
@@ -1254,7 +1254,7 @@ seoPages.push(
 seoPages.push(
   {
     slug: 'tortilla-import-distributor',
-    metaTitle: 'Tortilla Import Distributor | Wholesale Supply | TortillaSupplier',
+    metaTitle: 'Tortilla Import Distributor | Wholesale | TortillaSupplier',
     metaDescription: 'Tortilla import distributor supply. Wholesale flour and corn tortillas for food importers and regional distributors. Export-ready, BRCGS certified, full documentation.',
     heroTitle: 'Tortilla Import Distributor Supply',
     heroSubtitle: 'Wholesale tortillas for food importers and regional distributors. Flour tortillas, corn tortillas and frozen formats with full export documentation and competitive container pricing.',
@@ -1284,7 +1284,7 @@ seoPages.push(
   },
   {
     slug: 'frozen-tortilla-export',
-    metaTitle: 'Frozen Tortilla Export Supplier | Wholesale | TortillaSupplier',
+    metaTitle: 'Frozen Tortilla Export Supplier | TortillaSupplier',
     metaDescription: 'Frozen tortilla export supplier. Frozen flour and corn tortillas for international distributors and importers. 12-month shelf life, BRCGS certified, container-ready.',
     heroTitle: 'Frozen Tortilla Export Supplier',
     heroSubtitle: 'Wholesale frozen flour and corn tortillas for international buyers. 12-month shelf life, cold-chain export capability, full documentation for all destination markets.',
@@ -1315,7 +1315,7 @@ seoPages.push(
   },
   {
     slug: 'tortilla-export-supplier',
-    metaTitle: 'Tortilla Export Supplier | Global Wholesale | TortillaSupplier',
+    metaTitle: 'Tortilla Export Supplier | Wholesale | TortillaSupplier',
     metaDescription: 'Tortilla export supplier for international buyers. Wholesale flour and corn tortillas for export to UK, Europe, USA and Middle East. BRCGS certified, full documentation.',
     heroTitle: 'Tortilla Export Supplier',
     heroSubtitle: 'Wholesale tortilla export for international buyers. Flour and corn tortillas, frozen formats and flatbreads exported worldwide with full documentation and certified production.',
@@ -1469,7 +1469,7 @@ seoPages.push(
   },
   {
     slug: 'bulk-tortilla-wraps',
-    metaTitle: 'Bulk Tortilla Wraps | Wholesale 25cm & 30cm | TortillaSupplier',
+    metaTitle: 'Bulk Tortilla Wraps | Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Bulk tortilla wraps for foodservice and distribution. Wholesale 25cm and 30cm flour tortilla wraps in catering packs. Private label available. BRCGS certified.',
     heroTitle: 'Bulk Tortilla Wraps',
     heroSubtitle: 'Wholesale bulk tortilla wraps for foodservice, sandwich chains and distributors. 25cm and 30cm flour wrap tortillas in bulk catering packs, private label available.',
@@ -1538,7 +1538,7 @@ seoPages.push(
 seoPages.push(
   {
     slug: 'tortilla-supplier-canada',
-    metaTitle: 'Tortilla Supplier Canada | Wholesale Export | TortillaSupplier',
+    metaTitle: 'Tortilla Supplier Canada | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Canada. Flour and corn tortillas, wraps and flatbreads for Canadian food distributors and importers. Export-ready, BRCGS certified.',
     heroTitle: 'Tortilla Supplier for the Canadian Market',
     heroSubtitle: 'Wholesale flour and corn tortillas, frozen wraps and flatbreads for Canadian food distributors and importers. Export-ready with full documentation.',
@@ -1568,7 +1568,7 @@ seoPages.push(
   },
   {
     slug: 'tortilla-supplier-australia',
-    metaTitle: 'Tortilla Supplier Australia | Wholesale Export | TortillaSupplier',
+    metaTitle: 'Tortilla Supplier Australia | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Australia. Flour and corn tortillas, frozen wraps and flatbreads for Australian food distributors and importers. Export-ready.',
     heroTitle: 'Tortilla Supplier for the Australian Market',
     heroSubtitle: 'Wholesale flour and corn tortillas, frozen wraps and flatbreads for Australian food distributors and importers. Long-haul export capability, full documentation.',
