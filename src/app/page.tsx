@@ -8,6 +8,7 @@ import RegionCTASection from '@/components/RegionCTASection';
 import ContainerSupplySection from '@/components/ContainerSupplySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ProductCategoriesSection from '@/components/ProductCategoriesSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
 import DistributorTrustSection from '@/components/DistributorTrustSection';
 import { certifications } from '@/data/certifications';
 
@@ -56,12 +57,6 @@ const benefits = [
   },
 ];
 
-const howItWorks = [
-  { step: '01', title: 'Submit Inquiry', description: 'Fill out the inquiry form or contact us via WhatsApp with your requirements.' },
-  { step: '02', title: 'Receive Samples', description: 'We dispatch product samples with full technical datasheets for your evaluation.' },
-  { step: '03', title: 'Agree Terms', description: 'Confirm MOQ, pricing, packaging and delivery terms with our export team.' },
-  { step: '04', title: 'Dispatch & Deliver', description: 'Your order is manufactured, packed and dispatched with full export documentation.' },
-];
 
 export default function HomePage() {
   return (
@@ -122,30 +117,7 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Process</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight">How It Works</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {howItWorks.map((step, i) => (
-              <div key={step.step} className="relative">
-                {i < howItWorks.length - 1 && (
-                  <div className="hidden lg:block absolute top-4 left-full w-full h-px bg-gray-100 -translate-x-4 z-0" />
-                )}
-                <div className="relative z-10">
-                  <div className="w-8 h-8 rounded-full bg-[#2d7a3a]/8 flex items-center justify-center mb-5">
-                    <span className="text-xs font-bold text-[#2d7a3a]">{step.step}</span>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2 text-sm">{step.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorksSection />
 
       {/* Testimonials */}
       <TestimonialsSection />
