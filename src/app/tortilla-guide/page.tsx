@@ -134,6 +134,33 @@ export default function TortillaGuidePage() {
 
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Guide Hub cluster navigation — visible before the main content grid */}
+          <div className="mb-12 p-6 bg-gray-50 border border-gray-200 rounded-2xl">
+            <p className="text-xs font-bold text-[#2d7a3a] uppercase tracking-widest mb-3">Guide Cluster</p>
+            <p className="text-sm text-gray-600 mb-5">This hub links to all detailed tortilla guides. Select a topic to jump directly to the relevant guide page.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[
+                { label: 'Tortilla Size Chart', href: '/tortilla-size-chart', desc: 'All standard diameters — 15cm to 30cm, use cases and spec table.' },
+                { label: 'Tortilla Shelf Life', href: '/tortilla-shelf-life', desc: 'How long do tortillas last? Chilled, ambient and frozen formats.' },
+                { label: 'Tortilla Calories', href: '/tortilla-calories', desc: 'Calories by size and type. Full nutrition facts for flour and corn.' },
+                { label: 'How to Store Tortillas', href: '/how-to-store-tortillas', desc: 'Ambient, fridge and freezer storage guide for foodservice and retail.' },
+                { label: 'Manufacturing Process', href: '/tortilla-manufacturing-process', desc: '10-step guide to how tortillas are made at industrial scale.' },
+                { label: 'Wholesale Tortilla Supplier', href: '/tortilla-supplier', desc: 'BRCGS-certified manufacturer for container and pallet supply.' },
+              ].map((card) => (
+                <Link
+                  key={card.href}
+                  href={card.href}
+                  className="group flex flex-col bg-white border border-gray-200 rounded-xl p-4 hover:border-[#2d7a3a] hover:shadow-sm transition-all"
+                >
+                  <span className="text-sm font-semibold text-gray-900 group-hover:text-[#2d7a3a] transition-colors mb-1">{card.label}</span>
+                  <span className="text-xs text-gray-500 leading-relaxed">{card.desc}</span>
+                  <span className="mt-2 text-xs font-semibold text-[#2d7a3a] opacity-0 group-hover:opacity-100 transition-opacity">Read guide →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="lg:grid lg:grid-cols-[260px_1fr] lg:gap-12">
 
             {/* Table of contents sidebar */}
@@ -155,6 +182,24 @@ export default function TortillaGuidePage() {
                     ))}
                   </ol>
                 </nav>
+                <div className="mt-6 pt-5 border-t border-gray-200">
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">Related Guides</p>
+                  <ul className="space-y-2">
+                    {[
+                      { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+                      { label: 'Tortilla Shelf Life', href: '/tortilla-shelf-life' },
+                      { label: 'Tortilla Calories', href: '/tortilla-calories' },
+                      { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
+                      { label: 'Manufacturing Process', href: '/tortilla-manufacturing-process' },
+                    ].map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href} className="text-xs text-gray-500 hover:text-[#2d7a3a] transition-colors">
+                          {link.label} →
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </aside>
 

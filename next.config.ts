@@ -1,6 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      // Alias shorter slugs to canonical guide pages
+      {
+        source: '/tortilla-sizes',
+        destination: '/tortilla-size-chart',
+        permanent: true,
+      },
+      {
+        source: '/tortilla-manufacturing',
+        destination: '/tortilla-manufacturing-process',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -7,6 +7,12 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://tortillasupplier.com/sitemap.xml',
+    sitemap: [
+      'https://tortillasupplier.com/sitemap.xml',
+      'https://tortillasupplier.com/sitemap-products.xml',
+      'https://tortillasupplier.com/sitemap-guides.xml',
+      'https://tortillasupplier.com/sitemap-categories.xml',
+      'https://tortillasupplier.com/sitemap-blog.xml',
+    ],
   };
 }

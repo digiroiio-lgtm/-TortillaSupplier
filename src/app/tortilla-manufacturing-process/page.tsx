@@ -144,7 +144,7 @@ export default function TortillaManufacturingProcessPage() {
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },
-          { label: 'Our Factory', href: '/our-factory' },
+          { label: 'Tortilla Guide', href: '/tortilla-guide' },
           { label: 'Manufacturing Process' },
         ]}
       />
