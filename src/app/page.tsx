@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import StatsStrip from '@/components/StatsStrip';
@@ -8,6 +7,7 @@ import CertificationCard from '@/components/CertificationCard';
 import RegionCTASection from '@/components/RegionCTASection';
 import ContainerSupplySection from '@/components/ContainerSupplySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import ProductCategoriesSection from '@/components/ProductCategoriesSection';
 import DistributorTrustSection from '@/components/DistributorTrustSection';
 import { certifications } from '@/data/certifications';
 
@@ -22,20 +22,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.tortillasupplier.com' },
 };
 
-const categories = [
-  { title: 'Flour Tortillas', description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.', href: '/flour-tortilla-supplier', image: '/images/categories/flour-tortilla.svg' },
-  { title: 'Corn Tortillas', description: 'Traditional corn tortillas for authentic preparations and retail packs.', href: '/corn-tortilla-supplier', image: '/images/categories/corn-tortilla.svg' },
-  { title: 'Frozen Tortillas', description: 'Extended shelf life frozen tortillas for export and long-haul distribution.', href: '/frozen-tortilla-supplier', image: '/images/categories/frozen-tortilla.svg' },
-  { title: 'Wrap Flatbreads', description: 'Premium wrap flatbreads for sandwich operations and foodservice.', href: '/wrap-bread-supplier', image: '/images/categories/wrap-flatbread.svg' },
-  { title: 'Lavash Flatbreads', description: 'Thin lavash-style flatbreads for kebab, wrap and snack applications.', href: '/flatbread-supplier', image: '/images/categories/lavash-flatbread.svg' },
-];
-
-const foodserviceCategories = [
-  { title: 'Burrito Tortillas', description: 'Large 30cm flour tortillas for burrito wrapping — QSR and foodservice supply.', href: '/burrito-tortilla-supplier' },
-  { title: 'Wrap Tortillas', description: 'Mid-size wrap tortillas for sandwich wraps, paninis and cold food-to-go applications.', href: '/wrap-tortilla-supplier' },
-  { title: 'Street Taco Tortillas', description: 'Small corn and flour tortillas for authentic street taco and taqueria operations.', href: '/street-taco-tortilla-wholesale' },
-  { title: 'Frying Tortillas', description: 'Tostada and frying-grade corn tortillas suitable for deep fry and flat-grill applications.', href: '/frying-tortilla-supplier' },
-];
 
 const benefits = [
   {
@@ -97,60 +83,7 @@ export default function HomePage() {
       <ContainerSupplySection />
 
       {/* Product Categories */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-            <div>
-              <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-2">Product Range</p>
-              <h2 className="text-3xl font-bold text-gray-900 tracking-tight">Product Categories</h2>
-            </div>
-            <Link href="/products" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors whitespace-nowrap">
-              View all products →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {categories.map((cat) => (
-              <Link
-                key={cat.href}
-                href={cat.href}
-                className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:border-gray-200 transition-all group"
-              >
-                <div className="relative w-full h-36 overflow-hidden bg-gray-50">
-                  <Image
-                    src={cat.image}
-                    alt={cat.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-1 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{cat.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Foodservice row */}
-          <div className="mt-12">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Foodservice Formats</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {foodserviceCategories.map((cat) => (
-                <Link
-                  key={cat.href}
-                  href={cat.href}
-                  className="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md hover:border-gray-200 transition-all group"
-                >
-                  <h3 className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed mb-3">{cat.description}</p>
-                  <span className="text-xs font-medium text-[#2d7a3a]">View supply options →</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductCategoriesSection />
 
       {/* Why Choose Us — feature grid */}
       <section className="py-24 bg-white">
