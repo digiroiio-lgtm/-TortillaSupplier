@@ -27,7 +27,7 @@ export default function RegionCTASection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-12">
           <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Export Markets</p>
-          <h2 className="text-3xl font-bold text-gray-900 tracking-tight">We supply your market</h2>
+          <h2 className="text-3xl font-bold text-gray-900 tracking-tight">Global Distribution Markets</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {regions.map((region) => (

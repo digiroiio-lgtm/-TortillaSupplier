@@ -93,7 +93,7 @@ function Avatar({ name }: { name: string }) {
 
 export default function TestimonialsSection() {
   const featured = testimonials.slice(0, 3);
-  const secondary = testimonials.slice(3, 6);
+  const secondary = testimonials.slice(3, 5);
 
   return (
     <section className="py-24 bg-white">
@@ -166,8 +166,8 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Second row — 3 cards, slightly muted */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/* Second row — 2 cards, slightly muted */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {secondary.map((t) => (
             <div
               key={t.name}

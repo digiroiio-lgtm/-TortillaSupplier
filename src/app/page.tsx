@@ -24,39 +24,6 @@ export const metadata: Metadata = {
 };
 
 
-const benefits = [
-  {
-    icon: '📦',
-    title: 'Export Documentation',
-    description: 'Health certificates, certificates of origin and allergen declarations for every shipment.',
-  },
-  {
-    icon: '🏷️',
-    title: 'Private Label',
-    description: 'Custom branding, packaging and label design available across all product lines.',
-  },
-  {
-    icon: '❄️',
-    title: 'Cold Chain Logistics',
-    description: 'Chilled and frozen logistics for UK, European and international destinations.',
-  },
-  {
-    icon: '📐',
-    title: 'Flexible MOQ',
-    description: 'MOQ designed for importers, distributors and foodservice operators of any scale.',
-  },
-  {
-    icon: '✅',
-    title: 'Quality Certified',
-    description: 'BRCGS, IFS, ISO 22000 and HACCP certified production facility.',
-  },
-  {
-    icon: '🌙',
-    title: 'Halal Certified',
-    description: 'Halal-certified production available across all product categories.',
-  },
-];
-
 
 export default function HomePage() {
   return (
@@ -64,12 +31,11 @@ export default function HomePage() {
       {/* Hero */}
       <HeroSection
         eyebrow="Container supply for distributors & foodservice"
-        title="Wholesale Tortilla & Flatbread Supplier"
-        subtitle="Frozen flour, corn and specialty tortillas. Private label available, EU & UK certified, export ready from 20ft container."
+        title="Global Tortilla Supplier for Distributors & Food Importers"
+        subtitle="BRCGS-certified flour, corn and frozen tortillas. Private label and container supply for UK, USA and European distributors."
         badges={['BRCGS / IFS Certified', 'Private Label Available', '40ft Container Supply', 'EU & UK Export Ready']}
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
-        secondaryCTA={{ label: 'Request Samples', href: '/contact' }}
-        ctaNote="Sample delivery in 3–5 days (EU & UK)"
+        secondaryCTA={{ label: 'Request Container Quote', href: '/contact' }}
         galleryImages={[
           '/images/IMG_3011.jpg',
           '/images/IMG_3012.jpg',
@@ -89,42 +55,21 @@ export default function HomePage() {
       {/* Stats */}
       <StatsStrip />
 
+      {/* Distributor countries — social proof */}
+      <DistributorTrustSection />
+
       {/* Container / Features grid */}
       <ContainerSupplySection />
 
       {/* Product Categories */}
       <ProductCategoriesSection />
 
-      {/* Why Choose Us — feature grid */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Why Choose Us</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-4">
-              Built for serious B2B buyers
-            </h2>
-            <p className="text-base text-gray-500 leading-relaxed">
-              Everything you need to source wholesale tortillas reliably — from certified production to export-ready documentation.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((b) => (
-              <div key={b.title} className="group p-6 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all bg-white">
-                <div className="text-2xl mb-3">{b.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2 text-sm">{b.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{b.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Product Specs */}
+      {/* Foodservice Specs */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Specifications</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Product Specifications</h2>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Foodservice Specifications</h2>
             <p className="text-base text-gray-500">Full specification overview — diameter, weight, pack size and pallet quantities for our entire range.</p>
           </div>
           <ProductSpecTable />
@@ -143,15 +88,12 @@ export default function HomePage() {
       {/* How It Works */}
       <HowItWorksSection />
 
-      {/* Testimonials */}
-      <TestimonialsSection />
-
-      {/* Certifications */}
+      {/* Food Safety & Export Certifications */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Food Safety</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Certifications & Documentation</h2>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Food Safety &amp; Export Certifications</h2>
             <p className="text-base text-gray-500">Export documentation and quality certifications available on request for all product lines.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -162,7 +104,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      {/* Global Distribution Markets */}
+      <RegionCTASection />
+
+      {/* Final CTA */}
       <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 pointer-events-none"
@@ -170,8 +118,8 @@ export default function HomePage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-4">Get Started</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4 max-w-2xl mx-auto">
-            Ready to source wholesale tortillas?
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4 max-w-3xl mx-auto">
+            Ready to Source Tortillas for Your Distribution Network?
           </h2>
           <p className="text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
             Send us your requirements and our export team will respond within 1–2 business days with pricing and sample availability.
@@ -181,6 +129,12 @@ export default function HomePage() {
               href="/contact"
               className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
             >
+              Request Distributor Pricing
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-[#2d7a3a] text-white font-semibold rounded-lg hover:bg-[#245f2d] transition-colors text-sm"
+            >
               Request Container Quote
             </Link>
             <a
@@ -189,17 +143,11 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 transition-colors text-sm"
             >
-              WhatsApp Us
+              WhatsApp Sales
             </a>
           </div>
         </div>
       </section>
-
-      {/* Export Markets */}
-      <RegionCTASection />
-
-      {/* Distributor Trust */}
-      <DistributorTrustSection />
     </>
   );
 }
