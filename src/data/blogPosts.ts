@@ -292,6 +292,262 @@ const blogPosts: BlogPost[] = [
       'As global dining habits evolve, the role of tortillas in food distribution will likely become even more significant. Distributors who stock a well-rounded tortilla range — across sizes, formats, and private label options — are best positioned to capitalise on continued market growth.',
     tags: ['tortilla wholesale supplier', 'bulk tortilla supplier', 'tortilla distributor', 'wholesale tortilla'],
   },
+  {
+    slug: 'tortilla-supplier-guide',
+    title: 'The Complete Tortilla Supplier Guide for Wholesale Buyers',
+    excerpt:
+      'Everything wholesale buyers, distributors and food importers need to know before choosing a tortilla supplier — from certifications and formats to container pricing and lead times.',
+    metaTitle: 'Tortilla Supplier Guide for Wholesale Buyers | TortillaSupplier',
+    metaDescription:
+      'A complete guide for wholesale tortilla buyers covering supplier certifications, product formats, container shipment logistics, private label options and what to ask before placing an order.',
+    publishDate: '2025-06-01',
+    readTime: 8,
+    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    sections: [
+      {
+        heading: 'What Makes a Tortilla Supplier Reliable?',
+        body: 'Not all tortilla manufacturers are built for export. A reliable wholesale supplier must combine food safety certifications, stable production capacity, and export experience. Before requesting pricing, buyers should verify the following credentials:',
+        listItems: [
+          'BRCGS Global Food Safety Standard (Grade A or AA)',
+          'IFS Food Certification',
+          'ISO 22000 Food Safety Management System',
+          'HACCP production controls',
+          'Halal certification where required by target markets',
+        ],
+      },
+      {
+        heading: 'Understanding Product Formats',
+        body: 'Tortilla suppliers typically offer a range of formats designed for different end uses. The most common categories for wholesale buyers are flour tortillas, corn tortillas, and flatbreads. Within each category, size matters. A 30 cm flour tortilla is suited to burrito formats, a 25 cm is ideal for wraps, and a 15 cm corn tortilla is the standard for authentic street tacos. Buyers sourcing for multiple restaurant concepts should consider requesting mixed-pallet options to test SKUs before committing to full container orders.',
+      },
+      {
+        heading: 'Frozen vs Chilled Supply',
+        body: 'For international buyers, frozen tortillas are almost always the preferred format. Chilled tortillas typically have a shelf life of 14–21 days, which is insufficient for cross-continental shipping. Frozen tortillas stored at −18°C can achieve shelf life of 12 months or more, making them compatible with global cold-chain logistics. Importers should confirm that suppliers use IQF (individually quick frozen) or standard tray-pack frozen formats based on their end customer requirements.',
+      },
+      {
+        heading: 'Container Pricing and Minimum Orders',
+        body: 'Most wholesale tortilla suppliers price in container quantities — typically 20-foot or 40-foot refrigerated containers. Minimum order quantities (MOQs) vary by supplier but generally start at 2–5 pallets for mixed orders and scale up for dedicated SKU shipments. Buyers should request full container pricing that includes product cost, cold chain packaging, export documentation, and incoterms (typically EXW, FOB, or CIF).',
+      },
+      {
+        heading: 'Export Documentation',
+        body: 'A professional export-ready supplier should provide a complete documentation package with every shipment. This typically includes:',
+        listItems: [
+          'Commercial invoice and packing list',
+          'Health certificate issued by relevant authorities',
+          'Certificate of origin',
+          'Allergen declaration and technical datasheet',
+          'Phytosanitary certificate where required',
+        ],
+      },
+      {
+        heading: 'Lead Times and Production Planning',
+        body: 'Lead times for wholesale tortilla orders typically range from 2 to 6 weeks depending on production schedule, packaging requirements, and shipping route. Private label orders with custom packaging generally require 4–8 weeks for the first run due to artwork approval and print setup. Repeat orders usually move faster. Buyers should factor in seasonal demand peaks — particularly in Q4 — when planning supply contracts.',
+      },
+    ],
+    conclusion:
+      'Choosing the right tortilla supplier requires evaluating more than just price. Certifications, export experience, product range, and documentation standards all determine whether a supplier can reliably support your distribution network. Request samples, verify credentials, and always ask for a full export documentation sample before placing a first order.',
+    tags: ['tortilla supplier', 'wholesale tortilla', 'bulk tortilla supplier', 'tortilla wholesale supplier'],
+  },
+  {
+    slug: 'private-label-tortillas',
+    title: 'Private Label Tortillas: A Guide for Retailers and Distributors',
+    excerpt:
+      'Private label tortillas allow retailers and distributors to build their own brand while sourcing from established manufacturing facilities. Here is what you need to know before launching a private label programme.',
+    metaTitle: 'Private Label Tortillas for Retailers & Distributors | TortillaSupplier',
+    metaDescription:
+      'Learn how private label tortilla programmes work — from MOQs and packaging design to certifications and retailer compliance. A complete guide for supermarket buyers and food distributors.',
+    publishDate: '2025-06-15',
+    readTime: 6,
+    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    sections: [
+      {
+        heading: 'What Is a Private Label Tortilla Programme?',
+        body: "A private label programme allows a retailer, distributor, or foodservice buyer to sell tortillas under their own brand while the product itself is manufactured by a specialist tortilla producer. The buyer controls the brand identity — including packaging design, product name, and label copy — while the manufacturer handles production, certification, and export logistics. This model is widely used by supermarket chains across Europe and North America who want to offer own-brand tortillas without investing in production infrastructure.",
+      },
+      {
+        heading: 'Benefits for Retailers and Distributors',
+        body: 'Private label tortillas offer several commercial advantages over stocking a third-party brand:',
+        listItems: [
+          'Higher margin potential compared to branded products',
+          'Full control over packaging, positioning, and price point',
+          'Exclusivity in your distribution territory',
+          'Flexibility to adapt product specifications for your market',
+          'Stronger brand loyalty and repeat purchase rates',
+        ],
+      },
+      {
+        heading: 'Product Range Available for Private Label',
+        body: 'Most private label tortilla manufacturers offer the full product range under contract production, including:',
+        listItems: [
+          'Flour tortillas in all major sizes (20 cm, 25 cm, 30 cm)',
+          'Corn tortillas (15 cm street size, 20 cm)',
+          'Frozen flour and corn tortillas',
+          'Flatbreads and wrap formats',
+          'Gluten-free and whole wheat variants (subject to facility capability)',
+        ],
+      },
+      {
+        heading: 'Minimum Order Quantities',
+        body: 'Private label programmes typically require higher minimum order quantities than standard wholesale orders due to the costs associated with custom packaging production. MOQs generally start at one full pallet per SKU for repeat orders, but the initial packaging setup often requires a minimum print run that translates to 2–5 pallets. Buyers should discuss MOQs early in the process to ensure the programme is commercially viable at their expected volumes.',
+      },
+      {
+        heading: 'Packaging and Label Compliance',
+        body: 'Private label packaging must comply with food labelling regulations in the target market. In the UK and EU, this includes mandatory allergen declarations, nutritional information per 100g, country of origin, and net weight. Manufacturers with export experience typically provide guidance on label compliance and can supply a technical template to assist buyers with artwork development. Allow 2–4 weeks for artwork approval and print production before the first order ships.',
+      },
+      {
+        heading: 'Certifications and Retailer Compliance',
+        body: 'Major supermarket chains often require private label suppliers to hold specific food safety certifications — most commonly BRCGS AA or IFS Higher Level. Before committing to a private label contract, buyers should confirm that the manufacturing facility holds the certifications required by their retail customer. Certification documentation should be provided as part of the supplier onboarding process.',
+      },
+    ],
+    conclusion:
+      'Private label tortillas provide retailers and distributors with a scalable, high-margin product category that builds brand equity and consumer loyalty. The key to a successful launch is choosing a certified manufacturer with export experience, transparent documentation practices, and the flexibility to support your packaging and compliance requirements.',
+    tags: ['private label tortilla manufacturer', 'bulk tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier'],
+  },
+  {
+    slug: 'importing-tortillas-uk',
+    title: 'Importing Tortillas to the UK: A Practical Guide for Buyers',
+    excerpt:
+      'The UK is one of the fastest-growing markets for tortillas and wraps. Here is a practical guide for importers and distributors looking to source tortillas from international suppliers.',
+    metaTitle: 'Importing Tortillas to the UK: Buyer\'s Guide | TortillaSupplier',
+    metaDescription:
+      'A practical guide for UK importers and distributors sourcing tortillas internationally — covering customs, cold chain, food safety certifications, and supplier selection.',
+    publishDate: '2025-07-01',
+    readTime: 6,
+    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    sections: [
+      {
+        heading: 'The UK Tortilla Market',
+        body: "The United Kingdom is one of the world's largest consumers of tortillas outside North America. Wraps, burritos, and tacos have become mainstream meal formats in UK foodservice, retail, and meal-kit markets. Demand is driven by major QSR chains, supermarket own-label ranges, and the rapid growth of Mexican and Tex-Mex cuisine across the country. For international suppliers, the UK represents a high-volume, stable market with strong import infrastructure.",
+      },
+      {
+        heading: 'Import Requirements and Customs',
+        body: 'Since Brexit, importing food products into the UK requires compliance with specific customs and food safety requirements separate from those of the European Union. Key documentation requirements for tortilla imports include:',
+        listItems: [
+          'Commercial invoice and packing list',
+          'Certificate of origin (issued in the country of manufacture)',
+          'Health certificate for food products',
+          'Allergen declaration and product specification sheet',
+          'UK customs commodity code (typically 1905.90 for bakery products)',
+        ],
+      },
+      {
+        heading: 'Cold Chain and Storage Requirements',
+        body: 'Frozen tortilla imports must maintain an unbroken cold chain throughout transit. Shipments arriving at UK ports are subject to customs inspection, and importers must ensure that products remain at −18°C or below throughout. Working with a logistics provider that specialises in temperature-controlled imports is strongly recommended. Upon arrival, products should be transferred directly to approved cold storage facilities.',
+      },
+      {
+        heading: 'Food Safety Certifications for UK Buyers',
+        body: 'UK retailers and major foodservice buyers typically require suppliers to hold BRCGS certification — the standard most widely recognised by British supermarkets. Importers sourcing for major UK retail chains should confirm that their supplier holds a current BRCGS certificate and request a copy of the most recent audit report. IFS and ISO 22000 certifications are also recognised but may not satisfy all UK retailer requirements independently.',
+      },
+      {
+        heading: 'Selecting a Supplier for UK Import',
+        body: 'When evaluating tortilla suppliers for the UK market, buyers should consider:',
+        listItems: [
+          'BRCGS or equivalent food safety certification',
+          'Export track record to the UK or EU markets',
+          'Experience with UK labelling and allergen compliance',
+          'Frozen supply capability with reliable cold-chain logistics',
+          'Private label capability for own-brand programmes',
+        ],
+      },
+    ],
+    conclusion:
+      'Importing tortillas to the UK requires careful attention to customs documentation, cold-chain logistics, and food safety certifications. Working with an experienced exporter who understands UK import requirements significantly reduces compliance risk and ensures reliable supply to your distribution network.',
+    tags: ['tortilla supplier', 'frozen tortilla supplier', 'bulk tortilla supplier', 'tortilla distributor'],
+  },
+  {
+    slug: 'frozen-tortilla-supply-chain',
+    title: 'How the Frozen Tortilla Supply Chain Works',
+    excerpt:
+      'From production line to restaurant kitchen, frozen tortillas travel through a complex logistics network. Understanding this supply chain helps distributors optimise procurement and reduce risk.',
+    metaTitle: 'How the Frozen Tortilla Supply Chain Works | TortillaSupplier',
+    metaDescription:
+      'A behind-the-scenes look at the frozen tortilla supply chain — from manufacturing and cold-chain logistics to warehouse storage and foodservice delivery.',
+    publishDate: '2025-07-15',
+    readTime: 5,
+    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    sections: [
+      {
+        heading: 'Step 1: Production and Freezing',
+        body: 'Frozen tortillas begin life on industrial production lines where automated mixing, pressing, baking, and cooling equipment processes thousands of units per hour. Immediately after baking, tortillas pass through rapid blast-freezing tunnels that drop the product temperature to −18°C or below within minutes. This flash-freezing process locks in texture, flavour, and structural integrity, ensuring the tortilla performs identically to a fresh product once thawed.',
+      },
+      {
+        heading: 'Step 2: Packaging and Palletisation',
+        body: 'After freezing, tortillas are counted and packed into retail or foodservice bags. These bags are then placed into corrugated cases and stacked onto pallets. Cold storage pallets are typically stretch-wrapped and labelled with batch codes, production dates, best-before dates, and product specifications. Export orders require additional labelling to comply with destination country requirements.',
+      },
+      {
+        heading: 'Step 3: Cold Storage at Origin',
+        body: 'Palletised product is held in cold storage at the production facility until the shipment is ready to depart. Temperature logs are maintained throughout this period to ensure compliance with food safety requirements. For international orders, product may be held in cold storage for several days before loading into a refrigerated shipping container.',
+      },
+      {
+        heading: 'Step 4: Container Loading and Sea Freight',
+        body: 'Frozen tortillas are loaded into refrigerated shipping containers — known as reefers — set to maintain −18°C. Container loads typically range from 18 to 24 pallets depending on product weight and volume. Transit times vary by destination: Europe typically takes 3–10 days from Mediterranean ports, while the UK and North America may require 10–20 days depending on origin.',
+      },
+      {
+        heading: 'Step 5: Port Clearance and Delivery',
+        body: 'Upon arrival at the destination port, containers pass through customs clearance. Temperature logs from the container are reviewed to confirm cold-chain integrity throughout transit. Once cleared, product is delivered to the importer\'s cold store or directly to distribution centres, where it is held until picked and dispatched to end customers.',
+      },
+      {
+        heading: 'Optimising Your Frozen Tortilla Supply Chain',
+        body: 'Distributors can reduce supply chain risk by:',
+        listItems: [
+          'Working with suppliers who provide real-time temperature monitoring data',
+          'Maintaining a safety stock buffer of 4–8 weeks at the warehouse',
+          'Planning container orders on a rolling 6–8 week schedule',
+          'Partnering with a freight forwarder experienced in temperature-controlled imports',
+        ],
+      },
+    ],
+    conclusion:
+      'The frozen tortilla supply chain spans multiple stages and requires close coordination between manufacturer, logistics providers, and the importing distributor. Understanding each stage helps buyers make better procurement decisions, reduce lead times, and build a more resilient supply network.',
+    tags: ['frozen tortilla supplier', 'frozen tortilla wholesale', 'bulk tortilla supplier', 'tortilla distributor'],
+  },
+  {
+    slug: 'tortilla-market-growth',
+    title: 'Tortilla Market Growth: Why the Industry Shows No Signs of Slowing',
+    excerpt:
+      'The global tortilla market has grown consistently for over a decade and shows no signs of slowing. Here is what is driving demand and what it means for distributors and importers.',
+    metaTitle: 'Tortilla Market Growth: Global Industry Trends | TortillaSupplier',
+    metaDescription:
+      'An analysis of tortilla market growth drivers — from street food culture and QSR expansion to private label retail and frozen distribution trends across Europe and Asia.',
+    publishDate: '2025-08-01',
+    readTime: 6,
+    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    sections: [
+      {
+        heading: 'A Market That Keeps Growing',
+        body: 'The global tortilla and flatbread market has expanded significantly over the past decade. Growth has been driven by a combination of factors including the global rise of Mexican cuisine, the popularity of handheld food formats, and the widespread adoption of wraps and burritos across European and Asian foodservice markets. Industry estimates consistently place the tortilla market among the fastest-growing categories within the broader bakery sector.',
+      },
+      {
+        heading: 'QSR and Casual Dining Expansion',
+        body: 'One of the most significant drivers of tortilla demand has been the rapid international expansion of quick-service restaurant chains built around Mexican and Tex-Mex concepts. Burrito chains, taco restaurants, and wrap-focused QSR operators have opened thousands of locations across Europe, the Middle East, and Asia over the past decade. Each new restaurant location represents a steady, recurring demand for tortillas at scale.',
+      },
+      {
+        heading: 'Retail Growth and Private Label',
+        body: 'Supermarkets have become major consumers of tortillas — not just as a category managed by branded manufacturers, but through their own private label programmes. Retailers across the UK, Germany, France, and the Netherlands have expanded their own-brand tortilla ranges in response to consumer demand. This has created significant opportunities for private label manufacturers capable of supplying at retail volume and quality standards.',
+      },
+      {
+        heading: 'The Street Food Effect',
+        body: 'Street food culture has played a significant role in normalising tortillas in markets where they were once considered a niche product. Food markets, pop-up restaurants, and street food festivals have introduced millions of consumers to tacos, burritos, and wraps across Europe and Asia. As these consumers return to supermarkets and casual dining restaurants, they bring demand for the same formats with them.',
+      },
+      {
+        heading: 'Health and Flexitarian Trends',
+        body: 'The shift towards flexitarian and plant-based diets has also supported tortilla growth. Tortillas work well as a carrier for vegetarian and vegan fillings — beans, grilled vegetables, plant proteins — making them a natural fit for the growing segment of consumers reducing meat consumption. Whole wheat and lower-calorie tortilla variants have further expanded the addressable market.',
+      },
+      {
+        heading: 'What This Means for Distributors',
+        body: 'For food distributors, the tortilla market presents a compelling opportunity:',
+        listItems: [
+          'Consistent and growing demand across multiple customer segments',
+          'Low product complexity — a small SKU range can cover most foodservice needs',
+          'Frozen format enables efficient logistics and inventory management',
+          'Strong private label potential for retail accounts',
+          'Expanding customer base as global dining habits continue to evolve',
+        ],
+      },
+    ],
+    conclusion:
+      'The tortilla market is not a trend — it is a structural shift in global eating habits. For distributors and importers, building a strong tortilla supply programme now positions them ahead of continued demand growth across foodservice, retail, and private label channels.',
+    tags: ['tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier', 'bulk tortilla supplier'],
+  },
 ];
 
 export default blogPosts;

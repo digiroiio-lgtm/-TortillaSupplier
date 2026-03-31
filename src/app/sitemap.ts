@@ -44,6 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tortilla-supplier-usa`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/tortilla-supplier-europe`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/frozen-tortilla-supplier`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
+    // Company pages
+    { url: `${BASE_URL}/about`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/our-factory`, lastModified: LAST_MODIFIED, priority: 0.7, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/certifications`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/export-program`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    // Legal pages
+    { url: `${BASE_URL}/privacy-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/terms-of-service`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/cookie-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({

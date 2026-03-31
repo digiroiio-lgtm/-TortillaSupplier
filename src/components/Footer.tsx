@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import blogPosts from '@/data/blogPosts';
 
 const productLinks = [
   { label: 'Flour Tortilla 30cm', href: '/flour-tortilla-30cm-12-inch' },
@@ -45,6 +44,37 @@ const regionLinks = [
   { label: 'Supplier Italy', href: '/tortilla-supplier-italy' },
 ];
 
+const commercialLinks = [
+  { label: 'Tortilla Manufacturer', href: '/tortilla-supplier' },
+  { label: 'Mexican Tortilla Supplier', href: '/corn-tortilla-supplier' },
+  { label: 'Flatbread Manufacturer', href: '/flatbread-supplier' },
+  { label: 'Tortilla Factory', href: '/our-factory' },
+  { label: 'Tortilla Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
+  { label: 'Frozen Tortilla Wholesale', href: '/frozen-tortilla-supplier' },
+];
+
+const companyLinks = [
+  { label: 'About TortillaSupplier', href: '/about' },
+  { label: 'Our Factory', href: '/our-factory' },
+  { label: 'Food Safety Certifications', href: '/certifications' },
+  { label: 'Export Programme', href: '/export-program' },
+];
+
+const resourceLinks = [
+  { label: 'All Articles', href: '/blog' },
+  { label: 'Tortilla Supplier Guide', href: '/blog/tortilla-supplier-guide' },
+  { label: 'Private Label Tortillas', href: '/blog/private-label-tortillas' },
+  { label: 'Importing Tortillas to UK', href: '/blog/importing-tortillas-uk' },
+  { label: 'Frozen Supply Chain', href: '/blog/frozen-tortilla-supply-chain' },
+  { label: 'Tortilla Market Growth', href: '/blog/tortilla-market-growth' },
+];
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Service', href: '/terms-of-service' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
+];
+
 function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
@@ -63,17 +93,44 @@ function FooterColumn({ title, links }: { title: string; links: { label: string;
 }
 
 export default function Footer() {
-  const blogLinks = [
-    { label: 'All Articles', href: '/blog' },
-    ...blogPosts.map((p) => ({ label: p.title, href: `/blog/${p.slug}` })),
-  ];
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* CTA strip */}
+        <div className="py-10 border-b border-gray-100">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+            <div>
+              <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-1">Ready to Order?</p>
+              <p className="text-sm font-bold text-gray-900">Wholesale tortillas for distributors and importers</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="px-4 py-2 bg-[#2d7a3a] text-white font-semibold rounded-lg hover:bg-[#245f2d] transition-colors text-sm"
+              >
+                Request Distributor Pricing
+              </Link>
+              <Link
+                href="/contact"
+                className="px-4 py-2 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
+              >
+                Request Samples
+              </Link>
+              <Link
+                href="/contact"
+                className="px-4 py-2 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
+              >
+                Contact Export Team
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Main grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 py-16">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-4 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
               <span className="w-6 h-6 bg-[#2d7a3a] rounded-md flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-xs">T</span>
@@ -81,7 +138,9 @@ export default function Footer() {
               <span className="text-sm font-bold text-gray-900">TortillaSupplier</span>
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-5 max-w-xs">
-              Wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, BRCGS certified.
+              Wholesale tortilla supplier for distributors, importers and foodservice buyers across the UK,
+              USA and European markets. BRCGS-certified flour, corn and frozen tortillas available for
+              private label and container supply.
             </p>
             <div className="space-y-1.5">
               <a href="mailto:info@tortillasupplier.com" className="block text-sm text-gray-500 hover:text-gray-900 transition-colors">
@@ -101,7 +160,14 @@ export default function Footer() {
           <FooterColumn title="Suppliers" links={supplierLinks} />
           <FooterColumn title="Wholesale" links={wholesaleLinks} />
           <FooterColumn title="Regions" links={regionLinks} />
-          <FooterColumn title="Blog" links={blogLinks} />
+        </div>
+
+        {/* Secondary grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
+          <FooterColumn title="Company" links={companyLinks} />
+          <FooterColumn title="Resources" links={resourceLinks} />
+          <FooterColumn title="Commercial" links={commercialLinks} />
+          <FooterColumn title="Legal" links={legalLinks} />
         </div>
 
         {/* Bottom bar */}
