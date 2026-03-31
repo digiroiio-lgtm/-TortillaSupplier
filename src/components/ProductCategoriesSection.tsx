@@ -99,7 +99,8 @@ const featuredCards = [
     title: 'Flour Tortillas',
     subtitle: 'Wholesale · Export Grade · Private Label',
     description: 'Standard and large-format flour tortillas for foodservice, QSR and retail.',
-    image: '/images/img325.jpg',
+    image: '/images/img106.jpg',
+    alt: 'Wholesale flour tortillas production — large-format flour tortillas for foodservice, QSR and private label supply',
     imageBg: 'bg-[#f5f0e8]',
     href: '/flour-tortilla-supplier',
   },
@@ -109,7 +110,8 @@ const featuredCards = [
     title: 'Corn Tortillas',
     subtitle: 'Authentic · Wholesale · Export Grade',
     description: 'Traditional corn tortillas for authentic preparations and retail packs.',
-    image: '/images/img439.jpg',
+    image: '/images/img37.jpg',
+    alt: 'Traditional corn tortillas wholesale supplier — authentic Mexican corn tortillas for export and foodservice',
     imageBg: 'bg-[#f3ede0]',
     href: '/corn-tortilla-supplier',
   },
@@ -120,6 +122,7 @@ const featuredCards = [
     subtitle: 'Extended Shelf Life · Export Ready · -18°C',
     description: 'Extended shelf life frozen tortillas for export and long-haul distribution.',
     image: '/images/img178.jpg',
+    alt: 'Frozen tortillas export supply — extended shelf life tortillas for cold chain distribution at -18°C',
     imageBg: 'bg-[#e8f0f8]',
     href: '/frozen-tortilla-supplier',
   },
@@ -189,7 +192,7 @@ export default function ProductCategoriesSection() {
                 <div className="relative w-full h-full">
                   <Image
                     src={card.image}
-                    alt={card.title}
+                    alt={card.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 50vw, 20vw"
@@ -249,10 +252,10 @@ export default function ProductCategoriesSection() {
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Foodservice Formats</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
-              { title: 'Burrito Tortillas', description: 'Large 30cm flour tortillas for burrito wrapping — QSR and foodservice supply.', href: '/burrito-tortilla-supplier', image: '/images/img305.jpg' },
-              { title: 'Wrap Tortillas', description: 'Mid-size wrap tortillas for sandwich wraps, paninis and cold food-to-go applications.', href: '/wrap-tortilla-supplier', image: '/images/img204.jpg' },
-              { title: 'Street Taco Tortillas', description: 'Small corn and flour tortillas for authentic street taco and taqueria operations.', href: '/street-taco-tortilla-wholesale', image: '/images/img211.jpg' },
-              { title: 'Frying Tortillas', description: 'Tostada and frying-grade corn tortillas suitable for deep fry and flat-grill applications.', href: '/frying-tortilla-supplier', image: '/images/img308.jpg' },
+              { title: 'Burrito Tortillas', alt: 'Burrito tortillas wholesale — large 30cm flour tortillas for QSR and foodservice bulk supply', description: 'Large 30cm flour tortillas for burrito wrapping — QSR and foodservice supply.', href: '/burrito-tortilla-supplier', image: '/images/img61.jpg' },
+              { title: 'Wrap Tortillas', alt: 'Wrap tortillas foodservice — mid-size flour tortillas for sandwich wraps, paninis and food-to-go', description: 'Mid-size wrap tortillas for sandwich wraps, paninis and cold food-to-go applications.', href: '/wrap-tortilla-supplier', image: '/images/img204.jpg' },
+              { title: 'Street Taco Tortillas', alt: 'Street taco tortillas wholesale — small corn and flour tortillas for authentic taqueria operations', description: 'Small corn and flour tortillas for authentic street taco and taqueria operations.', href: '/street-taco-tortilla-wholesale', image: '/images/img211.jpg' },
+              { title: 'Frying Tortillas', alt: 'Frying tortillas bulk supply — tostada-grade corn tortillas for deep fry and flat-grill applications', description: 'Tostada and frying-grade corn tortillas suitable for deep fry and flat-grill applications.', href: '/frying-tortilla-supplier', image: '/images/img272.jpg' },
             ].map((cat) => (
               <Link
                 key={cat.href}
@@ -262,7 +265,7 @@ export default function ProductCategoriesSection() {
                 <div className="relative w-full h-28 bg-gray-50">
                   <Image
                     src={cat.image}
-                    alt={cat.title}
+                    alt={cat.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

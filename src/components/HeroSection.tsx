@@ -110,7 +110,7 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
               >
                 <Image
                   src={src}
-                  alt={`Product ${i + 1}`}
+                  alt={`Tortilla wholesale product gallery — ${['flour tortillas production', 'corn tortillas export', 'burrito tortillas bulk', 'wrap tortillas supply', 'frozen tortillas cold chain', 'street taco tortillas', 'foodservice tortillas'][i] ?? 'tortilla supplier'}`}
                   fill
                   className="object-cover opacity-80"
                   sizes="(max-width: 640px) 25vw, 16vw"
