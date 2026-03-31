@@ -2,6 +2,7 @@ export interface Author {
   slug: string;
   name: string;
   jobTitle: string;
+  /** Pre-composed SEO page title (≤60 chars, absolute — not appended to layout template). */
   pageTitle: string;
   bio: string;
   expertise: string[];
