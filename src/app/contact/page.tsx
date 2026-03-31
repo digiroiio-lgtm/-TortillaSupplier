@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact | Request Wholesale Tortilla Pricing | TortillaSupplier',
     description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
-    url: 'https://www.tortillasupplier.com/contact',
+    url: 'https://tortillasupplier.com/contact',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/contact' },
+  alternates: { canonical: 'https://tortillasupplier.com/contact' },
 };
 
 export default function ContactPage() {

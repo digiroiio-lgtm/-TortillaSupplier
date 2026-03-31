@@ -3,7 +3,7 @@ import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 const LAST_MODIFIED = new Date('2025-01-01');
 
 // Pillar pages get boosted priority; long-tail support/intent pages get 0.7

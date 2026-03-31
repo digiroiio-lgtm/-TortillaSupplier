@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 import JsonLd from '@/components/JsonLd';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

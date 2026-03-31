@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blogPosts';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
   title: { absolute: 'Tortilla Blog | Wholesale & Import Guides | TortillaSupplier' },

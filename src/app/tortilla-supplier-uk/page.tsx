@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tortilla Supplier UK for Distributors | TortillaSupplier',
     description: 'Wholesale tortilla supplier for the UK market. Chilled and frozen flour tortillas, corn tortillas and wraps for UK foodservice and retail.',
-    url: 'https://www.tortillasupplier.com/tortilla-supplier-uk',
+    url: 'https://tortillasupplier.com/tortilla-supplier-uk',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-uk' },
+  alternates: { canonical: 'https://tortillasupplier.com/tortilla-supplier-uk' },
 };
 
 const ukFAQs = [

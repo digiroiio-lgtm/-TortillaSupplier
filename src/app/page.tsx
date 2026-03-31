@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
     description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
-    url: 'https://www.tortillasupplier.com',
+    url: 'https://tortillasupplier.com',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com' },
+  alternates: { canonical: 'https://tortillasupplier.com' },
 };
 
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://www.tortillasupplier.com/sitemap.xml',
+    sitemap: 'https://tortillasupplier.com/sitemap.xml',
   };
 }

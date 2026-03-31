@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { products } from '@/data/products';
 import Link from 'next/link';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
   title: { absolute: 'Wholesale Tortillas & Flatbreads | TortillaSupplier' },

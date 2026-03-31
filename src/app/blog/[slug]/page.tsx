@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
 import { getAuthorByName } from '@/data/authors';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 interface PageProps {
   params: Promise<{ slug: string }>;

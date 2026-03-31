@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tortilla Supplier USA for Distributors | TortillaSupplier',
     description: 'Wholesale tortilla supplier for USA buyers. Frozen flour and corn tortillas for US foodservice, QSR and private label distributors.',
-    url: 'https://www.tortillasupplier.com/tortilla-supplier-usa',
+    url: 'https://tortillasupplier.com/tortilla-supplier-usa',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-usa' },
+  alternates: { canonical: 'https://tortillasupplier.com/tortilla-supplier-usa' },
 };
 
 const usaFAQs = [

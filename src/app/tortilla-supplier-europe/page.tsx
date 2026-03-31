@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tortilla Supplier Europe for Distributors | TortillaSupplier',
     description: 'Wholesale tortilla and flatbread supplier for European distributors and importers. IFS, BRCGS and ISO 22000 certified. Export documentation included.',
-    url: 'https://www.tortillasupplier.com/tortilla-supplier-europe',
+    url: 'https://tortillasupplier.com/tortilla-supplier-europe',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-europe' },
+  alternates: { canonical: 'https://tortillasupplier.com/tortilla-supplier-europe' },
 };
 
 const europeFAQs = [

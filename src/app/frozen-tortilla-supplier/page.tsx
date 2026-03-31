@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Frozen Tortilla Supplier | Wholesale Export | TortillaSupplier',
     description: 'Wholesale frozen tortilla supplier. Frozen flour and corn tortillas, wraps and flatbreads with 12-month shelf life at -18°C.',
-    url: 'https://www.tortillasupplier.com/frozen-tortilla-supplier',
+    url: 'https://tortillasupplier.com/frozen-tortilla-supplier',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/frozen-tortilla-supplier' },
+  alternates: { canonical: 'https://tortillasupplier.com/frozen-tortilla-supplier' },
 };
 
 const frozenFAQs = [

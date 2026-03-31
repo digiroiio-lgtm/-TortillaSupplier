@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import seoPages from '@/data/seoPages';
 import SEOLandingPage from '@/components/SEOLandingPage';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
