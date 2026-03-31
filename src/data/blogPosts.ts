@@ -13,6 +13,8 @@ export interface BlogPost {
   publishDate: string;
   readTime: number;
   author: { name: string; role: string };
+  reviewer?: { name: string; role: string };
+  relatedLinks?: Array<{ label: string; href: string }>;
   sections: BlogSection[];
   conclusion: string;
   tags: string[];
@@ -27,9 +29,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'How to Choose a Reliable Tortilla Supplier for Import | TortillaSupplier',
     metaDescription:
       'A practical guide for distributors and food importers on choosing the right wholesale tortilla supplier — covering certifications, cold chain, private label, and export documentation.',
-    publishDate: '2025-03-01',
+    publishDate: '2026-03-14',
     readTime: 5,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Supplier", href: "/tortilla-supplier" },
+        { label: "Food Safety Certifications", href: "/certifications" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'Food Safety Certifications',
@@ -78,9 +86,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Frozen vs Fresh Tortillas for International Distribution | TortillaSupplier',
     metaDescription:
       'Compare frozen and chilled tortilla formats for international distribution. Learn which option suits long-haul import logistics and how distributors can minimise supply chain risk.',
-    publishDate: '2025-03-15',
+    publishDate: '2026-03-16',
     readTime: 4,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Frozen Flour Tortilla Supplier", href: "/frozen-flour-tortilla-supplier" },
+        { label: "Frozen Corn Tortilla Supplier", href: "/frozen-corn-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'Frozen Tortillas',
@@ -128,9 +142,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Tortilla Sizes and Formats for Foodservice Buyers | TortillaSupplier',
     metaDescription:
       'A guide to tortilla sizes for foodservice operators and distributors — from 15 cm street taco format to 30 cm burrito tortillas. Learn which format fits your menu and import programme.',
-    publishDate: '2025-04-01',
+    publishDate: '2026-03-19',
     readTime: 4,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: 'Flour Tortilla 25cm (10")', href: '/flour-tortilla-25cm-10-inch' },
+        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
+        { label: "Tortilla Supplier USA", href: "/tortilla-supplier-usa" },
+    ],
     sections: [
       {
         heading: '15 cm Tortillas — Street Taco Format',
@@ -173,9 +193,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'How Tortillas Became the World\'s Most Versatile Bread | TortillaSupplier',
     metaDescription:
       'Discover how tortillas evolved from an ancient Mesoamerican staple into a global food format used by restaurants, street vendors, and major chains across every continent.',
-    publishDate: '2025-04-15',
+    publishDate: '2026-03-21',
     readTime: 7,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Corn Tortilla Supplier", href: "/corn-tortilla-supplier" },
+        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'From Ancient Staple to Global Food',
@@ -226,9 +252,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Why Frozen Tortillas Are Taking Over Global Foodservice | TortillaSupplier',
     metaDescription:
       'Learn why frozen tortillas have become the preferred supply format for restaurant chains and distributors across Europe and Asia — from shelf life and consistency to cold-chain logistics.',
-    publishDate: '2025-05-01',
+    publishDate: '2026-03-24',
     readTime: 6,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
+        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'The Shelf Life Problem',
@@ -263,9 +295,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Why Every Food Distributor Now Carries Tortillas | TortillaSupplier',
     metaDescription:
       'Explore why tortillas have become an essential product category for food distributors worldwide — from street food trends and private label opportunities to logistics efficiency.',
-    publishDate: '2025-05-15',
+    publishDate: '2026-03-26',
     readTime: 6,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
+        { label: "Tortilla Distributor Supply", href: "/tortilla-distributor" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'A Menu Format That Works Everywhere',
@@ -300,9 +338,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Tortilla Supplier Guide for Wholesale Buyers | TortillaSupplier',
     metaDescription:
       'A complete guide for wholesale tortilla buyers covering supplier certifications, product formats, container shipment logistics, private label options and what to ask before placing an order.',
-    publishDate: '2025-06-01',
+    publishDate: '2026-03-28',
     readTime: 8,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Wholesale Tortilla Supplier", href: "/tortilla-supplier" },
+        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'What Makes a Tortilla Supplier Reliable?',
@@ -355,9 +399,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Private Label Tortillas for Retailers & Distributors | TortillaSupplier',
     metaDescription:
       'Learn how private label tortilla programmes work — from MOQs and packaging design to certifications and retailer compliance. A complete guide for supermarket buyers and food distributors.',
-    publishDate: '2025-06-15',
+    publishDate: '2026-03-30',
     readTime: 6,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
+        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'What Is a Private Label Tortilla Programme?',
@@ -410,9 +460,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Importing Tortillas to the UK: Buyer\'s Guide | TortillaSupplier',
     metaDescription:
       'A practical guide for UK importers and distributors sourcing tortillas internationally — covering customs, cold chain, food safety certifications, and supplier selection.',
-    publishDate: '2025-07-01',
+    publishDate: '2026-03-31',
     readTime: 6,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Importer Supply", href: "/tortilla-importer-supply" },
+        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'The UK Tortilla Market',
@@ -461,9 +517,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'How the Frozen Tortilla Supply Chain Works | TortillaSupplier',
     metaDescription:
       'A behind-the-scenes look at the frozen tortilla supply chain — from manufacturing and cold-chain logistics to warehouse storage and foodservice delivery.',
-    publishDate: '2025-07-15',
+    publishDate: '2026-03-31',
     readTime: 5,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Container Tortilla Supply", href: "/container-tortilla-supply" },
+        { label: "Frozen Tortilla Export", href: "/frozen-tortilla-export" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'Step 1: Production and Freezing',
@@ -508,9 +570,15 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Tortilla Market Growth: Global Industry Trends | TortillaSupplier',
     metaDescription:
       'An analysis of tortilla market growth drivers — from street food culture and QSR expansion to private label retail and frozen distribution trends across Europe and Asia.',
-    publishDate: '2025-08-01',
+    publishDate: '2026-03-31',
     readTime: 6,
-    author: { name: 'Export Team', role: 'TortillaSupplier' },
+    author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
+        { label: "Bulk Tortilla Supplier", href: "/bulk-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'A Market That Keeps Growing',

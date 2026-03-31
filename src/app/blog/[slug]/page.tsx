@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
+import { getAuthorByName } from '@/data/authors';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: post.metaTitle,
+    title: { absolute: post.metaTitle },
     description: post.metaDescription,
     openGraph: {
       title: post.metaTitle,
@@ -44,13 +45,21 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const authorProfile = getAuthorByName(post.author.name);
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishDate,
-    author: { '@type': 'Organization', name: post.author.name },
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      jobTitle: post.author.role,
+      worksFor: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
+      ...(authorProfile ? { url: `${BASE_URL}/author/${authorProfile.slug}`, sameAs: [authorProfile.linkedIn] } : {}),
+    },
     publisher: {
       '@type': 'Organization',
       name: 'TortillaSupplier',
@@ -101,14 +110,38 @@ export default async function BlogPostPage({ params }: PageProps) {
             <p className="text-base text-gray-500 leading-relaxed mb-6">{post.excerpt}</p>
 
             {/* Author chip */}
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                {post.author.name.charAt(0)}
+            <div className="flex flex-col gap-2.5">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                  {post.author.name.charAt(0)}
+                </div>
+                <div>
+                  {authorProfile ? (
+                    <Link
+                      href={`/author/${authorProfile.slug}`}
+                      className="text-xs font-semibold text-gray-900 leading-tight hover:text-[#2d7a3a] transition-colors"
+                    >
+                      {post.author.name}
+                    </Link>
+                  ) : (
+                    <p className="text-xs font-semibold text-gray-900 leading-tight">{post.author.name}</p>
+                  )}
+                  <p className="text-xs text-gray-400 leading-tight">{post.author.role}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs font-semibold text-gray-900 leading-tight">{post.author.name}</p>
-                <p className="text-xs text-gray-400 leading-tight">{post.author.role}</p>
-              </div>
+              {post.reviewer && (
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xs font-bold flex-shrink-0">
+                    {post.reviewer.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900 leading-tight">
+                      Reviewed by {post.reviewer.name}
+                    </p>
+                    <p className="text-xs text-gray-400 leading-tight">{post.reviewer.role}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -190,7 +223,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 Request Distributor Pricing
               </Link>
               <a
-                href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+                href="https://wa.me/905531229372?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 transition-colors text-sm"
@@ -199,6 +232,24 @@ export default async function BlogPostPage({ params }: PageProps) {
               </a>
             </div>
           </div>
+
+          {/* Related resources — internal links per post */}
+          {post.relatedLinks && post.relatedLinks.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-gray-100">
+              <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Resources</h2>
+              <div className="flex flex-wrap gap-2">
+                {post.relatedLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
 
         {/* Related posts */}

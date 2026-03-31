@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
 import { SEOPageData } from '@/data/seoPages';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 // Map slug labels to human-readable text for related links
 function slugToLabel(slug: string): string {

@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blogPosts';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: 'Tortilla Supplier Blog | Wholesale & Import Guides',
+  title: { absolute: 'Tortilla Blog | Wholesale & Import Guides | TortillaSupplier' },
   description:
     'Guides and insights for wholesale tortilla buyers, food importers and distributors. Topics include certifications, cold chain, private label and B2B sourcing.',
   openGraph: {
-    title: 'Tortilla Supplier Blog | Wholesale & Import Guides',
+    title: 'Tortilla Blog | Wholesale & Import Guides | TortillaSupplier',
     description:
       'Guides and insights for wholesale tortilla buyers, food importers and distributors.',
     url: `${BASE_URL}/blog`,

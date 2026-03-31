@@ -32,7 +32,7 @@ const seoPages: SEOPageData[] = [
   // ─── PILLAR PAGES ────────────────────────────────────────────────────────────
   {
     slug: 'tortilla-supplier',
-    metaTitle: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
+    metaTitle: 'Wholesale Tortilla Supplier for Distributors | TortillaSupplier',
     metaDescription: 'Leading tortilla supplier for wholesale buyers. Flour tortillas, corn tortillas, frozen wraps and flatbreads. Export-ready, BRCGS certified, private label available.',
     heroTitle: 'Wholesale Tortilla Supplier',
     heroSubtitle: 'Flour and corn tortillas, frozen wraps and flatbreads for global B2B buyers. Export-ready, BRCGS certified, private label manufacturing available.',
@@ -61,7 +61,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-supplier',
-    metaTitle: 'Flour Tortilla Supplier | Wholesale Flour Tortillas 8", 10", 12"',
+    metaTitle: 'Flour Tortilla Supplier for Distributors | TortillaSupplier',
     metaDescription: 'Wholesale flour tortilla supplier. 20cm, 25cm and 30cm flour tortillas for foodservice, QSR and retail. Private label available. BRCGS certified.',
     heroTitle: 'Wholesale Flour Tortilla Supplier',
     heroSubtitle: 'Flour tortillas in 20cm (8"), 25cm (10") and 30cm (12") for foodservice, QSR and retail buyers. Private label manufacturing and export documentation included.',
@@ -90,7 +90,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'corn-tortilla-supplier',
-    metaTitle: 'Corn Tortilla Supplier | Wholesale Corn Tortillas 6" & 8"',
+    metaTitle: 'Corn Tortilla Supplier for Distributors | TortillaSupplier',
     metaDescription: 'Wholesale corn tortilla supplier. 15cm (6") and 20cm (8") corn tortillas for authentic Mexican foodservice and retail. BRCGS certified, export ready.',
     heroTitle: 'Wholesale Corn Tortilla Supplier',
     heroSubtitle: 'Traditional corn tortillas in 15cm (6") and 20cm (8") for authentic foodservice and retail applications. Export-ready with full documentation.',
@@ -119,7 +119,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flatbread-supplier',
-    metaTitle: 'Flatbread Supplier | Wholesale Flatbreads for Foodservice & Retail',
+    metaTitle: 'Flatbread Supplier | Wholesale Lavash & Wraps | TortillaSupplier',
     metaDescription: 'Wholesale flatbread supplier. Lavash, wrap flatbreads and thin flatbreads in 25cm and 30cm for foodservice and retail. Export ready, BRCGS certified.',
     heroTitle: 'Wholesale Flatbread Supplier',
     heroSubtitle: 'Lavash flatbreads, wrap flatbreads and thin-style flatbreads for kebab, wrap and snack applications. Foodservice and retail wholesale supply.',
@@ -148,7 +148,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'wrap-bread-supplier',
-    metaTitle: 'Wrap Bread Supplier | Wholesale Tortilla Wraps for Foodservice',
+    metaTitle: 'Wrap Bread Supplier for Foodservice | TortillaSupplier',
     metaDescription: 'Wholesale wrap bread supplier for foodservice and QSR. Flour tortilla wraps in 25cm and 30cm. Private label available. BRCGS certified.',
     heroTitle: 'Wholesale Wrap Bread Supplier',
     heroSubtitle: 'Premium tortilla wraps and flatbread wraps for QSR, sandwich operations and foodservice. 25cm and 30cm wholesale supply with private label options.',
@@ -177,7 +177,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-wholesale',
-    metaTitle: 'Tortilla Wholesale | Bulk Tortilla Supply for Distributors',
+    metaTitle: 'Tortilla Wholesale for Importers | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supply for distributors and importers. Bulk flour and corn tortillas, frozen wraps and flatbreads. Competitive wholesale pricing, BRCGS certified.',
     heroTitle: 'Tortilla Wholesale Supply',
     heroSubtitle: 'Bulk tortilla and flatbread supply for wholesale distributors, food importers and buying groups. Competitive pricing, export-ready, full documentation.',
@@ -205,7 +205,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-distributor',
-    metaTitle: 'Tortilla Distributor | Wholesale Tortilla Distribution Supply',
+    metaTitle: 'Tortilla Distributor Supply | Wholesale | TortillaSupplier',
     metaDescription: 'Tortilla supply for distributors. Flour and corn tortillas, wraps and flatbreads for wholesale distribution. BRCGS certified, private label available.',
     heroTitle: 'Tortilla Supply for Distributors',
     heroSubtitle: 'Consistent wholesale tortilla supply for food distributors. Full product range, private label options and reliable logistics for UK, European and international distribution.',
@@ -237,7 +237,7 @@ const seoPages: SEOPageData[] = [
   // ─── FLOUR TORTILLA CLUSTER ───────────────────────────────────────────────────
   {
     slug: 'flour-tortilla-30cm-12-inch',
-    metaTitle: 'Flour Tortilla 30cm (12 inch) | Wholesale Burrito Tortilla Supply',
+    metaTitle: 'Flour Tortilla 30cm (12") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 30cm (12") flour tortillas for burrito and wrap applications. Large-format flour tortillas for QSR, foodservice and retail. Export ready.',
     heroTitle: 'Flour Tortilla 30cm (12") — Wholesale Supply',
     heroSubtitle: 'Large-format 30cm flour tortillas for burritos, wraps and large sandwich applications. QSR and foodservice wholesale supply with private label available.',
@@ -269,7 +269,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-25cm-10-inch',
-    metaTitle: 'Flour Tortilla 25cm (10 inch) | Wholesale Tortilla Supply',
+    metaTitle: 'Flour Tortilla 25cm (10") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 25cm (10") flour tortillas for foodservice and retail. Standard medium-format tortillas for wraps, quesadillas and sandwich applications.',
     heroTitle: 'Flour Tortilla 25cm (10") — Wholesale Supply',
     heroSubtitle: 'Medium-format 25cm flour tortillas for wraps, quesadillas and sandwich applications. Wholesale supply for foodservice and retail buyers.',
@@ -301,7 +301,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-20cm-8-inch',
-    metaTitle: 'Flour Tortilla 20cm (8 inch) | Wholesale Small Tortilla Supply',
+    metaTitle: 'Flour Tortilla 20cm (8") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 20cm (8") flour tortillas for fajitas and small wrap applications. Compact foodservice format for restaurant and retail supply.',
     heroTitle: 'Flour Tortilla 20cm (8") — Wholesale Supply',
     heroSubtitle: 'Compact 20cm flour tortillas for fajitas, street food and small wrap applications. Wholesale foodservice and retail supply.',
@@ -332,7 +332,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-wholesale',
-    metaTitle: 'Flour Tortilla Wholesale | Bulk Flour Tortilla Supply',
+    metaTitle: 'Flour Tortilla Wholesale | Bulk Supply | TortillaSupplier',
     metaDescription: 'Bulk flour tortilla wholesale supply. All sizes (20cm, 25cm, 30cm) available in pallet quantities. Distributor pricing, private label, BRCGS certified.',
     heroTitle: 'Flour Tortilla Wholesale Supplier',
     heroSubtitle: 'Bulk flour tortilla supply in all sizes for distributors and importers. Pallet and container quantities with distributor pricing and private label options.',
@@ -362,7 +362,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'frozen-flour-tortilla-supplier',
-    metaTitle: 'Frozen Flour Tortilla Supplier | Wholesale Frozen Tortillas',
+    metaTitle: 'Frozen Flour Tortilla Supplier | Export Ready | TortillaSupplier',
     metaDescription: 'Wholesale frozen flour tortilla supplier. 12-month shelf life at -18°C. All sizes available. Export-ready cold chain logistics.',
     heroTitle: 'Frozen Flour Tortilla Supplier',
     heroSubtitle: 'Wholesale frozen flour tortillas in all sizes with 12-month shelf life. Export-ready cold chain logistics for UK, USA and European buyers.',
@@ -392,7 +392,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flour-tortilla-distributor',
-    metaTitle: 'Flour Tortilla Distributor Supply | Wholesale Flour Tortillas',
+    metaTitle: 'Flour Tortilla Distributor Supply | TortillaSupplier',
     metaDescription: 'Flour tortilla supply for distributors. Consistent quality, all sizes, private label available. BRCGS certified tortilla manufacturer.',
     heroTitle: 'Flour Tortilla Supply for Distributors',
     heroSubtitle: 'Reliable flour tortilla supply for food distributors. Consistent batch quality, full product range, private label and export documentation.',
@@ -423,7 +423,7 @@ const seoPages: SEOPageData[] = [
   // ─── CORN TORTILLA CLUSTER ────────────────────────────────────────────────────
   {
     slug: 'corn-tortilla-15cm-6-inch',
-    metaTitle: 'Corn Tortilla 15cm (6 inch) | Wholesale Taco Tortilla Supply',
+    metaTitle: 'Corn Tortilla 15cm (6") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 15cm (6") corn tortillas for tacos and street food. Traditional corn tortilla supplier for foodservice and retail buyers.',
     heroTitle: 'Corn Tortilla 15cm (6") — Wholesale Supply',
     heroSubtitle: 'Traditional 15cm corn tortillas for tacos, street food and authentic Mexican foodservice. Wholesale supply with export documentation.',
@@ -454,7 +454,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'corn-tortilla-20cm-8-inch',
-    metaTitle: 'Corn Tortilla 20cm (8 inch) | Wholesale Corn Tortilla Supply',
+    metaTitle: 'Corn Tortilla 20cm (8") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 20cm (8") corn tortillas for enchiladas and large taco applications. Foodservice and retail corn tortilla supply. Export ready.',
     heroTitle: 'Corn Tortilla 20cm (8") — Wholesale Supply',
     heroSubtitle: 'Medium-format 20cm corn tortillas for enchiladas, large tacos and street food. Wholesale supply for foodservice and retail buyers.',
@@ -484,7 +484,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'corn-tortilla-wholesale',
-    metaTitle: 'Corn Tortilla Wholesale | Bulk Corn Tortilla Supply',
+    metaTitle: 'Corn Tortilla Wholesale | Bulk Supply | TortillaSupplier',
     metaDescription: 'Bulk corn tortilla wholesale supply. 15cm and 20cm corn tortillas in pallet quantities for distributors and importers. Competitive wholesale pricing.',
     heroTitle: 'Corn Tortilla Wholesale Supply',
     heroSubtitle: 'Bulk corn tortilla supply in pallet and container quantities for wholesale distributors. 15cm and 20cm formats with competitive distributor pricing.',
@@ -513,7 +513,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'frozen-corn-tortilla-supplier',
-    metaTitle: 'Frozen Corn Tortilla Supplier | Wholesale Frozen Corn Tortillas',
+    metaTitle: 'Frozen Corn Tortilla Supplier | Export Ready | TortillaSupplier',
     metaDescription: 'Wholesale frozen corn tortilla supplier. 15cm and 20cm formats with 12-month shelf life at -18°C. Export-ready cold chain supply.',
     heroTitle: 'Frozen Corn Tortilla Supplier',
     heroSubtitle: 'Wholesale frozen corn tortillas in 15cm and 20cm. 12-month shelf life at -18°C. Export-ready with full cold chain documentation.',
@@ -542,7 +542,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'corn-tortilla-distributor',
-    metaTitle: 'Corn Tortilla Distributor Supply | Wholesale Corn Tortillas',
+    metaTitle: 'Corn Tortilla Distributor Supply | TortillaSupplier',
     metaDescription: 'Corn tortilla supply for distributors. Consistent quality 15cm and 20cm corn tortillas. Private label available. BRCGS certified.',
     heroTitle: 'Corn Tortilla Supply for Distributors',
     heroSubtitle: 'Reliable corn tortilla supply for food distributors. Both standard sizes, consistent batch quality, private label and full documentation.',
@@ -573,7 +573,7 @@ const seoPages: SEOPageData[] = [
   // ─── WRAP TORTILLA CLUSTER ────────────────────────────────────────────────────
   {
     slug: 'tortilla-wrap-30cm-12-inch',
-    metaTitle: 'Tortilla Wrap 30cm (12 inch) | Wholesale Large Wrap Supply',
+    metaTitle: 'Tortilla Wrap 30cm (12") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 30cm (12") tortilla wraps for QSR, sandwich chains and foodservice. Large-format wrap supply with private label. BRCGS certified.',
     heroTitle: 'Tortilla Wrap 30cm (12") — Wholesale Supply',
     heroSubtitle: 'Large-format 30cm tortilla wraps for QSR chains, sandwich operations and catering. Wholesale supply with private label options.',
@@ -604,7 +604,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-wrap-25cm-10-inch',
-    metaTitle: 'Tortilla Wrap 25cm (10 inch) | Wholesale Wrap Supply',
+    metaTitle: 'Tortilla Wrap 25cm (10") Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale 25cm (10") tortilla wraps for foodservice and retail. Medium-format wrap supply for sandwich operations and catering.',
     heroTitle: 'Tortilla Wrap 25cm (10") — Wholesale Supply',
     heroSubtitle: 'Medium-format 25cm tortilla wraps for sandwich operations, deli counters and retail. Wholesale supply with multiple variants.',
@@ -634,7 +634,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'wrap-bread-wholesale',
-    metaTitle: 'Wrap Bread Wholesale | Bulk Wrap Supply for Distributors',
+    metaTitle: 'Wrap Bread Wholesale | Bulk Supply | TortillaSupplier',
     metaDescription: 'Wholesale wrap bread supply in bulk quantities. 25cm and 30cm wraps for distributors and importers. Private label, all variants available.',
     heroTitle: 'Wrap Bread Wholesale Supply',
     heroSubtitle: 'Bulk wrap bread supply in 25cm and 30cm for wholesale distributors. All variants, private label options and competitive pricing.',
@@ -663,7 +663,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'wrap-flatbread-supplier',
-    metaTitle: 'Wrap Flatbread Supplier | Wholesale Flatbread Wraps',
+    metaTitle: 'Wrap Flatbread Supplier | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale wrap flatbread supplier for foodservice and retail. Premium soft flatbread wraps for sandwich and wrap applications. Export ready.',
     heroTitle: 'Wholesale Wrap Flatbread Supplier',
     heroSubtitle: 'Premium wrap flatbreads for sandwich operations, deli counters and foodservice. Soft, pliable flatbread wrap format for all applications.',
@@ -694,7 +694,7 @@ const seoPages: SEOPageData[] = [
   // ─── FLATBREAD CLUSTER ────────────────────────────────────────────────────────
   {
     slug: 'lavash-flatbread-supplier',
-    metaTitle: 'Lavash Flatbread Supplier | Wholesale Lavash for Kebab & Wrap',
+    metaTitle: 'Lavash Flatbread Supplier | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale lavash flatbread supplier for kebab, wrap and snack applications. Thin lavash-style flatbreads for foodservice and retail. Export ready.',
     heroTitle: 'Wholesale Lavash Flatbread Supplier',
     heroSubtitle: 'Thin lavash-style flatbreads for kebab operations, wrap applications and snack formats. Foodservice and retail wholesale supply.',
@@ -724,7 +724,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'lavash-flatbread-wholesale',
-    metaTitle: 'Lavash Flatbread Wholesale | Bulk Lavash Supply',
+    metaTitle: 'Lavash Flatbread Wholesale | Bulk Supply | TortillaSupplier',
     metaDescription: 'Bulk lavash flatbread wholesale supply for distributors and importers. High-count pallet quantities for kebab and foodservice distribution.',
     heroTitle: 'Lavash Flatbread Wholesale Supply',
     heroSubtitle: 'Bulk lavash flatbread supply for wholesale distributors and kebab suppliers. Pallet quantities, private label and full export documentation.',
@@ -753,7 +753,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flatbread-25cm-10-inch',
-    metaTitle: 'Flatbread 25cm (10 inch) | Wholesale Flatbread Supply',
+    metaTitle: 'Flatbread 25cm (10") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 25cm (10") flatbreads for foodservice and retail. Wrap and lavash-style flatbreads in 25cm for wholesale supply.',
     heroTitle: 'Flatbread 25cm (10") — Wholesale Supply',
     heroSubtitle: '25cm flatbreads for wrap, lavash and snack applications. Wholesale supply for foodservice distributors and retail buyers.',
@@ -783,7 +783,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'flatbread-30cm-12-inch',
-    metaTitle: 'Flatbread 30cm (12 inch) | Wholesale Large Flatbread Supply',
+    metaTitle: 'Flatbread 30cm (12") Wholesale Supplier | TortillaSupplier',
     metaDescription: 'Wholesale 30cm (12") flatbreads for foodservice and catering. Large-format wrap and lavash-style flatbreads for QSR and restaurant supply.',
     heroTitle: 'Flatbread 30cm (12") — Wholesale Supply',
     heroSubtitle: 'Large-format 30cm flatbreads for catering, QSR and large wrap applications. Wrap-style and lavash-style available in bulk.',
@@ -815,7 +815,7 @@ const seoPages: SEOPageData[] = [
   // ─── COUNTRY PAGES ────────────────────────────────────────────────────────────
   {
     slug: 'tortilla-supplier-spain',
-    metaTitle: 'Tortilla Supplier Spain | Wholesale Tortillas for Spanish Market',
+    metaTitle: 'Tortilla Supplier Spain for Distributors | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Spain. Flour and corn tortillas, wraps and flatbreads for Spanish foodservice distributors and importers. IFS certified.',
     heroTitle: 'Tortilla Supplier for the Spanish Market',
     heroSubtitle: 'Wholesale flour and corn tortillas, wraps and flatbreads for Spanish food distributors and importers. IFS and BRCGS certified, EU export documentation.',
@@ -844,7 +844,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-supplier-germany',
-    metaTitle: 'Tortilla Supplier Germany | Wholesale Tortillas for German Market',
+    metaTitle: 'Tortilla Supplier Germany | Frozen & Flour | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Germany. Flour and corn tortillas, wraps and flatbreads for German food distributors. IFS certified, EU export.',
     heroTitle: 'Tortilla Supplier for the German Market',
     heroSubtitle: 'Wholesale tortillas and flatbreads for German food distributors and importers. IFS certified manufacturing with full EU documentation.',
@@ -873,7 +873,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-supplier-france',
-    metaTitle: 'Tortilla Supplier France | Wholesale Tortillas for French Market',
+    metaTitle: 'Tortilla Supplier France for Distributors | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for France. Flour and corn tortillas, wraps and flatbreads for French food distributors. BRCGS & IFS certified.',
     heroTitle: 'Tortilla Supplier for the French Market',
     heroSubtitle: 'Wholesale tortillas and flatbreads for French food distributors and importers. BRCGS and IFS certified with full EU documentation.',
@@ -904,7 +904,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-supplier-netherlands',
-    metaTitle: 'Tortilla Supplier Netherlands | Wholesale Tortillas for Dutch Market',
+    metaTitle: 'Tortilla Supplier Netherlands | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for the Netherlands. Flour and corn tortillas, wraps and flatbreads for Dutch food distributors. Export ready.',
     heroTitle: 'Tortilla Supplier for the Netherlands',
     heroSubtitle: 'Wholesale tortillas and flatbreads for Dutch food distributors and importers. Export-ready with full EU documentation and private label options.',
@@ -935,7 +935,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-supplier-italy',
-    metaTitle: 'Tortilla Supplier Italy | Wholesale Tortillas for Italian Market',
+    metaTitle: 'Tortilla Supplier Italy for Distributors | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for Italy. Flour and corn tortillas, wraps and flatbreads for Italian food distributors and importers. EU export certified.',
     heroTitle: 'Tortilla Supplier for the Italian Market',
     heroSubtitle: 'Wholesale tortillas and flatbreads for Italian food distributors, importers and foodservice buyers. EU certified with private label options.',
@@ -968,7 +968,7 @@ const seoPages: SEOPageData[] = [
   // ─── WHOLESALE INTENT CLUSTER ─────────────────────────────────────────────────
   {
     slug: 'bulk-tortilla-supplier',
-    metaTitle: 'Bulk Tortilla Supplier | Container & Pallet Tortilla Supply',
+    metaTitle: 'Bulk Tortilla Supplier | Pallet & Container | TortillaSupplier',
     metaDescription: 'Bulk tortilla supplier for importers and distributors. Container and pallet quantities for all tortilla formats. Competitive pricing, BRCGS certified.',
     heroTitle: 'Bulk Tortilla Supplier',
     heroSubtitle: 'Container and pallet quantity tortilla supply for importers, buying groups and wholesale distributors. All formats, competitive bulk pricing.',
@@ -997,7 +997,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-wholesale-supplier',
-    metaTitle: 'Tortilla Wholesale Supplier | B2B Tortilla Supply',
+    metaTitle: 'Tortilla Wholesale Supplier | B2B Supply | TortillaSupplier',
     metaDescription: 'B2B tortilla wholesale supplier. Flour and corn tortillas, frozen wraps and flatbreads at wholesale prices. Export ready, private label, BRCGS certified.',
     heroTitle: 'B2B Tortilla Wholesale Supplier',
     heroSubtitle: 'Wholesale tortilla and flatbread supply for B2B buyers. Competitive wholesale pricing, private label manufacturing and full export documentation.',
@@ -1026,7 +1026,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'private-label-tortilla-manufacturer',
-    metaTitle: 'Private Label Tortilla Manufacturer | Custom Branded Tortillas',
+    metaTitle: 'Private Label Tortilla Manufacturer | TortillaSupplier',
     metaDescription: 'Private label tortilla manufacturer for retailers and distributors. Custom branding, packaging design and production for all tortilla formats. BRCGS certified.',
     heroTitle: 'Private Label Tortilla Manufacturer',
     heroSubtitle: 'Custom-branded tortillas and flatbreads for retailers, distributors and foodservice brands. Full private label service from recipe to branded pack.',
@@ -1056,7 +1056,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-importer-supply',
-    metaTitle: 'Tortilla Importer Supply | Wholesale Tortillas for Importers',
+    metaTitle: 'Tortilla Importer Supply | Wholesale Export | TortillaSupplier',
     metaDescription: 'Tortilla supply for food importers. Bulk tortilla and flatbread supply with full export documentation for UK, European and global importers.',
     heroTitle: 'Tortilla Supply for Importers',
     heroSubtitle: 'Wholesale tortilla and flatbread supply for food importers. Full export documentation, container quantities and competitive importer pricing.',
@@ -1085,7 +1085,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'tortilla-foodservice-supplier',
-    metaTitle: 'Foodservice Tortilla Supplier | Wholesale Tortillas for Restaurants & QSR',
+    metaTitle: 'Foodservice Tortilla Supplier | QSR Supply | TortillaSupplier',
     metaDescription: 'Wholesale tortilla supplier for foodservice. QSR chains, restaurants, catering and hospitality tortilla supply. All sizes, bulk packs, BRCGS certified.',
     heroTitle: 'Foodservice Tortilla Supplier',
     heroSubtitle: 'Wholesale tortilla supply for QSR chains, restaurants, catering operations and hospitality. Bulk catering packs, all sizes and private label options.',
@@ -1118,7 +1118,7 @@ const seoPages: SEOPageData[] = [
 seoPages.push(
   {
     slug: 'burrito-tortilla-supplier',
-    metaTitle: 'Burrito Tortilla Supplier | Wholesale 30cm Flour Tortillas',
+    metaTitle: 'Burrito Tortilla Supplier | 30cm Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale burrito tortilla supplier. Large-format 30cm flour tortillas for QSR chains, restaurants and foodservice distributors. BRCGS certified, export ready.',
     heroTitle: 'Burrito Tortilla Supplier',
     heroSubtitle: 'Wholesale 30cm flour tortillas for burrito wrapping and large-format foodservice applications. QSR chain supply, private label and export ready.',
@@ -1151,7 +1151,7 @@ seoPages.push(
   },
   {
     slug: 'wrap-tortilla-supplier',
-    metaTitle: 'Wrap Tortilla Supplier | Wholesale Tortilla Wraps for Foodservice',
+    metaTitle: 'Wrap Tortilla Supplier | Wholesale | TortillaSupplier',
     metaDescription: 'Wholesale wrap tortilla supplier. 25cm and 30cm flour tortillas for sandwich wraps, cold food-to-go and foodservice. Private label available.',
     heroTitle: 'Wrap Tortilla Supplier',
     heroSubtitle: 'Wholesale flour tortillas for wrap and sandwich applications. Mid and large-format sizes for sandwich shops, delis, foodservice and retail.',
@@ -1184,7 +1184,7 @@ seoPages.push(
   },
   {
     slug: 'street-taco-tortilla-wholesale',
-    metaTitle: 'Street Taco Tortilla Wholesale | Small Corn & Flour Tortillas',
+    metaTitle: 'Street Taco Tortilla Wholesale | 15cm Bulk | TortillaSupplier',
     metaDescription: 'Wholesale street taco tortillas. Small 15cm corn and flour tortillas for authentic taco operations, Mexican restaurants and QSR taco formats. Export ready.',
     heroTitle: 'Street Taco Tortilla Wholesale Supplier',
     heroSubtitle: 'Wholesale small-format corn and flour tortillas for authentic street taco, taqueria and restaurant taco applications. Bulk catering supply, private label available.',
@@ -1217,7 +1217,7 @@ seoPages.push(
   },
   {
     slug: 'frying-tortilla-supplier',
-    metaTitle: 'Frying Tortilla Supplier | Wholesale Tostada & Frying Corn Tortillas',
+    metaTitle: 'Frying Tortilla Supplier | Bulk Corn | TortillaSupplier',
     metaDescription: 'Wholesale frying tortilla and tostada supplier. Frying-grade corn tortillas for deep fry and flat-grill applications. Foodservice and distributor supply.',
     heroTitle: 'Frying Tortilla Supplier',
     heroSubtitle: 'Wholesale frying-grade corn tortillas for tostadas, tortilla chips and flat-grill applications. Bulk foodservice supply, export ready.',
@@ -1247,6 +1247,444 @@ seoPages.push(
     parentSlug: 'tortilla-foodservice-supplier',
     parentLabel: 'Foodservice Tortilla Supplier',
     isProductPage: true,
+  },
+);
+
+// ─── TORTILLA IMPORT / EXPORT CLUSTER ────────────────────────────────────────
+seoPages.push(
+  {
+    slug: 'tortilla-import-distributor',
+    metaTitle: 'Tortilla Import Distributor | Wholesale Supply | TortillaSupplier',
+    metaDescription: 'Tortilla import distributor supply. Wholesale flour and corn tortillas for food importers and regional distributors. Export-ready, BRCGS certified, full documentation.',
+    heroTitle: 'Tortilla Import Distributor Supply',
+    heroSubtitle: 'Wholesale tortillas for food importers and regional distributors. Flour tortillas, corn tortillas and frozen formats with full export documentation and competitive container pricing.',
+    heroBadges: ['Import Ready', 'Full Documentation', 'Container Supply'],
+    primaryCTALabel: 'Request Import Quote',
+    introHeading: 'Wholesale Tortilla Supply for Distributors and Importers',
+    introParagraphs: [
+      'We supply wholesale tortillas to food importers and regional distributors across Europe, North America and the Middle East. Our product range covers flour tortillas, corn tortillas and frozen formats suited to import distribution programmes.',
+      'Every shipment is accompanied by full export documentation — health certificates, certificates of origin, allergen declarations and technical datasheets. BRCGS and IFS certification provides the food safety compliance required by retail and foodservice distributors.',
+    ],
+    features: [
+      { title: 'Complete Export Documentation', description: 'Health certificates, certificates of origin, allergen declarations and technical datasheets with every shipment.' },
+      { title: 'Container & Groupage Options', description: 'Full container loads and groupage options for distributors of all scale.' },
+      { title: 'BRCGS & IFS Certified', description: 'Certified production meeting the compliance requirements of retail and foodservice distribution networks.' },
+      { title: 'Private Label Available', description: 'Private label tortilla production for distributors building their own branded product range.' },
+    ],
+    faqs: [
+      { question: 'Do you supply tortillas to food importers?', answer: 'Yes. We supply wholesale tortillas to food importers and regional distributors worldwide with full export documentation.' },
+      { question: 'What export documentation do you provide?', answer: 'We provide health certificates, certificates of origin, allergen declarations and technical product datasheets with every shipment.' },
+      { question: 'Can you supply container quantities?', answer: 'Yes. Full container loads (FCL) and groupage (LCL) options are available depending on order volume and destination.' },
+      { question: 'Are frozen tortillas available for import distribution?', answer: 'Yes. Frozen flour and corn tortillas with 12-month shelf life at -18°C are available for import and regional distribution.' },
+    ],
+    relatedSlugs: ['tortilla-importer-supply', 'tortilla-distributor', 'container-tortilla-supply', 'bulk-tortilla-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-importer-supply',
+    parentLabel: 'Tortilla Importer Supply',
+  },
+  {
+    slug: 'frozen-tortilla-export',
+    metaTitle: 'Frozen Tortilla Export Supplier | Wholesale | TortillaSupplier',
+    metaDescription: 'Frozen tortilla export supplier. Frozen flour and corn tortillas for international distributors and importers. 12-month shelf life, BRCGS certified, container-ready.',
+    heroTitle: 'Frozen Tortilla Export Supplier',
+    heroSubtitle: 'Wholesale frozen flour and corn tortillas for international buyers. 12-month shelf life, cold-chain export capability, full documentation for all destination markets.',
+    heroBadges: ['Frozen Export', '12-Month Shelf Life', 'Cold Chain Ready'],
+    primaryCTALabel: 'Request Frozen Export Quote',
+    introHeading: 'Frozen Tortilla Export for International Distribution',
+    introParagraphs: [
+      'We export frozen flour and corn tortillas to international buyers across Europe, North America and the Middle East. Frozen formats offer 12-month shelf life at −18°C, making them the preferred choice for long-haul export and international distribution programmes.',
+      'Our cold-chain export capability covers refrigerated container logistics, temperature monitoring and full documentation required for international frozen food imports. All products are produced under BRCGS and IFS certified conditions.',
+    ],
+    features: [
+      { title: '12-Month Shelf Life', description: 'Frozen tortillas at −18°C offer 12-month shelf life for long-haul export and international distribution.' },
+      { title: 'Cold Chain Logistics', description: 'Refrigerated container export with temperature monitoring and cold-chain documentation.' },
+      { title: 'All Formats Available', description: 'Frozen flour tortillas, frozen corn tortillas and frozen wrap formats available for export.' },
+      { title: 'BRCGS Certified', description: 'BRCGS-certified production meeting food safety requirements for international frozen food import.' },
+    ],
+    faqs: [
+      { question: 'What frozen tortilla formats do you export?', answer: 'We export frozen flour tortillas (20cm, 25cm, 30cm), frozen corn tortillas (15cm, 20cm) and frozen wrap formats.' },
+      { question: 'What is the shelf life of exported frozen tortillas?', answer: 'Frozen tortillas have a 12-month shelf life when stored at −18°C. Cold chain documentation is provided with every shipment.' },
+      { question: 'Can you supply container quantities of frozen tortillas?', answer: 'Yes. Full refrigerated container loads and groupage shipments are available for frozen tortilla export.' },
+      { question: 'What documentation is required for frozen tortilla export?', answer: 'Health certificates, cold chain documentation, certificates of origin, allergen declarations and technical datasheets are provided for all export shipments.' },
+    ],
+    relatedSlugs: ['frozen-flour-tortilla-supplier', 'frozen-corn-tortilla-supplier', 'tortilla-export-supplier', 'container-tortilla-supply'],
+    showSpecTable: true,
+    specTableFilter: 'frozen',
+    parentSlug: 'tortilla-importer-supply',
+    parentLabel: 'Tortilla Importer Supply',
+  },
+  {
+    slug: 'tortilla-export-supplier',
+    metaTitle: 'Tortilla Export Supplier | Global Wholesale | TortillaSupplier',
+    metaDescription: 'Tortilla export supplier for international buyers. Wholesale flour and corn tortillas for export to UK, Europe, USA and Middle East. BRCGS certified, full documentation.',
+    heroTitle: 'Tortilla Export Supplier',
+    heroSubtitle: 'Wholesale tortilla export for international buyers. Flour and corn tortillas, frozen formats and flatbreads exported worldwide with full documentation and certified production.',
+    heroBadges: ['Export Specialist', 'BRCGS Certified', 'Global Supply'],
+    primaryCTALabel: 'Request Export Quote',
+    introHeading: 'Wholesale Tortilla Export for Global Markets',
+    introParagraphs: [
+      'We are a certified tortilla export supplier serving wholesale buyers across the UK, Europe, USA and Middle East. Our export programme covers flour tortillas, corn tortillas, frozen formats, flatbreads and private label production.',
+      'Our export team handles all logistics, documentation and compliance requirements for international tortilla shipments. BRCGS, IFS and halal certification ensures product acceptance across all major export markets.',
+    ],
+    features: [
+      { title: 'Global Export Capability', description: 'Established export routes to UK, Europe, USA, Middle East and beyond.' },
+      { title: 'Full Export Documentation', description: 'Health certificates, certificates of origin, allergen declarations and technical datasheets provided.' },
+      { title: 'Multi-Certification', description: 'BRCGS, IFS, ISO 22000, HACCP and Halal certification for all major export market requirements.' },
+      { title: 'Private Label Export', description: 'Private label tortilla export with custom branding and packaging for international markets.' },
+    ],
+    faqs: [
+      { question: 'Which countries do you export tortillas to?', answer: 'We export to the UK, continental Europe, the USA, Canada and the Middle East. Contact us for specific destination enquiries.' },
+      { question: 'What certifications do you hold for export?', answer: 'BRCGS, IFS Food, ISO 22000, HACCP and Halal certifications. Full documentation provided with every shipment.' },
+      { question: 'Do you offer private label export?', answer: 'Yes. Private label tortilla export with custom branding is available for international buyers.' },
+      { question: 'Can you supply frozen tortillas for export?', answer: 'Yes. Frozen flour and corn tortillas with 12-month shelf life are available for export in refrigerated containers.' },
+    ],
+    relatedSlugs: ['tortilla-importer-supply', 'frozen-tortilla-export', 'container-tortilla-supply', 'tortilla-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
+  },
+  {
+    slug: 'container-tortilla-supply',
+    metaTitle: 'Container Tortilla Supply | FCL Export | TortillaSupplier',
+    metaDescription: 'Container tortilla supply for importers and distributors. Full container loads of wholesale flour and corn tortillas. Frozen and ambient formats, BRCGS certified.',
+    heroTitle: 'Container Tortilla Supply',
+    heroSubtitle: 'Full container load wholesale tortilla supply for importers and distributors. FCL and LCL options for flour tortillas, corn tortillas and frozen formats worldwide.',
+    heroBadges: ['FCL & LCL Available', 'Container Pricing', 'Export Ready'],
+    primaryCTALabel: 'Request Container Quote',
+    introHeading: 'Wholesale Container Supply of Tortillas for Importers',
+    introParagraphs: [
+      'We supply wholesale tortillas in full container loads (FCL) and groupage (LCL) shipments to importers and distributors worldwide. Container supply is the most cost-efficient method for large-scale tortilla procurement across international markets.',
+      'Container orders include ambient flour and corn tortilla formats, frozen formats in refrigerated reefer containers, and mixed product configurations. Full export documentation and BRCGS-certified production are standard for all container shipments.',
+    ],
+    features: [
+      { title: 'FCL & LCL Options', description: 'Full container loads and groupage shipments available for all order volumes and destinations.' },
+      { title: 'Reefer Container Frozen', description: 'Refrigerated reefer containers for frozen tortilla shipments with temperature monitoring throughout transit.' },
+      { title: 'Mixed Product Loads', description: 'Mixed container configurations combining flour tortillas, corn tortillas and flatbreads in one shipment.' },
+      { title: 'Container Pricing', description: 'Competitive container pricing for importers and distributors requiring large volume supply.' },
+    ],
+    faqs: [
+      { question: 'What is the capacity of a container tortilla order?', answer: 'A standard 20ft container holds approximately 10–14 pallets of tortillas. A 40ft container holds approximately 20–26 pallets depending on product weight and height.' },
+      { question: 'Do you supply frozen tortillas in refrigerated containers?', answer: 'Yes. Frozen tortillas are shipped in refrigerated reefer containers maintained at −18°C with temperature monitoring throughout transit.' },
+      { question: 'Can we mix products in a container order?', answer: 'Yes. Mixed container loads combining flour tortillas, corn tortillas and flatbreads are available.' },
+      { question: 'What documentation is provided for container shipments?', answer: 'Full export documentation including health certificates, certificates of origin, allergen declarations and technical datasheets are provided.' },
+    ],
+    relatedSlugs: ['tortilla-importer-supply', 'tortilla-export-supplier', 'bulk-tortilla-supplier', 'frozen-tortilla-export'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-importer-supply',
+    parentLabel: 'Tortilla Importer Supply',
+  },
+);
+
+// ─── FOODSERVICE CLUSTER EXPANSION ───────────────────────────────────────────
+seoPages.push(
+  {
+    slug: 'restaurant-tortilla-supply',
+    metaTitle: 'Restaurant Tortilla Supply | Wholesale | TortillaSupplier',
+    metaDescription: 'Wholesale restaurant tortilla supply. Flour and corn tortillas for Mexican restaurants, taco bars and international dining. All sizes, catering packs, BRCGS certified.',
+    heroTitle: 'Restaurant Tortilla Supply',
+    heroSubtitle: 'Wholesale flour and corn tortillas for Mexican restaurants, taco bars and international dining operations. All standard sizes, bulk catering packs, consistent quality.',
+    heroBadges: ['Restaurant Supply', 'All Sizes', 'Bulk Catering'],
+    primaryCTALabel: 'Request Restaurant Quote',
+    introHeading: 'Wholesale Tortilla Supply for Restaurants',
+    introParagraphs: [
+      'We supply wholesale tortillas to Mexican restaurants, taco bars, international dining venues and restaurant groups. Our restaurant range covers all standard sizes — 15cm street taco, 20cm, 25cm and 30cm — in both corn and flour tortilla formats.',
+      'Restaurant buyers benefit from consistent batch quality, bulk catering packs, flexible supply quantities and private label options for branded restaurant concepts. BRCGS-certified production ensures food safety compliance for restaurant supply chains.',
+    ],
+    features: [
+      { title: 'Full Size Range', description: '15cm, 20cm, 25cm and 30cm — all standard restaurant tortilla sizes from a single supplier.' },
+      { title: 'Corn & Flour Options', description: 'Traditional corn tortillas and premium flour tortillas for every menu application.' },
+      { title: 'Bulk Catering Packs', description: 'High-count catering pack formats designed for restaurant kitchen operations.' },
+      { title: 'Restaurant Group Supply', description: 'Consistent quality and supply reliability for restaurant groups and multi-site operations.' },
+    ],
+    faqs: [
+      { question: 'What sizes do you supply for restaurant use?', answer: 'We supply 15cm (street taco), 20cm, 25cm (wrap) and 30cm (burrito) tortillas in both corn and flour formats for restaurant supply.' },
+      { question: 'Do you supply to restaurant groups?', answer: 'Yes. We supply restaurant groups and multi-site operations with consistent quality and reliable supply schedules.' },
+      { question: 'What pack sizes are available for restaurants?', answer: 'Bulk catering packs typically contain 20–24 tortillas per pack. Custom configurations are available.' },
+      { question: 'Are frozen tortillas available for restaurant supply?', answer: 'Yes. Frozen formats with 12-month shelf life are ideal for restaurants managing stock levels and reducing waste.' },
+    ],
+    relatedSlugs: ['tortilla-foodservice-supplier', 'qsr-tortilla-supplier', 'catering-tortilla-supply', 'burrito-tortilla-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-foodservice-supplier',
+    parentLabel: 'Foodservice Tortilla Supplier',
+  },
+  {
+    slug: 'qsr-tortilla-supplier',
+    metaTitle: 'QSR Tortilla Supplier | Chain Supply | TortillaSupplier',
+    metaDescription: 'Wholesale QSR tortilla supplier. Consistent quality tortillas for quick service restaurant chains. All sizes, private label, BRCGS certified production.',
+    heroTitle: 'QSR Tortilla Supplier',
+    heroSubtitle: 'Wholesale tortilla supply for quick service restaurant chains. Consistent batch quality, bulk supply capability and private label production for QSR operators.',
+    heroBadges: ['QSR Chain Supply', 'Consistent Quality', 'Private Label'],
+    primaryCTALabel: 'Request QSR Quote',
+    introHeading: 'Tortilla Supply for Quick Service Restaurant Chains',
+    introParagraphs: [
+      'We supply wholesale tortillas to quick service restaurant chains, franchise networks and large-scale QSR operators worldwide. Our QSR supply programme is built around consistency, reliability and food safety compliance — the three factors that matter most to chain operators.',
+      'All tortilla products are produced in standardised batches under BRCGS-certified conditions. Private label tortilla production is available for QSR operators building their own branded product specifications.',
+    ],
+    features: [
+      { title: 'Chain Consistency', description: 'Standardised production ensuring the same tortilla quality across all chain locations.' },
+      { title: 'Large-Volume Supply', description: 'Supply capability designed for QSR chain volumes and multi-location rollouts.' },
+      { title: 'BRCGS Certified', description: 'BRCGS food safety certification meeting QSR chain compliance requirements.' },
+      { title: 'Private Label QSR', description: 'Custom specification and private label production for branded QSR tortilla products.' },
+    ],
+    faqs: [
+      { question: 'Can you supply QSR chains consistently?', answer: 'Yes. We supply QSR chains with standardised quality tortillas and reliable supply schedules suited to multi-location chain operations.' },
+      { question: 'Do you offer private label tortillas for QSR brands?', answer: 'Yes. Private label tortilla production to custom specifications is available for QSR operators.' },
+      { question: 'What certifications are required for QSR supply?', answer: 'Most QSR chains require BRCGS or IFS certification. We hold both, along with ISO 22000 and HACCP compliance.' },
+      { question: 'What tortilla sizes are used by QSR chains?', answer: 'Most common QSR sizes are 25cm (wrap/sandwich), 30cm (burrito) and 15cm (taco). All are available from our range.' },
+    ],
+    relatedSlugs: ['tortilla-foodservice-supplier', 'restaurant-tortilla-supply', 'burrito-tortilla-supplier', 'wrap-tortilla-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-foodservice-supplier',
+    parentLabel: 'Foodservice Tortilla Supplier',
+  },
+  {
+    slug: 'catering-tortilla-supply',
+    metaTitle: 'Catering Tortilla Supply | Bulk Wholesale | TortillaSupplier',
+    metaDescription: 'Wholesale catering tortilla supply. Bulk flour and corn tortillas for event catering, institutional catering and contract food service. BRCGS certified.',
+    heroTitle: 'Catering Tortilla Supply',
+    heroSubtitle: 'Wholesale tortillas for event catering, institutional catering and contract foodservice. Flexible quantities, bulk packs and all standard sizes for catering operations.',
+    heroBadges: ['Event Catering', 'Institutional Supply', 'Bulk Packs'],
+    primaryCTALabel: 'Request Catering Quote',
+    introHeading: 'Bulk Tortilla Supply for Catering Operations',
+    introParagraphs: [
+      'We supply wholesale tortillas to catering companies, event caterers, institutional foodservice and contract catering operations. Our catering range covers all standard sizes in bulk pack configurations suited to high-volume preparation.',
+      'Catering buyers benefit from flexible order quantities, consistent quality and the full range of flour and corn tortilla formats. Frozen formats are available for caterers managing stock across multiple events or sites.',
+    ],
+    features: [
+      { title: 'Flexible Order Quantities', description: 'Order quantities suited to catering operations of all sizes, from single events to large institutional supply.' },
+      { title: 'Bulk Pack Formats', description: 'High-count bulk packs designed for catering kitchen efficiency.' },
+      { title: 'Frozen for Stock Management', description: 'Frozen tortillas help catering operations manage stock across events without waste.' },
+      { title: 'All Sizes Available', description: 'Full range from 15cm taco to 30cm burrito for all catering menu formats.' },
+    ],
+    faqs: [
+      { question: 'Do you supply tortillas to catering companies?', answer: 'Yes. We supply event caterers, institutional catering and contract foodservice operations with wholesale tortillas.' },
+      { question: 'What bulk pack options are available for catering?', answer: 'Bulk catering packs typically contain 20–24 tortillas per pack with multiple packs per carton. We can discuss custom configurations.' },
+      { question: 'Are frozen tortillas suitable for event catering?', answer: 'Yes. Frozen formats help caterers manage stock across multiple events, thawing only what they need per service.' },
+      { question: 'What sizes are most popular for catering?', answer: '25cm and 30cm flour tortillas are most popular for catering wraps and burritos. 15cm corn tortillas are common for taco-themed events.' },
+    ],
+    relatedSlugs: ['tortilla-foodservice-supplier', 'restaurant-tortilla-supply', 'bulk-tortilla-supplier', 'flour-tortilla-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-foodservice-supplier',
+    parentLabel: 'Foodservice Tortilla Supplier',
+  },
+  {
+    slug: 'bulk-tortilla-wraps',
+    metaTitle: 'Bulk Tortilla Wraps | Wholesale 25cm & 30cm | TortillaSupplier',
+    metaDescription: 'Bulk tortilla wraps for foodservice and distribution. Wholesale 25cm and 30cm flour tortilla wraps in catering packs. Private label available. BRCGS certified.',
+    heroTitle: 'Bulk Tortilla Wraps',
+    heroSubtitle: 'Wholesale bulk tortilla wraps for foodservice, sandwich chains and distributors. 25cm and 30cm flour wrap tortillas in bulk catering packs, private label available.',
+    heroBadges: ['Bulk Wraps', '25cm & 30cm', 'Private Label'],
+    primaryCTALabel: 'Request Bulk Wrap Quote',
+    introHeading: 'Wholesale Bulk Tortilla Wrap Supply',
+    introParagraphs: [
+      'We supply bulk tortilla wraps to sandwich chains, cafés, foodservice distributors and food-to-go operators. Our 25cm (10") and 30cm (12") flour tortilla wraps are available in high-count bulk catering packs for volume operations.',
+      'Bulk wrap tortillas are available in ambient and frozen formats. Private label wrap production with custom branding is available from competitive order quantities for distributors and foodservice brands.',
+    ],
+    features: [
+      { title: '25cm & 30cm Bulk Wraps', description: 'Both standard wrap sizes available in bulk catering packs from a single supplier.' },
+      { title: 'High-Count Catering Packs', description: 'Designed for high-volume sandwich, food-to-go and foodservice operations.' },
+      { title: 'Ambient & Frozen Formats', description: 'Ambient wraps for short supply cycles; frozen wraps with 12-month shelf life for longer distribution.' },
+      { title: 'Private Label Wraps', description: 'Custom branded bulk wrap tortillas for distributors and foodservice operators.' },
+    ],
+    faqs: [
+      { question: 'What sizes of bulk wrap tortillas do you supply?', answer: 'We supply 25cm (10") and 30cm (12") flour tortilla wraps in bulk catering packs.' },
+      { question: 'Are frozen bulk wraps available for distribution?', answer: 'Yes. Frozen wrap tortillas with 12-month shelf life are available for foodservice distribution and import.' },
+      { question: 'Can you supply private label bulk wraps?', answer: 'Yes. Private label bulk wrap tortillas with custom branding are available.' },
+      { question: 'What counts are available in bulk wrap packs?', answer: 'Catering packs typically contain 20–24 wraps per pack. Custom configurations are available on request.' },
+    ],
+    relatedSlugs: ['wrap-tortilla-supplier', 'wrap-bread-wholesale', 'flour-tortilla-supplier', 'tortilla-foodservice-supplier'],
+    showSpecTable: true,
+    specTableFilter: 'wrap',
+    parentSlug: 'tortilla-foodservice-supplier',
+    parentLabel: 'Foodservice Tortilla Supplier',
+  },
+);
+
+// ─── TORTILLA TYPES CLUSTER ───────────────────────────────────────────────────
+seoPages.push(
+  {
+    slug: 'mexican-tortilla-supplier',
+    metaTitle: 'Mexican Tortilla Supplier | Wholesale | TortillaSupplier',
+    metaDescription: 'Wholesale Mexican tortilla supplier. Authentic corn and flour tortillas for Mexican restaurants, foodservice and retail. All sizes, BRCGS certified, export ready.',
+    heroTitle: 'Mexican Tortilla Supplier',
+    heroSubtitle: 'Wholesale authentic corn and flour tortillas for Mexican restaurants, foodservice operators and retail buyers. Traditional formats, certified production, global export.',
+    heroBadges: ['Authentic Formats', 'Corn & Flour', 'Export Ready'],
+    primaryCTALabel: 'Request Mexican Tortilla Quote',
+    introHeading: 'Wholesale Authentic Mexican Tortilla Supply',
+    introParagraphs: [
+      'We supply authentic Mexican-format tortillas to restaurants, foodservice distributors and retail buyers worldwide. Our range covers traditional corn tortillas in 15cm (6") street taco size and 20cm formats, alongside flour tortillas for wraps and burritos.',
+      'All tortillas are produced under BRCGS and IFS certified conditions with halal certification available. Export-ready with full documentation, our Mexican tortilla range serves buyers across the UK, Europe and North America.',
+    ],
+    features: [
+      { title: 'Traditional Corn Tortillas', description: 'Authentic 15cm and 20cm corn tortillas for tacos, enchiladas and traditional Mexican applications.' },
+      { title: 'Flour Tortillas for Burritos', description: '25cm and 30cm flour tortillas for burritos, fajitas and large-format Mexican dishes.' },
+      { title: 'Halal Certified', description: 'Halal-certified production available — important for Mexican and international restaurant supply.' },
+      { title: 'Export Ready', description: 'Full export documentation for Mexican tortilla supply to the UK, Europe and beyond.' },
+    ],
+    faqs: [
+      { question: 'What authentic Mexican tortilla formats do you supply?', answer: 'We supply 15cm corn tortillas (street taco), 20cm corn tortillas, and flour tortillas in 20cm, 25cm and 30cm for authentic Mexican applications.' },
+      { question: 'Are corn tortillas available for export?', answer: 'Yes. Corn tortillas are available in ambient and frozen formats for international export.' },
+      { question: 'Is halal certification available for Mexican tortillas?', answer: 'Yes. Halal-certified production is available for all tortilla formats.' },
+      { question: 'Do you supply to Mexican restaurant chains?', answer: 'Yes. We supply Mexican restaurant chains and QSR operators with consistent quality tortillas in bulk catering formats.' },
+    ],
+    relatedSlugs: ['corn-tortilla-supplier', 'flour-tortilla-supplier', 'street-taco-tortilla-wholesale', 'tortilla-foodservice-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
+  },
+);
+
+// ─── REGION CLUSTER EXPANSION ─────────────────────────────────────────────────
+seoPages.push(
+  {
+    slug: 'tortilla-supplier-canada',
+    metaTitle: 'Tortilla Supplier Canada | Wholesale Export | TortillaSupplier',
+    metaDescription: 'Wholesale tortilla supplier for Canada. Flour and corn tortillas, wraps and flatbreads for Canadian food distributors and importers. Export-ready, BRCGS certified.',
+    heroTitle: 'Tortilla Supplier for the Canadian Market',
+    heroSubtitle: 'Wholesale flour and corn tortillas, frozen wraps and flatbreads for Canadian food distributors and importers. Export-ready with full documentation.',
+    heroBadges: ['Canada Supply', 'Export Ready', 'Full Documentation'],
+    primaryCTALabel: 'Request Canada Quote',
+    introHeading: 'Wholesale Tortilla Supply for Canadian Buyers',
+    introParagraphs: [
+      'We supply wholesale tortillas and flatbreads to food importers and distributors in Canada. Our Canadian market range covers flour tortillas, corn tortillas, frozen formats and flatbreads for the growing Mexican and international food segment.',
+      'Canadian importers benefit from BRCGS and IFS certified production, full export documentation, halal certification availability and competitive container pricing. Our export team manages all logistics to Canadian ports.',
+    ],
+    features: [
+      { title: 'North American Export', description: 'Established export capability to Canadian ports with full documentation and customs support.' },
+      { title: 'Full Product Range', description: 'Flour tortillas, corn tortillas, frozen formats and flatbreads for Canadian distribution.' },
+      { title: 'Halal Certified', description: 'Halal certification available — relevant for Canada\'s diverse food market.' },
+      { title: 'Private Label Available', description: 'Private label tortilla production for Canadian retailers and distributors.' },
+    ],
+    faqs: [
+      { question: 'Do you supply tortillas to Canadian food distributors?', answer: 'Yes. We supply flour tortillas, corn tortillas and flatbreads to Canadian importers with full export documentation.' },
+      { question: 'Is frozen tortilla export available to Canada?', answer: 'Yes. Frozen flour and corn tortillas with 12-month shelf life are available for Canadian import.' },
+      { question: 'What certifications do you hold for Canadian market supply?', answer: 'We hold BRCGS, IFS Food, ISO 22000, HACCP and Halal certifications accepted by Canadian retailers and distributors.' },
+      { question: 'Is private label available for Canadian market supply?', answer: 'Yes. Private label production with Canadian-compliant labelling is available.' },
+    ],
+    relatedSlugs: ['tortilla-supplier-usa', 'tortilla-export-supplier', 'container-tortilla-supply', 'tortilla-wholesale'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
+  },
+  {
+    slug: 'tortilla-supplier-australia',
+    metaTitle: 'Tortilla Supplier Australia | Wholesale Export | TortillaSupplier',
+    metaDescription: 'Wholesale tortilla supplier for Australia. Flour and corn tortillas, frozen wraps and flatbreads for Australian food distributors and importers. Export-ready.',
+    heroTitle: 'Tortilla Supplier for the Australian Market',
+    heroSubtitle: 'Wholesale flour and corn tortillas, frozen wraps and flatbreads for Australian food distributors and importers. Long-haul export capability, full documentation.',
+    heroBadges: ['Australia Supply', 'Long-Haul Export', 'Frozen Formats'],
+    primaryCTALabel: 'Request Australia Quote',
+    introHeading: 'Wholesale Tortilla Supply for Australian Buyers',
+    introParagraphs: [
+      'We supply wholesale tortillas and flatbreads to food importers and distributors in Australia. Our frozen tortilla formats — with 12-month shelf life at −18°C — are well suited to the long transit times involved in Australian import logistics.',
+      'Australian importers benefit from BRCGS and IFS certified production, full export documentation and halal-certified product options for Australia\'s growing halal food market.',
+    ],
+    features: [
+      { title: 'Long-Haul Frozen Export', description: 'Frozen tortillas with 12-month shelf life suited to Australian import transit times.' },
+      { title: 'Full Export Documentation', description: 'Health certificates, certificates of origin and allergen declarations for Australian customs.' },
+      { title: 'Halal Certified', description: 'Halal-certified production available for Australian halal market distribution.' },
+      { title: 'Private Label Available', description: 'Private label tortilla production for Australian retailers and distributors.' },
+    ],
+    faqs: [
+      { question: 'Do you export tortillas to Australia?', answer: 'Yes. We export frozen and ambient tortillas to Australian food importers with full export documentation.' },
+      { question: 'What tortilla formats are best for Australian import?', answer: 'Frozen tortillas are preferred for Australian import due to transit times. Frozen formats provide 12-month shelf life at −18°C.' },
+      { question: 'Is halal-certified tortilla supply available for Australia?', answer: 'Yes. Halal-certified production is available across all product lines.' },
+      { question: 'What certifications do you hold for Australian supply?', answer: 'BRCGS, IFS Food, ISO 22000, HACCP and Halal certifications are provided with full documentation.' },
+    ],
+    relatedSlugs: ['frozen-tortilla-export', 'tortilla-export-supplier', 'container-tortilla-supply', 'tortilla-wholesale'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
+  },
+  {
+    slug: 'tortilla-supplier-middle-east',
+    metaTitle: 'Tortilla Supplier Middle East | Halal | TortillaSupplier',
+    metaDescription: 'Wholesale tortilla supplier for the Middle East. Halal-certified flour and corn tortillas, wraps and flatbreads for Middle Eastern food distributors. Export-ready.',
+    heroTitle: 'Tortilla Supplier for the Middle East',
+    heroSubtitle: 'Halal-certified wholesale tortillas and flatbreads for Middle Eastern food distributors and importers. Full export documentation, competitive container pricing.',
+    heroBadges: ['Halal Certified', 'Middle East Supply', 'Container Export'],
+    primaryCTALabel: 'Request Middle East Quote',
+    introHeading: 'Wholesale Halal Tortilla Supply for the Middle East',
+    introParagraphs: [
+      'We supply wholesale halal-certified tortillas and flatbreads to food importers and distributors across the Middle East. Our Middle Eastern market range includes flour tortillas, corn tortillas, frozen formats and flatbreads certified under halal production standards.',
+      'Middle Eastern buyers benefit from competitive container pricing, full export documentation, and product formats suited to the region\'s foodservice and retail distribution requirements.',
+    ],
+    features: [
+      { title: 'Halal Certified Production', description: 'Halal-certified tortilla production meeting Middle Eastern import and retail requirements.' },
+      { title: 'Container Export', description: 'Competitive container pricing for Middle Eastern distributors and importers.' },
+      { title: 'Flatbread Range', description: 'Flatbreads and lavash-style formats complementing the tortilla range for Middle Eastern distribution.' },
+      { title: 'Full Documentation', description: 'Health certificates, halal certificates and certificates of origin for Middle Eastern customs.' },
+    ],
+    faqs: [
+      { question: 'Do you supply halal-certified tortillas to the Middle East?', answer: 'Yes. We supply halal-certified flour tortillas, corn tortillas and flatbreads to Middle Eastern importers and distributors.' },
+      { question: 'What documentation is required for Middle Eastern import?', answer: 'Health certificates, halal certification, certificates of origin and allergen declarations are provided with all Middle Eastern shipments.' },
+      { question: 'Do you supply to UAE and Saudi Arabian distributors?', answer: 'Yes. We supply distributors across the UAE, Saudi Arabia and broader Middle East with full halal documentation.' },
+      { question: 'Are flatbreads available for Middle Eastern distribution?', answer: 'Yes. Our wrap flatbreads and lavash-style flatbreads are popular in Middle Eastern foodservice and retail channels.' },
+    ],
+    relatedSlugs: ['tortilla-supplier-uae', 'tortilla-supplier-saudi-arabia', 'tortilla-export-supplier', 'lavash-flatbread-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier',
+    parentLabel: 'Wholesale Tortilla Supplier',
+  },
+  {
+    slug: 'tortilla-supplier-uae',
+    metaTitle: 'Tortilla Supplier UAE | Halal Wholesale | TortillaSupplier',
+    metaDescription: 'Wholesale tortilla supplier for the UAE. Halal-certified flour and corn tortillas, wraps and flatbreads for UAE food distributors and importers. Export-ready.',
+    heroTitle: 'Tortilla Supplier for the UAE',
+    heroSubtitle: 'Halal-certified wholesale tortillas and flatbreads for UAE food distributors, importers and foodservice buyers. Full export documentation, competitive pricing.',
+    heroBadges: ['UAE Supply', 'Halal Certified', 'Export Ready'],
+    primaryCTALabel: 'Request UAE Quote',
+    introHeading: 'Wholesale Halal Tortilla Supply for UAE Buyers',
+    introParagraphs: [
+      'We supply wholesale halal-certified tortillas and flatbreads to food importers and distributors in the UAE. The UAE\'s diverse foodservice market — spanning international restaurant chains, hotel catering and retail — creates strong demand for tortillas, wraps and flatbreads.',
+      'UAE buyers benefit from halal certification, competitive container pricing, full export documentation and a complete product range covering flour tortillas, corn tortillas, frozen formats and flatbreads.',
+    ],
+    features: [
+      { title: 'Halal Certified', description: 'Halal-certified production meeting UAE retail, foodservice and import requirements.' },
+      { title: 'UAE Foodservice Ready', description: 'Product formats suited to UAE hotel, restaurant and foodservice distribution.' },
+      { title: 'Container Pricing', description: 'Competitive pricing for container-based supply to UAE importers.' },
+      { title: 'Full UAE Documentation', description: 'Health certificates, halal certificates, certificates of origin and allergen declarations provided.' },
+    ],
+    faqs: [
+      { question: 'Do you supply tortillas to UAE food distributors?', answer: 'Yes. We supply halal-certified flour tortillas, corn tortillas and flatbreads to UAE importers and distributors.' },
+      { question: 'Is halal certification required for UAE market supply?', answer: 'Yes. UAE food imports require halal certification. We hold full halal certification for all product lines.' },
+      { question: 'Do you supply to UAE hotels and foodservice operators?', answer: 'Yes. Our tortilla and flatbread range is suited to UAE hotel catering, restaurant chains and foodservice distribution.' },
+      { question: 'What export documentation is provided for UAE?', answer: 'Health certificates, halal certificates, certificates of origin and allergen declarations are provided for UAE shipments.' },
+    ],
+    relatedSlugs: ['tortilla-supplier-middle-east', 'tortilla-supplier-saudi-arabia', 'tortilla-export-supplier', 'flatbread-supplier'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier-middle-east',
+    parentLabel: 'Tortilla Supplier Middle East',
+  },
+  {
+    slug: 'tortilla-supplier-saudi-arabia',
+    metaTitle: 'Tortilla Supplier Saudi Arabia | Halal | TortillaSupplier',
+    metaDescription: 'Wholesale tortilla supplier for Saudi Arabia. Halal-certified flour and corn tortillas for Saudi food distributors and importers. Export-ready with full documentation.',
+    heroTitle: 'Tortilla Supplier for Saudi Arabia',
+    heroSubtitle: 'Halal-certified wholesale tortillas and flatbreads for Saudi Arabian food distributors and importers. Competitive container pricing, full halal documentation.',
+    heroBadges: ['Saudi Arabia Supply', 'Halal Certified', 'Container Export'],
+    primaryCTALabel: 'Request KSA Quote',
+    introHeading: 'Wholesale Halal Tortilla Supply for Saudi Arabian Buyers',
+    introParagraphs: [
+      'We supply wholesale halal-certified tortillas and flatbreads to food importers and distributors in Saudi Arabia. Saudi Arabia\'s rapidly growing foodservice sector — driven by international restaurant chains, hospitality expansion and changing consumer preferences — creates consistent demand for tortillas and wraps.',
+      'Saudi buyers benefit from halal-certified production, competitive container pricing, full documentation for Saudi customs and a complete product range covering flour tortillas, corn tortillas, frozen formats and flatbreads.',
+    ],
+    features: [
+      { title: 'Halal Certified Production', description: 'Full halal certification meeting Saudi Arabian import and retail requirements.' },
+      { title: 'Saudi Foodservice Market', description: 'Product formats suited to Saudi restaurant chains, hotels and foodservice distribution.' },
+      { title: 'Container Supply', description: 'Competitive container pricing for Saudi importers and distributors.' },
+      { title: 'Complete Documentation', description: 'Halal certificates, health certificates, certificates of origin provided for Saudi customs.' },
+    ],
+    faqs: [
+      { question: 'Do you supply halal tortillas to Saudi Arabia?', answer: 'Yes. We supply halal-certified flour tortillas, corn tortillas and flatbreads to Saudi Arabian importers and food distributors.' },
+      { question: 'What halal documentation do you provide for Saudi import?', answer: 'We provide halal certificates alongside health certificates, certificates of origin and allergen declarations for Saudi customs.' },
+      { question: 'Can you supply container quantities to Saudi Arabia?', answer: 'Yes. Full container loads and groupage shipments are available for Saudi Arabian import.' },
+      { question: 'Do you supply Saudi foodservice operators?', answer: 'Yes. We supply the Saudi foodservice sector including restaurant chains, hotels and catering operations.' },
+    ],
+    relatedSlugs: ['tortilla-supplier-middle-east', 'tortilla-supplier-uae', 'tortilla-export-supplier', 'container-tortilla-supply'],
+    showSpecTable: true,
+    parentSlug: 'tortilla-supplier-middle-east',
+    parentLabel: 'Tortilla Supplier Middle East',
   },
 );
 

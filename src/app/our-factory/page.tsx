@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: 'Our Factory | Tortilla Manufacturing Facility | TortillaSupplier',
+  title: { absolute: 'Our Factory | Tortilla Manufacturing Facility | TortillaSupplier' },
   description:
     'Tour our tortilla manufacturing facility — automated production lines, cold chain infrastructure, and quality control systems designed for international wholesale supply.',
   openGraph: {

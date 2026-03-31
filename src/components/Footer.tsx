@@ -42,11 +42,16 @@ const regionLinks = [
   { label: 'Supplier France', href: '/tortilla-supplier-france' },
   { label: 'Supplier Netherlands', href: '/tortilla-supplier-netherlands' },
   { label: 'Supplier Italy', href: '/tortilla-supplier-italy' },
+  { label: 'Supplier Canada', href: '/tortilla-supplier-canada' },
+  { label: 'Supplier Australia', href: '/tortilla-supplier-australia' },
+  { label: 'Supplier Middle East', href: '/tortilla-supplier-middle-east' },
+  { label: 'Supplier UAE', href: '/tortilla-supplier-uae' },
+  { label: 'Supplier Saudi Arabia', href: '/tortilla-supplier-saudi-arabia' },
 ];
 
 const commercialLinks = [
   { label: 'Tortilla Manufacturer', href: '/tortilla-supplier' },
-  { label: 'Mexican Tortilla Supplier', href: '/corn-tortilla-supplier' },
+  { label: 'Mexican Tortilla Supplier', href: '/mexican-tortilla-supplier' },
   { label: 'Flatbread Manufacturer', href: '/flatbread-supplier' },
   { label: 'Tortilla Factory', href: '/our-factory' },
   { label: 'Tortilla Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
@@ -73,6 +78,43 @@ const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms of Service', href: '/terms-of-service' },
   { label: 'Cookie Policy', href: '/cookie-policy' },
+];
+
+// ─── New SEO cluster columns ──────────────────────────────────────────────────
+
+const sizeLinks = [
+  { label: '15 cm (6") Tortilla', href: '/corn-tortilla-15cm-6-inch' },
+  { label: '20 cm (8") Tortilla', href: '/flour-tortilla-20cm-8-inch' },
+  { label: '25 cm (10") Tortilla', href: '/flour-tortilla-25cm-10-inch' },
+  { label: '30 cm (12") Tortilla', href: '/flour-tortilla-30cm-12-inch' },
+  { label: 'Street Taco Tortilla', href: '/street-taco-tortilla-wholesale' },
+  { label: 'Burrito Size Tortilla', href: '/burrito-tortilla-supplier' },
+];
+
+const importLinks = [
+  { label: 'Tortilla Import Supplier', href: '/tortilla-importer-supply' },
+  { label: 'Tortilla Import Distributor', href: '/tortilla-import-distributor' },
+  { label: 'Frozen Tortilla Export', href: '/frozen-tortilla-export' },
+  { label: 'Tortilla Export Supplier', href: '/tortilla-export-supplier' },
+  { label: 'Container Tortilla Supply', href: '/container-tortilla-supply' },
+];
+
+const foodserviceLinks = [
+  { label: 'Foodservice Tortilla Supplier', href: '/tortilla-foodservice-supplier' },
+  { label: 'Restaurant Tortilla Supply', href: '/restaurant-tortilla-supply' },
+  { label: 'QSR Tortilla Supplier', href: '/qsr-tortilla-supplier' },
+  { label: 'Catering Tortilla Supply', href: '/catering-tortilla-supply' },
+  { label: 'Bulk Tortilla Wraps', href: '/bulk-tortilla-wraps' },
+];
+
+const typeLinks = [
+  { label: 'Flour Tortillas', href: '/flour-tortilla-supplier' },
+  { label: 'Corn Tortillas', href: '/corn-tortilla-supplier' },
+  { label: 'Frozen Tortillas', href: '/frozen-tortilla-supplier' },
+  { label: 'Soft Tortilla Wraps', href: '/wrap-tortilla-supplier' },
+  { label: 'Mexican Tortillas', href: '/mexican-tortilla-supplier' },
+  { label: 'Flatbread Wraps', href: '/wrap-flatbread-supplier' },
+  { label: 'Lavash Flatbread', href: '/lavash-flatbread-supplier' },
 ];
 
 function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
@@ -127,7 +169,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Main grid */}
+        {/* Main grid — Brand + core clusters */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 py-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
@@ -147,11 +189,11 @@ export default function Footer() {
                 info@tortillasupplier.com
               </a>
               <a
-                href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+                href="https://wa.me/905531229372?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
                 target="_blank" rel="noopener noreferrer"
                 className="block text-sm text-gray-500 hover:text-gray-900 transition-colors"
               >
-                WhatsApp: +90 5XX XXX XX XX
+                WhatsApp: +90 553 122 93 72
               </a>
             </div>
           </div>
@@ -160,6 +202,14 @@ export default function Footer() {
           <FooterColumn title="Suppliers" links={supplierLinks} />
           <FooterColumn title="Wholesale" links={wholesaleLinks} />
           <FooterColumn title="Regions" links={regionLinks} />
+        </div>
+
+        {/* SEO cluster grid — new keyword clusters */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
+          <FooterColumn title="Tortilla Sizes" links={sizeLinks} />
+          <FooterColumn title="Tortilla Import" links={importLinks} />
+          <FooterColumn title="Foodservice Tortillas" links={foodserviceLinks} />
+          <FooterColumn title="Tortilla Types" links={typeLinks} />
         </div>
 
         {/* Secondary grid */}

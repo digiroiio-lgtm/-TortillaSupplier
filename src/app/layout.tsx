@@ -5,22 +5,22 @@ import Footer from '@/components/Footer';
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 import JsonLd from '@/components/JsonLd';
 
-const BASE_URL = 'https://www.tortillasupplier.com';
+const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
+    default: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
     template: '%s | TortillaSupplier',
   },
-  description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+  description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label available.',
   openGraph: {
     type: 'website',
     siteName: 'TortillaSupplier',
     locale: 'en_GB',
     url: BASE_URL,
-    title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
-    description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+    title: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
+    description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
     images: [
       {
         url: '/images/og-default.png',
@@ -34,13 +34,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@TortillaSupply',
     creator: '@TortillaSupply',
-    title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
-    description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+    title: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
+    description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
     images: ['/images/og-default.png'],
   },
-  alternates: {
-    canonical: BASE_URL,
-  },
+  // No global canonical here — every page sets its own self-referencing canonical
 };
 
 const organizationSchema = {
@@ -56,7 +54,14 @@ const organizationSchema = {
     availableLanguage: 'English',
   },
   sameAs: [],
-  description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+  description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label available.',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'TortillaSupplier',
+  url: BASE_URL,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -64,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
         <Navbar />
         <main>{children}</main>
         <Footer />

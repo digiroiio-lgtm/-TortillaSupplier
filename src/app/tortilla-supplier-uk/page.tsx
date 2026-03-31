@@ -8,14 +8,14 @@ import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Tortilla Supplier UK | Wholesale Tortillas & Frozen Wraps',
+  title: { absolute: 'Tortilla Supplier UK for Distributors | TortillaSupplier' },
   description: 'Wholesale tortilla supplier for the UK market. Chilled and frozen flour tortillas, corn tortillas and wraps for UK foodservice and retail.',
   openGraph: {
-    title: 'Tortilla Supplier UK | Wholesale Tortillas & Frozen Wraps',
+    title: 'Tortilla Supplier UK for Distributors | TortillaSupplier',
     description: 'Wholesale tortilla supplier for the UK market. Chilled and frozen flour tortillas, corn tortillas and wraps for UK foodservice and retail.',
-    url: 'https://www.tortillasupplier.com/tortilla-supplier-uk',
+    url: 'https://tortillasupplier.com/tortilla-supplier-uk',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/tortilla-supplier-uk' },
+  alternates: { canonical: 'https://tortillasupplier.com/tortilla-supplier-uk' },
 };
 
 const ukFAQs = [

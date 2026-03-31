@@ -3,14 +3,14 @@ import ContactForm from '@/components/ContactForm';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Contact | Wholesale Tortilla Inquiry',
+  title: { absolute: 'Contact | Request Wholesale Tortilla Pricing | TortillaSupplier' },
   description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
   openGraph: {
-    title: 'Contact | Wholesale Tortilla Inquiry',
+    title: 'Contact | Request Wholesale Tortilla Pricing | TortillaSupplier',
     description: 'Send a wholesale inquiry for tortillas and flatbreads. Export supply to UK, USA and Europe.',
-    url: 'https://www.tortillasupplier.com/contact',
+    url: 'https://tortillasupplier.com/contact',
   },
-  alternates: { canonical: 'https://www.tortillasupplier.com/contact' },
+  alternates: { canonical: 'https://tortillasupplier.com/contact' },
 };
 
 export default function ContactPage() {
@@ -40,7 +40,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-700 mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2d7a3a] hover:underline">+90 5XX XXX XX XX</a>
+                  <a href="https://wa.me/905531229372" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2d7a3a] hover:underline">+90 553 122 93 72</a>
                 </div>
                 <div className="mt-6 p-4 bg-[#FAFAF8] border border-gray-200 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2">Export Markets</h3>
