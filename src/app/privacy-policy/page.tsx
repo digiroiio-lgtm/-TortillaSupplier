@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 const BASE_URL = 'https://www.tortillasupplier.com';
@@ -68,7 +69,7 @@ export default function PrivacyPolicyPage() {
           <h2>5. Cookies</h2>
           <p>
             Our website uses cookies to support basic functionality and analytics. Please see our{' '}
-            <a href="/cookie-policy" className="text-[#2d7a3a] hover:underline">Cookie Policy</a> for details
+            <Link href="/cookie-policy" className="text-[#2d7a3a] hover:underline">Cookie Policy</Link> for details
             on the types of cookies we use and how to manage them.
           </p>
 
