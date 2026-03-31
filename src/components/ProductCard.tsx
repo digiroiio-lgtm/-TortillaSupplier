@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </li>
         <li className="text-sm text-gray-700 flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-[#2d7a3a] rounded-full flex-shrink-0"></span>
-          Pack Count: {product.packCount} per pack
+          Pack: {product.packCount} pcs · Pallet: {product.palletCases} cases
         </li>
         <li className="text-sm text-gray-700 flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-[#2d7a3a] rounded-full flex-shrink-0"></span>

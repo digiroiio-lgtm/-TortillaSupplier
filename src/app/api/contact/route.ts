@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, company, country, email, phone, product, volume, message } = body;
+    const { name, company, country, email, phone, product, volume, privateLabel, message } = body;
 
     if (!name || !company || !country || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -21,6 +21,7 @@ export async function POST(request: NextRequest) {
         phone ? `Phone/WhatsApp: ${phone}` : null,
         product ? `Product of Interest: ${product}` : null,
         volume ? `Estimated Monthly Volume: ${volume}` : null,
+        privateLabel ? `Private Label Required: ${privateLabel}` : null,
         message ? `\nMessage:\n${message}` : null,
       ]
         .filter(Boolean)
@@ -48,7 +49,7 @@ export async function POST(request: NextRequest) {
       }
     } else {
       // Fallback: log to console when no API key is configured
-      console.log('[Contact Form Submission]', { name, company, country, email, phone, product, volume, message });
+      console.log('[Contact Form Submission]', { name, company, country, email, phone, product, volume, privateLabel, message });
     }
 
     return NextResponse.json({ success: true });

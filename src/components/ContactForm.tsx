@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [form, setForm] = useState({
-    name: '', company: '', country: '', email: '', phone: '', product: '', volume: '', message: ''
+    name: '', company: '', country: '', email: '', phone: '', product: '', volume: '', privateLabel: '', message: ''
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -94,6 +94,24 @@ export default function ContactForm() {
         <label className="block text-sm font-medium text-gray-700 mb-1">Estimated Monthly Volume</label>
         <input name="volume" value={form.volume} onChange={handleChange} placeholder="e.g. 5,000 units / month"
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Private Label Required?</label>
+        <div className="flex gap-4">
+          {['Yes', 'No', 'Not sure yet'].map((opt) => (
+            <label key={opt} className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="privateLabel"
+                value={opt}
+                checked={form.privateLabel === opt}
+                onChange={handleChange}
+                className="accent-[#2d7a3a]"
+              />
+              <span className="text-sm text-gray-700">{opt}</span>
+            </label>
+          ))}
+        </div>
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
