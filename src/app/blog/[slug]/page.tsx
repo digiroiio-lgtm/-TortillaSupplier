@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
+import { getAuthorByName } from '@/data/authors';
 
 const BASE_URL = 'https://www.tortillasupplier.com';
 
@@ -44,13 +45,21 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const authorProfile = getAuthorByName(post.author.name);
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishDate,
-    author: { '@type': 'Organization', name: post.author.name },
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      jobTitle: post.author.role,
+      worksFor: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
+      ...(authorProfile ? { url: `${BASE_URL}/author/${authorProfile.slug}`, sameAs: [authorProfile.linkedIn] } : {}),
+    },
     publisher: {
       '@type': 'Organization',
       name: 'TortillaSupplier',
@@ -101,14 +110,38 @@ export default async function BlogPostPage({ params }: PageProps) {
             <p className="text-base text-gray-500 leading-relaxed mb-6">{post.excerpt}</p>
 
             {/* Author chip */}
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
-                {post.author.name.charAt(0)}
+            <div className="flex flex-col gap-2.5">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                  {post.author.name.charAt(0)}
+                </div>
+                <div>
+                  {authorProfile ? (
+                    <Link
+                      href={`/author/${authorProfile.slug}`}
+                      className="text-xs font-semibold text-gray-900 leading-tight hover:text-[#2d7a3a] transition-colors"
+                    >
+                      {post.author.name}
+                    </Link>
+                  ) : (
+                    <p className="text-xs font-semibold text-gray-900 leading-tight">{post.author.name}</p>
+                  )}
+                  <p className="text-xs text-gray-400 leading-tight">{post.author.role}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs font-semibold text-gray-900 leading-tight">{post.author.name}</p>
-                <p className="text-xs text-gray-400 leading-tight">{post.author.role}</p>
-              </div>
+              {post.reviewer && (
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xs font-bold flex-shrink-0">
+                    {post.reviewer.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900 leading-tight">
+                      Reviewed by {post.reviewer.name}
+                    </p>
+                    <p className="text-xs text-gray-400 leading-tight">{post.reviewer.role}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

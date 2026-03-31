@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
+import authors from '@/data/authors';
 
 const BASE_URL = 'https://www.tortillasupplier.com';
 const LAST_MODIFIED = new Date('2025-01-01');
@@ -69,5 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
   }));
 
-  return [...staticPages, ...blogPages, ...dynamicPages];
+  const authorPages: MetadataRoute.Sitemap = authors.map((author) => ({
+    url: `${BASE_URL}/author/${author.slug}`,
+    lastModified: LAST_MODIFIED,
+    priority: 0.6,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [...staticPages, ...blogPages, ...authorPages, ...dynamicPages];
 }
