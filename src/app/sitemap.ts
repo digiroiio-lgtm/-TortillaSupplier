@@ -4,9 +4,9 @@ import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
 
 const BASE_URL = 'https://tortillasupplier.com';
-const LAST_MODIFIED = new Date('2025-01-01');
+const LAST_MODIFIED = new Date('2026-03-31');
 
-// Pillar pages get boosted priority; long-tail support/intent pages get 0.7
+// Pillar pages: highest-value commercial landing pages
 const PILLAR_SLUGS = new Set([
   'tortilla-supplier',
   'flour-tortilla-supplier',
@@ -18,6 +18,16 @@ const PILLAR_SLUGS = new Set([
   'frozen-corn-tortilla-supplier',
 ]);
 
+// Regional pages: dedicated pages for key geographic markets
+const REGIONAL_SLUGS = new Set([
+  'tortilla-supplier-spain',
+  'tortilla-supplier-germany',
+  'tortilla-supplier-france',
+  'tortilla-supplier-netherlands',
+  'tortilla-supplier-italy',
+]);
+
+// Support / long-tail pages: intent and distribution cluster pages
 const SUPPORT_SLUGS = new Set([
   'tortilla-distributor',
   'flour-tortilla-distributor',
@@ -43,8 +53,22 @@ const SUPPORT_SLUGS = new Set([
   'qsr-tortilla-supplier',
   'catering-tortilla-supply',
   'bulk-tortilla-wraps',
-  // Types cluster
+  // Product type cluster
   'mexican-tortilla-supplier',
+  'burrito-tortilla-supplier',
+  'wrap-tortilla-supplier',
+  'street-taco-tortilla-wholesale',
+  'frying-tortilla-supplier',
+  // Product size pages
+  'flour-tortilla-30cm-12-inch',
+  'flour-tortilla-25cm-10-inch',
+  'flour-tortilla-20cm-8-inch',
+  'corn-tortilla-15cm-6-inch',
+  'corn-tortilla-20cm-8-inch',
+  'tortilla-wrap-30cm-12-inch',
+  'tortilla-wrap-25cm-10-inch',
+  'flatbread-25cm-10-inch',
+  'flatbread-30cm-12-inch',
   // Region expansion
   'tortilla-supplier-canada',
   'tortilla-supplier-australia',
@@ -84,8 +108,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
     url: `${BASE_URL}/${page.slug}`,
     lastModified: LAST_MODIFIED,
-    priority: PILLAR_SLUGS.has(page.slug) ? 0.9 : SUPPORT_SLUGS.has(page.slug) ? 0.7 : 0.8,
-    changeFrequency: 'monthly',
+    priority: PILLAR_SLUGS.has(page.slug)
+      ? 0.9
+      : REGIONAL_SLUGS.has(page.slug)
+        ? 0.8
+        : SUPPORT_SLUGS.has(page.slug)
+          ? 0.7
+          : 0.8,
+    changeFrequency: 'monthly' as const,
   }));
 
   const authorPages: MetadataRoute.Sitemap = authors.map((author) => ({
