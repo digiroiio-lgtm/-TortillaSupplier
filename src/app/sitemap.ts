@@ -33,6 +33,24 @@ const SUPPORT_SLUGS = new Set([
   'private-label-tortilla-manufacturer',
   'tortilla-importer-supply',
   'tortilla-foodservice-supplier',
+  // Import / export cluster
+  'tortilla-import-distributor',
+  'frozen-tortilla-export',
+  'tortilla-export-supplier',
+  'container-tortilla-supply',
+  // Foodservice cluster
+  'restaurant-tortilla-supply',
+  'qsr-tortilla-supplier',
+  'catering-tortilla-supply',
+  'bulk-tortilla-wraps',
+  // Types cluster
+  'mexican-tortilla-supplier',
+  // Region expansion
+  'tortilla-supplier-canada',
+  'tortilla-supplier-australia',
+  'tortilla-supplier-middle-east',
+  'tortilla-supplier-uae',
+  'tortilla-supplier-saudi-arabia',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
