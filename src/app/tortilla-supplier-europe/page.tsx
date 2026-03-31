@@ -10,10 +10,10 @@ import { certifications } from '@/data/certifications';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Tortilla Supplier Europe | Wholesale Flatbread & Tortilla Supply',
+  title: { absolute: 'Tortilla Supplier Europe for Distributors | TortillaSupplier' },
   description: 'Wholesale tortilla and flatbread supplier for European distributors and importers. IFS, BRCGS and ISO 22000 certified. Export documentation included.',
   openGraph: {
-    title: 'Tortilla Supplier Europe | Wholesale Flatbread & Tortilla Supply',
+    title: 'Tortilla Supplier Europe for Distributors | TortillaSupplier',
     description: 'Wholesale tortilla and flatbread supplier for European distributors and importers. IFS, BRCGS and ISO 22000 certified. Export documentation included.',
     url: 'https://www.tortillasupplier.com/tortilla-supplier-europe',
   },

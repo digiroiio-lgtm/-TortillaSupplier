@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 const BASE_URL = 'https://www.tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: 'Food Safety Certifications | TortillaSupplier',
+  title: { absolute: 'Food Safety Certifications | TortillaSupplier' },
   description:
     'TortillaSupplier holds BRCGS, IFS, ISO 22000, HACCP and Halal certifications. Learn how our food safety standards support international wholesale and private label buyers.',
   openGraph: {

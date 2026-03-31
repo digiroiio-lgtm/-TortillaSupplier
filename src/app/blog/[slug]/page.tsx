@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: post.metaTitle,
+    title: { absolute: post.metaTitle },
     description: post.metaDescription,
     openGraph: {
       title: post.metaTitle,
@@ -232,6 +232,24 @@ export default async function BlogPostPage({ params }: PageProps) {
               </a>
             </div>
           </div>
+
+          {/* Related resources — internal links per post */}
+          {post.relatedLinks && post.relatedLinks.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-gray-100">
+              <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Resources</h2>
+              <div className="flex flex-wrap gap-2">
+                {post.relatedLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
 
         {/* Related posts */}

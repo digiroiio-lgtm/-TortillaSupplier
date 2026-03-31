@@ -14,6 +14,7 @@ export interface BlogPost {
   readTime: number;
   author: { name: string; role: string };
   reviewer?: { name: string; role: string };
+  relatedLinks?: Array<{ label: string; href: string }>;
   sections: BlogSection[];
   conclusion: string;
   tags: string[];
@@ -32,6 +33,11 @@ const blogPosts: BlogPost[] = [
     readTime: 5,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Supplier", href: "/tortilla-supplier" },
+        { label: "Food Safety Certifications", href: "/certifications" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'Food Safety Certifications',
@@ -84,6 +90,11 @@ const blogPosts: BlogPost[] = [
     readTime: 4,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Frozen Flour Tortilla Supplier", href: "/frozen-flour-tortilla-supplier" },
+        { label: "Frozen Corn Tortilla Supplier", href: "/frozen-corn-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'Frozen Tortillas',
@@ -135,6 +146,11 @@ const blogPosts: BlogPost[] = [
     readTime: 4,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: 'Flour Tortilla 25cm (10")', href: '/flour-tortilla-25cm-10-inch' },
+        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
+        { label: "Tortilla Supplier USA", href: "/tortilla-supplier-usa" },
+    ],
     sections: [
       {
         heading: '15 cm Tortillas — Street Taco Format',
@@ -181,6 +197,11 @@ const blogPosts: BlogPost[] = [
     readTime: 7,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Corn Tortilla Supplier", href: "/corn-tortilla-supplier" },
+        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'From Ancient Staple to Global Food',
@@ -235,6 +256,11 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
+        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'The Shelf Life Problem',
@@ -273,6 +299,11 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
+        { label: "Tortilla Distributor Supply", href: "/tortilla-distributor" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'A Menu Format That Works Everywhere',
@@ -311,6 +342,11 @@ const blogPosts: BlogPost[] = [
     readTime: 8,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Wholesale Tortilla Supplier", href: "/tortilla-supplier" },
+        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'What Makes a Tortilla Supplier Reliable?',
@@ -367,6 +403,11 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
+        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'What Is a Private Label Tortilla Programme?',
@@ -423,6 +464,11 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Importer Supply", href: "/tortilla-importer-supply" },
+        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'The UK Tortilla Market',
@@ -475,6 +521,11 @@ const blogPosts: BlogPost[] = [
     readTime: 5,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Container Tortilla Supply", href: "/container-tortilla-supply" },
+        { label: "Frozen Tortilla Export", href: "/frozen-tortilla-export" },
+        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+    ],
     sections: [
       {
         heading: 'Step 1: Production and Freezing',
@@ -523,6 +574,11 @@ const blogPosts: BlogPost[] = [
     readTime: 6,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
+        { label: "Bulk Tortilla Supplier", href: "/bulk-tortilla-supplier" },
+        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+    ],
     sections: [
       {
         heading: 'A Market That Keeps Growing',

@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 const BASE_URL = 'https://www.tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: 'Export Programme | Wholesale Tortilla Supply | TortillaSupplier',
+  title: { absolute: 'Export Programme | Wholesale Tortilla Supply | TortillaSupplier' },
   description:
     'Our wholesale tortilla export programme is designed for distributors, importers and foodservice buyers. Container pricing, private label, and full documentation support.',
   openGraph: {

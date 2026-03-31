@@ -13,11 +13,11 @@ import DistributorTrustSection from '@/components/DistributorTrustSection';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
-  title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
-  description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+  title: { absolute: 'Global Tortilla Supplier for Distributors | TortillaSupplier' },
+  description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label and container supply available.',
   openGraph: {
-    title: 'Tortilla Supplier | Wholesale Tortillas for UK, USA & Europe',
-    description: 'Premium wholesale tortilla and flatbread supplier for UK, USA and European markets. Export-ready, private label available, BRCGS certified.',
+    title: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
+    description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
     url: 'https://www.tortillasupplier.com',
   },
   alternates: { canonical: 'https://www.tortillasupplier.com' },

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const page = seoPages.find((p) => p.slug === slug);
   if (!page) return {};
   return {
-    title: page.metaTitle,
+    title: { absolute: page.metaTitle },
     description: page.metaDescription,
     openGraph: {
       title: page.metaTitle,

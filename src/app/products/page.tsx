@@ -10,11 +10,11 @@ import Link from 'next/link';
 const BASE_URL = 'https://www.tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: 'Products | Wholesale Tortillas & Flatbreads',
-  description: 'Full range of wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads. Private label available.',
+  title: { absolute: 'Wholesale Tortillas & Flatbreads | TortillaSupplier' },
+  description: 'Wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads for B2B buyers. Private label manufacturing, BRCGS certified, export-ready supply to UK, USA and Europe.',
   openGraph: {
-    title: 'Products | Wholesale Tortillas & Flatbreads',
-    description: 'Full range of wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads. Private label available.',
+    title: 'Wholesale Tortillas & Flatbreads | TortillaSupplier',
+    description: 'Wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads for B2B buyers. Private label manufacturing, BRCGS certified, export-ready supply.',
     url: `${BASE_URL}/products`,
   },
   alternates: { canonical: `${BASE_URL}/products` },
