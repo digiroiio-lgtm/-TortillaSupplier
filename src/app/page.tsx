@@ -7,6 +7,7 @@ import ProductSpecTable from '@/components/ProductSpecTable';
 import CertificationCard from '@/components/CertificationCard';
 import RegionCTASection from '@/components/RegionCTASection';
 import ContainerSupplySection from '@/components/ContainerSupplySection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import DistributorTrustSection from '@/components/DistributorTrustSection';
 import { certifications } from '@/data/certifications';
 
@@ -212,6 +213,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* Certifications */}
       <section className="py-24 bg-gray-50">
