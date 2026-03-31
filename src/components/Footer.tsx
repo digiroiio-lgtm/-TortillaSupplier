@@ -147,11 +147,11 @@ export default function Footer() {
                 info@tortillasupplier.com
               </a>
               <a
-                href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+                href="https://wa.me/905531229372?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
                 target="_blank" rel="noopener noreferrer"
                 className="block text-sm text-gray-500 hover:text-gray-900 transition-colors"
               >
-                WhatsApp: +90 5XX XXX XX XX
+                WhatsApp: +90 553 122 93 72
               </a>
             </div>
           </div>

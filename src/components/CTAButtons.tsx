@@ -14,7 +14,7 @@ export default function CTAButtons({ primaryLabel = 'Request a Quote', primaryHr
       </Link>
       {showWhatsApp && (
         <a
-          href="https://wa.me/905XXXXXXXXX"
+          href="https://wa.me/905531229372"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-3 border border-[#25D366] text-[#1a1a1a] font-semibold rounded-md hover:bg-[#25D366]/10 transition-colors text-sm"
