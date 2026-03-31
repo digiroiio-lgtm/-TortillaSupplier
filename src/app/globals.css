@@ -1,12 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAF8;
-  --foreground: #1a1a1a;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2d7a3a;
+  --accent-dark: #1f5a2a;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #2d7a3a20;
+  color: #0a0a0a;
 }

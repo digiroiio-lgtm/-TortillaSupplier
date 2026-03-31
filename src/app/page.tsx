@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import StatsStrip from '@/components/StatsStrip';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import CertificationCard from '@/components/CertificationCard';
-import BuyerTypeCard from '@/components/BuyerTypeCard';
 import RegionCTASection from '@/components/RegionCTASection';
-import TrustBadgeStrip from '@/components/TrustBadgeStrip';
 import ContainerSupplySection from '@/components/ContainerSupplySection';
 import DistributorTrustSection from '@/components/DistributorTrustSection';
-import Link from 'next/link';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
@@ -39,146 +37,190 @@ const foodserviceCategories = [
 ];
 
 const benefits = [
-  { title: 'Export Documentation', description: 'Full export documentation including health certificates, certificates of origin and allergen declarations.' },
-  { title: 'Private Label', description: 'Custom branding, packaging and label design available for all product lines.' },
-  { title: 'Cold Chain Logistics', description: 'Chilled and frozen logistics solutions for UK, European and international destinations.' },
-  { title: 'Flexible MOQ', description: 'Minimum order quantities designed for importers, distributors and foodservice operators.' },
-  { title: 'Quality Certified', description: 'BRCGS, IFS, ISO 22000 and HACCP certified production facility.' },
-  { title: 'Halal Certified', description: 'Halal-certified production available across all product categories.' },
+  {
+    icon: '📦',
+    title: 'Export Documentation',
+    description: 'Health certificates, certificates of origin and allergen declarations for every shipment.',
+  },
+  {
+    icon: '🏷️',
+    title: 'Private Label',
+    description: 'Custom branding, packaging and label design available across all product lines.',
+  },
+  {
+    icon: '❄️',
+    title: 'Cold Chain Logistics',
+    description: 'Chilled and frozen logistics for UK, European and international destinations.',
+  },
+  {
+    icon: '📐',
+    title: 'Flexible MOQ',
+    description: 'MOQ designed for importers, distributors and foodservice operators of any scale.',
+  },
+  {
+    icon: '✅',
+    title: 'Quality Certified',
+    description: 'BRCGS, IFS, ISO 22000 and HACCP certified production facility.',
+  },
+  {
+    icon: '🌙',
+    title: 'Halal Certified',
+    description: 'Halal-certified production available across all product categories.',
+  },
 ];
 
 const howItWorks = [
-  { step: '01', title: 'Submit Inquiry', description: 'Fill out the inquiry form or contact us via WhatsApp with your product requirements.' },
+  { step: '01', title: 'Submit Inquiry', description: 'Fill out the inquiry form or contact us via WhatsApp with your requirements.' },
   { step: '02', title: 'Receive Samples', description: 'We dispatch product samples with full technical datasheets for your evaluation.' },
   { step: '03', title: 'Agree Terms', description: 'Confirm MOQ, pricing, packaging and delivery terms with our export team.' },
   { step: '04', title: 'Dispatch & Deliver', description: 'Your order is manufactured, packed and dispatched with full export documentation.' },
 ];
 
-const heroTrustItems = [
-  'BRCGS / IFS Certified',
-  'Private Label Available',
-  '40ft Container Supply',
-  'EU & UK Export Ready',
-];
-
 export default function HomePage() {
   return (
     <>
+      {/* Hero */}
       <HeroSection
+        eyebrow="Container supply for distributors & foodservice"
         title="Wholesale Tortilla & Flatbread Supplier"
-        subtitle="Container supply for distributors & foodservice. Frozen flour, corn and specialty tortillas — private label available, EU & UK certified, export ready."
-        badges={['BRCGS / IFS Certified', 'Private Label Available', 'Container Supply', 'EU & UK Export Ready']}
+        subtitle="Frozen flour, corn and specialty tortillas. Private label available, EU & UK certified, export ready from 20ft container."
+        badges={['BRCGS / IFS Certified', 'Private Label Available', '40ft Container Supply', 'EU & UK Export Ready']}
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
         secondaryCTA={{ label: 'Request Container Quote', href: '/bulk-tortilla-supplier' }}
       />
 
-      {/* Hero trust strip */}
-      <div className="bg-[#f3f8f4] border-b border-[#2d7a3a]/10 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 items-center">
-            {heroTrustItems.map((item) => (
-              <div key={item} className="flex items-center gap-1.5 text-sm text-[#2d7a3a] font-medium">
-                <svg className="w-4 h-4 text-[#2d7a3a] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
+      {/* Stats */}
       <StatsStrip />
+
+      {/* Container / Features grid */}
       <ContainerSupplySection />
 
-      <section className="py-16 bg-white">
+      {/* Product Categories */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Product Categories</h2>
-          <p className="text-gray-500 text-sm mb-8">Wholesale tortillas and flatbreads for every application.</p>
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+            <div>
+              <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-2">Product Range</p>
+              <h2 className="text-3xl font-bold text-gray-900 tracking-tight">Product Categories</h2>
+            </div>
+            <Link href="/products" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors whitespace-nowrap">
+              View all products →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {categories.map((cat) => (
-              <Link key={cat.href} href={cat.href}
-                className="bg-[#FAFAF8] border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow group">
-                <div className="relative w-full h-40 overflow-hidden">
+              <Link
+                key={cat.href}
+                href={cat.href}
+                className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:border-gray-200 transition-all group"
+              >
+                <div className="relative w-full h-36 overflow-hidden bg-gray-50">
                   <Image
                     src={cat.image}
                     alt={cat.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
-                  <p className="text-xs text-gray-500">{cat.description}</p>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-1 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
+                  <p className="text-xs text-gray-400 leading-relaxed">{cat.description}</p>
                 </div>
               </Link>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Foodservice categories */}
-      <section className="py-12 bg-[#FAFAF8] border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#1a1a1a] mb-1">Foodservice Formats</h2>
-          <p className="text-gray-500 text-sm mb-6">Specialist tortilla categories for QSR, restaurant and foodservice operators.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {foodserviceCategories.map((cat) => (
-              <Link key={cat.href} href={cat.href}
-                className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow group">
-                <h3 className="font-semibold text-[#1a1a1a] mb-2 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
-                <p className="text-xs text-gray-500 mb-3">{cat.description}</p>
-                <span className="text-[#2d7a3a] text-xs font-semibold">View supply options →</span>
-              </Link>
-            ))}
+          {/* Foodservice row */}
+          <div className="mt-12">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Foodservice Formats</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {foodserviceCategories.map((cat) => (
+                <Link
+                  key={cat.href}
+                  href={cat.href}
+                  className="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md hover:border-gray-200 transition-all group"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">{cat.title}</h3>
+                  <p className="text-xs text-gray-400 leading-relaxed mb-3">{cat.description}</p>
+                  <span className="text-xs font-medium text-[#2d7a3a]">View supply options →</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Why Choose Us — feature grid */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Why Choose Us</h2>
-          <p className="text-gray-500 text-sm mb-8">Built for B2B buyers who need reliable wholesale supply.</p>
+          <div className="max-w-2xl mb-16">
+            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Why Choose Us</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+              Built for serious B2B buyers
+            </h2>
+            <p className="text-base text-gray-500 leading-relaxed">
+              Everything you need to source wholesale tortillas reliably — from certified production to export-ready documentation.
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((b) => (
-              <div key={b.title} className="bg-white border border-gray-200 rounded-lg p-5">
-                <h3 className="font-semibold text-[#1a1a1a] mb-2">{b.title}</h3>
-                <p className="text-sm text-gray-500">{b.description}</p>
+              <div key={b.title} className="group p-6 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all bg-white">
+                <div className="text-2xl mb-3">{b.icon}</div>
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">{b.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{b.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#FAFAF8]">
+      {/* Product Specs */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Product Specifications</h2>
-          <p className="text-gray-500 text-sm mb-8">Full specification overview for our wholesale tortilla and flatbread range.</p>
+          <div className="max-w-2xl mb-12">
+            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Specifications</p>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Product Specifications</h2>
+            <p className="text-base text-gray-500">Full specification overview — diameter, weight, pack size and pallet quantities for our entire range.</p>
+          </div>
           <ProductSpecTable />
         </div>
       </section>
 
-      <section className="py-16 bg-[#2d7a3a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Ready to Source Wholesale Tortillas?</h2>
-          <p className="text-green-100 mb-6 text-sm max-w-xl mx-auto">Send us your requirements and our export team will respond within 1–2 business days with pricing and sample availability.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/contact" className="px-6 py-3 bg-white text-[#2d7a3a] font-semibold rounded-md hover:bg-gray-100 transition-colors text-sm">
-              Request a Quote
-            </Link>
-            <a href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F" target="_blank" rel="noopener noreferrer"
-              className="px-6 py-3 border border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors text-sm">
-              WhatsApp Us
-            </a>
+      {/* How It Works */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Process</p>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-tight">How It Works</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {howItWorks.map((step, i) => (
+              <div key={step.step} className="relative">
+                {i < howItWorks.length - 1 && (
+                  <div className="hidden lg:block absolute top-4 left-full w-full h-px bg-gray-100 -translate-x-4 z-0" />
+                )}
+                <div className="relative z-10">
+                  <div className="w-8 h-8 rounded-full bg-[#2d7a3a]/8 flex items-center justify-center mb-5">
+                    <span className="text-xs font-bold text-[#2d7a3a]">{step.step}</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2 text-sm">{step.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#FAFAF8]">
+      {/* Certifications */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Certifications &amp; Documentation</h2>
-          <p className="text-gray-500 text-sm mb-8">Export documentation and quality certifications available on request.</p>
+          <div className="max-w-2xl mb-12">
+            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Food Safety</p>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Certifications & Documentation</h2>
+            <p className="text-base text-gray-500">Export documentation and quality certifications available on request for all product lines.</p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {certifications.map((cert) => (
               <CertificationCard key={cert.id} name={cert.name} description={cert.description} />
@@ -187,43 +229,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Who We Supply</h2>
-          <p className="text-gray-500 text-sm mb-8">Serving B2B buyers across the food supply chain.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <BuyerTypeCard icon="🏪" title="Food Distributors" description="Wholesale import and distribution for regional and national food distributors." />
-            <BuyerTypeCard icon="🍽️" title="Foodservice Operators" description="QSR chains, restaurants, catering and hospitality operators at scale." />
-            <BuyerTypeCard icon="🏷️" title="Private Label Buyers" description="Custom branding and private label packaging for retailers and brands." />
-            <BuyerTypeCard icon="🏭" title="Food Manufacturers" description="Ingredient supply for food manufacturing, ready meal and sandwich production." />
+      {/* CTA */}
+      <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #2d7a3a 0%, transparent 70%)' }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-4">Get Started</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4 max-w-2xl mx-auto">
+            Ready to source wholesale tortillas?
+          </h2>
+          <p className="text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+            Send us your requirements and our export team will respond within 1–2 business days with pricing and sample availability.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
+            >
+              Request a Quote
+            </Link>
+            <a
+              href="https://wa.me/905XXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 transition-colors text-sm"
+            >
+              WhatsApp Us
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#FAFAF8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">How It Works</h2>
-          <p className="text-gray-500 text-sm mb-8">A straightforward process from inquiry to delivery.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {howItWorks.map((step) => (
-              <div key={step.step} className="flex flex-col">
-                <span className="text-4xl font-bold text-[#2d7a3a]/20 mb-2">{step.step}</span>
-                <h3 className="font-semibold text-[#1a1a1a] mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-500">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* Export Markets */}
       <RegionCTASection />
-      <DistributorTrustSection />
 
-      <section className="py-8 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TrustBadgeStrip />
-        </div>
-      </section>
+      {/* Distributor Trust */}
+      <DistributorTrustSection />
     </>
   );
 }
