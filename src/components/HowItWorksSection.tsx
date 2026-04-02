@@ -221,9 +221,9 @@ export default function HowItWorksSection() {
 
                 {/* Text */}
                 <div className="lg:mt-0 mt-0">
-                  <h3 className="font-bold text-gray-900 mb-2 text-base">
+                  <p className="font-bold text-gray-900 mb-2 text-base">
                     {step.num}. {step.title}
-                  </h3>
+                  </p>
                   <p className="text-sm text-gray-500 leading-relaxed max-w-[200px]">{step.description}</p>
                 </div>
               </div>

@@ -12,7 +12,7 @@ export default function CertificationCard({ name, description }: CertificationCa
             {name.split(' ').map(w => w[0]).join('').slice(0, 4)}
           </span>
         </div>
-        <h3 className="font-semibold text-gray-900 text-sm">{name}</h3>
+        <p className="font-semibold text-gray-900 text-sm">{name}</p>
       </div>
       <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
     </div>

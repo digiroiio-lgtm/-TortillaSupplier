@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     default: 'Global Tortilla Supplier for Distributors | TortillaSupplier',
     template: '%s | TortillaSupplier',
   },
+  icons: {
+    apple: '/images/og-default.png',
+  },
   description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label available.',
   openGraph: {
     type: 'website',
