@@ -6,11 +6,11 @@ import JsonLd from '@/components/JsonLd';
 const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Tortilla Calories: Complete Nutrition Guide | TortillaSupplier' },
+  title: { absolute: 'Tortilla Calories: Nutrition Guide | TortillaSupplier' },
   description:
     'How many calories in a tortilla? Flour vs corn tortilla calories by size — 6", 8", 10", 12". Nutrition facts for foodservice buyers and retail planners.',
   openGraph: {
-    title: 'Tortilla Calories: Complete Nutrition Guide | TortillaSupplier',
+    title: 'Tortilla Calories: Nutrition Guide | TortillaSupplier',
     description:
       'How many calories in a tortilla? Flour vs corn tortilla calories by size — 6", 8", 10", 12". Nutrition facts for foodservice buyers and retail planners.',
     url: `${BASE_URL}/tortilla-calories`,
