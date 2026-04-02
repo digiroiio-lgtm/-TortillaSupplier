@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Related resources — internal links per post */}
           {post.relatedLinks && post.relatedLinks.length > 0 && (
             <div className="mt-10 pt-8 border-t border-gray-100">
-              <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Resources</h2>
+              <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Resources</h3>
               <div className="flex flex-wrap gap-2">
                 {post.relatedLinks.map((link) => (
                   <Link

@@ -161,7 +161,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
       {page.relatedSlugs.length > 0 && (
         <section className="py-8 bg-[#FAFAF8] border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h2>
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h3>
             <div className="flex flex-wrap gap-3">
               {page.relatedSlugs.map((slug) => (
                 <Link
