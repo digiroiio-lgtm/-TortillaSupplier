@@ -487,8 +487,8 @@ export default function TortillaGuidePage() {
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   Private label tortilla manufacturing is a well-established model used by supermarket chains,
                   foodservice distributors, and specialist food importers around the world. Under a private label
-                  arrangement, a certified manufacturer produces tortillas to the buyer's specification and
-                  packages them under the buyer's brand name.
+                  arrangement, a certified manufacturer produces tortillas to the buyer&apos;s specification and
+                  packages them under the buyer&apos;s brand name.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   The advantages for the buyer are significant. Private label enables retailers and distributors
