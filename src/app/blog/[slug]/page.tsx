@@ -180,6 +180,32 @@ export default async function BlogPostPage({ params }: PageProps) {
                     ))}
                   </ul>
                 )}
+                {section.tableData && (
+                  <div className="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+                    <table className="w-full text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          {section.tableData.headers.map((header) => (
+                            <th key={header} scope="col" className="text-left px-4 py-3 font-semibold text-gray-700 text-xs whitespace-nowrap">
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {section.tableData.rows.map((row, rowIdx) => (
+                          <tr key={rowIdx} className="bg-white hover:bg-gray-50 transition-colors">
+                            {row.map((cell, cellIdx) => (
+                              <td key={cellIdx} className={`px-4 py-3 text-xs ${cellIdx === 0 ? 'font-medium text-gray-900' : 'text-gray-600'}`}>
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </section>
             ))}
 
@@ -210,23 +236,29 @@ export default async function BlogPostPage({ params }: PageProps) {
               Get Started
             </p>
             <h3 className="text-xl font-bold text-white mb-2">
-              Ready to Source Tortillas for Your Distribution Network?
+              Import Tortillas Directly from a Certified Manufacturer
             </h3>
-            <p className="text-sm text-gray-400 mb-6 max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-gray-400 mb-4 max-w-md mx-auto leading-relaxed">
               Our export team responds within 1–2 business days with pricing and sample availability.
             </p>
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-gray-500 mb-6">
+              <li>✓ MOQ: 1 container</li>
+              <li>✓ Private label available</li>
+              <li>✓ Frozen or fresh supply</li>
+              <li>✓ BRCGS · IFS · Halal certified</li>
+            </ul>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/contact"
                 className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
               >
-                Request Distributor Pricing
+                Request Distributor Pricing →
               </Link>
               <a
                 href="https://wa.me/905531229372?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/8 transition-colors text-sm"
+                className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm"
               >
                 WhatsApp Sales
               </a>

@@ -1,7 +1,13 @@
+export interface BlogTableData {
+  headers: string[];
+  rows: string[][];
+}
+
 export interface BlogSection {
   heading: string;
   body: string;
   listItems?: string[];
+  tableData?: BlogTableData;
 }
 
 export interface BlogPost {
@@ -34,14 +40,14 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Tortilla Supplier", href: "/tortilla-supplier" },
-        { label: "Food Safety Certifications", href: "/certifications" },
-        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+      { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
+      { label: 'Food Safety Certifications', href: '/certifications' },
+      { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
     ],
     sections: [
       {
         heading: 'Food Safety Certifications',
-        body: 'One of the first criteria to evaluate when sourcing tortillas internationally is certification. Reliable tortilla manufacturers should comply with internationally recognised food safety systems such as:',
+        body: 'One of the first criteria to evaluate when sourcing tortillas internationally is certification. The UK tortilla market alone is estimated to exceed £350M annually, and major retailers operating at this scale require certified suppliers. Reliable tortilla manufacturers should comply with internationally recognised food safety systems such as:',
         listItems: [
           'BRCGS Global Food Safety Standard',
           'IFS Food Certification',
@@ -51,11 +57,11 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Cold Chain and Shelf Life',
-        body: 'Tortillas exported internationally are typically supplied in chilled or frozen formats. Frozen tortillas can provide shelf life of up to 12 months when stored at −18°C, making them ideal for long-distance distribution and import logistics. Distributors should confirm that suppliers provide stable cold-chain logistics and clear storage instructions.',
+        body: 'Tortillas exported internationally are typically supplied in chilled or frozen formats. Frozen tortillas can provide shelf life of up to 12 months when stored at −18°C, making them ideal for long-distance distribution and import logistics. A 20-foot reefer container holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units — enabling cost efficiency improvements of 35–40% versus pallet shipping. Distributors should confirm that suppliers provide stable cold-chain logistics and clear storage instructions.',
       },
       {
         heading: 'Private Label Capabilities',
-        body: 'Private label tortillas are increasingly popular among supermarket chains and foodservice distributors. A supplier that offers private label production allows buyers to build their own brand identity while maintaining competitive sourcing costs. Key private label services include:',
+        body: 'Private label tortillas are increasingly popular among supermarket chains and foodservice distributors. A supplier that offers private label production allows buyers to build their own brand identity while maintaining competitive sourcing costs. Margins on private label tortillas are typically 15–25% higher than stocking a third-party brand. Key private label services include:',
         listItems: [
           'Custom packaging design',
           'Label compliance for target markets',
@@ -75,7 +81,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'Selecting the right tortilla supplier is critical for distributors and food importers. A certified production facility, reliable logistics, and flexible export programs are essential for building long-term wholesale supply partnerships.',
+      'Selecting the right tortilla supplier is critical for distributors and food importers. A certified production facility, reliable logistics, and flexible export programs are essential for building long-term wholesale supply partnerships. With the UK and European tortilla market continuing its double-digit growth trajectory, securing a certified export manufacturer now is a strategic advantage.',
     tags: ['tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier', 'import tortilla'],
   },
   {
@@ -91,20 +97,31 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     relatedLinks: [
-        { label: "Frozen Flour Tortilla Supplier", href: "/frozen-flour-tortilla-supplier" },
-        { label: "Frozen Corn Tortilla Supplier", href: "/frozen-corn-tortilla-supplier" },
-        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+      { label: 'Frozen Flour Tortilla Supplier', href: '/frozen-flour-tortilla-supplier' },
+      { label: 'Frozen Corn Tortilla Supplier', href: '/frozen-corn-tortilla-supplier' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
     ],
     sections: [
       {
         heading: 'Frozen Tortillas',
-        body: 'Frozen tortillas are the most common choice for export markets. They offer extended shelf life and stable product quality during long shipping routes. Key advantages include:',
+        body: 'Frozen tortillas are the most common choice for export markets. They offer extended shelf life and stable product quality during long shipping routes. The global frozen bakery market — which includes frozen tortillas — is projected to exceed $28 billion by 2028, reflecting the rapid adoption of frozen formats across international foodservice. Key advantages include:',
         listItems: [
           'Shelf life up to 12 months at −18°C',
           'Reduced waste during distribution',
           'Ideal for container shipments',
           'Compatible with international cold chain logistics',
         ],
+      },
+      {
+        heading: 'Container Economics for Frozen Tortillas',
+        body: 'Frozen tortillas are highly efficient to ship in container volumes. A 20-foot reefer container typically carries around 800,000 tortillas, while a 40-foot container handles up to 1.2 million units. Shipping in container quantities reduces per-unit logistics costs by 35–40% compared to pallet-based freight. This makes frozen container supply the default choice for distributors importing at scale.',
+        tableData: {
+          headers: ['Container', 'Approx. Tortillas', 'Pallets', 'Cost Efficiency'],
+          rows: [
+            ['20ft reefer', '~800,000 units', '18–20 pallets', 'Baseline'],
+            ['40ft reefer', '~1,200,000 units', '36–40 pallets', '35–40% saving vs pallet freight'],
+          ],
+        },
       },
       {
         heading: 'Who Uses Frozen Tortillas',
@@ -131,7 +148,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'Understanding the difference between frozen and chilled tortilla supply formats allows distributors to build efficient import programs and reduce supply chain risk.',
+      'Understanding the difference between frozen and chilled tortilla supply formats allows distributors to build efficient import programs and reduce supply chain risk. For intercontinental shipments, frozen container supply consistently delivers the best balance of cost, quality, and logistics reliability.',
     tags: ['frozen tortilla supplier', 'bulk tortilla supplier', 'tortilla distributor', 'frozen tortilla wholesale'],
   },
   {
@@ -147,11 +164,27 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     relatedLinks: [
-        { label: 'Flour Tortilla 25cm (10")', href: '/flour-tortilla-25cm-10-inch' },
-        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
-        { label: "Tortilla Supplier USA", href: "/tortilla-supplier-usa" },
+      { label: 'Flour Tortilla 25cm (10")', href: '/flour-tortilla-25cm-10-inch' },
+      { label: 'Foodservice Tortilla Supplier', href: '/tortilla-foodservice-supplier' },
+      { label: 'Tortilla Supplier USA', href: '/tortilla-supplier-usa' },
     ],
     sections: [
+      {
+        heading: 'Tortilla Size Reference: B2B Pack Formats',
+        body: 'Industry-standard pack counts differ by size and channel. The table below shows the B2B foodservice and distributor pack formats used across the product range:',
+        tableData: {
+          headers: ['Size', 'Inch', 'Weight', 'B2B Pack Count', 'Typical Use'],
+          rows: [
+            ['10 cm', '4"', '15 g', '30 pcs', 'Mini taco / street food'],
+            ['15 cm', '6"', '25 g', '24 pcs', 'Street taco / snack'],
+            ['20 cm', '8"', '35 g', '18 pcs', 'Wrap / sandwich'],
+            ['25 cm', '10"', '50 g', '12 pcs', 'Foodservice wrap'],
+            ['30 cm', '12"', '65 g', '10 pcs', 'Burrito / large wrap'],
+            ['32 cm', '12.5"', '70 g', '8 pcs', 'Burrito restaurant'],
+            ['35 cm', '14"', '90 g', '6 pcs', 'Large burrito / QSR'],
+          ],
+        },
+      },
       {
         heading: '15 cm Tortillas — Street Taco Format',
         body: 'Small tortillas around 15 cm are typically used for street tacos and traditional dishes. Common applications:',
@@ -178,11 +211,11 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Choosing the Right Size for Your Distribution Programme',
-        body: 'Food distributors often import multiple tortilla sizes to serve different restaurant segments. Mixed pallet options allow importers to test several SKUs within a single container shipment, reducing upfront commitment while expanding product range.',
+        body: 'Food distributors often import multiple tortilla sizes to serve different restaurant segments. Mixed pallet options allow importers to test several SKUs within a single container shipment, reducing upfront commitment while expanding product range. A single 40-foot container can hold up to 1.2 million tortillas — making it practical to combine sizes across the same shipment.',
       },
     ],
     conclusion:
-      'Understanding tortilla size formats helps foodservice buyers design menus efficiently and optimise food preparation operations. A supplier offering multiple sizes with mixed pallet options provides maximum flexibility for building your import programme.',
+      'Understanding tortilla size formats helps foodservice buyers design menus efficiently and optimise food preparation operations. A supplier offering multiple sizes with B2B-aligned pack counts and mixed pallet options provides maximum flexibility for building a scalable import programme.',
     tags: ['tortilla wholesale', 'tortilla foodservice supplier', 'bulk tortilla supplier', 'tortilla sizes'],
   },
   {
@@ -190,7 +223,7 @@ const blogPosts: BlogPost[] = [
     title: "How Tortillas Became the World's Most Versatile Bread",
     excerpt:
       'From ancient Mesoamerican staple to global foodservice platform, tortillas have evolved into the most adaptable bread format on the planet — and their worldwide journey is still accelerating.',
-    metaTitle: 'Tortillas: World\'s Most Versatile Bread | TortillaSupplier',
+    metaTitle: "Tortillas: World's Most Versatile Bread | TortillaSupplier",
     metaDescription:
       'Discover how tortillas evolved from an ancient Mesoamerican staple into a global food format used by restaurants, street vendors, and major chains across every continent.',
     publishDate: '2026-03-21',
@@ -198,14 +231,18 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Corn Tortilla Supplier", href: "/corn-tortilla-supplier" },
-        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
-        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+      { label: 'Corn Tortilla Supplier', href: '/corn-tortilla-supplier' },
+      { label: 'Flour Tortilla Supplier', href: '/flour-tortilla-supplier' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
     ],
     sections: [
       {
         heading: 'From Ancient Staple to Global Food',
         body: "The tortilla's origins trace back thousands of years to Mesoamerica. Indigenous cultures such as the Aztecs and Mayans relied heavily on maize as a dietary foundation. Through a process called nixtamalization — soaking corn in alkaline water — they created masa, a dough that could be pressed and cooked into flat rounds. These early corn tortillas were far more than just food; they were utensils, plates, and nutritional staples all in one. When Spanish colonists arrived in the 16th century, wheat was introduced to the region, eventually giving rise to flour tortillas, which became especially popular in northern Mexico and the southwestern United States. Today both varieties coexist, each serving different culinary roles. Corn tortillas remain the foundation of traditional tacos, enchiladas, and tostadas, while flour tortillas have become the preferred format for wraps, burritos, and foodservice applications.",
+      },
+      {
+        heading: 'A $45 Billion Global Market',
+        body: 'The scale of the modern tortilla industry reflects this global journey. The global tortilla market is forecast to exceed $45 billion by 2030, growing at an estimated compound annual rate of 8–10% per year. The UK tortilla market alone is estimated to exceed £350M annually, driven by the growth of wrap-based QSR restaurants and Mexican cuisine. European consumption is expanding rapidly, with Germany, the Netherlands, France, and Spain emerging as major import markets. For distributors and importers, this growth represents a compelling and durable commercial opportunity.',
       },
       {
         heading: 'Why Tortillas Work Across Cuisines',
@@ -227,7 +264,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Frozen Tortillas and the Logistics Revolution',
-        body: 'One of the biggest innovations in the tortilla industry has been the widespread adoption of frozen supply formats. Frozen tortillas dramatically extend shelf life — often up to 12 months — while preserving product quality. This allows manufacturers to export tortillas across long distances without sacrificing freshness. For distributors, frozen products offer several advantages:',
+        body: 'One of the biggest innovations in the tortilla industry has been the widespread adoption of frozen supply formats. Frozen tortillas dramatically extend shelf life — often up to 12 months — while preserving product quality. This allows manufacturers to export tortillas across long distances without sacrificing freshness. A single 40-foot reefer container can carry up to 1.2 million tortillas, making intercontinental distribution commercially viable at scale. For distributors, frozen products offer several advantages:',
         listItems: [
           'longer inventory windows',
           'reduced product waste',
@@ -241,7 +278,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'What began thousands of years ago as a humble corn flatbread has become one of the most adaptable foods in the modern world. For distributors and importers, tortillas represent a product category that combines strong consumer demand with efficient logistics and scalable production — and their global journey is far from over.',
+      'What began thousands of years ago as a humble corn flatbread has become one of the most adaptable foods in the modern world. With a market forecast exceeding $45 billion by 2030, for distributors and importers, tortillas represent a product category that combines strong consumer demand with efficient logistics and scalable production — and their global journey is far from over.',
     tags: ['tortilla supplier', 'bulk tortilla supplier', 'tortilla distributor', 'wholesale tortilla'],
   },
   {
@@ -257,9 +294,9 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
-        { label: "Foodservice Tortilla Supplier", href: "/tortilla-foodservice-supplier" },
-        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+      { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
+      { label: 'Foodservice Tortilla Supplier', href: '/tortilla-foodservice-supplier' },
+      { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
     ],
     sections: [
       {
@@ -279,12 +316,24 @@ const blogPosts: BlogPost[] = [
         body: 'The expansion of global cold-chain logistics has also played a major role in the rise of frozen tortillas. Modern refrigerated shipping containers allow frozen products to travel long distances while maintaining stable temperatures. Distributors can now move frozen tortillas from production facilities to warehouses thousands of kilometres away without compromising quality, making it possible for international suppliers to serve markets that were once inaccessible.',
       },
       {
+        heading: 'Container Economics: Why Frozen Scales Better',
+        body: 'The economics of frozen container shipping make it significantly more efficient than ambient or chilled pallet freight at scale. Distributors who commit to full container loads benefit from predictable unit economics and simplified logistics planning.',
+        tableData: {
+          headers: ['Shipping Format', 'Approx. Volume', 'Shelf Life', 'Cost Efficiency'],
+          rows: [
+            ['Pallet (ambient)', '~18,000 tortillas', '21 days', 'High per-unit cost'],
+            ['20ft reefer (frozen)', '~800,000 tortillas', '12 months', 'Baseline FCL cost'],
+            ['40ft reefer (frozen)', '~1,200,000 tortillas', '12 months', '35–40% saving vs pallet'],
+          ],
+        },
+      },
+      {
         heading: 'Why Distributors Prefer Frozen Tortillas',
         body: 'For distributors, frozen tortillas offer clear logistical advantages. They simplify inventory management, reduce spoilage risk, and allow larger shipment volumes. Container-based shipments can include thousands of tortilla packs while maintaining stable product quality throughout transit. Additionally, frozen formats make it easier to serve multiple customer segments simultaneously — from small restaurants to large retail chains.',
       },
     ],
     conclusion:
-      'As global foodservice networks continue expanding, frozen tortillas are likely to remain the preferred supply format. They provide the stability, scalability, and reliability required for international distribution. For distributors and restaurant operators alike, frozen tortillas are not just a convenience — they are a supply chain solution.',
+      'As global foodservice networks continue expanding, frozen tortillas are likely to remain the preferred supply format. They provide the stability, scalability, and reliability required for international distribution. With container economics improving at scale, distributors who commit to frozen container supply consistently achieve the best unit costs and supply chain resilience.',
     tags: ['frozen tortilla supplier', 'frozen tortilla wholesale', 'bulk tortilla supplier', 'tortilla distributor'],
   },
   {
@@ -300,11 +349,15 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     relatedLinks: [
-        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
-        { label: "Tortilla Distributor Supply", href: "/tortilla-distributor" },
-        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+      { label: 'Tortilla Wholesale', href: '/tortilla-wholesale' },
+      { label: 'Tortilla Distributor Supply', href: '/tortilla-distributor' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
     ],
     sections: [
+      {
+        heading: 'A Market Distributors Cannot Afford to Ignore',
+        body: 'The global tortilla market is forecast to exceed $45 billion by 2030, growing at 8–10% per year. The UK tortilla market alone is estimated to exceed £350M annually, and European markets — Germany, France, the Netherlands, Spain — are expanding at a similar rate. For food distributors, this growth represents a durable category with consistent, recurring demand across foodservice, retail, and private label channels.',
+      },
       {
         heading: 'A Menu Format That Works Everywhere',
         body: 'Tortillas have become a universal menu component because they support a wide range of culinary styles. Restaurants can build entire menu categories around tortillas without needing specialised equipment or ingredients. Wraps, tacos, burritos, quesadillas, and flatbread sandwiches all rely on the same basic product. For distributors supplying restaurants, this versatility translates into strong and consistent demand.',
@@ -315,11 +368,11 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Private Label Opportunities',
-        body: 'Supermarket chains have also contributed to tortilla expansion through private label programmes. Retailers often seek versatile products that can support multiple meal occasions — tortillas work well because they can be marketed for tacos, wraps, breakfast dishes, and even pizza-style applications. For distributors, supplying private label tortillas creates new revenue opportunities while strengthening relationships with retail buyers.',
+        body: 'Supermarket chains have also contributed to tortilla expansion through private label programmes. Retailers often seek versatile products that can support multiple meal occasions — tortillas work well because they can be marketed for tacos, wraps, breakfast dishes, and even pizza-style applications. Private label margins are typically 15–25% higher than stocking a branded equivalent. For distributors, supplying private label tortillas creates new revenue opportunities while strengthening relationships with retail buyers.',
       },
       {
         heading: 'The Logistics Advantage',
-        body: 'Compared to many baked goods, tortillas are relatively easy to transport and store. Frozen formats extend shelf life significantly, making them ideal for large-scale distribution. This logistical efficiency makes tortillas attractive products for wholesalers and importers. They occupy a unique position where culinary versatility meets supply chain practicality.',
+        body: 'Compared to many baked goods, tortillas are relatively easy to transport and store. A 40-foot reefer container can carry up to 1.2 million tortillas, and frozen formats extend shelf life to 12 months — making them ideal for large-scale international distribution. This logistical efficiency makes tortillas attractive products for wholesalers and importers. They occupy a unique position where culinary versatility meets supply chain practicality.',
       },
       {
         heading: 'A Category That Continues to Grow',
@@ -327,7 +380,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'As global dining habits evolve, the role of tortillas in food distribution will likely become even more significant. Distributors who stock a well-rounded tortilla range — across sizes, formats, and private label options — are best positioned to capitalise on continued market growth.',
+      'As global dining habits evolve, the role of tortillas in food distribution will likely become even more significant. With market growth exceeding 8% annually, distributors who stock a well-rounded tortilla range — across sizes, formats, and private label options — are best positioned to capitalise on continued demand growth across foodservice, retail, and private label channels.',
     tags: ['tortilla wholesale supplier', 'bulk tortilla supplier', 'tortilla distributor', 'wholesale tortilla'],
   },
   {
@@ -343,9 +396,9 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Wholesale Tortilla Supplier", href: "/tortilla-supplier" },
-        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
-        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+      { label: 'Wholesale Tortilla Supplier', href: '/tortilla-supplier' },
+      { label: 'Private Label Tortilla Manufacturer', href: '/private-label-tortilla-manufacturer' },
+      { label: 'Container Tortilla Supply', href: '/container-tortilla-supply' },
     ],
     sections: [
       {
@@ -360,6 +413,21 @@ const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'Supplier Comparison: Local vs Industrial vs Export Manufacturer',
+        body: 'Understanding the difference between supplier tiers helps buyers choose the right partner for their scale and distribution model:',
+        tableData: {
+          headers: ['Criteria', 'Local Supplier', 'Industrial Supplier', 'Export Manufacturer'],
+          rows: [
+            ['Shelf life', '7 days', '14 days', '12 months frozen'],
+            ['Production capacity', 'Low', 'Medium', 'High'],
+            ['Export logistics', 'Not available', 'Limited', 'Full container FCL / LCL'],
+            ['Certifications', 'Basic / none', 'ISO 22000', 'BRCGS · IFS · Halal'],
+            ['Private label', 'Rarely', 'Sometimes', 'Standard offering'],
+            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 container'],
+          ],
+        },
+      },
+      {
         heading: 'Understanding Product Formats',
         body: 'Tortilla suppliers typically offer a range of formats designed for different end uses. The most common categories for wholesale buyers are flour tortillas, corn tortillas, and flatbreads. Within each category, size matters. A 30 cm flour tortilla is suited to burrito formats, a 25 cm is ideal for wraps, and a 15 cm corn tortilla is the standard for authentic street tacos. Buyers sourcing for multiple restaurant concepts should consider requesting mixed-pallet options to test SKUs before committing to full container orders.',
       },
@@ -369,7 +437,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Container Pricing and Minimum Orders',
-        body: 'Most wholesale tortilla suppliers price in container quantities — typically 20-foot or 40-foot refrigerated containers. Minimum order quantities (MOQs) vary by supplier but generally start at 2–5 pallets for mixed orders and scale up for dedicated SKU shipments. Buyers should request full container pricing that includes product cost, cold chain packaging, export documentation, and incoterms (typically EXW, FOB, or CIF).',
+        body: 'Most wholesale tortilla suppliers price in container quantities — typically 20-foot or 40-foot refrigerated containers. A 20-foot reefer holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units, with cost efficiency improvements of 35–40% over pallet-based shipping. Minimum order quantities (MOQs) vary by supplier but generally start at 2–5 pallets for mixed orders and scale up for dedicated SKU shipments. Buyers should request full container pricing that includes product cost, cold chain packaging, export documentation, and incoterms (typically EXW, FOB, or CIF).',
       },
       {
         heading: 'Export Documentation',
@@ -404,9 +472,9 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     relatedLinks: [
-        { label: "Private Label Tortilla Manufacturer", href: "/private-label-tortilla-manufacturer" },
-        { label: "Flour Tortilla Supplier", href: "/flour-tortilla-supplier" },
-        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+      { label: 'Private Label Tortilla Manufacturer', href: '/private-label-tortilla-manufacturer' },
+      { label: 'Flour Tortilla Supplier', href: '/flour-tortilla-supplier' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
     ],
     sections: [
       {
@@ -415,7 +483,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Benefits for Retailers and Distributors',
-        body: 'Private label tortillas offer several commercial advantages over stocking a third-party brand:',
+        body: 'Private label tortillas offer several commercial advantages over stocking a third-party brand. Margins on private label products are typically 15–25% higher than equivalent branded lines, and own-brand products generate stronger repeat purchase rates:',
         listItems: [
           'Higher margin potential compared to branded products',
           'Full control over packaging, positioning, and price point',
@@ -428,11 +496,11 @@ const blogPosts: BlogPost[] = [
         heading: 'Product Range Available for Private Label',
         body: 'Most private label tortilla manufacturers offer the full product range under contract production, including:',
         listItems: [
-          'Flour tortillas in all major sizes (20 cm, 25 cm, 30 cm)',
-          'Corn tortillas (15 cm street size, 20 cm)',
+          'Flour tortillas in all major sizes (15 cm, 20 cm, 25 cm, 30 cm, 32 cm, 35 cm)',
+          'Corn tortillas (10 cm taco, 15 cm street size, 20 cm)',
           'Frozen flour and corn tortillas',
-          'Flatbreads and wrap formats',
-          'Gluten-free and whole wheat variants (subject to facility capability)',
+          'Flatbreads, lavash, wrap formats, and piadina',
+          'Specialty tortillas (whole wheat, high protein, spinach, beetroot and more)',
         ],
       },
       {
@@ -449,7 +517,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'Private label tortillas provide retailers and distributors with a scalable, high-margin product category that builds brand equity and consumer loyalty. The key to a successful launch is choosing a certified manufacturer with export experience, transparent documentation practices, and the flexibility to support your packaging and compliance requirements.',
+      'Private label tortillas provide retailers and distributors with a scalable, high-margin product category that builds brand equity and consumer loyalty. With margins 15–25% above branded alternatives, the commercial case is compelling. The key to a successful launch is choosing a certified manufacturer with export experience, transparent documentation practices, and the flexibility to support your packaging and compliance requirements.',
     tags: ['private label tortilla manufacturer', 'bulk tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier'],
   },
   {
@@ -465,14 +533,14 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Tortilla Importer Supply", href: "/tortilla-importer-supply" },
-        { label: "Frozen Tortilla Supplier", href: "/frozen-tortilla-supplier" },
-        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+      { label: 'Tortilla Importer Supply', href: '/tortilla-importer-supply' },
+      { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
+      { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
     ],
     sections: [
       {
         heading: 'The UK Tortilla Market',
-        body: "The United Kingdom is one of the world's largest consumers of tortillas outside North America. Wraps, burritos, and tacos have become mainstream meal formats in UK foodservice, retail, and meal-kit markets. Demand is driven by major QSR chains, supermarket own-label ranges, and the rapid growth of Mexican and Tex-Mex cuisine across the country. For international suppliers, the UK represents a high-volume, stable market with strong import infrastructure.",
+        body: "The United Kingdom is one of the world's largest consumers of tortillas outside North America. The UK tortilla market is estimated to exceed £350M annually, driven by major QSR chains, supermarket own-label ranges, and the rapid growth of Mexican and Tex-Mex cuisine across the country. Wraps, burritos, and tacos have become mainstream meal formats in UK foodservice, retail, and meal-kit markets. For international suppliers, the UK represents a high-volume, stable market with strong import infrastructure and growing demand for both chilled and frozen tortilla formats.",
       },
       {
         heading: 'Import Requirements and Customs',
@@ -488,6 +556,17 @@ const blogPosts: BlogPost[] = [
       {
         heading: 'Cold Chain and Storage Requirements',
         body: 'Frozen tortilla imports must maintain an unbroken cold chain throughout transit. Shipments arriving at UK ports are subject to customs inspection, and importers must ensure that products remain at −18°C or below throughout. Working with a logistics provider that specialises in temperature-controlled imports is strongly recommended. Upon arrival, products should be transferred directly to approved cold storage facilities.',
+      },
+      {
+        heading: 'Container Economics for UK Import',
+        body: 'For UK importers buying at volume, container shipments offer the most competitive unit economics. A 40-foot reefer container holds up to 1.2 million tortillas at cost efficiency improvements of 35–40% over pallet freight. Most UK distributors begin with a 20-foot container (approximately 800,000 tortillas) and scale to 40-foot loads as their customer base expands.',
+        tableData: {
+          headers: ['Container', 'Approx. Tortillas', 'Pallets', 'Transit to UK'],
+          rows: [
+            ['20ft reefer', '~800,000 units', '18–20 pallets', '10–20 days'],
+            ['40ft reefer', '~1,200,000 units', '36–40 pallets', '10–20 days'],
+          ],
+        },
       },
       {
         heading: 'Food Safety Certifications for UK Buyers',
@@ -506,7 +585,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'Importing tortillas to the UK requires careful attention to customs documentation, cold-chain logistics, and food safety certifications. Working with an experienced exporter who understands UK import requirements significantly reduces compliance risk and ensures reliable supply to your distribution network.',
+      'With the UK tortilla market exceeding £350M annually and growing consistently, importing tortillas to the UK represents a significant commercial opportunity for distributors. Careful attention to customs documentation, cold-chain logistics, and food safety certifications — combined with a certified export manufacturer — significantly reduces compliance risk and ensures reliable supply to your distribution network.',
     tags: ['tortilla supplier', 'frozen tortilla supplier', 'bulk tortilla supplier', 'tortilla distributor'],
   },
   {
@@ -522,9 +601,9 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Container Tortilla Supply", href: "/container-tortilla-supply" },
-        { label: "Frozen Tortilla Export", href: "/frozen-tortilla-export" },
-        { label: "Tortilla Supplier UK", href: "/tortilla-supplier-uk" },
+      { label: 'Container Tortilla Supply', href: '/container-tortilla-supply' },
+      { label: 'Frozen Tortilla Export', href: '/frozen-tortilla-export' },
+      { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
     ],
     sections: [
       {
@@ -541,11 +620,11 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Step 4: Container Loading and Sea Freight',
-        body: 'Frozen tortillas are loaded into refrigerated shipping containers — known as reefers — set to maintain −18°C. Container loads typically range from 18 to 24 pallets depending on product weight and volume. Transit times vary by destination: Europe typically takes 3–10 days from Mediterranean ports, while the UK and North America may require 10–20 days depending on origin.',
+        body: 'Frozen tortillas are loaded into refrigerated shipping containers — known as reefers — set to maintain −18°C. A 20-foot reefer container holds approximately 800,000 tortillas across 18–20 pallets; a 40-foot container handles up to 1.2 million units across 36–40 pallets, with cost efficiency improvements of 35–40% versus pallet shipping. Transit times vary by destination: Europe typically takes 3–10 days from Mediterranean ports, while the UK and North America may require 10–20 days depending on origin.',
       },
       {
         heading: 'Step 5: Port Clearance and Delivery',
-        body: 'Upon arrival at the destination port, containers pass through customs clearance. Temperature logs from the container are reviewed to confirm cold-chain integrity throughout transit. Once cleared, product is delivered to the importer\'s cold store or directly to distribution centres, where it is held until picked and dispatched to end customers.',
+        body: "Upon arrival at the destination port, containers pass through customs clearance. Temperature logs from the container are reviewed to confirm cold-chain integrity throughout transit. Once cleared, product is delivered to the importer's cold store or directly to distribution centres, where it is held until picked and dispatched to end customers.",
       },
       {
         heading: 'Optimising Your Frozen Tortilla Supply Chain',
@@ -559,7 +638,7 @@ const blogPosts: BlogPost[] = [
       },
     ],
     conclusion:
-      'The frozen tortilla supply chain spans multiple stages and requires close coordination between manufacturer, logistics providers, and the importing distributor. Understanding each stage helps buyers make better procurement decisions, reduce lead times, and build a more resilient supply network.',
+      'The frozen tortilla supply chain spans multiple stages and requires close coordination between manufacturer, logistics providers, and the importing distributor. Understanding each stage helps buyers make better procurement decisions, reduce lead times, and build a more resilient supply network. With container volumes of 800,000 to 1.2 million units per shipment, the economics strongly favour a direct manufacturer-to-importer model.',
     tags: ['frozen tortilla supplier', 'frozen tortilla wholesale', 'bulk tortilla supplier', 'tortilla distributor'],
   },
   {
@@ -575,14 +654,14 @@ const blogPosts: BlogPost[] = [
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     relatedLinks: [
-        { label: "Tortilla Wholesale", href: "/tortilla-wholesale" },
-        { label: "Bulk Tortilla Supplier", href: "/bulk-tortilla-supplier" },
-        { label: "Tortilla Supplier Europe", href: "/tortilla-supplier-europe" },
+      { label: 'Tortilla Wholesale', href: '/tortilla-wholesale' },
+      { label: 'Bulk Tortilla Supplier', href: '/bulk-tortilla-supplier' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
     ],
     sections: [
       {
         heading: 'A Market That Keeps Growing',
-        body: 'The global tortilla and flatbread market has expanded significantly over the past decade. Growth has been driven by a combination of factors including the global rise of Mexican cuisine, the popularity of handheld food formats, and the widespread adoption of wraps and burritos across European and Asian foodservice markets. Industry estimates consistently place the tortilla market among the fastest-growing categories within the broader bakery sector.',
+        body: 'The global tortilla and flatbread market is forecast to exceed $45 billion by 2030, growing at an estimated compound annual rate of 8–10% per year. The UK tortilla market alone is estimated to exceed £350M annually. In Europe, Germany, France, the Netherlands, and Spain are among the fastest-growing import markets, driven by QSR expansion, retail own-label growth, and changing consumer eating habits. Growth has been driven by a combination of factors including the global rise of Mexican cuisine, the popularity of handheld food formats, and the widespread adoption of wraps and burritos across European and Asian foodservice markets.',
       },
       {
         heading: 'QSR and Casual Dining Expansion',
@@ -605,15 +684,17 @@ const blogPosts: BlogPost[] = [
         body: 'For food distributors, the tortilla market presents a compelling opportunity:',
         listItems: [
           'Consistent and growing demand across multiple customer segments',
+          'Global market forecast to exceed $45 billion by 2030',
+          'UK market exceeding £350M annually',
           'Low product complexity — a small SKU range can cover most foodservice needs',
           'Frozen format enables efficient logistics and inventory management',
-          'Strong private label potential for retail accounts',
+          'Strong private label potential with 15–25% higher margins vs branded lines',
           'Expanding customer base as global dining habits continue to evolve',
         ],
       },
     ],
     conclusion:
-      'The tortilla market is not a trend — it is a structural shift in global eating habits. For distributors and importers, building a strong tortilla supply programme now positions them ahead of continued demand growth across foodservice, retail, and private label channels.',
+      'The tortilla market is not a trend — it is a structural shift in global eating habits. With global revenues forecast to exceed $45 billion by 2030 and the UK market alone at £350M, distributors and importers building a strong tortilla supply programme now are positioning themselves ahead of continued demand growth across foodservice, retail, and private label channels.',
     tags: ['tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier', 'bulk tortilla supplier'],
   },
   {
@@ -641,7 +722,7 @@ const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: 'The Growing Demand for Wholesale Tortillas',
-        body: 'The global tortilla market has expanded rapidly over the last decade. What started as a regional staple in Mexico has become one of the most widely distributed flatbreads across Europe, North America, and the Middle East. Today tortillas are used across foodservice, QSR chains, supermarkets, and catering businesses. The global tortilla market is expected to exceed $45 billion by 2030, driven by the growth of wrap-based fast casual restaurants and global street food concepts. For distributors, importers, and foodservice suppliers, choosing the right wholesale tortilla supplier is no longer just about price. Reliability, certifications, production capacity, and logistics all play a critical role in maintaining a consistent supply chain.',
+        body: 'The global tortilla market has expanded rapidly over the last decade. What started as a regional staple in Mexico has become one of the most widely distributed flatbreads across Europe, North America, and the Middle East. Today tortillas are used across foodservice, QSR chains, supermarkets, and catering businesses. The global tortilla market is expected to exceed $45 billion by 2030, growing at 8–10% per year. The UK tortilla market alone is estimated to exceed £350M annually, driven by the growth of wrap-based fast casual restaurants and Mexican cuisine. For distributors, importers, and foodservice suppliers, choosing the right wholesale tortilla supplier is no longer just about price. Reliability, certifications, production capacity, and logistics all play a critical role in maintaining a consistent supply chain.',
       },
       {
         heading: 'What Makes a Reliable Tortilla Supplier',
@@ -655,6 +736,21 @@ const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'Supplier Comparison: Which Type Fits Your Distribution Model?',
+        body: 'Not all tortilla suppliers are suited for international distribution. Understanding the difference between supplier tiers helps buyers select the right manufacturing partner:',
+        tableData: {
+          headers: ['Criteria', 'Local Supplier', 'Industrial Supplier', 'Export Manufacturer'],
+          rows: [
+            ['Shelf life', '7 days', '14 days', '12 months frozen'],
+            ['Production capacity', 'Low', 'Medium', 'High'],
+            ['Export logistics', 'Not available', 'Limited', 'Full container FCL / LCL'],
+            ['Certifications', 'Basic / none', 'ISO 22000', 'BRCGS · IFS · Halal'],
+            ['Private label', 'Rarely', 'Sometimes', 'Standard offering'],
+            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 container'],
+          ],
+        },
+      },
+      {
         heading: 'Certifications Importers Should Look For',
         body: 'Food safety certification is one of the first things international distributors evaluate when choosing a wholesale tortilla supplier. Recognised certifications help guarantee product safety, traceability, and regulatory compliance. For distributors importing tortillas into the UK, USA, or Europe, working with a certified tortilla manufacturer reduces regulatory risks and simplifies customs clearance. Key certifications to check include:',
         listItems: [
@@ -666,20 +762,32 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Tortilla Formats for Distribution',
-        body: 'Wholesale tortilla suppliers typically offer several product formats designed for different distribution channels. Understanding these formats helps distributors choose the best option for their logistics model. Flour tortillas are the most widely distributed format globally, used for wraps, burritos, quesadillas, and many foodservice dishes. Common sizes range from 15 cm street taco tortillas to 30 cm burrito tortillas. Corn tortillas are traditional Mexican-style tortillas made from corn masa, widely used in Mexican restaurants and specialty food markets. Frozen tortillas are becoming the preferred format for international distribution, as freezing extends shelf life and allows distributors to ship large container volumes without quality degradation.',
+        body: 'Wholesale tortilla suppliers typically offer several product formats designed for different distribution channels. Understanding these formats helps distributors choose the best option for their logistics model. Flour tortillas are the most widely distributed format globally, used for wraps, burritos, quesadillas, and many foodservice dishes. Common sizes range from 15 cm street taco tortillas to 35 cm large burrito tortillas. Corn tortillas are traditional Mexican-style tortillas made from corn masa, widely used in Mexican restaurants and specialty food markets. Frozen tortillas are becoming the preferred format for international distribution, as freezing extends shelf life and allows distributors to ship large container volumes without quality degradation.',
       },
       {
         heading: 'Frozen vs Fresh Tortillas for International Distribution',
         body: 'For distributors operating across long distances, shelf life is a critical factor when selecting a tortilla format. Fresh tortillas typically have a shelf life of 7–14 days, making them best suited for local or regional distribution. Frozen tortillas offer a shelf life of up to 12 months, making them the preferred choice for international and intercontinental distribution. This is why many global distributors prefer working with a frozen tortilla supplier when importing products across continents. Frozen formats allow importers to manage longer shipping routes, maintain consistent quality, and plan container orders on a rolling schedule.',
       },
       {
-        heading: 'Container Supply Options for Distributors',
-        body: 'For large distributors and importers, tortillas are typically supplied in container shipments. A standard container can contain approximately 800,000 to 1.2 million tortillas depending on size and packaging format. Container supply allows distributors to secure consistent volume while optimising logistics costs. Many distributors also prefer suppliers that offer private label tortilla manufacturing, allowing them to sell tortillas under their own brand while sourcing from an established production facility. Common container supply options include:',
+        heading: 'Container Supply Economics for Distributors',
+        body: 'For large distributors and importers, tortillas are typically supplied in container shipments. Container supply allows distributors to secure consistent volume while optimising logistics costs — 35–40% more cost-efficient than pallet-based freight at equivalent volumes.',
+        tableData: {
+          headers: ['Container', 'Approx. Tortillas', 'Pallets', 'Typical MOQ'],
+          rows: [
+            ['20ft reefer', '~800,000 units', '18–20 pallets', 'Entry-level FCL'],
+            ['40ft reefer', '~1,200,000 units', '36–40 pallets', 'High-volume FCL'],
+          ],
+        },
+      },
+      {
+        heading: 'Private Label Programme for Distributors',
+        body: 'Many distributors prefer private label tortilla manufacturing, allowing them to sell tortillas under their own brand while sourcing from an established production facility. Private label programmes typically deliver margins 15–25% above equivalent branded lines. Key programme features include:',
         listItems: [
-          'Full container load (FCL) shipments for high-volume distributors',
-          'Mixed product containers combining different tortilla formats',
-          'Frozen reefer transport for temperature-controlled international shipping',
-          'Private label manufacturing with custom branding and packaging',
+          'Custom packaging design and brand development',
+          'Label compliance for UK, EU, and USA target markets',
+          'Full product range available under contract production',
+          'MOQ from 1 container per SKU',
+          'BRCGS/IFS-certified production for retailer compliance',
         ],
       },
       {
@@ -701,12 +809,13 @@ const blogPosts: BlogPost[] = [
           'What is a tortilla supplier? A tortilla supplier is a manufacturer or distributor that produces tortillas in bulk for wholesalers, restaurants, foodservice companies, and retail chains.',
           'What certifications should a tortilla manufacturer have? Common certifications include BRCGS, IFS, ISO 22000, HACCP, and Halal certification depending on the export market.',
           'What tortilla format is best for international distribution? Frozen tortillas are typically preferred for international distribution because they offer longer shelf life and more stable logistics.',
-          'How many tortillas fit in a container shipment? Depending on size and packaging format, a standard container can contain approximately 800,000 to 1.2 million tortillas.',
+          'How many tortillas fit in a container shipment? A 20-foot reefer container holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units.',
+          'What is the MOQ for private label tortillas? Private label programmes typically start from 1 container per SKU, with custom packaging produced in parallel.',
         ],
       },
     ],
     conclusion:
-      'Selecting the right tortilla supplier is a strategic decision for distributors. A strong supplier partnership provides consistent product supply, scalable production capacity, reliable export logistics, certified food safety standards, and flexible private label options. As global demand for tortillas continues to grow, distributors that secure reliable manufacturing partners will be better positioned to expand their foodservice and retail distribution networks. Request distributor pricing, request samples, or contact our export team to learn more about wholesale tortilla supply options.',
+      'Selecting the right tortilla supplier is a strategic decision for distributors. With the global tortilla market forecast to exceed $45 billion by 2030 and the UK market alone at £350M, the commercial opportunity is substantial. A strong supplier partnership provides consistent product supply, scalable production capacity, reliable export logistics, certified food safety standards, and flexible private label options. Import tortillas directly from a certified manufacturer — MOQ 1 container, private label available, frozen or fresh supply. Request distributor pricing today.',
     tags: [
       'tortilla supplier',
       'wholesale tortilla supplier',
