@@ -211,7 +211,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {/* Conclusion */}
             <div className="mt-10 p-6 bg-gray-50 border border-gray-100 rounded-2xl">
-              <h2 className="text-lg font-bold text-gray-900 mb-2">Conclusion</h2>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Conclusion</h3>
               <p className="text-base text-gray-600 leading-relaxed">{post.conclusion}</p>
             </div>
 
@@ -288,7 +288,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {relatedPosts.length > 0 && (
           <div className="border-t border-gray-100 py-14">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-lg font-bold text-gray-900 mb-6">Related Articles</h2>
+              <h3 className="text-lg font-bold text-gray-900 mb-6">Related Articles</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {relatedPosts.map((related) => (
                   <Link

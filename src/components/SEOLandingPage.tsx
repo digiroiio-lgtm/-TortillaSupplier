@@ -131,7 +131,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
       {page.showSpecTable && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Product Specifications</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">Product Specifications</h3>
             <p className="text-gray-500 text-sm mb-8">
               Full specification details for our wholesale tortilla and flatbread range.
             </p>
@@ -142,7 +142,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">Frequently Asked Questions</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-8">Frequently Asked Questions</h3>
           <div className="max-w-3xl">
             <FAQAccordion items={page.faqs} />
           </div>
@@ -152,7 +152,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request a Quote</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request a Quote</h3>
             <ContactForm />
           </div>
         </div>
