@@ -25,12 +25,20 @@ const supplierLinks = [
 const wholesaleLinks = [
   { label: 'Tortilla Wholesale', href: '/tortilla-wholesale' },
   { label: 'Bulk Tortilla Supplier', href: '/bulk-tortilla-supplier' },
-  { label: 'Private Label', href: '/private-label-tortilla-manufacturer' },
+  { label: 'Private Label', href: '/private-label-tortillas' },
   { label: 'Importer Supply', href: '/tortilla-importer-supply' },
   { label: 'Wrap Bread Wholesale', href: '/wrap-bread-wholesale' },
   { label: 'Street Taco Wholesale', href: '/street-taco-tortilla-wholesale' },
   { label: 'Wrap Tortilla Supplier', href: '/wrap-tortilla-supplier' },
   { label: 'Frying Tortillas', href: '/frying-tortilla-supplier' },
+];
+
+const privateLabelLinks = [
+  { label: 'Private Label Tortillas', href: '/private-label-tortillas' },
+  { label: 'Private Label Flour Tortillas', href: '/private-label-flour-tortillas' },
+  { label: 'Private Label Corn Tortillas', href: '/private-label-corn-tortillas' },
+  { label: 'Private Label Tortillas UK', href: '/private-label-tortillas-uk' },
+  { label: 'Private Label Manufacturer', href: '/private-label-tortilla-manufacturer' },
 ];
 
 const regionLinks = [
@@ -219,6 +227,11 @@ export default function Footer() {
           <FooterColumn title="Tortilla Import" links={importLinks} />
           <FooterColumn title="Foodservice Tortillas" links={foodserviceLinks} />
           <FooterColumn title="Tortilla Types" links={typeLinks} />
+        </div>
+
+        {/* Private Label cluster */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
+          <FooterColumn title="Private Label" links={privateLabelLinks} />
         </div>
 
         {/* Secondary grid */}
