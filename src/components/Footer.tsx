@@ -74,6 +74,15 @@ const resourceLinks = [
   { label: 'Tortilla Market Growth', href: '/blog/tortilla-market-growth' },
 ];
 
+const guideLinks = [
+  { label: 'Tortilla Guide', href: '/tortilla-guide' },
+  { label: 'Tortilla Sizes', href: '/tortilla-size-chart' },
+  { label: 'Tortilla Shelf Life', href: '/tortilla-shelf-life' },
+  { label: 'Tortilla Calories', href: '/tortilla-calories' },
+  { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
+  { label: 'How Tortillas Are Made', href: '/tortilla-manufacturing-process' },
+];
+
 const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms of Service', href: '/terms-of-service' },
@@ -215,9 +224,9 @@ export default function Footer() {
         {/* Secondary grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
           <FooterColumn title="Company" links={companyLinks} />
+          <FooterColumn title="Guides" links={guideLinks} />
           <FooterColumn title="Resources" links={resourceLinks} />
           <FooterColumn title="Commercial" links={commercialLinks} />
-          <FooterColumn title="Legal" links={legalLinks} />
         </div>
 
         {/* Bottom bar */}
@@ -232,6 +241,13 @@ export default function Footer() {
             <span>HACCP</span>
             <span className="text-gray-200">·</span>
             <span>Halal Certified</span>
+          </div>
+          <div className="flex flex-wrap gap-4 text-xs text-gray-400">
+            {legalLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-gray-700 transition-colors">
+                {link.label}
+              </Link>
+            ))}
           </div>
           <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} TortillaSupplier. All rights reserved.

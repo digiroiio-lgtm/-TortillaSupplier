@@ -80,7 +80,7 @@ export default function ContainerSupplySection() {
               <div className="w-9 h-9 rounded-lg bg-[#2d7a3a]/8 flex items-center justify-center text-[#2d7a3a] mb-4 group-hover:bg-[#2d7a3a]/12 transition-colors">
                 {f.icon}
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">{f.title}</h3>
+              <p className="font-semibold text-gray-900 mb-2 text-sm">{f.title}</p>
               <p className="text-sm text-gray-500 leading-relaxed">{f.description}</p>
             </div>
           ))}

@@ -26,7 +26,7 @@ const blogPosts: BlogPost[] = [
     title: 'How to Choose a Reliable Tortilla Supplier for Import',
     excerpt:
       'Importing tortillas requires evaluating food safety certifications, cold-chain logistics, and consistent product quality before committing to a long-term supply contract.',
-    metaTitle: 'How to Choose a Reliable Tortilla Supplier for Import | TortillaSupplier',
+    metaTitle: 'Tortilla Supplier Guide for Import Buyers | TortillaSupplier',
     metaDescription:
       'A practical guide for distributors and food importers on choosing the right wholesale tortilla supplier — covering certifications, cold chain, private label, and export documentation.',
     publishDate: '2026-03-14',
@@ -83,7 +83,7 @@ const blogPosts: BlogPost[] = [
     title: 'Frozen Tortillas vs Fresh Tortillas for International Distribution',
     excerpt:
       'For importers, choosing between frozen and chilled tortilla formats is a critical supply-chain decision. Here is how to evaluate which format fits your distribution model.',
-    metaTitle: 'Frozen vs Fresh Tortillas for International Distribution | TortillaSupplier',
+    metaTitle: 'Frozen vs Fresh Tortillas for Importers | TortillaSupplier',
     metaDescription:
       'Compare frozen and chilled tortilla formats for international distribution. Learn which option suits long-haul import logistics and how distributors can minimise supply chain risk.',
     publishDate: '2026-03-16',
@@ -139,7 +139,7 @@ const blogPosts: BlogPost[] = [
     title: 'Tortilla Sizes and Formats Used by Foodservice Buyers',
     excerpt:
       'Restaurants, QSR chains, and catering companies select tortillas based on portion size and dish type. This guide covers the most common sizes used by foodservice distributors.',
-    metaTitle: 'Tortilla Sizes and Formats for Foodservice Buyers | TortillaSupplier',
+    metaTitle: 'Tortilla Sizes for Foodservice Buyers | TortillaSupplier',
     metaDescription:
       'A guide to tortilla sizes for foodservice operators and distributors — from 15 cm street taco format to 30 cm burrito tortillas. Learn which format fits your menu and import programme.',
     publishDate: '2026-03-19',
@@ -190,7 +190,7 @@ const blogPosts: BlogPost[] = [
     title: "How Tortillas Became the World's Most Versatile Bread",
     excerpt:
       'From ancient Mesoamerican staple to global foodservice platform, tortillas have evolved into the most adaptable bread format on the planet — and their worldwide journey is still accelerating.',
-    metaTitle: 'How Tortillas Became the World\'s Most Versatile Bread | TortillaSupplier',
+    metaTitle: 'Tortillas: World\'s Most Versatile Bread | TortillaSupplier',
     metaDescription:
       'Discover how tortillas evolved from an ancient Mesoamerican staple into a global food format used by restaurants, street vendors, and major chains across every continent.',
     publishDate: '2026-03-21',
@@ -249,7 +249,7 @@ const blogPosts: BlogPost[] = [
     title: 'Why Frozen Tortillas Are Taking Over Global Foodservice',
     excerpt:
       'Fresh tortillas work locally — but frozen formats have become the backbone of international foodservice distribution. Here is why logistics and shelf life have changed the equation for restaurant operators worldwide.',
-    metaTitle: 'Why Frozen Tortillas Are Taking Over Global Foodservice | TortillaSupplier',
+    metaTitle: 'Frozen Tortillas in Global Foodservice | TortillaSupplier',
     metaDescription:
       'Learn why frozen tortillas have become the preferred supply format for restaurant chains and distributors across Europe and Asia — from shelf life and consistency to cold-chain logistics.',
     publishDate: '2026-03-24',
@@ -292,7 +292,7 @@ const blogPosts: BlogPost[] = [
     title: 'Why Every Food Distributor Now Carries Tortillas',
     excerpt:
       'Not long ago tortillas were considered a niche product outside Mexico. Today they are a core category in distributor warehouses across Europe and North America. Here is what changed.',
-    metaTitle: 'Why Every Food Distributor Now Carries Tortillas | TortillaSupplier',
+    metaTitle: 'Why Food Distributors Now Carry Tortillas | TortillaSupplier',
     metaDescription:
       'Explore why tortillas have become an essential product category for food distributors worldwide — from street food trends and private label opportunities to logistics efficiency.',
     publishDate: '2026-03-26',
@@ -335,7 +335,7 @@ const blogPosts: BlogPost[] = [
     title: 'The Complete Tortilla Supplier Guide for Wholesale Buyers',
     excerpt:
       'Everything wholesale buyers, distributors and food importers need to know before choosing a tortilla supplier — from certifications and formats to container pricing and lead times.',
-    metaTitle: 'Tortilla Supplier Guide for Wholesale Buyers | TortillaSupplier',
+    metaTitle: 'Tortilla Supplier Guide for Buyers | TortillaSupplier',
     metaDescription:
       'A complete guide for wholesale tortilla buyers covering supplier certifications, product formats, container shipment logistics, private label options and what to ask before placing an order.',
     publishDate: '2026-03-28',
@@ -396,7 +396,7 @@ const blogPosts: BlogPost[] = [
     title: 'Private Label Tortillas: A Guide for Retailers and Distributors',
     excerpt:
       'Private label tortillas allow retailers and distributors to build their own brand while sourcing from established manufacturing facilities. Here is what you need to know before launching a private label programme.',
-    metaTitle: 'Private Label Tortillas for Retailers & Distributors | TortillaSupplier',
+    metaTitle: 'Private Label Tortillas for Distributors | TortillaSupplier',
     metaDescription:
       'Learn how private label tortilla programmes work — from MOQs and packaging design to certifications and retailer compliance. A complete guide for supermarket buyers and food distributors.',
     publishDate: '2026-03-30',
@@ -457,7 +457,7 @@ const blogPosts: BlogPost[] = [
     title: 'Importing Tortillas to the UK: A Practical Guide for Buyers',
     excerpt:
       'The UK is one of the fastest-growing markets for tortillas and wraps. Here is a practical guide for importers and distributors looking to source tortillas from international suppliers.',
-    metaTitle: 'Importing Tortillas to the UK: Buyer\'s Guide | TortillaSupplier',
+    metaTitle: 'UK Tortilla Import Guide for Buyers | TortillaSupplier',
     metaDescription:
       'A practical guide for UK importers and distributors sourcing tortillas internationally — covering customs, cold chain, food safety certifications, and supplier selection.',
     publishDate: '2026-03-31',
@@ -514,7 +514,7 @@ const blogPosts: BlogPost[] = [
     title: 'How the Frozen Tortilla Supply Chain Works',
     excerpt:
       'From production line to restaurant kitchen, frozen tortillas travel through a complex logistics network. Understanding this supply chain helps distributors optimise procurement and reduce risk.',
-    metaTitle: 'How the Frozen Tortilla Supply Chain Works | TortillaSupplier',
+    metaTitle: 'Frozen Tortilla Supply Chain Guide | TortillaSupplier',
     metaDescription:
       'A behind-the-scenes look at the frozen tortilla supply chain — from manufacturing and cold-chain logistics to warehouse storage and foodservice delivery.',
     publishDate: '2026-03-31',
@@ -567,7 +567,7 @@ const blogPosts: BlogPost[] = [
     title: 'Tortilla Market Growth: Why the Industry Shows No Signs of Slowing',
     excerpt:
       'The global tortilla market has grown consistently for over a decade and shows no signs of slowing. Here is what is driving demand and what it means for distributors and importers.',
-    metaTitle: 'Tortilla Market Growth: Global Industry Trends | TortillaSupplier',
+    metaTitle: 'Tortilla Market Growth: Global Trends | TortillaSupplier',
     metaDescription:
       'An analysis of tortilla market growth drivers — from street food culture and QSR expansion to private label retail and frozen distribution trends across Europe and Asia.',
     publishDate: '2026-03-31',

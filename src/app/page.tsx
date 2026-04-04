@@ -15,11 +15,11 @@ import JsonLd from '@/components/JsonLd';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Global Tortilla Supplier & Wholesale Tortilla Manufacturer | TortillaSupplier' },
-  description: 'BRCGS-certified wholesale tortilla supplier and manufacturer for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label and container supply available.',
+  title: { absolute: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier' },
+  description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
   openGraph: {
-    title: 'Global Tortilla Supplier & Wholesale Tortilla Manufacturer | TortillaSupplier',
-    description: 'BRCGS-certified wholesale tortilla supplier and manufacturer for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
+    title: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier',
+    description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
     url: 'https://tortillasupplier.com',
   },
   alternates: { canonical: 'https://tortillasupplier.com' },
@@ -127,7 +127,7 @@ const homepageFaqs = [
 
 const supplierClusterLinks = [
   { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
-  { label: 'Tortilla Manufacturer', href: '/tortilla-supplier' },
+  { label: 'Tortilla Manufacturer', href: '/tortilla-manufacturing-process' },
   { label: 'Tortilla Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
   { label: 'Wholesale Tortillas', href: '/tortilla-wholesale' },
   { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
@@ -243,7 +243,7 @@ export default function HomePage() {
               ].map((item) => (
                 <div key={item.title} className="p-5 bg-gray-50 border border-gray-200 rounded-xl">
                   <div className="text-2xl mb-3">{item.icon}</div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-1.5">{item.title}</h3>
+                  <p className="text-sm font-semibold text-gray-900 mb-1.5">{item.title}</p>
                   <p className="text-xs text-gray-500 leading-relaxed">{item.body}</p>
                 </div>
               ))}

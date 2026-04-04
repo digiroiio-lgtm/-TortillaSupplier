@@ -181,6 +181,7 @@ export default function ProductCategoriesSection() {
             <Link
               key={card.href}
               href={card.href}
+              aria-label={`${card.title} — wholesale supply`}
               className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:border-gray-200 transition-all group flex flex-col"
             >
               {/* Image area */}
@@ -202,9 +203,9 @@ export default function ProductCategoriesSection() {
 
               {/* Info */}
               <div className="p-4 border-t border-gray-50">
-                <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-[#2d7a3a] transition-colors">
+                <p className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-[#2d7a3a] transition-colors">
                   {card.title}
-                </h3>
+                </p>
                 <p className="text-xs text-gray-400 leading-relaxed">{card.description}</p>
               </div>
             </Link>
@@ -222,9 +223,9 @@ export default function ProductCategoriesSection() {
               <p className="text-xs font-semibold text-[#6dbf7a] uppercase tracking-widest mb-3">
                 Private Label
               </p>
-              <h3 className="text-lg font-bold text-white leading-snug mb-3">
+              <p className="text-lg font-bold text-white leading-snug mb-3">
                 Explore our full product range
-              </h3>
+              </p>
               <p className="text-xs text-white/60 leading-relaxed mb-6">
                 BRCGS certified, halal-compliant, export-ready. Custom packaging available from 20ft container.
               </p>
@@ -260,6 +261,7 @@ export default function ProductCategoriesSection() {
               <Link
                 key={cat.href}
                 href={cat.href}
+                aria-label={`${cat.title} — wholesale supply options`}
                 className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-gray-200 transition-all group"
               >
                 <div className="relative w-full h-28 bg-gray-50">
@@ -272,11 +274,11 @@ export default function ProductCategoriesSection() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">
+                  <p className="font-semibold text-gray-900 mb-1.5 text-sm group-hover:text-[#2d7a3a] transition-colors">
                     {cat.title}
-                  </h3>
+                  </p>
                   <p className="text-xs text-gray-400 leading-relaxed mb-3">{cat.description}</p>
-                  <span className="text-xs font-medium text-[#2d7a3a]">View supply options →</span>
+                  <span className="text-xs font-medium text-[#2d7a3a]" aria-hidden="true">View supply options →</span>
                 </div>
               </Link>
             ))}

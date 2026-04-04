@@ -92,6 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/our-factory`, lastModified: LAST_MODIFIED, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/certifications`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/export-program`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    // Authority content pages
+    { url: `${BASE_URL}/tortilla-size-chart`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-manufacturing-process`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-guide`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
+    // Guide cluster pages
+    { url: `${BASE_URL}/tortilla-shelf-life`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-calories`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/how-to-store-tortillas`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
     // Legal pages
     { url: `${BASE_URL}/privacy-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/terms-of-service`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },

@@ -5,11 +5,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Our Factory | Tortilla Manufacturing Facility | TortillaSupplier' },
+  title: { absolute: 'Our Factory | Tortilla Manufacturing | TortillaSupplier' },
   description:
     'Tour our tortilla manufacturing facility — automated production lines, cold chain infrastructure, and quality control systems designed for international wholesale supply.',
   openGraph: {
-    title: 'Our Factory | Tortilla Manufacturing Facility | TortillaSupplier',
+    title: 'Our Factory | Tortilla Manufacturing | TortillaSupplier',
     description:
       'High-capacity tortilla manufacturing facility with BRCGS-certified production lines, blast freezing, and cold-chain export logistics.',
     url: `${BASE_URL}/our-factory`,

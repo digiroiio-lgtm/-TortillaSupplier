@@ -5,11 +5,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Export Programme | Wholesale Tortilla Supply | TortillaSupplier' },
+  title: { absolute: 'Export Programme | Tortilla Wholesale | TortillaSupplier' },
   description:
     'Our wholesale tortilla export programme is designed for distributors, importers and foodservice buyers. Container pricing, private label, and full documentation support.',
   openGraph: {
-    title: 'Export Programme | Wholesale Tortilla Supply | TortillaSupplier',
+    title: 'Export Programme | Tortilla Wholesale | TortillaSupplier',
     description:
       'Container-ready tortilla export programme for international distributors and importers — BRCGS certified, private label available, full documentation support.',
     url: `${BASE_URL}/export-program`,

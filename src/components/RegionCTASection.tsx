@@ -37,7 +37,7 @@ export default function RegionCTASection() {
               className="group block bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:shadow-md hover:border-gray-200 transition-all"
             >
               <div className="text-3xl mb-4">{region.flag}</div>
-              <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#2d7a3a] transition-colors">{region.name}</h3>
+              <p className="font-bold text-gray-900 mb-2 group-hover:text-[#2d7a3a] transition-colors">{region.name}</p>
               <p className="text-sm text-gray-500 leading-relaxed mb-5">{region.description}</p>
               <span className="text-sm font-medium text-[#2d7a3a]">Learn more →</span>
             </Link>
