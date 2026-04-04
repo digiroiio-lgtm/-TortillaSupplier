@@ -93,7 +93,7 @@ export default function CertificationsPage() {
           </div>
 
           <div className="mt-12 bg-gray-50 rounded-2xl p-8">
-            <h2 className="text-lg font-bold text-gray-900 mb-2">Request Certification Documents</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Request Certification Documents</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-5 max-w-xl">
               Wholesale buyers and private label customers can request copies of our current certification
               documents as part of the supplier onboarding process. Please contact our export team.
