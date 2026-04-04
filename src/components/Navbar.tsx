@@ -88,7 +88,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="w-7 h-7 bg-[#2d7a3a] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#245f2d] transition-colors">
+            <span className="w-7 h-7 bg-[#2d7a3a] rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#245f2d] transition-colors">
               <span className="text-white font-bold text-xs">T</span>
             </span>
             <span className="text-base font-bold text-gray-900 tracking-tight">TortillaSupplier</span>
