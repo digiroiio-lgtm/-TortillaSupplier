@@ -229,13 +229,9 @@ export default function Footer() {
           <FooterColumn title="Tortilla Types" links={typeLinks} />
         </div>
 
-        {/* Private Label cluster */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
+        {/* Secondary grid — Private Label merged in */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-10 border-t border-gray-100">
           <FooterColumn title="Private Label" links={privateLabelLinks} />
-        </div>
-
-        {/* Secondary grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
           <FooterColumn title="Company" links={companyLinks} />
           <FooterColumn title="Guides" links={guideLinks} />
           <FooterColumn title="Resources" links={resourceLinks} />
