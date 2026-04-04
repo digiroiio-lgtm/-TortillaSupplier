@@ -19,11 +19,11 @@ const nextConfig: NextConfig = {
   async headers() {
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/",
+      "script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://va.vercel-scripts.com/",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data:",
       "font-src 'self'",
-      "connect-src 'self' https://www.google.com/recaptcha/",
+      "connect-src 'self' https://www.google.com/recaptcha/ https://vitals.vercel-insights.com/",
       "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/",
       "object-src 'none'",
       "base-uri 'self'",
