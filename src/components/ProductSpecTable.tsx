@@ -7,7 +7,7 @@ interface ProductSpecTableProps {
   filterType?: Product['type'];
 }
 
-const ALL_TYPES = ['all', 'flour', 'corn', 'frozen', 'wrap', 'flatbread'] as const;
+const ALL_TYPES = ['all', 'flour', 'corn', 'frozen', 'wrap', 'flatbread', 'specialty'] as const;
 
 export default function ProductSpecTable({ filterType }: ProductSpecTableProps) {
   const [activeFilter, setActiveFilter] = useState<string>(filterType || 'all');
@@ -54,7 +54,9 @@ export default function ProductSpecTable({ filterType }: ProductSpecTableProps) 
             {filtered.map((product) => (
               <tr key={product.id} className="bg-white hover:bg-gray-50 transition-colors">
                 <td className="px-4 py-3 font-medium text-gray-900">{product.name}</td>
-                <td className="px-4 py-3 text-gray-600">{product.diameterCm}cm</td>
+                <td className="px-4 py-3 text-gray-600">
+                  {product.diameterCm}cm{product.diameterInch ? ` / ${product.diameterInch}` : ''}
+                </td>
                 <td className="px-4 py-3 text-gray-600">{product.weightG}g</td>
                 <td className="px-4 py-3 text-gray-600">{product.packCount} pcs</td>
                 <td className="px-4 py-3">
