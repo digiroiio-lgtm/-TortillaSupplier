@@ -649,7 +649,7 @@ export default function TortillaGuidePage() {
 
               {/* Related links */}
               <section>
-                <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides and Product Pages</h2>
+                <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides and Product Pages</h3>
                 <div className="flex flex-wrap gap-3">
                   {[
                     { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },

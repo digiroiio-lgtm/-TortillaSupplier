@@ -31,19 +31,19 @@ export default function CookiePolicyPage() {
             information to site owners.
           </p>
 
-          <h2>2. How We Use Cookies</h2>
+          <h3>2. How We Use Cookies</h3>
           <p>
             TortillaSupplier uses cookies to support the following purposes:
           </p>
 
-          <h3>Essential Cookies</h3>
+          <h4>Essential Cookies</h4>
           <p>
             These cookies are necessary for the website to function correctly. They enable core
             functionality such as page navigation and access to secure areas. The website cannot
             function properly without these cookies. No consent is required for essential cookies.
           </p>
 
-          <h3>Analytics Cookies</h3>
+          <h4>Analytics Cookies</h4>
           <p>
             We use analytics cookies (such as those provided by Google Analytics) to understand how
             visitors interact with our website. These cookies collect anonymised information including
@@ -51,7 +51,7 @@ export default function CookiePolicyPage() {
             the site experience for wholesale buyers.
           </p>
 
-          <h2>3. Third-Party Cookies</h2>
+          <h3>3. Third-Party Cookies</h3>
           <p>
             Some cookies on our site are set by third-party services. These may include:
           </p>
@@ -69,7 +69,7 @@ export default function CookiePolicyPage() {
             </li>
           </ul>
 
-          <h2>4. Managing Cookies</h2>
+          <h3>4. Managing Cookies</h3>
           <p>
             You can control and manage cookies through your browser settings. Most browsers allow you
             to block or delete cookies. Please note that disabling cookies may affect the functionality
@@ -80,14 +80,14 @@ export default function CookiePolicyPage() {
             help documentation.
           </p>
 
-          <h2>5. Changes to This Policy</h2>
+          <h3>5. Changes to This Policy</h3>
           <p>
             We may update this Cookie Policy from time to time to reflect changes in the cookies we
             use or in applicable regulations. The date at the top of this page reflects the most recent
             revision.
           </p>
 
-          <h2>6. Contact</h2>
+          <h3>6. Contact</h3>
           <p>
             For questions about our use of cookies, please contact us at{' '}
             <a href="mailto:info@tortillasupplier.com" className="text-[#2d7a3a] hover:underline">

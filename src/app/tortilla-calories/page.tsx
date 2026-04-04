@@ -282,7 +282,7 @@ export default function TortillaCaloriesPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Tortilla Guide', href: '/tortilla-guide' },

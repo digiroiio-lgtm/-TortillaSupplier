@@ -319,7 +319,7 @@ export default function TortillaManufacturingProcessPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Pages</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Pages</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Our Factory', href: '/our-factory' },

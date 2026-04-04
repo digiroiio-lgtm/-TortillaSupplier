@@ -237,7 +237,7 @@ export default function TortillaSizeChartPage() {
 
           {/* Full spec table */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2">Full Product Specification Table</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Full Product Specification Table</h3>
             <p className="text-sm text-gray-500 mb-6">
               Weight, pack count, shelf life and private label availability for every standard tortilla and flatbread size.
             </p>
@@ -294,7 +294,7 @@ export default function TortillaSizeChartPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides & Product Pages</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides & Product Pages</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Corn Tortilla 15cm (6")', href: '/corn-tortilla-15cm-6-inch' },

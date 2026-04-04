@@ -125,7 +125,7 @@ export default function UKPage() {
 
       <section className="py-8 bg-[#FAFAF8] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h2>
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h3>
           <div className="flex flex-wrap gap-3">
             <Link href="/tortilla-supplier-usa" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors">USA Supply</Link>
             <Link href="/tortilla-supplier-europe" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors">Europe Supply</Link>

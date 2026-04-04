@@ -30,14 +30,14 @@ export default function TermsOfServicePage() {
             bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.
           </p>
 
-          <h2>2. Use of the Site</h2>
+          <h3>2. Use of the Site</h3>
           <p>
             This Site is intended for wholesale buyers, food distributors, importers, and foodservice
             professionals seeking information about our tortilla and flatbread products and export
             programmes. You agree to use the Site only for lawful purposes.
           </p>
 
-          <h2>3. Information Accuracy</h2>
+          <h3>3. Information Accuracy</h3>
           <p>
             We endeavour to ensure that information on this Site is accurate and up to date. However,
             product specifications, pricing, and availability are subject to change. All pricing provided
@@ -45,49 +45,49 @@ export default function TermsOfServicePage() {
             governed by written agreements between TortillaSupplier and the buyer.
           </p>
 
-          <h2>4. Wholesale Enquiries</h2>
+          <h3>4. Wholesale Enquiries</h3>
           <p>
             Submitting an enquiry through our contact form or WhatsApp does not constitute a binding
             order or contract. Orders are only binding when confirmed in writing by both parties.
             TortillaSupplier reserves the right to decline any enquiry or order at its discretion.
           </p>
 
-          <h2>5. Intellectual Property</h2>
+          <h3>5. Intellectual Property</h3>
           <p>
             All content on this Site, including text, images, and design, is the property of
             TortillaSupplier or its licensors and is protected by applicable intellectual property laws.
             You may not reproduce or distribute content from this Site without prior written permission.
           </p>
 
-          <h2>6. Limitation of Liability</h2>
+          <h3>6. Limitation of Liability</h3>
           <p>
             To the maximum extent permitted by law, TortillaSupplier shall not be liable for any
             indirect, incidental, or consequential damages arising from your use of this Site or
             reliance on information published herein.
           </p>
 
-          <h2>7. External Links</h2>
+          <h3>7. External Links</h3>
           <p>
             This Site may contain links to third-party websites. These links are provided for
             convenience only. TortillaSupplier has no control over, and accepts no responsibility
             for, the content of those sites.
           </p>
 
-          <h2>8. Governing Law</h2>
+          <h3>8. Governing Law</h3>
           <p>
             These Terms of Service shall be governed by and construed in accordance with applicable
             commercial law. Any disputes arising from use of this Site shall be subject to the
             exclusive jurisdiction of the relevant courts.
           </p>
 
-          <h2>9. Changes to These Terms</h2>
+          <h3>9. Changes to These Terms</h3>
           <p>
             We may update these Terms of Service at any time. The date at the top of this page will
             reflect the most recent revision. Continued use of the Site constitutes acceptance of
             the revised terms.
           </p>
 
-          <h2>10. Contact</h2>
+          <h3>10. Contact</h3>
           <p>
             For questions regarding these Terms of Service, please contact us at{' '}
             <a href="mailto:info@tortillasupplier.com" className="text-[#2d7a3a] hover:underline">

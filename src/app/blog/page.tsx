@@ -97,9 +97,9 @@ export default function BlogIndexPage() {
                 <span>·</span>
                 <span>{post.readTime} min read</span>
               </div>
-              <h2 className="text-base font-semibold text-gray-900 leading-snug mb-2 flex-1 group-hover:text-[#2d7a3a] transition-colors">
+              <h3 className="text-base font-semibold text-gray-900 leading-snug mb-2 flex-1 group-hover:text-[#2d7a3a] transition-colors">
                 {post.title}
-              </h2>
+              </h3>
               <p className="text-sm text-gray-500 leading-relaxed line-clamp-3 mb-4">{post.excerpt}</p>
               <span className="text-xs font-semibold text-[#2d7a3a] group-hover:underline">
                 Read article →

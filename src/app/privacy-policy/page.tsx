@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
             protect information that you provide when using our website or contacting us for wholesale enquiries.
           </p>
 
-          <h2>2. Information We Collect</h2>
+          <h3>2. Information We Collect</h3>
           <p>We may collect the following types of information:</p>
           <ul>
             <li>
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
 
-          <h2>3. How We Use Your Information</h2>
+          <h3>3. How We Use Your Information</h3>
           <p>We use the information we collect to:</p>
           <ul>
             <li>Respond to wholesale enquiries and provide pricing information</li>
@@ -59,41 +59,41 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>We do not sell or share your personal information with third parties for marketing purposes.</p>
 
-          <h2>4. Data Retention</h2>
+          <h3>4. Data Retention</h3>
           <p>
             We retain contact information submitted through our inquiry forms for as long as is necessary
             to manage the business relationship, or for a maximum of 3 years from the date of last contact,
             unless a longer retention period is required by law.
           </p>
 
-          <h2>5. Cookies</h2>
+          <h3>5. Cookies</h3>
           <p>
             Our website uses cookies to support basic functionality and analytics. Please see our{' '}
             <Link href="/cookie-policy" className="text-[#2d7a3a] hover:underline">Cookie Policy</Link> for details
             on the types of cookies we use and how to manage them.
           </p>
 
-          <h2>6. Your Rights</h2>
+          <h3>6. Your Rights</h3>
           <p>
             Depending on your location, you may have rights under applicable data protection law to access,
             correct, or request deletion of your personal data. To exercise any of these rights, please
             contact us at <a href="mailto:info@tortillasupplier.com" className="text-[#2d7a3a] hover:underline">info@tortillasupplier.com</a>.
           </p>
 
-          <h2>7. Third-Party Services</h2>
+          <h3>7. Third-Party Services</h3>
           <p>
             Our website may use third-party services such as Google Analytics for website usage analytics.
             These services may set cookies and collect usage data in accordance with their own privacy policies.
           </p>
 
-          <h2>8. Changes to This Policy</h2>
+          <h3>8. Changes to This Policy</h3>
           <p>
             We may update this Privacy Policy from time to time. The date at the top of this page will reflect
             the most recent update. Continued use of the website after changes constitutes acceptance of the
             updated policy.
           </p>
 
-          <h2>9. Contact</h2>
+          <h3>9. Contact</h3>
           <p>
             For questions about this Privacy Policy, please contact us at{' '}
             <a href="mailto:info@tortillasupplier.com" className="text-[#2d7a3a] hover:underline">

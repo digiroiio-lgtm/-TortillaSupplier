@@ -203,7 +203,7 @@ export default function TortillaShelfLifePage() {
           {/* Chilled section */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Chilled Tortillas: 14–21 Days</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Chilled Tortillas: 14–21 Days</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Chilled flour tortillas — stored between +2°C and +4°C — have a shelf life of 14–21 days
                 from production. This is the standard format for domestic UK and European retail, where
@@ -222,7 +222,7 @@ export default function TortillaShelfLifePage() {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Ambient / MAP Tortillas: 90–120 Days</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Ambient / MAP Tortillas: 90–120 Days</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Some flour tortilla formulations are designed for ambient shelf life of 90–120 days using
                 hermetic sealed packaging with modified-atmosphere (nitrogen flush). These products use
@@ -240,7 +240,7 @@ export default function TortillaShelfLifePage() {
 
           {/* Frozen section — most important for B2B */}
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Frozen Tortillas: 9–12 Months</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Frozen Tortillas: 9–12 Months</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Frozen tortillas are the international distribution standard. Blast-frozen immediately after
               baking at −18°C, flour and corn tortillas achieve a shelf life of 9–12 months. This extended
@@ -320,7 +320,7 @@ export default function TortillaShelfLifePage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
