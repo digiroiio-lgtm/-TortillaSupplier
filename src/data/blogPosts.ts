@@ -715,7 +715,7 @@ const blogPosts: BlogPost[] = [
       { label: 'Corn Tortilla Supplier', href: '/corn-tortilla-supplier' },
       { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
       { label: 'Private Label Tortillas', href: '/private-label-tortillas' },
-      { label: 'Tortilla Sizes', href: '/tortilla-sizes' },
+      { label: 'Tortilla Sizes', href: '/tortilla-size-chart' },
       { label: 'Importing Tortillas to UK', href: '/importing-tortillas-to-uk' },
       { label: 'Container Tortilla Supply', href: '/container-tortilla-supply' },
     ],
