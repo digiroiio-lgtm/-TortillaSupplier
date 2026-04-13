@@ -66,7 +66,7 @@ export default function OurFactoryPage() {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Freezing and Cold Storage</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Freezing and Cold Storage</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Frozen tortilla products pass through blast-freezing tunnels immediately after baking,
                 rapidly reducing product temperature to −18°C to lock in quality. Frozen products are
@@ -94,7 +94,7 @@ export default function OurFactoryPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Quality Control</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quality Control</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Quality control is integrated at every stage of the production process. Our QC team
                 performs regular checks on dough consistency, product dimensions, bake colour, and
@@ -103,7 +103,7 @@ export default function OurFactoryPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Packaging and Export</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Packaging and Export</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Finished products are packed into retail bags or foodservice cases and palletised for
                 export. Our packaging team handles standard wholesale formats as well as custom private

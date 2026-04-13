@@ -52,7 +52,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h2>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Our mission is to be the most reliable tortilla supplier for international wholesale buyers.
                   We achieve this through consistent product quality, transparent export documentation, flexible
@@ -60,7 +60,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-3">Our Markets</h2>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Our Markets</h3>
                 <ul className="space-y-2">
                   {[
                     'United Kingdom and Ireland',

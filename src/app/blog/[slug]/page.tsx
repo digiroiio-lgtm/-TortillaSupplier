@@ -154,11 +154,13 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.excerpt}
             </p>
 
-            {post.sections.map((section, i) => (
+            {post.sections.map((section, i) => {
+              const SectionHeading = (i === 0 ? 'h2' : 'h3') as 'h2' | 'h3';
+              return (
               <section key={i} className="mb-10">
-                <h2 className="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                <SectionHeading className="text-xl font-bold text-gray-900 mb-3 tracking-tight">
                   {section.heading}
-                </h2>
+                </SectionHeading>
                 <p className="text-base text-gray-600 leading-relaxed mb-3">{section.body}</p>
                 {section.listItems && section.listItems.length > 0 && (
                   <ul className="space-y-2 mt-3">
@@ -207,7 +209,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </div>
                 )}
               </section>
-            ))}
+              );
+            })}
 
             {/* Conclusion */}
             <div className="mt-10 p-6 bg-gray-50 border border-gray-100 rounded-2xl">

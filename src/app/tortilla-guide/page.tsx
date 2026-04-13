@@ -234,7 +234,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 2 */}
               <section id="types-of-tortillas">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Types of Tortillas</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Types of Tortillas</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   There are two principal types of tortilla — flour and corn — plus a range of derivative
                   formats including wraps, flatbreads, and specialty tortillas. Each type has distinct
@@ -286,7 +286,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 3 */}
               <section id="tortilla-sizes">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Tortilla Sizes and Formats</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Tortilla Sizes and Formats</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Tortillas are produced in a range of standard diameters, each associated with specific
                   applications. Selecting the correct size is critical for foodservice portion consistency,
@@ -333,7 +333,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 4 */}
               <section id="flour-vs-corn">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Flour vs Corn Tortillas</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Flour vs Corn Tortillas</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   The choice between flour and corn tortillas depends on the intended application, target
                   market, and consumer preference. Both have distinct properties that make them suited to
@@ -374,7 +374,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 5 */}
               <section id="fresh-vs-frozen">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Fresh vs Frozen Tortillas</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Fresh vs Frozen Tortillas</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   The distinction between chilled/ambient and frozen tortillas is critical for international
                   wholesale buyers. It determines logistics requirements, shelf life management, and
@@ -412,7 +412,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 6 */}
               <section id="foodservice-applications">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Foodservice Applications</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Foodservice Applications</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Tortillas are one of the most versatile food formats in commercial kitchens. Their
                   neutral flavour base, structural flexibility, and range of available sizes make them
@@ -458,7 +458,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 7 */}
               <section id="retail-distribution">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Retail and Distribution</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Retail and Distribution</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   In retail, tortillas are merchandised as a standalone bakery product, as part of meal-kit
                   components, and increasingly as an ethnic foods staple in mainstream supermarkets. The
@@ -483,7 +483,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 8 */}
               <section id="private-label">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Private Label Tortillas</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Private Label Tortillas</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   Private label tortilla manufacturing is a well-established model used by supermarket chains,
                   foodservice distributors, and specialist food importers around the world. Under a private label
@@ -517,7 +517,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 9 */}
               <section id="how-tortillas-are-made">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How Tortillas Are Made</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">How Tortillas Are Made</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   At commercial scale, tortilla production is a continuous automated process. Flour or masa
                   is mixed with water, fat, and seasoning, divided into precise weight portions, pressed to
@@ -546,7 +546,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 10 */}
               <section id="import-logistics">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Import and Distribution Logistics</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Import and Distribution Logistics</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   Importing tortillas for wholesale distribution involves navigating cold-chain logistics,
                   customs documentation, food safety import requirements, and container economics. The
@@ -578,7 +578,7 @@ export default function TortillaGuidePage() {
 
               {/* Section 11 */}
               <section id="choosing-a-supplier">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Choosing a Wholesale Tortilla Supplier</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Choosing a Wholesale Tortilla Supplier</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Selecting the right tortilla supplier is one of the most consequential decisions a food
                   importer or distributor makes in this category. The wrong supplier — one without the right
@@ -636,7 +636,7 @@ export default function TortillaGuidePage() {
 
               {/* FAQ Section */}
               <section id="faq">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h3>
                 <div className="space-y-4">
                   {faqs.map((faq) => (
                     <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">

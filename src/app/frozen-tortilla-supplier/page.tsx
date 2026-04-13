@@ -73,7 +73,7 @@ export default function FrozenPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Frozen Product Specifications</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">Frozen Product Specifications</h3>
           <p className="text-gray-500 text-sm mb-8">Frozen tortilla and flatbread range with full shelf life and storage specifications.</p>
           <ProductSpecTable filterType="frozen" />
         </div>
@@ -81,7 +81,7 @@ export default function FrozenPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Pallet &amp; Carton Configuration</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Pallet &amp; Carton Configuration</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
               <thead className="bg-gray-50">
@@ -117,7 +117,7 @@ export default function FrozenPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">Frozen Tortilla FAQ</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-8">Frozen Tortilla FAQ</h3>
           <div className="max-w-3xl">
             <FAQAccordion items={frozenFAQs} />
           </div>
@@ -127,7 +127,7 @@ export default function FrozenPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request Frozen Tortilla Pricing</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request Frozen Tortilla Pricing</h3>
             <ContactForm />
           </div>
         </div>

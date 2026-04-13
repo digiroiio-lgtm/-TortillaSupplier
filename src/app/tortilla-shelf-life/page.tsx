@@ -269,7 +269,7 @@ export default function TortillaShelfLifePage() {
 
           {/* Factors affecting shelf life */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Factors That Affect Tortilla Shelf Life</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Factors That Affect Tortilla Shelf Life</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 {
@@ -307,7 +307,7 @@ export default function TortillaShelfLifePage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Shelf Life: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Shelf Life: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">

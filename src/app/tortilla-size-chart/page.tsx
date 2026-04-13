@@ -206,7 +206,7 @@ export default function TortillaSizeChartPage() {
 
           {/* Per-size deep dive */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-8">Tortilla Sizes Explained</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-8">Tortilla Sizes Explained</h3>
             <div className="space-y-10">
               {sizeData.map((size) => (
                 <div key={size.diameter} className="grid lg:grid-cols-[200px_1fr] gap-6 items-start">
@@ -281,7 +281,7 @@ export default function TortillaSizeChartPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Sizes: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Sizes: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">

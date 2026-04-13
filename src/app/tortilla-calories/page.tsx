@@ -174,7 +174,7 @@ export default function TortillaCaloriesPage() {
 
           {/* Corn tortilla calories table */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2">Corn Tortilla Calories by Size</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Corn Tortilla Calories by Size</h3>
             <p className="text-sm text-gray-500 mb-5">
               Per-tortilla nutrition estimates for standard corn tortilla sizes. Corn tortillas are naturally gluten-free.
             </p>
@@ -218,7 +218,7 @@ export default function TortillaCaloriesPage() {
 
           {/* Flour vs Corn comparison */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Flour vs Corn Tortillas: Nutritional Comparison</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Flour vs Corn Tortillas: Nutritional Comparison</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-3">Flour Tortillas</h3>
@@ -247,7 +247,7 @@ export default function TortillaCaloriesPage() {
 
           {/* Why nutrition matters for B2B buyers */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Why Tortilla Nutrition Matters for Foodservice Buyers</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Why Tortilla Nutrition Matters for Foodservice Buyers</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Foodservice operators, school caterers, and retail buyers increasingly require accurate
               nutritional data for menu labelling compliance. In the UK, mandatory calorie labelling legislation
@@ -269,7 +269,7 @@ export default function TortillaCaloriesPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Calories: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Calories: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">

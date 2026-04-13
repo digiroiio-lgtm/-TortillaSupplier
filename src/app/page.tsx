@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Manufacturing &amp; Export</p>
-              <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">Tortilla Manufacturing &amp; Export</h2>
+              <h3 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">Tortilla Manufacturing &amp; Export</h3>
               <p className="text-base text-gray-600 leading-relaxed mb-4">
                 As a tortilla manufacturer supplying distributors and food importers, our production facility produces flour, corn and frozen tortillas for international wholesale distribution. Our tortilla factory operates to BRCGS and IFS standards with full export documentation for container shipments worldwide.
               </p>
@@ -257,7 +257,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Specifications</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Foodservice Specifications</h2>
+            <h3 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Foodservice Specifications</h3>
             <p className="text-base text-gray-500">Full specification overview — diameter, weight, pack size and pallet quantities for our entire range.</p>
           </div>
           <ProductSpecTable />
@@ -281,7 +281,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Food Safety</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Food Safety &amp; Export Certifications</h2>
+            <h3 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Food Safety &amp; Export Certifications</h3>
             <p className="text-base text-gray-500">Export documentation and quality certifications available on request for all product lines.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -300,7 +300,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">FAQ</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Frequently Asked Questions</h2>
+            <h3 className="text-3xl font-bold text-gray-900 tracking-tight mb-3">Frequently Asked Questions</h3>
             <p className="text-base text-gray-500">Common questions from distributors and food importers about our wholesale tortilla supply programme.</p>
           </div>
           <div className="max-w-3xl">
@@ -328,9 +328,9 @@ export default function HomePage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-4">Get Started</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4 max-w-3xl mx-auto">
+          <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4 max-w-3xl mx-auto">
             Ready to Source Tortillas for Your Distribution Network?
-          </h2>
+          </h3>
           <p className="text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
             Send us your requirements and our export team will respond within 1–2 business days with pricing and sample availability.
           </p>

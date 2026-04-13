@@ -190,7 +190,7 @@ export default function HowItWorksSection() {
         {/* Header */}
         <div className="max-w-2xl mb-20">
           <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">Process</p>
-          <h2 className="text-3xl font-bold text-gray-900 tracking-tight">How It Works</h2>
+          <h3 className="text-3xl font-bold text-gray-900 tracking-tight">How It Works</h3>
         </div>
 
         {/* Steps row */}

@@ -99,7 +99,7 @@ export default function ExportProgramPage() {
 
           {/* Documentation */}
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Export Documentation</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Export Documentation</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Every international shipment includes a complete documentation package:
             </p>

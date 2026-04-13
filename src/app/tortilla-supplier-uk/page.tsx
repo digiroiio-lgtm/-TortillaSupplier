@@ -65,7 +65,7 @@ export default function UKPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Products for UK Supply</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">Products for UK Supply</h3>
           <p className="text-gray-500 text-sm mb-8">Chilled and frozen tortillas suitable for UK foodservice and retail.</p>
           <ProductSpecTable />
         </div>
@@ -107,7 +107,7 @@ export default function UKPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">UK Buyer FAQ</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-8">UK Buyer FAQ</h3>
           <div className="max-w-3xl">
             <FAQAccordion items={ukFAQs} />
           </div>
@@ -117,7 +117,7 @@ export default function UKPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a UK Supply Quote</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a UK Supply Quote</h3>
             <ContactForm />
           </div>
         </div>

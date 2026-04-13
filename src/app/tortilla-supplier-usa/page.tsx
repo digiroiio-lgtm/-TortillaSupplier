@@ -65,7 +65,7 @@ export default function USAPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Frozen &amp; Chilled Products for USA</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">Frozen &amp; Chilled Products for USA</h3>
           <p className="text-gray-500 text-sm mb-8">Export-ready frozen tortilla range with 12-month shelf life.</p>
           <ProductSpecTable filterType="frozen" />
         </div>
@@ -73,7 +73,7 @@ export default function USAPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">USA Export Documentation</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">USA Export Documentation</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {['FDA Facility Registration', 'Health Certificate', 'Certificate of Origin', 'Allergen Declaration'].map((doc) => (
               <div key={doc} className="bg-[#FAFAF8] border border-gray-200 rounded-lg p-4">
@@ -92,7 +92,7 @@ export default function USAPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">USA Buyer FAQ</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-8">USA Buyer FAQ</h3>
           <div className="max-w-3xl">
             <FAQAccordion items={usaFAQs} />
           </div>
@@ -102,7 +102,7 @@ export default function USAPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a USA Supply Quote</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a USA Supply Quote</h3>
             <ContactForm />
           </div>
         </div>

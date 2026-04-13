@@ -215,7 +215,7 @@ export default function HowToStoreTortillasPage() {
 
           {/* Foodservice storage best practices */}
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Foodservice Storage Best Practices</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Foodservice Storage Best Practices</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-6">
               Commercial foodservice operations require consistent tortilla quality across high service volumes.
               Poor storage practices — including temperature abuse, inadequate packaging, and incorrect thawing —
@@ -250,7 +250,7 @@ export default function HowToStoreTortillasPage() {
 
           {/* B2B distribution storage */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Storage for Wholesale Distributors</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Storage for Wholesale Distributors</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Wholesale distributors handling frozen tortilla imports must maintain an unbroken cold chain
               from the point of container receipt through to delivery to the end customer. Key requirements:
@@ -276,7 +276,7 @@ export default function HowToStoreTortillasPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Storage: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Storage: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">

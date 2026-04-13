@@ -136,7 +136,7 @@ export default function ProductCategoriesSection() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-2">Product Range</p>
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight">Product Categories</h2>
+            <h3 className="text-3xl font-bold text-gray-900 tracking-tight">Product Categories</h3>
           </div>
           <Link
             href="/products"

@@ -104,9 +104,9 @@ export default function TestimonialsSection() {
             <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">
               Buyer Reviews
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight max-w-xl">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight max-w-xl">
               Trusted by distributors and foodservice buyers worldwide
-            </h2>
+            </h3>
           </div>
 
           {/* Rating badge */}
