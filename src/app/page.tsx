@@ -15,10 +15,10 @@ import JsonLd from '@/components/JsonLd';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier' },
+  title: { absolute: 'Wholesale Tortilla Manufacturer | TortillaSupplier' },
   description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
   openGraph: {
-    title: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier',
+    title: 'Wholesale Tortilla Manufacturer | TortillaSupplier',
     description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
     url: 'https://tortillasupplier.com',
   },

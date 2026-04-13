@@ -1056,7 +1056,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'importing-tortillas-to-uk',
-    metaTitle: 'Importing Tortillas to the UK | Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Importing Tortillas to the UK | TortillaSupplier',
     metaDescription: 'Importing tortillas to the UK from a BRCGS-certified supplier. Flour tortillas, corn tortillas and frozen formats with full UK import documentation and container supply.',
     heroTitle: 'Importing Tortillas to the UK',
     heroSubtitle: 'Wholesale tortilla supply for UK importers and distributors. BRCGS-certified production, full UK import documentation, cold chain logistics and competitive container pricing.',
@@ -1727,7 +1727,7 @@ seoPages.push(
   // ─── PRIVATE LABEL CLUSTER ───────────────────────────────────────────────────
   {
     slug: 'private-label-tortillas',
-    metaTitle: 'Private Label Tortillas | Manufacturer for Importers & Distributors',
+    metaTitle: 'Private Label Tortillas | TortillaSupplier',
     metaDescription: 'Private label tortilla manufacturing for importers and distributors. Custom branding, all tortilla formats, container supply. BRCGS certified. Request a quote.',
     heroTitle: 'Private Label Tortilla Manufacturing',
     heroSubtitle: 'Custom-branded tortillas and flatbreads for importers, distributors and retail buyers. Full private label service covering all formats, packaging options and export markets.',
@@ -1766,7 +1766,7 @@ seoPages.push(
   },
   {
     slug: 'private-label-flour-tortillas',
-    metaTitle: 'Private Label Flour Tortillas | Manufacturer for Distributors',
+    metaTitle: 'Private Label Flour Tortillas | TortillaSupplier',
     metaDescription: 'Private label flour tortilla manufacturing for distributors and importers. 20cm, 25cm and 30cm sizes. Custom branding, container supply, BRCGS certified.',
     heroTitle: 'Private Label Flour Tortillas',
     heroSubtitle: 'Custom-branded flour tortillas in 20cm, 25cm and 30cm for distributors, retailers and foodservice brands. Full private label service with export documentation.',
@@ -1839,7 +1839,7 @@ seoPages.push(
   },
   {
     slug: 'private-label-tortillas-uk',
-    metaTitle: 'Private Label Tortillas UK | Manufacturer for UK Distributors',
+    metaTitle: 'Private Label Tortillas UK | TortillaSupplier',
     metaDescription: 'Private label tortilla manufacturer for UK distributors and retailers. Flour, corn and frozen tortillas with custom branding. BRCGS certified, UK import ready.',
     heroTitle: 'Private Label Tortillas for UK Distributors',
     heroSubtitle: 'Custom-branded tortillas and flatbreads for UK retailers, distributors and foodservice brands. BRCGS-certified production with full UK import documentation.',
