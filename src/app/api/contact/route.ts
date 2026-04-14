@@ -10,15 +10,15 @@ export async function POST(request: NextRequest) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_EMAIL ?? 'info@tortillasupplier.com';
+    const fromDomain   = process.env.FROM_EMAIL_DOMAIN ?? 'tortillasupplier.com';
 
     if (resendApiKey) {
       const emailBody = [
-        `Name: ${name}`,
+        `Full Name: ${name}`,
         `Company: ${company}`,
         `Country: ${country}`,
         `Email: ${email}`,
-        phone ? `Phone/WhatsApp: ${phone}` : null,
+        phone ? `Phone / WhatsApp: ${phone}` : null,
         product ? `Product of Interest: ${product}` : null,
         volume ? `Estimated Monthly Volume: ${volume}` : null,
         privateLabel ? `Private Label Required: ${privateLabel}` : null,
@@ -34,10 +34,10 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'TortillaSupplier Inquiry <noreply@tortillasupplier.com>',
-          to: [toEmail],
+          from: `TortillaSupplier Inquiry <noreply@${fromDomain}>`,
+          to: ['info@tortillasupplier.com', 'gokturk@unadam.com.tr'],
           reply_to: email,
-          subject: `Wholesale Inquiry from ${company} (${country})`,
+          subject: 'New Wholesale Inquiry – TortillaSupplier',
           text: emailBody,
         }),
       });
@@ -47,6 +47,7 @@ export async function POST(request: NextRequest) {
         console.error('Resend error:', err);
         return NextResponse.json({ error: 'Email delivery failed' }, { status: 500 });
       }
+      console.log('[Contact] Email sent successfully to all recipients');
     } else {
       // Fallback: log to console when no API key is configured
       console.log('[Contact Form Submission]', { name, company, country, email, phone, product, volume, privateLabel, message });

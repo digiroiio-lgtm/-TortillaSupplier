@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const RESEND_API_URL = 'https://api.resend.com/emails';
 const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
-const EMAIL_SUBJECT = 'New Distributor Inquiry – TortillaSupplier';
+const EMAIL_SUBJECT = 'New Wholesale Inquiry – TortillaSupplier';
 
 function buildEmailText(fields: {
   name: string;
@@ -155,8 +155,6 @@ export async function POST(request: NextRequest) {
 
     // ── Email delivery ────────────────────────────────────────────────────────
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail      = process.env.CONTACT_EMAIL    ?? 'info@tortillasupplier.com';
-    const ccEmail      = process.env.CONTACT_EMAIL_CC ?? 'oguzyumuk@gmail.com';
     const fromDomain   = process.env.FROM_EMAIL_DOMAIN ?? 'tortillasupplier.com';
 
     if (resendApiKey) {
@@ -168,8 +166,7 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           from: `TortillaSupplier Inquiry <noreply@${fromDomain}>`,
-          to: [toEmail],
-          cc: [ccEmail],
+          to: ['info@tortillasupplier.com', 'gokturk@unadam.com.tr'],
           reply_to: email,
           subject: EMAIL_SUBJECT,
           text: buildEmailText(fields),
@@ -182,6 +179,7 @@ export async function POST(request: NextRequest) {
         console.error('[Inquiry] Resend error:', err);
         return NextResponse.json({ error: 'Email delivery failed' }, { status: 500 });
       }
+      console.log('[Inquiry] Email sent successfully to all recipients');
     } else {
       // No API key configured — log for local development
       console.log('[Inquiry Form Submission]', fields);
