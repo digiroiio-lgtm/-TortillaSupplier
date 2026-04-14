@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Analytics } from '@vercel/analytics/next';
 import Script from 'next/script';
 import './globals.css';
@@ -6,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 import JsonLd from '@/components/JsonLd';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -104,6 +106,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
         <Footer />
         <WhatsAppFloatingButton />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
         <Analytics />
       </body>
     </html>
