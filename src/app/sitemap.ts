@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
+import events from '@/data/events';
 
 const BASE_URL = 'https://tortillasupplier.com';
 const LAST_MODIFIED = new Date('2026-03-31');
@@ -104,6 +105,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/privacy-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/terms-of-service`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/cookie-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
+    // Events hub
+    { url: `${BASE_URL}/events/global-food-beverage-trade-shows-2026`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
@@ -133,5 +136,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
   }));
 
-  return [...staticPages, ...blogPages, ...authorPages, ...dynamicPages];
+  const eventPages: MetadataRoute.Sitemap = events.map((event) => ({
+    url: `${BASE_URL}/events/${event.slug}`,
+    lastModified: LAST_MODIFIED,
+    priority: 0.7,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [...staticPages, ...blogPages, ...authorPages, ...eventPages, ...dynamicPages];
 }
