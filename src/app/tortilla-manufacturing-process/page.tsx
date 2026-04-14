@@ -277,7 +277,7 @@ export default function TortillaManufacturingProcessPage() {
 
           {/* Certifications */}
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Certifications and Quality Standards</h2>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Certifications and Quality Standards</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-6">
               Commercially manufactured tortillas for international wholesale supply require production under
               verified food safety management systems. Our facility maintains the following certifications:
@@ -306,7 +306,7 @@ export default function TortillaManufacturingProcessPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Manufacturing Process: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Manufacturing Process: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
@@ -319,7 +319,7 @@ export default function TortillaManufacturingProcessPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Pages</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Pages</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Our Factory', href: '/our-factory' },

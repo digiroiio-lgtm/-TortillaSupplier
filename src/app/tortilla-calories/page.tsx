@@ -269,7 +269,7 @@ export default function TortillaCaloriesPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Calories: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Calories: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
@@ -282,7 +282,7 @@ export default function TortillaCaloriesPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Tortilla Guide', href: '/tortilla-guide' },

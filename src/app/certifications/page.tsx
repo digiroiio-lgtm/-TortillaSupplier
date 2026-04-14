@@ -78,10 +78,11 @@ export default function CertificationsPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-8">Certification Details</h2>
           <div className="space-y-8">
             {certifications.map((cert) => (
               <div key={cert.name} className="border border-gray-100 rounded-2xl p-6 hover:border-gray-200 hover:shadow-sm transition-all">
-                <h2 className="text-base font-bold text-gray-900 mb-2">{cert.name}</h2>
+                <h3 className="text-base font-bold text-gray-900 mb-2">{cert.name}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-3">{cert.description}</p>
                 <p className="text-xs text-[#2d7a3a] font-semibold">
                   <span className="text-gray-400 font-normal">Market relevance: </span>

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
+import events from '@/data/events';
 
 const BASE_URL = 'https://tortillasupplier.com';
 const LAST_MODIFIED = new Date('2026-03-31');
@@ -133,5 +134,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
   }));
 
-  return [...staticPages, ...blogPages, ...authorPages, ...dynamicPages];
+  const eventPages: MetadataRoute.Sitemap = events.map((event) => ({
+    url: `${BASE_URL}/events/${event.slug}`,
+    lastModified: LAST_MODIFIED,
+    priority: event.isHubPage ? 0.8 : 0.7,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [...staticPages, ...blogPages, ...authorPages, ...dynamicPages, ...eventPages];
 }

@@ -73,7 +73,7 @@ export default function USAPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">USA Export Documentation</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">USA Export Documentation</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {['FDA Facility Registration', 'Health Certificate', 'Certificate of Origin', 'Allergen Declaration'].map((doc) => (
               <div key={doc} className="bg-[#FAFAF8] border border-gray-200 rounded-lg p-4">
@@ -92,7 +92,7 @@ export default function USAPage() {
 
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-8">USA Buyer FAQ</h2>
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-8">USA Buyer FAQ</h3>
           <div className="max-w-3xl">
             <FAQAccordion items={usaFAQs} />
           </div>
@@ -102,7 +102,7 @@ export default function USAPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a USA Supply Quote</h2>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Get a USA Supply Quote</h3>
             <ContactForm />
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function USAPage() {
 
       <section className="py-8 bg-[#FAFAF8] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h2>
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Pages</h3>
           <div className="flex flex-wrap gap-3">
             <Link href="/tortilla-supplier-uk" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors">UK Supply</Link>
             <Link href="/tortilla-supplier-europe" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors">Europe Supply</Link>

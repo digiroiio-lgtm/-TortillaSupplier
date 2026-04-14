@@ -32,7 +32,7 @@ export default function ContactPage() {
               <ContactForm />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#1a1a1a] mb-6">Contact Information</h2>
+              <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-700 mb-1">Email</h3>

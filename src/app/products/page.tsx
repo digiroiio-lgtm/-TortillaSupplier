@@ -73,7 +73,7 @@ export default function ProductsPage() {
 
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-[#1a1a1a] mb-4">Related Pages</h2>
+          <h3 className="text-lg font-bold text-[#1a1a1a] mb-4">Related Pages</h3>
           <div className="flex flex-wrap gap-3">
             <Link href="/tortilla-supplier-uk" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors">UK Supply</Link>
             <Link href="/tortilla-supplier-usa" className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors">USA Supply</Link>

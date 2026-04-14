@@ -281,7 +281,7 @@ export default function TortillaSizeChartPage() {
 
           {/* FAQ */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Tortilla Sizes: Frequently Asked Questions</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Tortilla Sizes: Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <div key={faq.question} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
@@ -294,7 +294,7 @@ export default function TortillaSizeChartPage() {
 
           {/* Related links */}
           <div>
-            <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides & Product Pages</h2>
+            <h3 className="text-base font-bold text-gray-900 mb-4">Related Guides &amp; Product Pages</h3>
             <div className="flex flex-wrap gap-3">
               {[
                 { label: 'Corn Tortilla 15cm (6")', href: '/corn-tortilla-15cm-6-inch' },
