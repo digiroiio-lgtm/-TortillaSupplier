@@ -10,7 +10,8 @@ export async function POST(request: NextRequest) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_EMAIL ?? 'info@tortillasupplier.com';
+    const toEmail  = process.env.CONTACT_EMAIL   ?? 'info@tortillasupplier.com';
+    const toEmail2 = process.env.CONTACT_EMAIL_2 ?? 'gokturk@unadam.com.tr';
 
     if (resendApiKey) {
       const emailBody = [
@@ -35,9 +36,9 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           from: 'TortillaSupplier Inquiry <noreply@tortillasupplier.com>',
-          to: [toEmail],
+          to: [toEmail, toEmail2],
           reply_to: email,
-          subject: `Wholesale Inquiry from ${company} (${country})`,
+          subject: 'New Wholesale Inquiry – TortillaSupplier',
           text: emailBody,
         }),
       });
@@ -47,6 +48,7 @@ export async function POST(request: NextRequest) {
         console.error('Resend error:', err);
         return NextResponse.json({ error: 'Email delivery failed' }, { status: 500 });
       }
+      console.log('[Contact] Email sent successfully to', [toEmail, toEmail2].join(', '));
     } else {
       // Fallback: log to console when no API key is configured
       console.log('[Contact Form Submission]', { name, company, country, email, phone, product, volume, privateLabel, message });
