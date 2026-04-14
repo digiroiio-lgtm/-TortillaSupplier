@@ -74,6 +74,16 @@ const companyLinks = [
   { label: 'Export Programme', href: '/export-program' },
 ];
 
+const eventLinks = [
+  { label: '2026 Trade Shows', href: '/events/global-food-beverage-trade-shows-2026' },
+  { label: 'Gulfood Dubai 2026', href: '/events/gulfood-dubai-2026' },
+  { label: 'Alimentaria Barcelona 2026', href: '/events/alimentaria-barcelona-2026' },
+  { label: 'NRA Show Chicago 2026', href: '/events/nra-show-chicago-2026' },
+  { label: 'IFE Manufacturing London 2026', href: '/events/ife-manufacturing-london-2026' },
+  { label: 'Food & Drink Expo UK 2026', href: '/events/food-drink-expo-uk-2026' },
+  { label: 'SIAL Paris 2026', href: '/events/sial-paris-2026' },
+];
+
 const resourceLinks = [
   { label: 'All Articles', href: '/blog' },
   { label: 'Tortilla Supplier Guide', href: '/blog/tortilla-supplier-guide' },
@@ -212,9 +222,10 @@ export default function Footer() {
         </div>
 
         {/* Secondary grid — Private Label merged in */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-10 border-t border-gray-100">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-10 border-t border-gray-100">
           <FooterColumn title="Private Label" links={privateLabelLinks} />
           <FooterColumn title="Company" links={companyLinks} />
+          <FooterColumn title="Industry Events" links={eventLinks} />
           <FooterColumn title="Guides" links={guideLinks} />
           <FooterColumn title="Resources" links={resourceLinks} />
           <FooterColumn title="Commercial" links={commercialLinks} />

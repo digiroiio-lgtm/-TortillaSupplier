@@ -12,6 +12,7 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import DistributorTrustSection from '@/components/DistributorTrustSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import TrustSignalsSection from '@/components/TrustSignalsSection';
+import EventsTrustSection from '@/components/EventsTrustSection';
 import JsonLd from '@/components/JsonLd';
 import { certifications } from '@/data/certifications';
 
@@ -323,6 +324,9 @@ export default function HomePage() {
 
       {/* Trust Signals — certifications, guarantees, buyer-facing proof */}
       <TrustSignalsSection />
+
+      {/* Industry Events — upcoming trade shows as trust signal */}
+      <EventsTrustSection />
 
       {/* Final CTA */}
       <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
