@@ -698,6 +698,92 @@ const blogPosts: BlogPost[] = [
     tags: ['tortilla supplier', 'wholesale tortilla', 'tortilla wholesale supplier', 'bulk tortilla supplier'],
   },
   {
+    slug: 'importing-tortillas-usa',
+    title: 'Importing Tortillas to the USA: A Practical Guide for Buyers',
+    excerpt:
+      'The United States is the largest tortilla market in the world. Here is a practical guide for importers, distributors, and foodservice buyers looking to source tortillas from international manufacturers.',
+    metaTitle: 'USA Tortilla Import Guide for Buyers | TortillaSupplier',
+    metaDescription:
+      'A practical guide for US importers and distributors sourcing tortillas internationally — covering FDA compliance, cold chain, food safety certifications, and container economics.',
+    publishDate: '2026-04-05',
+    readTime: 6,
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+      { label: 'Tortilla Supplier USA', href: '/tortilla-supplier-usa' },
+      { label: 'Bulk Tortilla Supplier', href: '/bulk-tortilla-supplier' },
+      { label: 'Private Label Tortilla Manufacturer', href: '/private-label-tortilla-manufacturer' },
+    ],
+    sections: [
+      {
+        heading: 'The US Tortilla Market',
+        body: 'The United States represents the largest and most mature tortilla market globally, with an estimated market size exceeding $12 billion annually. Tortillas are a staple product across foodservice, retail, and QSR (quick-service restaurant) segments. Both flour tortillas and corn tortillas are widely consumed, with increasing demand for frozen tortilla formats, clean label products, and private label manufacturing. Demand is driven by:',
+        listItems: [
+          'Major QSR chains (Mexican and Tex-Mex concepts)',
+          'Supermarket private label programs',
+          'Foodservice distributors',
+          'Meal kit and ready-to-eat segments',
+        ],
+      },
+      {
+        heading: 'Import Requirements and FDA Compliance',
+        body: 'Importing tortillas into the United States requires strict compliance with FDA regulations. US importers must also ensure that products comply with labelling requirements, including a nutrition facts panel, ingredient list, allergen disclosure, and country of origin labelling. Key requirements include:',
+        listItems: [
+          'FDA facility registration (mandatory for all overseas manufacturers)',
+          'Prior Notice submission before shipment arrival',
+          'Commercial invoice and packing list',
+          'Certificate of origin',
+          'Product specification sheet and allergen declaration',
+          'FSMA compliance (Food Safety Modernization Act)',
+        ],
+      },
+      {
+        heading: 'Cold Chain and Distribution Requirements',
+        body: 'Frozen tortillas must be transported under a strict cold chain. Shipments are inspected at US ports including Los Angeles, Houston, and New York. After arrival, products should be transferred to cold storage warehouses and regional distribution networks. Key considerations:',
+        listItems: [
+          'Temperature must be maintained at −18°C (0°F) or below throughout transit',
+          'Reliable temperature-controlled logistics providers are essential',
+          'Cold-chain documentation must be available for customs review at entry ports',
+        ],
+      },
+      {
+        heading: 'Container Economics for US Import',
+        body: 'For US buyers, container shipments provide the best cost efficiency. Larger buyers typically scale quickly to full container loads (FCL) to reduce unit cost. A standard reefer container offers:',
+        tableData: {
+          headers: ['Container', 'Approx. Tortillas', 'Pallets', 'Transit Time'],
+          rows: [
+            ['20ft reefer', '~800,000 units', '18–20 pallets', '15–30 days'],
+            ['40ft reefer', '~1,200,000 units', '36–40 pallets', '15–30 days'],
+          ],
+        },
+      },
+      {
+        heading: 'Food Safety Certifications for US Buyers',
+        body: 'US distributors and retailers require strict food safety standards. Buyers should always request the latest audit report, certification validity documents, and export history. Most commonly accepted certifications include:',
+        listItems: [
+          'BRCGS (globally recognised, widely accepted by US retail chains)',
+          'SQF (Safe Quality Food — widely used in the US food industry)',
+          'IFS / ISO 22000',
+          'HACCP compliance',
+        ],
+      },
+      {
+        heading: 'Selecting a Supplier for the US Market',
+        body: 'When choosing a tortilla supplier for US import, success depends on regulatory compliance (FDA and FSMA), strong cold-chain logistics, certified production standards, and reliable scalable supply. For distributors and importers, working with an experienced export manufacturer significantly reduces operational risk and ensures long-term supply stability. Key factors include:',
+        listItems: [
+          'FDA-compliant production facility with active registration',
+          'Export experience to North America',
+          'Reliable frozen supply chain with documented cold-chain records',
+          'Private label capability for US brands and retailers',
+          'Consistent production capacity to support growing order volumes',
+        ],
+      },
+    ],
+    conclusion:
+      'With a market exceeding $12 billion annually, the United States offers the largest commercial opportunity for tortilla suppliers globally. Careful attention to FDA and FSMA compliance, cold-chain logistics, and food safety certifications — combined with a certified export manufacturer — significantly reduces compliance risk and ensures reliable supply to your US distribution network.',
+    tags: ['tortilla supplier USA', 'import tortillas USA', 'frozen tortilla supplier USA', 'bulk tortilla supplier USA'],
+  },
+  {
     slug: 'wholesale-tortilla-supplier-distributors',
     title: 'Best Tortilla Supplier for Distributors in 2026',
     excerpt:
