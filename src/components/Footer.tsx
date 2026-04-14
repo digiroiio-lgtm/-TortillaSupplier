@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import FooterCTAStrip from '@/components/FooterCTAStrip';
 
 const productLinks = [
   { label: 'Flour Tortilla 30cm', href: '/flour-tortilla-30cm-12-inch' },
@@ -163,26 +164,7 @@ export default function Footer() {
               <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-1">Ready to Order?</p>
               <p className="text-sm font-bold text-gray-900">Wholesale tortillas for distributors and importers</p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="px-4 py-2 bg-[#2d7a3a] text-white font-semibold rounded-lg hover:bg-[#245f2d] transition-colors text-sm"
-              >
-                Request Distributor Pricing
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
-              >
-                Request Samples
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
-              >
-                Contact Export Team
-              </Link>
-            </div>
+            <FooterCTAStrip />
           </div>
         </div>
 
@@ -239,17 +221,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-100 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex flex-wrap gap-4 text-xs text-gray-400">
-            <span>BRCGS</span>
-            <span className="text-gray-200">·</span>
-            <span>IFS</span>
-            <span className="text-gray-200">·</span>
-            <span>ISO 22000</span>
-            <span className="text-gray-200">·</span>
-            <span>HACCP</span>
-            <span className="text-gray-200">·</span>
-            <span>Halal Certified</span>
+        <div className="border-t border-gray-100 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-2">
+            {['BRCGS', 'IFS', 'ISO 22000', 'HACCP', 'Halal Certified'].map((cert) => (
+              <span
+                key={cert}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-50 border border-gray-200 rounded-full text-xs font-medium text-gray-600"
+              >
+                <svg className="w-3 h-3 text-[#2d7a3a] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                {cert}
+              </span>
+            ))}
           </div>
           <div className="flex flex-wrap gap-4 text-xs text-gray-400">
             {legalLinks.map((link) => (
