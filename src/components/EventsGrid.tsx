@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import type { TradeEvent, EventRegion } from '@/data/events';
 
-const REGIONS: Array<EventRegion | 'All'> = ['All', 'Europe', 'Americas', 'Middle East', 'Asia'];
+const REGIONS: Array<EventRegion | 'All'> = ['All', 'Europe', 'United Kingdom', 'Americas', 'Middle East', 'Asia'];
 
 interface EventsGridProps {
   events: TradeEvent[];

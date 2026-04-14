@@ -11,7 +11,7 @@ const PAGE_URL = `${BASE_URL}/events/global-food-beverage-trade-shows-2026`;
 export const metadata: Metadata = {
   title: { absolute: '2026 Food & Beverage Expos for the Tortilla Industry | TortillaSupplier' },
   description:
-    'A directory of the world\'s top 2026 food and beverage trade shows — Gulfood, Alimentaria, NRA Show, and SIAL Paris — with dates, locations, and relevance to the global tortilla supply chain.',
+    'A directory of the world\'s top 2026 food and beverage trade shows — Gulfood, Alimentaria, NRA Show, SIAL Paris, IFE Manufacturing, Food & Drink Expo, and more UK events — with dates, locations, and relevance to the global tortilla supply chain.',
   openGraph: {
     title: '2026 Food & Beverage Expos for the Tortilla Industry | TortillaSupplier',
     description:
@@ -60,10 +60,10 @@ export default function EventsHubPage() {
           <p className="text-base text-gray-500 leading-relaxed max-w-2xl">
             A curated directory of the world&apos;s most important food and beverage trade shows in 2026.
             Each event represents a key networking opportunity for tortilla distributors, importers and
-            wholesale buyers across Europe, the Americas and the Middle East.
+            wholesale buyers across Europe, the United Kingdom, the Americas and the Middle East.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
-            {['Europe', 'Americas', 'Middle East'].map((region) => (
+            {['Europe', 'United Kingdom', 'Americas', 'Middle East'].map((region) => (
               <span
                 key={region}
                 className="px-3 py-1.5 bg-[#2d7a3a]/10 text-[#2d7a3a] text-xs font-semibold rounded-full"
@@ -95,10 +95,42 @@ export default function EventsHubPage() {
             SIAL Paris, Alimentaria and the NRA Show provide direct access to decision-makers across
             retail, foodservice and QSR channels.
           </p>
+          <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-6">
+            The United Kingdom is one of the world&apos;s most important hubs for food technology, retail
+            chains and specialty food markets. UK Food Supply Chain events — including IFE Manufacturing,
+            the Food &amp; Drink Expo and Lunch! — are essential reference points for London Food Technology
+            developments and Specialty Food Distribution UK. We track UK&apos;s rapidly growing demand for
+            authentic Mexican food products and tortilla innovations across these events.
+          </p>
           <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
             TortillaSupplier monitors these events to ensure our product portfolio and export capabilities
             align with the latest market demands and innovation trends in the global tortilla supply chain.
           </p>
+        </div>
+      </section>
+
+      {/* Trust strip */}
+      <section className="py-12 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest text-center mb-6">
+            Connecting with Industry Leaders at Global Expos
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {[
+              'Gulfood – Dubai',
+              'Alimentaria – Barcelona',
+              'NRA Show – Chicago',
+              'SIAL Paris',
+              'IFE Manufacturing – London',
+              'Food & Drink Expo – Birmingham',
+              'Speciality & Fine Food Fair – London',
+              'Lunch! – London',
+            ].map((show) => (
+              <span key={show} className="text-xs text-gray-400 font-medium">
+                {show}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
