@@ -16,6 +16,8 @@ export interface TradeEvent {
   description: string;
   tortillaRelevance: string;
   emoji: string;
+  /** ISO 8601 date when these event dates were last verified against the official website */
+  lastVerified: string;
 }
 
 const events: TradeEvent[] = [
@@ -37,6 +39,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'Global tortilla and flatbread innovation trends — including frozen and ambient formats — are prominently showcased at Gulfood. The event is critical for tortilla suppliers targeting the GCC, MENA and wider Asian export markets, where demand for flatbreads and wraps is growing rapidly.',
     emoji: '🇦🇪',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'alimentaria-barcelona-2026',
@@ -56,6 +59,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'Global tortilla and flatbread innovation trends, including private label and tortilla supply chain optimisation, are key discussion areas at Alimentaria. Spain is one of Europe\'s fastest-growing tortilla markets, making this show essential for building European distribution partnerships.',
     emoji: '🇪🇸',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'nra-show-chicago-2026',
@@ -75,6 +79,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'Global tortilla and flatbread innovation trends for quick-service restaurants and foodservice operators are central to the NRA Show. This is the top venue for tortilla suppliers seeking entry into the US foodservice and QSR supply chain.',
     emoji: '🇺🇸',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'sial-paris-2026',
@@ -94,6 +99,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'Global tortilla and flatbread innovation trends are well represented at SIAL Paris, with dedicated sections for ethnic foods and flatbreads. For international tortilla supply chain professionals, SIAL is the premier venue for connecting with European retail and foodservice buyers.',
     emoji: '🇫🇷',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'ife-manufacturing-london-2026',
@@ -113,6 +119,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. IFE Manufacturing is a key venue for connecting with UK food manufacturers exploring private label tortilla and flatbread production.',
     emoji: '🏭',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'food-drink-expo-uk-2026',
@@ -132,6 +139,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. The Food & Drink Expo is the primary venue for establishing UK distributor and retail partnerships for tortilla and flatbread wholesale supply.',
     emoji: '🇬🇧',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'london-wine-fair-2026',
@@ -151,6 +159,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. London Wine Fair connects tortilla and food suppliers with UK hospitality buyers who source complementary food products for Mexican and Latin-themed venues.',
     emoji: '🍷',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'imbibe-live-london-2026',
@@ -170,6 +179,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. Imbibe Live represents a key channel into UK bars and restaurants serving Mexican street food and cocktail menus that pair directly with tortilla and wrap products.',
     emoji: '🍸',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'speciality-fine-food-london-2026',
@@ -189,6 +199,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. This fair is especially relevant for premium and artisan tortilla formats targeting the UK\'s growing specialty food retail and fine dining channels.',
     emoji: '🧺',
+    lastVerified: '2026-04-14',
   },
   {
     slug: 'lunch-expo-london-2026',
@@ -208,6 +219,7 @@ const events: TradeEvent[] = [
     tortillaRelevance:
       'As a global provider, we track UK\'s rapidly growing demand for authentic Mexican food products and tortilla innovations. Lunch! is the most direct route to UK food-to-go operators who use tortillas and wraps as the foundation of their grab-and-go menus and street food offerings.',
     emoji: '🌯',
+    lastVerified: '2026-04-14',
   },
 ];
 
