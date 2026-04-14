@@ -35,15 +35,15 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-700 mb-1">Email</h3>
+                  <h4 className="text-sm font-semibold text-gray-700 mb-1">Email</h4>
                   <a href="mailto:info@tortillasupplier.com" className="text-sm text-[#2d7a3a] hover:underline">info@tortillasupplier.com</a>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-700 mb-1">WhatsApp</h3>
+                  <h4 className="text-sm font-semibold text-gray-700 mb-1">WhatsApp</h4>
                   <a href="https://wa.me/905531229372" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2d7a3a] hover:underline">+90 553 122 93 72</a>
                 </div>
                 <div className="mt-6 p-4 bg-[#FAFAF8] border border-gray-200 rounded-lg">
-                  <h3 className="text-sm font-semibold text-gray-700 mb-2">Export Markets</h3>
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Export Markets</h4>
                   <ul className="space-y-1 text-sm text-gray-500">
                     <li>United Kingdom</li>
                     <li>United States</li>
