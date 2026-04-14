@@ -4,7 +4,7 @@ import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
-const GA_MEASUREMENT_ID = 'G-CLYV96DLMD';
+const GA_MEASUREMENT_ID = 'G-R9W0BV1FRL';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
@@ -43,7 +43,7 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `,
         }}
       />
