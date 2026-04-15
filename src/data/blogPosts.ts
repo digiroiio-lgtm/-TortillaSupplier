@@ -824,6 +824,409 @@ const blogPosts: BlogPost[] = [
       'tortilla distributor',
     ],
   },
+  {
+    slug: 'wholesale-tortilla-price-guide',
+    title: 'Wholesale Tortilla Price Guide: What Distributors Pay Per Unit',
+    excerpt:
+      'Understanding wholesale tortilla pricing helps distributors plan margins, negotiate contracts, and choose the right supplier tier. This guide breaks down unit costs across formats and volumes.',
+    metaTitle: 'Wholesale Tortilla Price Guide for Distributors | TortillaSupplier',
+    metaDescription:
+      'Wholesale tortilla prices by format, volume, and container size. Learn what distributors and importers pay per unit for flour, corn, and wrap tortillas at B2B scale.',
+    publishDate: '2026-04-01',
+    readTime: 5,
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+      { label: 'Tortilla Wholesale', href: '/tortilla-wholesale' },
+      { label: 'Wholesale Tortilla Supplier', href: '/tortilla-wholesale' },
+      { label: 'Request Distributor Pricing', href: '/contact' },
+    ],
+    sections: [
+      {
+        heading: 'How Wholesale Tortilla Pricing Works',
+        body: 'Wholesale tortilla prices are typically quoted per unit (per tortilla), per case, or per pallet, depending on the buyer\'s volume tier. B2B pricing is almost always lower than retail shelf pricing because it removes multiple layers of margin. At container-level volumes — 800,000 to 1.2 million tortillas per shipment — unit costs drop significantly compared to pallet-level purchasing. Distributors who commit to full container loads consistently achieve the most competitive tortilla wholesale prices.',
+      },
+      {
+        heading: 'Typical Wholesale Tortilla Price Ranges by Format',
+        body: 'Pricing varies by tortilla type, size, and recipe. The table below gives indicative B2B price ranges across the most common wholesale formats. Exact prices depend on origin, certification, pack format, and volume commitment.',
+        tableData: {
+          headers: ['Format', 'Size', 'Indicative Wholesale Price (per unit)', 'MOQ'],
+          rows: [
+            ['Flour tortilla', '25 cm (10")', '€0.08 – €0.14', '1 container'],
+            ['Flour tortilla', '30 cm (12")', '€0.11 – €0.18', '1 container'],
+            ['Corn tortilla', '15 cm (6")', '€0.06 – €0.10', '1 container'],
+            ['Whole wheat tortilla', '25 cm (10")', '€0.10 – €0.16', '1 container'],
+            ['Burrito tortilla', '32 cm (12.5")', '€0.13 – €0.20', '1 container'],
+            ['Wrap tortilla', '25 cm (10")', '€0.08 – €0.14', '1 container'],
+          ],
+        },
+      },
+      {
+        heading: 'Volume and Container Economics',
+        body: 'Container-level ordering is where wholesale pricing becomes most competitive. A 40-foot reefer container holds up to 1.2 million tortillas, which reduces per-unit logistics costs by 35–40% compared to pallet-based freight. For distributors buying at this scale, the all-in tortilla wholesale price — production plus shipping — becomes significantly more attractive. Buyers with smaller initial volumes can start with a 20-foot container (approximately 800,000 units) and scale from there.',
+      },
+      {
+        heading: 'What Affects Wholesale Tortilla Pricing',
+        body: 'Several factors influence the final wholesale price quoted by a tortilla manufacturer:',
+        listItems: [
+          'Raw material costs (wheat flour, corn masa, oil, and packaging)',
+          'Tortilla size and recipe complexity',
+          'Certifications required (BRCGS, Halal, organic)',
+          'Private label packaging versus standard production',
+          'Frozen versus chilled supply format',
+          'Annual volume commitment and contract length',
+        ],
+      },
+      {
+        heading: 'Private Label Tortillas and Margin Opportunity',
+        body: 'Distributors who source wholesale tortillas under a private label programme typically earn 15–25% higher margins than reselling third-party branded products. Private label wholesale tortilla programmes allow distributors to build their own brand identity while leveraging certified manufacturer infrastructure. Minimum order quantities for private label typically start from one container per SKU.',
+      },
+      {
+        heading: 'Getting an Accurate Wholesale Tortilla Quote',
+        body: 'Wholesale tortilla pricing is best obtained by contacting manufacturers directly with a specification sheet that includes tortilla size, format (frozen or fresh), pack count, required certifications, and target destination country. Most certified exporters will provide a detailed wholesale price including production, packaging, and CIF freight to your import port.',
+      },
+    ],
+    conclusion:
+      'Wholesale tortilla prices vary significantly by format, volume, and supply model. Distributors who buy at container level — particularly on annual supply contracts — consistently achieve the lowest unit costs. To get accurate wholesale tortilla pricing for your distribution programme, contact a certified tortilla manufacturer with your volume requirements and target market details.',
+    tags: [
+      'wholesale tortilla',
+      'wholesale tortillas',
+      'tortilla wholesale price',
+      'wholesale tortilla supplier',
+      'bulk tortilla supplier',
+    ],
+  },
+  {
+    slug: 'wholesale-tortilla-wraps-south-africa',
+    title: 'Wholesale Tortilla Wraps: Sourcing Guide for Cape Town and Durban Distributors',
+    excerpt:
+      'South Africa is one of the fastest-growing import markets for wholesale tortilla wraps in Africa. This guide covers sourcing, pricing, and logistics for distributors based in Cape Town and Durban.',
+    metaTitle: 'Wholesale Tortilla Wraps Cape Town & Durban | TortillaSupplier',
+    metaDescription:
+      'A wholesale tortilla wraps sourcing guide for South African distributors in Cape Town and Durban — covering import pricing, container logistics, and certified supplier requirements.',
+    publishDate: '2026-04-03',
+    readTime: 5,
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
+    relatedLinks: [
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
+      { label: 'Export Programme', href: '/export-program' },
+      { label: 'Contact for Pricing', href: '/contact' },
+    ],
+    sections: [
+      {
+        heading: 'The Growing Market for Tortilla Wraps in South Africa',
+        body: 'Demand for tortilla wraps in South Africa has grown steadily in line with the expansion of Mexican-inspired cuisine, QSR restaurant chains, and international food retail. Both Cape Town and Durban have seen significant growth in foodservice and retail distribution of wrap-based products, driving demand for affordable wholesale tortilla wraps at consistent quality. For importers, sourcing from certified international manufacturers offers a cost-effective alternative to local production.',
+      },
+      {
+        heading: 'Wholesale Tortilla Wraps Pricing for South African Importers',
+        body: 'Tortilla wrap wholesale prices for South African distributors depend on the format, size, and shipping route. Standard 25 cm flour tortilla wraps sourced at container level typically arrive at a landed cost between R1.20 and R2.80 per unit depending on origin, certification, and pack format. The table below provides indicative pricing guidance for common wholesale tortilla wrap formats.',
+        tableData: {
+          headers: ['Format', 'Size', 'Est. Wholesale Price (per unit)', 'Pack Count'],
+          rows: [
+            ['Flour wrap (frozen)', '25 cm (10")', 'R1.20 – R1.90', '12 pcs/bag'],
+            ['Flour wrap (frozen)', '30 cm (12")', 'R1.60 – R2.40', '10 pcs/bag'],
+            ['Whole wheat wrap', '25 cm (10")', 'R1.50 – R2.20', '12 pcs/bag'],
+            ['Spinach wrap', '25 cm (10")', 'R1.60 – R2.40', '12 pcs/bag'],
+            ['Corn tortilla wrap', '20 cm (8")', 'R0.90 – R1.60', '18 pcs/bag'],
+          ],
+        },
+      },
+      {
+        heading: 'Shipping Tortilla Wraps to Cape Town and Durban',
+        body: 'Both Cape Town and Durban are major South African port cities with established cold-chain logistics infrastructure. International tortilla wrap shipments typically move in 20-foot or 40-foot reefer containers. Transit times from European tortilla manufacturers to South African ports range from 14 to 21 days depending on the shipping route and carrier. Distributors should factor in port clearance and customs documentation when planning stock cycles.',
+      },
+      {
+        heading: 'Container Volume and Cost Efficiency',
+        body: 'Sourcing wholesale tortilla wraps at container level significantly reduces per-unit costs for South African importers. A 40-foot reefer container holds approximately 1.2 million tortillas, while a 20-foot container holds around 800,000 units. For distributors in Cape Town or Durban who supply multiple foodservice accounts or retail outlets, container-level purchasing delivers the most competitive tortilla wrap wholesale price compared to smaller freight shipments.',
+      },
+      {
+        heading: 'Certifications Required for South African Import',
+        body: 'Wholesale tortilla wrap imports into South Africa must comply with local food safety regulations and import requirements. Exporters supplying the South African market should provide:',
+        listItems: [
+          'Valid BRCGS or IFS food safety certification',
+          'Health certificate and certificate of origin',
+          'Allergen declarations compliant with South African labelling standards',
+          'Halal certification where required for Muslim-majority retail or foodservice channels',
+          'Technical product datasheets',
+        ],
+      },
+      {
+        heading: 'Private Label Tortilla Wraps for South African Distributors',
+        body: 'Many South African distributors prefer to source wholesale tortilla wraps under a private label programme, allowing them to sell under their own brand rather than a foreign manufacturer\'s name. Private label wrap programmes typically start from one container per SKU and include custom packaging design, local labelling compliance, and direct manufacturer shipping.',
+      },
+    ],
+    conclusion:
+      'South Africa — including both Cape Town and Durban — represents a growing import market for wholesale tortilla wraps. Distributors who source directly from certified international manufacturers can access competitive tortilla wrap wholesale prices while meeting local food safety requirements. For a detailed quote on wholesale tortilla wraps delivered to Cape Town or Durban, contact the team with your volume and format requirements.',
+    tags: [
+      'wholesale tortilla wraps',
+      'tortilla wraps wholesale cape town',
+      'tortilla wraps wholesale durban',
+      'tortilla wrap wholesale price',
+      'tortilla wraps wholesale durban price',
+    ],
+  },
+  {
+    slug: 'wholesale-corn-tortillas-guide',
+    title: 'Wholesale Corn Tortillas: A B2B Buyer\'s Guide for Importers and Distributors',
+    excerpt:
+      'Corn tortillas are the original tortilla format and remain one of the most widely sourced products in international wholesale food markets. This guide covers sizes, pack formats, and how to buy corn tortillas at scale.',
+    metaTitle: 'Wholesale Corn Tortillas for Importers & Distributors | TortillaSupplier',
+    metaDescription:
+      'Complete B2B buyer\'s guide to wholesale corn tortillas — covering sizes, frozen formats, pack counts, container logistics, and how to source wholesale burrito tortillas for foodservice.',
+    publishDate: '2026-04-05',
+    readTime: 5,
+    author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+      { label: 'Corn Tortilla Supplier', href: '/corn-tortilla-supplier' },
+      { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+      { label: 'Request Pricing', href: '/contact' },
+    ],
+    sections: [
+      {
+        heading: 'Why Distributors Source Wholesale Corn Tortillas',
+        body: 'Corn tortillas are the traditional foundation of Mexican cuisine and remain one of the most consumed tortilla formats worldwide. For food distributors, wholesale corn tortillas offer a consistent and recurring demand across taqueria restaurants, Mexican QSR chains, foodservice caterers, and retail ethnic food aisles. The growing popularity of street tacos across Europe, North America, and the Middle East has further expanded demand for authentic corn tortilla formats at wholesale scale.',
+      },
+      {
+        heading: 'Corn Tortilla Sizes and B2B Pack Formats',
+        body: 'Wholesale corn tortillas are available in a range of sizes suited to different foodservice applications. The table below shows standard B2B pack formats for distributor and foodservice buyers:',
+        tableData: {
+          headers: ['Size', 'Inch', 'Weight', 'B2B Pack Count', 'Typical Use'],
+          rows: [
+            ['10 cm', '4"', '12 g', '30 pcs/bag', 'Mini taco / street food'],
+            ['15 cm', '6"', '22 g', '24 pcs/bag', 'Street taco / traditional'],
+            ['18 cm', '7"', '30 g', '20 pcs/bag', 'Taco / casual dining'],
+            ['20 cm', '8"', '38 g', '18 pcs/bag', 'Tostada / enchilada'],
+          ],
+        },
+      },
+      {
+        heading: 'Wholesale Burrito Tortillas: Flour or Corn?',
+        body: 'Burrito tortillas are typically made from flour rather than corn, as the larger size (30–35 cm) requires the higher gluten content in wheat flour to maintain structural integrity when filled and rolled. However, corn tortilla variants at 20–25 cm can be used in some burrito-style presentations. Distributors sourcing wholesale burrito tortillas should specify both the size format and whether flour or corn is required when requesting B2B pricing.',
+      },
+      {
+        heading: 'Frozen Corn Tortillas for International Distribution',
+        body: 'For international wholesale buyers, frozen corn tortillas are the preferred format. Frozen storage at −18°C extends product shelf life to up to 12 months, making them ideal for long-distance container shipments. Frozen corn tortillas perform well when thawed and are used directly in cooking or reheating applications, maintaining texture and flavour comparable to freshly produced product. Distributors importing wholesale corn tortillas from certified manufacturers can request full export documentation including Halal certificates for relevant markets.',
+      },
+      {
+        heading: 'Nixtamalization and Corn Tortilla Quality',
+        body: 'Authentic corn tortillas are produced using a traditional process called nixtamalization — soaking and cooking dried corn in an alkaline solution (typically lime water) before grinding it into masa dough. This process improves the nutritional profile of the corn, increases protein availability, and produces the characteristic flavour of genuine corn tortillas. Wholesale buyers should confirm that suppliers use traditional nixtamalized masa rather than lower-cost substitutes, as this directly impacts product quality and consumer acceptance.',
+      },
+      {
+        heading: 'Container Economics for Wholesale Corn Tortillas',
+        body: 'Corn tortillas are typically lighter and smaller than flour tortillas, meaning container shipments can carry higher unit counts. A 40-foot reefer container can hold approximately 1.2–1.5 million corn tortillas depending on size and pack format. This makes container-level purchasing highly cost-effective for wholesale distributors. Per-unit logistics costs drop significantly at full container load (FCL) compared to pallet-level freight, making it the recommended sourcing method for established importers.',
+      },
+    ],
+    conclusion:
+      'Wholesale corn tortillas represent a high-demand, authentic food category with strong growth across global foodservice and retail markets. Distributors sourcing at container level from certified manufacturers achieve the most competitive unit pricing and reliable supply chain performance. Whether buying wholesale corn tortillas for tacos, wholesale burrito tortillas for QSR chains, or mixed format containers for foodservice distribution, working directly with an export manufacturer is the most cost-efficient route.',
+    tags: [
+      'wholesale corn tortillas',
+      'wholesale corn tortilla',
+      'wholesale burrito tortillas',
+      'bulk tortilla supplier',
+      'tortilla wholesale',
+    ],
+  },
+  {
+    slug: 'wholesale-flour-wheat-tortillas',
+    title: 'Wholesale Flour Tortillas and Whole Wheat Tortillas: B2B Buying Guide',
+    excerpt:
+      'Flour and whole wheat tortillas dominate the wrap and burrito market globally. This guide covers wholesale flour tortilla formats, whole wheat tortilla options, and what B2B buyers need to consider when sourcing at scale.',
+    metaTitle: 'Wholesale Flour Tortillas & Whole Wheat Tortillas | TortillaSupplier',
+    metaDescription:
+      'A B2B buying guide for wholesale flour tortillas and whole wheat tortillas — covering sizes, certifications, pack formats, and container supply for food distributors and importers.',
+    publishDate: '2026-04-07',
+    readTime: 5,
+    author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    relatedLinks: [
+      { label: 'Flour Tortilla Supplier', href: '/flour-tortilla-supplier' },
+      { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+      { label: 'Request Distributor Pricing', href: '/contact' },
+    ],
+    sections: [
+      {
+        heading: 'Wholesale Flour Tortillas: The Most Traded Format',
+        body: 'Flour tortillas are the dominant format in international wholesale markets, accounting for the majority of global tortilla trade by volume. Their mild flavour, pliable texture, and availability in large sizes make them the default choice for wraps, burritos, quesadillas, and foodservice sandwich formats. Wholesale flour tortillas are produced in sizes from 15 cm to 35 cm, covering applications from street tacos to large QSR burritos. For distributors, flour tortillas provide consistent, high-volume demand across multiple customer segments.',
+      },
+      {
+        heading: 'Whole Wheat Tortillas: Growing Demand in Health-Conscious Markets',
+        body: 'Whole wheat tortillas have grown from a niche health product into a mainstream wholesale category. Driven by consumer demand for higher-fibre and nutritionally enriched options, whole wheat tortillas are now stocked by supermarket chains, health food distributors, and foodservice operators across Europe, North America, and Australasia. Wholesale whole wheat tortilla products typically contain 30–50% whole wheat flour blended with standard flour to maintain elasticity and texture. For distributors, whole wheat tortillas command a slight premium over standard flour tortillas, typically 10–20% higher at wholesale level.',
+      },
+      {
+        heading: 'Size and Format Comparison',
+        body: 'Both flour and whole wheat wholesale tortillas are available in a standard range of B2B sizes:',
+        tableData: {
+          headers: ['Size', 'Inch', 'Primary Use', 'B2B Pack Count', 'Available in Whole Wheat'],
+          rows: [
+            ['15 cm', '6"', 'Street taco', '24 pcs/bag', 'Yes'],
+            ['20 cm', '8"', 'Sandwich wrap', '18 pcs/bag', 'Yes'],
+            ['25 cm', '10"', 'Foodservice wrap', '12 pcs/bag', 'Yes'],
+            ['30 cm', '12"', 'Burrito / QSR', '10 pcs/bag', 'Yes'],
+            ['32 cm', '12.5"', 'Restaurant burrito', '8 pcs/bag', 'Yes'],
+            ['35 cm', '14"', 'Large QSR burrito', '6 pcs/bag', 'Limited'],
+          ],
+        },
+      },
+      {
+        heading: 'Certifications Required for Wholesale Flour Tortilla Supply',
+        body: 'Wholesale flour tortilla buyers in regulated markets typically require suppliers to hold recognised food safety certifications. The most important for export supply include:',
+        listItems: [
+          'BRCGS Global Food Safety Standard (required by most UK and EU retailers)',
+          'IFS Food Certification (common for continental European buyers)',
+          'ISO 22000 Food Safety Management System',
+          'Halal certification (essential for Middle East, South-East Asia, and parts of Africa)',
+          'HACCP production system documentation',
+        ],
+      },
+      {
+        heading: 'Frozen vs Ambient Wholesale Flour Tortillas',
+        body: 'Wholesale flour tortillas are available in three formats: ambient (MAP-packed), chilled, and frozen. For international distribution, frozen is the preferred option because it extends shelf life to 12 months and eliminates cold-chain complexity during container shipping. Ambient flour tortillas are suitable for domestic or regional distribution only. For any distribution programme spanning multiple countries or continents, frozen container supply is the standard approach used by wholesale distributors.',
+      },
+      {
+        heading: 'Minimum Order Quantities and Container Supply',
+        body: 'Most certified wholesale flour tortilla manufacturers supply at MOQ of one container per SKU. A 40-foot reefer container holds approximately 1.2 million tortillas (depending on size), while a 20-foot container holds around 800,000 units. Distributors who commit to annual volume contracts can negotiate reduced pricing and priority production scheduling. Whole wheat tortilla SKUs may have slightly higher MOQs due to specialised ingredient sourcing requirements.',
+      },
+    ],
+    conclusion:
+      'Wholesale flour tortillas and whole wheat tortillas are core B2B product categories with strong demand across foodservice, retail, and private label channels worldwide. Distributors looking to source at container level should work directly with certified manufacturers who offer export logistics, flexible pack formats, and the certifications required by their target market.',
+    tags: [
+      'wholesale flour tortilla',
+      'whole wheat tortilla',
+      'wholesale tortilla wraps',
+      'bulk tortilla supplier',
+      'tortilla wholesale',
+    ],
+  },
+  {
+    slug: 'wholesale-tortilla-manufacturers-guide',
+    title: 'Wholesale Tortilla Manufacturers: How to Find and Evaluate a Production Partner',
+    excerpt:
+      'Finding the right wholesale tortilla manufacturer is a critical step for distributors and importers building a long-term supply programme. This guide explains how to evaluate tortilla companies, verify certifications, and build reliable production partnerships.',
+    metaTitle: 'Wholesale Tortilla Manufacturers Guide | TortillaSupplier',
+    metaDescription:
+      'How to find and evaluate wholesale tortilla manufacturers — covering certifications, production capacity, private label capability, and what separates leading tortilla companies from basic commodity suppliers.',
+    publishDate: '2026-04-09',
+    readTime: 6,
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+      { label: 'Our Factory', href: '/our-factory' },
+      { label: 'Food Safety Certifications', href: '/certifications' },
+      { label: 'Export Programme', href: '/export-program' },
+    ],
+    sections: [
+      {
+        heading: 'What Is a Wholesale Tortilla Manufacturer?',
+        body: 'A wholesale tortilla manufacturer is a food production company that produces tortillas in bulk quantities for B2B buyers — including food distributors, importers, restaurant chains, and retail supermarket groups. Unlike retail brands that focus on consumer packaging, wholesale tortilla manufacturers supply bulk packs, foodservice cases, and private label products designed for professional buyers. Leading tortilla manufacturers operate certified production facilities capable of producing millions of units per day across multiple formats including flour, corn, whole wheat, and specialty tortilla varieties.',
+      },
+      {
+        heading: 'Tortilla Company Types: Manufacturing vs Distribution',
+        body: 'The term "tortilla company" can refer to two different business models: a manufacturer that produces tortillas directly, or a distributor that sources from producers and resells to buyers. Importers and wholesale buyers should seek direct manufacturer relationships wherever possible to access the most competitive pricing, consistent product quality, and flexible private label options. Distributors who buy through intermediaries pay additional margin at each layer of the supply chain.',
+      },
+      {
+        heading: 'Tortilla Wholesale Distributors in San Antonio, TX',
+        body: 'San Antonio, Texas has historically been one of the most significant hubs for tortilla production and distribution in the United States. The city\'s large Hispanic community and proximity to the US-Mexico border made it a natural centre for the tortilla industry during the 20th century. Today, major tortilla wholesale distributors operate from San Antonio serving foodservice buyers and retail chains across the southern United States. For US-based buyers, San Antonio remains a key sourcing region for wholesale tortilla supply.',
+      },
+      {
+        heading: 'Tortilla Land Wholesale and Branded vs Private Label',
+        body: 'Tortilla Land is a well-known consumer brand sold in retail environments, offering refrigerated raw tortilla dough in cook-at-home formats. For wholesale buyers, Tortilla Land products are available through broad-line distributors and wholesale club channels. However, distributors building their own brand programmes typically prefer unbranded private label production from wholesale tortilla manufacturers rather than reselling established brands, as private label margins are substantially higher — typically 15–25% above branded alternatives at comparable quality.',
+      },
+      {
+        heading: 'Key Criteria for Evaluating Wholesale Tortilla Manufacturers',
+        body: 'When evaluating wholesale tortilla manufacturers, distributors and importers should assess the following criteria:',
+        listItems: [
+          'Food safety certifications: BRCGS, IFS, ISO 22000, HACCP, and Halal as applicable',
+          'Production capacity and ability to supply full container volumes consistently',
+          'Export experience including documentation, health certificates, and customs compliance',
+          'Private label capability including custom packaging design and labelling compliance',
+          'Cold chain logistics: frozen and chilled supply formats with temperature-controlled shipping',
+          'Audit and factory visit policy: transparency over production standards',
+          'References from existing international customers',
+        ],
+      },
+      {
+        heading: 'Global Regions with Major Tortilla Manufacturing Capacity',
+        body: 'Wholesale tortilla manufacturers are concentrated in several global regions. Mexico remains the largest producer and is the origin country for traditional corn tortilla production. Spain and other parts of Europe have developed significant export-oriented manufacturing capacity, particularly for flour and whole wheat tortilla wraps destined for European and international markets. In the United States, major production centres include Texas (including San Antonio), California, and the Midwest. Buyers should evaluate manufacturers based on certification, product range, and export logistics capability rather than geography alone.',
+      },
+      {
+        heading: 'Building a Long-Term Wholesale Supply Partnership',
+        body: 'The most successful wholesale tortilla sourcing programmes are based on long-term manufacturing partnerships rather than opportunistic spot purchasing. Annual supply contracts allow manufacturers to plan production schedules, provide price stability, and allocate dedicated packaging lines for private label programmes. Distributors who commit to regular container volumes typically receive priority production scheduling and more competitive pricing than buyers purchasing on a one-off basis.',
+      },
+    ],
+    conclusion:
+      'Finding the right wholesale tortilla manufacturer requires evaluating certifications, production capacity, export experience, and private label capability. Whether sourcing from San Antonio-based distributors in the US market or directly from certified export manufacturers in Europe or Mexico, buyers who invest in due diligence before committing to a supply contract build more resilient and cost-effective sourcing programmes.',
+    tags: [
+      'wholesale tortillas manufacturers',
+      'tortilla company',
+      'tortilla land wholesale',
+      'tortilla wholesale distributor san antonio tx',
+      'wholesale tortilla supplier',
+    ],
+  },
+  {
+    slug: 'tortilla-bread-baskets-press-wholesale',
+    title: 'Tortilla Bread, Baskets, and Press Wholesale: What B2B Buyers Need to Know',
+    excerpt:
+      'Beyond the tortilla itself, wholesale buyers often source related products including tortilla bread formats, tortilla baskets for foodservice, and tortilla presses for commercial kitchens. This guide covers wholesale options for each category.',
+    metaTitle: 'Tortilla Bread, Baskets & Press Wholesale | TortillaSupplier',
+    metaDescription:
+      'Wholesale guide to tortilla bread formats, tortilla baskets for foodservice, and tortilla press equipment for commercial kitchens — plus wholesale club tortilla buying and B2B sourcing tips.',
+    publishDate: '2026-04-11',
+    readTime: 5,
+    author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+      { label: 'Tortilla Products', href: '/products' },
+      { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
+      { label: 'Contact for Wholesale', href: '/contact' },
+    ],
+    sections: [
+      {
+        heading: 'Tortilla Bread Wholesale: Formats and Applications',
+        body: 'The term "tortilla bread" is used in several wholesale and retail contexts. Most commonly it refers to flour tortillas sold in bread-adjacent applications — as flatbreads, wrap-style sandwich bases, or artisan-positioned flatbread products positioned near the bakery aisle. Wholesale tortilla bread formats include standard flour wraps in bakery-style packaging, flavoured flatbreads (tomato, herb, spinach), and specialty grain blends. For distributors supplying delis, catering companies, and sandwich chains, tortilla bread wholesale represents a growing product category driven by the shift away from sliced bread toward flatbread-based convenience formats.',
+      },
+      {
+        heading: 'Tortilla Baskets Wholesale for Foodservice',
+        body: 'Tortilla baskets are a popular foodservice product used in Mexican restaurants, casual dining chains, and catering operations. They are made by shaping flour or corn tortillas into bowl-like forms and either frying or baking them to create an edible serving vessel for salads, chips, dips, and protein dishes. Wholesale tortilla baskets are typically supplied frozen and ready to heat. Distributors supplying Mexican restaurants, hotel caterers, and buffet-style operations frequently stock tortilla baskets as part of their broader tortilla product range. Standard wholesale pack counts are typically 50–100 baskets per case for foodservice buyers.',
+      },
+      {
+        heading: 'Tortilla Press Wholesale for Commercial Kitchens',
+        body: 'A tortilla press is a piece of kitchen equipment used to flatten masa dough balls into uniform round tortillas for cooking. Commercial tortilla presses range from manual cast iron presses suitable for small restaurants to large automated hydraulic or electric presses used in high-volume kitchen operations. For distributors supplying restaurant equipment alongside food products, tortilla press wholesale represents a complementary product category. Commercial tortilla presses are available from specialised restaurant equipment suppliers and can be sourced as part of a complete Mexican kitchen setup package.',
+      },
+      {
+        heading: 'Wholesale Club Tortilla Buying: How It Works',
+        body: 'Wholesale club stores — such as Costco and similar membership warehouse retailers — carry tortillas in large-format consumer bulk packs designed for high-volume household or small business buyers. Wholesale club tortilla products are typically sold in packs of 60–120 tortillas at a significant price premium versus direct B2B manufacturer supply. For food businesses buying at genuine wholesale scale — restaurants, caterers, or distributors — purchasing through wholesale clubs is rarely the most cost-effective option. Direct container-level supply from a certified manufacturer delivers significantly lower unit costs than wholesale club pricing.',
+      },
+      {
+        heading: 'Comparing B2B Wholesale Channels',
+        body: 'Wholesale buyers have several sourcing options across the tortilla supply chain. The table below compares the main channels:',
+        tableData: {
+          headers: ['Channel', 'Unit Price Level', 'MOQ', 'Private Label', 'Best For'],
+          rows: [
+            ['Direct manufacturer (container)', 'Lowest', '1 container', 'Yes', 'Importers and large distributors'],
+            ['Broad-line food distributor', 'Mid', 'Case or pallet', 'Limited', 'Mid-size foodservice buyers'],
+            ['Wholesale club', 'Mid-high', 'Consumer bulk pack', 'No', 'Small businesses and households'],
+            ['Retail (supermarket)', 'Highest', 'Per unit', 'No', 'Individual consumers'],
+          ],
+        },
+      },
+      {
+        heading: 'Building a Complete Wholesale Tortilla Product Range',
+        body: 'The most effective wholesale distributors build a complete tortilla product range rather than stocking a single SKU. A full range covering flour wraps, corn tortillas, whole wheat formats, tortilla baskets, and tortilla bread positions distributors to serve multiple customer types — from traditional Mexican restaurants to sandwich shops and catering companies. Sourcing from a single certified manufacturer with a broad product range also simplifies logistics, documentation, and supplier management compared to working with multiple producers.',
+      },
+    ],
+    conclusion:
+      'Wholesale tortilla products extend well beyond the basic flour wrap. Bread formats, tortilla baskets for foodservice, and even tortilla press equipment all represent B2B categories relevant to distributors serving restaurant and catering customers. For distributors comparing wholesale club tortilla pricing against direct manufacturer supply, container-level sourcing consistently delivers lower unit costs, private label flexibility, and more reliable supply chain performance.',
+    tags: [
+      'tortilla bread wholesale',
+      'tortilla baskets wholesale',
+      'tortilla press wholesale',
+      'wholesale club tortilla',
+      'tortilla wholesale',
+    ],
+  },
 ];
 
 export default blogPosts;
