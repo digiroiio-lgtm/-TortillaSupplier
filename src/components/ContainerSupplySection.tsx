@@ -86,8 +86,36 @@ export default function ContainerSupplySection() {
           ))}
         </div>
 
+        {/* Container Economics — scaling ladder */}
+        <div className="mt-12 bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-2">How Distributors Scale With Us</p>
+          <p className="text-sm text-gray-500 mb-6">A clear progression from first order to recurring container programme.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { step: '1', label: 'Start', value: '1 Pallet', detail: 'Low-risk entry for new products or markets' },
+              { step: '2', label: 'Trial', value: 'Mixed SKU', detail: 'Test multiple formats in a single shipment' },
+              { step: '3', label: 'Scale', value: 'Full Container', detail: '20ft or 40ft FCL at optimised container pricing' },
+              { step: '4', label: 'Repeat', value: 'Quarterly Pricing', detail: 'Stable per-unit pricing locked for the quarter' },
+            ].map((item, i) => (
+              <div key={item.step} className="relative flex flex-col">
+                {i < 3 && (
+                  <div className="hidden sm:block absolute top-4 left-full w-full h-px bg-gray-200 z-0" style={{ width: '100%' }} />
+                )}
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-7 h-7 rounded-full bg-[#2d7a3a] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 z-10">
+                    {item.step}
+                  </div>
+                  <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">{item.label}</span>
+                </div>
+                <p className="font-bold text-gray-900 text-sm mb-1">{item.value}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA row */}
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/contact"
             className="px-5 py-2.5 bg-[#0a0a0a] text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors"

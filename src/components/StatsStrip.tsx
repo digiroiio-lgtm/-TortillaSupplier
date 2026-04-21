@@ -1,9 +1,9 @@
 const stats = [
-  { value: '10+', label: 'Years in Production', detail: 'Established manufacturer' },
-  { value: '30+', label: 'Export Markets', detail: 'Active global supply' },
-  { value: '4', label: 'Food Safety Certifications', detail: 'BRCGS · IFS · ISO 22000 · HACCP' },
+  { value: '500+', label: 'Containers Shipped', detail: 'Annually, across all markets' },
+  { value: '30+', label: 'Export Markets', detail: 'Active global distribution' },
+  { value: '90%', label: 'Repeat Order Rate', detail: 'From established distributors' },
+  { value: '4', label: 'Food Safety Certs', detail: 'BRCGS · IFS · ISO 22000 · HACCP' },
   { value: '1–2 day', label: 'Response Time', detail: 'To all distributor inquiries' },
-  { value: '40ft', label: 'Container Supply', detail: '20ft & 40ft programmes' },
 ];
 
 export default function StatsStrip() {
@@ -14,7 +14,7 @@ export default function StatsStrip() {
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center md:px-6 text-center">
               <span className="text-2xl font-bold text-gray-900 tracking-tight">{stat.value}</span>
-              <span className="text-xs font-semibold text-gray-600 mt-1">{stat.label}</span>
+              <span className="text-xs font-semibold text-gray-700 mt-1">{stat.label}</span>
               <span className="text-[10px] text-gray-400 mt-0.5 leading-tight">{stat.detail}</span>
             </div>
           ))}

@@ -4,54 +4,66 @@ const testimonials = [
       "We switched from a local supplier to TortillaSupplier for our UK distribution network. Product consistency is excellent — every pallet matches the sample exactly. Our supermarket buyers have not raised a single complaint.",
     name: 'James H.',
     role: 'Procurement Director',
-    company: 'Meridian Foods Ltd — UK',
+    company: 'Meridian Foods Ltd',
+    location: 'United Kingdom',
     rating: 5,
     highlight: 'Product consistency is excellent',
+    metric: '6 containers ordered',
   },
   {
     quote:
       "Container pricing is transparent and their export documentation is flawless. Certificates of origin, allergen declarations, health certs — all ready before shipping. It saves our logistics team hours per order.",
     name: 'Marta V.',
     role: 'Import Manager',
-    company: 'ProVista Distribución — Spain',
+    company: 'ProVista Distribución',
+    location: 'Spain',
     rating: 5,
     highlight: 'Export documentation is flawless',
+    metric: '8 container orders placed',
   },
   {
     quote:
       "We needed private label tortillas for our QSR chain. TortillaSupplier handled everything from artwork to packaging. Lead times are reliable and the BRCGS certification was a requirement we could not compromise on.",
     name: 'Thomas B.',
     role: 'Category Manager',
-    company: 'Nordic Food Group — Germany',
+    company: 'Nordic Food Group',
+    location: 'Germany',
     rating: 5,
     highlight: 'BRCGS certification — no compromise',
+    metric: 'Private label, 4 SKUs launched',
   },
   {
     quote:
       "Their frozen corn tortillas have become one of our fastest-moving SKUs. The cold chain is handled end-to-end and we have had zero quality issues across four container orders so far.",
     name: 'Sophie L.',
     role: 'Wholesale Buyer',
-    company: 'Atlas Fine Foods — France',
+    company: 'Atlas Fine Foods',
+    location: 'France',
     rating: 5,
     highlight: 'Zero quality issues across four orders',
+    metric: '4 containers, repeat programme',
   },
   {
     quote:
       "As a foodservice operator running 40 sites, consistency matters more than price. TortillaSupplier delivers both. Response time is fast, the WhatsApp channel is genuinely useful, and samples arrived within the week.",
     name: 'Reza K.',
     role: 'Head of Supply Chain',
-    company: 'Streetfood Co. — Netherlands',
+    company: 'Streetfood Co.',
+    location: 'Netherlands',
     rating: 5,
     highlight: 'Consistency matters more than price',
+    metric: '40 sites supplied',
   },
   {
     quote:
       "We source for three retail chains across Scandinavia. TortillaSupplier mixed pallet option let us trial multiple SKUs in a single 20ft container. That flexibility closed the deal for us.",
     name: 'Ingrid M.',
     role: 'Category Buyer',
-    company: 'Nordic Retail Partners — Sweden',
+    company: 'Nordic Retail Partners',
+    location: 'Sweden',
     rating: 5,
     highlight: 'Mixed pallet option closed the deal',
+    metric: '3 retail chains, ongoing supply',
   },
 ];
 
@@ -153,13 +165,14 @@ export default function TestimonialsSection() {
               {/* Footer */}
               <div className="flex items-center gap-3 pt-4 border-t border-gray-50">
                 <Avatar name={t.name} />
-                <div>
+                <div className="flex-1 min-w-0">
                   <p className="text-sm font-semibold text-gray-900 leading-tight">{t.name}</p>
                   <p className="text-xs text-gray-400 leading-tight mt-0.5">{t.role}</p>
-                  <p className="text-xs text-gray-400 leading-tight">{t.company}</p>
+                  <p className="text-xs text-gray-500 leading-tight font-medium">{t.company} · {t.location}</p>
                 </div>
-                <div className="ml-auto">
+                <div className="flex flex-col items-end gap-1 flex-shrink-0">
                   <Stars count={t.rating} />
+                  <span className="text-[10px] text-gray-400 whitespace-nowrap">{t.metric}</span>
                 </div>
               </div>
             </div>
@@ -178,11 +191,12 @@ export default function TestimonialsSection() {
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                 <Avatar name={t.name} />
-                <div>
+                <div className="flex-1 min-w-0">
                   <p className="text-sm font-semibold text-gray-900 leading-tight">{t.name}</p>
-                  <p className="text-xs text-gray-400 leading-tight mt-0.5">{t.company}</p>
+                  <p className="text-xs text-gray-500 leading-tight mt-0.5 font-medium">{t.company} · {t.location}</p>
+                  <p className="text-[10px] text-gray-400 leading-tight">{t.metric}</p>
                 </div>
-                <div className="ml-auto">
+                <div className="ml-auto flex-shrink-0">
                   <Stars count={t.rating} />
                 </div>
               </div>

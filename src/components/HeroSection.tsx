@@ -13,9 +13,10 @@ interface HeroSectionProps {
   eyebrow?: string;
   galleryImages?: string[];
   showWhatsApp?: boolean;
+  showPricingAnchor?: boolean;
 }
 
-export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, ctaNote, eyebrow, galleryImages, showWhatsApp }: HeroSectionProps) {
+export default function HeroSection({ title, subtitle, badges, primaryCTA, secondaryCTA, ctaNote, eyebrow, galleryImages, showWhatsApp, showPricingAnchor }: HeroSectionProps) {
   return (
     <section className="relative bg-[#0a0a0a] overflow-hidden">
       {/* Radial glow */}
@@ -64,8 +65,13 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
         </h1>
 
         {/* Subtitle */}
-        <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-3 max-w-2xl mx-auto">
           {subtitle}
+        </p>
+
+        {/* ICP microcopy */}
+        <p className="text-xs text-gray-500 mb-8 max-w-2xl mx-auto">
+          Built for importers, wholesale distributors, private label buyers and QSR supply chains.
         </p>
 
         {/* CTAs */}
@@ -106,6 +112,14 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
           )}
           {(primaryCTA || secondaryCTA) && (
             <p className="text-xs text-gray-600">Response in 1–2 business days · Samples available · Export documentation included</p>
+          )}
+          {showPricingAnchor && (
+            <div className="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-white/6 border border-white/10 rounded-full">
+              <svg className="w-3 h-3 text-[#2d7a3a] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
+              </svg>
+              <span className="text-xs text-gray-400">Container-based pricing available on request · Optimised for distributor margins at scale · From pallet to full container programmes</span>
+            </div>
           )}
         </div>
 

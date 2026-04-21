@@ -9,6 +9,8 @@ const regions = [
     formats: 'Chilled & frozen formats · BRCGS required · Retail-ready packaging',
     detail: 'The UK tortilla market exceeds £350M annually. BRCGS certification is a prerequisite for most major retail buyers. We supply established UK distributors with container loads of flour, corn and frozen tortillas — with full UK retail labelling compliance.',
     certNote: 'BRCGS · IFS · Halal on request',
+    routes: 'Container routes: Felixstowe · Southampton · Tilbury',
+    docNote: 'UK import docs, EUR.1 certificates & health certs included',
   },
   {
     name: 'United States',
@@ -18,6 +20,8 @@ const regions = [
     formats: 'Frozen preferred · FDA-compliant labelling · FCL container supply',
     detail: 'The US is the world\'s largest tortilla market. We supply frozen flour and corn tortillas to US foodservice distributors and private label buyers, with full FDA documentation and import compliance support for East and West Coast ports.',
     certNote: 'HACCP · ISO 22000 · Halal certified',
+    routes: 'Container routes: Los Angeles · New York · Houston',
+    docNote: 'FDA prior notice, US customs docs & COO certificates included',
   },
   {
     name: 'European Union',
@@ -27,6 +31,8 @@ const regions = [
     formats: 'Mixed pallet options · IFS certified · Multi-language packaging available',
     detail: 'Germany, France, the Netherlands, Spain and Italy are our largest European markets. IFS certification is standard for EU retail buyers. Mixed pallet containers allow importers to test multiple SKUs before committing to full production runs.',
     certNote: 'IFS · BRCGS · ISO 22000',
+    routes: 'Container routes: Rotterdam · Hamburg · Antwerp · Barcelona',
+    docNote: 'EU health certs, EUR.1 & multi-language labelling available',
   },
   {
     name: 'Middle East',
@@ -36,6 +42,8 @@ const regions = [
     formats: 'Halal certified · Frozen container supply · UAE, Saudi, Qatar delivery',
     detail: 'Demand for tortillas across UAE, Saudi Arabia, Qatar, and Kuwait is growing rapidly, driven by QSR expansion and hotel foodservice. All products are available with Halal certification. We supply direct container shipments to GCC ports with full SASO and import documentation.',
     certNote: 'Halal certified · BRCGS · Export docs included',
+    routes: 'Container routes: Jebel Ali (UAE) · Dammam · Doha',
+    docNote: 'SASO, Halal & GCC import documentation prepared in-house',
   },
 ];
 
@@ -88,9 +96,20 @@ export default function RegionCTASection() {
               </div>
 
               {/* Formats */}
-              <div className="mb-5">
+              <div className="mb-3">
                 <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1.5">Supply Format</p>
                 <p className="text-xs text-gray-600">{region.formats}</p>
+              </div>
+
+              {/* Container routes */}
+              <div className="mb-3">
+                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-1.5">Container Routes</p>
+                <p className="text-xs text-gray-600">{region.routes}</p>
+              </div>
+
+              {/* Documentation note */}
+              <div className="mb-5 px-3 py-2 bg-gray-50 rounded-lg border border-gray-100">
+                <p className="text-[10px] text-gray-500 leading-relaxed">📋 {region.docNote}</p>
               </div>
 
               {/* Link */}

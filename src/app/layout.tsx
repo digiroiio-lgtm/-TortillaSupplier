@@ -75,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <Navbar />
-        <main>{children}</main>
+        <main className="pb-16 md:pb-0">{children}</main>
         <Footer />
         <WhatsAppFloatingButton />
         <Analytics />
