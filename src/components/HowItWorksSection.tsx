@@ -80,6 +80,22 @@ function IconDispatch() {
   );
 }
 
+function IconRepeat() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+      {/* Circular arrows */}
+      <path d="M16 40a24 24 0 0124-24" stroke="#2d7a3a" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M40 16l-6-6 6-6" stroke="#2d7a3a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M64 40a24 24 0 01-24 24" stroke="#2d7a3a" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M40 64l6 6-6 6" stroke="#2d7a3a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Container stack centre */}
+      <rect x="28" y="30" width="24" height="18" rx="2" fill="#e8f4ec" stroke="#2d7a3a" strokeWidth="1.5" />
+      <path d="M28 36h24" stroke="#2d7a3a" strokeWidth="1.5" />
+      <path d="M28 42h24" stroke="#2d7a3a" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
 /* ── Curved arrows (SVG, alternating down / up) ── */
 
 function ArrowDown() {
@@ -178,10 +194,19 @@ const steps = [
     ring: 'ring-[#c6e8cf]',
     toast: true,
   },
+  {
+    num: '5',
+    title: 'Repeat Programme',
+    description: 'Establish a recurring container supply programme with stable pricing, reserved production capacity, and priority dispatch.',
+    icon: <IconRepeat />,
+    bg: 'bg-[#fffbeb]',
+    ring: 'ring-[#fde68a]',
+    toast: false,
+  },
 ];
 
-// Arrows alternate: down on odd gaps, up on even gaps (matches reference pattern)
-const arrows = [<ArrowDown key="a1" />, <ArrowUp key="a2" />, <ArrowDown key="a3" />];
+// Arrows alternate: down on odd gaps, up on even gaps
+const arrows = [<ArrowDown key="a1" />, <ArrowUp key="a2" />, <ArrowDown key="a3" />, <ArrowUp key="a4" />];
 
 export default function HowItWorksSection() {
   return (
@@ -194,7 +219,7 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Steps row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 lg:gap-0">
           {steps.map((step, i) => (
             <div key={step.num} className="flex lg:flex-col items-start gap-6 lg:gap-0 mb-12 lg:mb-0">
               {/* Column content */}
