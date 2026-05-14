@@ -824,6 +824,130 @@ const blogPosts: BlogPost[] = [
       'tortilla distributor',
     ],
   },
+  {
+    slug: 'cost-to-import-tortillas-2026',
+    title: 'How Much Does It Cost to Import Tortillas in 2026?',
+    excerpt:
+      'Importing tortillas in 2026 involves far more than product pricing. This guide breaks down the real-world cost structure — freight, cold chain, customs, and landed cost — for distributors and wholesale buyers.',
+    metaTitle: 'Cost to Import Tortillas in 2026 | Landed Cost Guide | TortillaSupplier',
+    metaDescription:
+      'Understand the full cost of importing tortillas internationally in 2026. Covers freight rates, customs duties, cold chain logistics, container economics, and total landed cost examples.',
+    publishDate: '2026-05-14',
+    readTime: 8,
+    author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
+    reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
+    relatedLinks: [
+      { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
+      { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
+      { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
+      { label: 'Tortilla Supplier Europe', href: '/tortilla-supplier-europe' },
+      { label: 'Tortilla Supplier USA', href: '/tortilla-supplier-usa' },
+    ],
+    sections: [
+      {
+        heading: 'Main Cost Components When Importing Tortillas',
+        body: 'Importing tortillas involves far more than just product pricing. Buyers must calculate the total landed cost. Typical import cost structure includes:',
+        tableData: {
+          headers: ['Cost Component', 'Description'],
+          rows: [
+            ['Product Cost', 'Tortilla manufacturing price'],
+            ['Freight', 'Ocean or air shipping'],
+            ['Cold Chain', 'Reefer container costs for frozen products'],
+            ['Customs Duties', 'Import taxes and tariffs'],
+            ['Inland Logistics', 'Local transportation and warehousing'],
+            ['Certifications', 'Compliance and food safety requirements'],
+            ['Storage', 'Frozen or ambient warehouse costs'],
+            ['Customs Clearance', 'Broker and handling fees'],
+          ],
+        },
+      },
+      {
+        heading: 'Frozen vs Ambient Tortillas: Cost Difference',
+        body: 'One of the biggest cost drivers is the product format. Frozen tortillas require reefer containers, temperature-controlled storage, cold-chain distribution, and higher logistics coordination. However, they also provide longer shelf life, reduced spoilage, better consistency for foodservice operations, and easier international scaling. Ambient products reduce logistics complexity but may introduce shorter shelf life, higher waste risk, a more limited distribution radius, and quality consistency challenges. For international distributors, frozen formats often become more economical at scale despite higher freight costs.',
+      },
+      {
+        heading: 'Freight Costs in 2026',
+        body: 'Freight prices fluctuate throughout the year depending on fuel prices, port congestion, and global trade conditions. These figures vary based on seasonality, port availability, reefer demand, transit times, and carrier capacity. Frozen tortilla shipments are heavily influenced by reefer container availability.',
+        tableData: {
+          headers: ['Route', 'Estimated 40ft Reefer Cost'],
+          rows: [
+            ['Türkiye → UK', '$4,000 – $6,500'],
+            ['Türkiye → Europe', '$3,500 – $5,500'],
+            ['Türkiye → USA East Coast', '$6,000 – $9,000'],
+            ['Türkiye → Canada', '$7,000 – $10,000'],
+          ],
+        },
+      },
+      {
+        heading: 'Customs Duties and Import Taxes',
+        body: 'Customs duties depend on product composition, country of origin, trade agreements, and the destination market. In the UK — one of the fastest-growing tortilla import markets in Europe — importers must evaluate post-Brexit customs procedures, VAT implications, food labelling requirements, EORI registration, and frozen storage compliance. EU buyers typically focus on food safety documentation, IFS/BRCGS compliance, ingredient declarations, and country-specific labelling laws. The US market may involve FDA registration, Prior Notice filings, import brokers, and USDA considerations for specific ingredients. Regulatory compliance can significantly impact total import costs if documentation is incomplete.',
+      },
+      {
+        heading: 'Cold Chain Costs for Frozen Tortillas',
+        body: 'Cold-chain management is one of the most underestimated operational expenses. Despite these costs, frozen tortillas often reduce overall waste and inventory loss for distributors. Typical cold-chain costs include:',
+        listItems: [
+          'Reefer electricity charges',
+          'Port plug-in fees',
+          'Frozen warehousing',
+          'Temperature monitoring',
+          'Local refrigerated transportation',
+        ],
+      },
+      {
+        heading: 'Example: 40ft Container Import Scenario',
+        body: 'Below is a simplified example of a frozen tortilla import model. Estimated total landed cost: ~$31,500 USD. Actual costs vary depending on product type, packaging format, pallet configuration, destination market, and import volume.',
+        tableData: {
+          headers: ['Expense Category', 'Estimated Cost'],
+          rows: [
+            ['Product Value', '$22,000'],
+            ['Reefer Freight', '$5,500'],
+            ['Customs & Clearance', '$1,500'],
+            ['Inland Logistics', '$1,200'],
+            ['Cold Storage', '$800'],
+            ['Miscellaneous Fees', '$500'],
+          ],
+        },
+      },
+      {
+        heading: 'Private Label Import Costs',
+        body: 'Private label tortilla programmes may include additional costs such as packaging design, custom film printing, label compliance, retail barcode integration, MOQ requirements, and formula customisation. However, private label programmes also create higher margins, brand ownership, retail expansion opportunities, and distributor differentiation.',
+      },
+      {
+        heading: 'How Distributors Reduce Import Costs',
+        body: 'Scale dramatically improves profitability in tortilla distribution. Experienced tortilla importers optimise costs through:',
+        listItems: [
+          'Full container utilisation',
+          'Long-term freight agreements',
+          'Forecast-based procurement',
+          'Frozen inventory planning',
+          'Multi-market distribution',
+          'Strategic warehouse positioning',
+        ],
+      },
+      {
+        heading: 'What Buyers Should Prioritise Beyond Price',
+        body: 'The cheapest supplier is rarely the most efficient long-term partner. Operational reliability often saves more money than small unit-price differences. Professional distributors typically prioritise:',
+        listItems: [
+          'Consistent product quality',
+          'BRCGS / IFS certifications',
+          'Stable lead times',
+          'Export experience',
+          'Cold-chain reliability',
+          'Production scalability',
+          'Documentation accuracy',
+        ],
+      },
+    ],
+    conclusion:
+      'Global tortilla demand continues to grow across foodservice, retail, and QSR markets in 2026. For importers and distributors, understanding the full landed cost structure is essential before scaling internationally. The most successful tortilla import programmes balance product quality, logistics efficiency, compliance, shelf life, inventory predictability, and long-term supplier stability. As international food distribution becomes increasingly competitive, operational discipline matters more than ever.',
+    tags: [
+      'import tortilla',
+      'tortilla import cost',
+      'wholesale tortilla',
+      'frozen tortilla logistics',
+      'tortilla supplier',
+    ],
+  },
 ];
 
 export default blogPosts;
