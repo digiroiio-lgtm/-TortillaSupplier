@@ -167,7 +167,7 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: `TortillaSupplier Inquiry <noreply@${fromDomain}>`,
+          from: `Tortilla Supplier <info@${fromDomain}>`,
           to: [toEmail],
           cc: [ccEmail],
           reply_to: email,

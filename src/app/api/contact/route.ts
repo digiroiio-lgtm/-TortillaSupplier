@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'TortillaSupplier Inquiry <noreply@tortillasupplier.com>',
+          from: 'Tortilla Supplier <info@tortillasupplier.com>',
           to: [toEmail],
           reply_to: email,
           subject: `Wholesale Inquiry from ${company} (${country})`,
