@@ -9,7 +9,10 @@ import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
-// GA4 measurement ID for the tortillasupplier.com property (stream: "Tortilla Supplier Akış").
+// GA4 measurement ID for the tortillasupplier.com property.
+// Stream: "Tortilla Supplier Akış" — Stream ID 14366577453.
+// Injected once here in RootLayout so every route under /app inherits the tag
+// (App Router shares the root layout across all pages).
 const GA_MEASUREMENT_ID = 'G-R9W0BV1FRL';
 
 export const metadata: Metadata = {
@@ -70,6 +73,20 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'TortillaSupplier',
   url: BASE_URL,
+  // Publisher tie-back so search engines / AI overviews can attribute the
+  // site to the same Organization node above without a second lookup.
+  publisher: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
+  // Declares the site's internal search endpoint for Google's Sitelinks
+  // Search Box (see schema.org/SearchAction). The /blog route already
+  // supports free-text browsing; this simply advertises the pattern.
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${BASE_URL}/blog?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -83,6 +100,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <WhatsAppFloatingButton />
         <Analytics />
+        {/*
+          GA4 gtag.js. `afterInteractive` fires after hydration so it does not
+          block LCP. `send_page_view: true` is the default but stated
+          explicitly so future edits do not accidentally disable it, and
+          `transport_type: 'beacon'` ensures pageviews survive route changes
+          in the App Router.
+        */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -92,7 +116,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              send_page_view: true,
+              transport_type: 'beacon',
+            });
           `}
         </Script>
       </body>

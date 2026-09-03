@@ -20,14 +20,21 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    // GA4 (measurement ID G-R9W0BV1FRL) requires googletagmanager.com to load
+    // the gtag.js script, and google-analytics.com (plus regional endpoints
+    // like region1.google-analytics.com) to POST hits and serve fallback GIF
+    // beacons. Google Ads / Signals also uses google.com and doubleclick.net.
+    // Without these entries the GA4 tag in RootLayout is blocked by CSP and
+    // the property receives zero data — which matches the property's
+    // "Last 48h: no data received" warning surfaced by the admin.
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://va.vercel-scripts.com/",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://va.vercel-scripts.com/",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data:",
+      "img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.google.co.uk",
       "font-src 'self'",
-      "connect-src 'self' https://www.google.com/recaptcha/ https://vitals.vercel-insights.com/",
-      "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/",
+      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.google.com/recaptcha/ https://vitals.vercel-insights.com/",
+      "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://www.googletagmanager.com",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",

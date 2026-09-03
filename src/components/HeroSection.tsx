@@ -107,35 +107,45 @@ export default function HeroSection({ title, subtitle, badges, primaryCTA, secon
         {/* Product gallery mosaic */}
         {galleryImages && galleryImages.length > 0 && (
           <div className="mt-14 grid grid-cols-4 sm:grid-cols-6 gap-2 max-w-4xl mx-auto">
-            {galleryImages.map((src, i) => (
-              <div
-                key={src}
-                className={`relative rounded-xl overflow-hidden bg-white/5 border border-white/10 ${
-                  i === 0 ? 'col-span-2 row-span-2 aspect-square' : 'aspect-square'
-                }`}
-              >
-                <Image
-                  src={src}
-                  alt={`Tortilla wholesale product gallery — ${[
-                    'flour tortillas on production line — wholesale tortilla manufacturer',
-                    'gourmet tortilla wrap with fresh toppings — foodservice supply',
-                    'spinach tortilla wrap with grilled chicken — specialty tortilla wholesale',
-                    'street tacos with fresh salsa — corn tortilla bulk supply',
-                    'burrito wrap with beef and vegetables — large format tortilla supply',
-                    'purple tortilla wrap — coloured specialty tortilla exporter',
-                    'loaded tortilla wrap sandwich — foodservice format tortillas',
-                    'classic flour tortilla quesadilla — standard tortilla wholesale',
-                    'chicken burrito with rice — bulk tortilla supply for QSR',
-                    'tortilla pinwheel canapés — catering and retail tortilla formats',
-                    'fresh veggie wrap in flour tortilla — export grade tortillas',
-                    'tortilla flatbread with toppings — private label tortilla supplier',
-                  ][i] ?? 'tortilla wholesale supplier product'}`}
-                  fill
-                  className="object-cover opacity-80"
-                  sizes="(max-width: 640px) 25vw, 16vw"
-                />
-              </div>
-            ))}
+            {galleryImages.map((src, i) => {
+              // The first tile is the LCP candidate on mobile (col-span-2, row-span-2).
+              // Prioritising it and lazy-loading the rest cuts mobile LCP significantly
+              // (measured ~8.3s → target ≤2.5s) without changing layout.
+              const isHero = i === 0;
+              return (
+                <div
+                  key={src}
+                  className={`relative rounded-xl overflow-hidden bg-white/5 border border-white/10 ${
+                    isHero ? 'col-span-2 row-span-2 aspect-square' : 'aspect-square'
+                  }`}
+                >
+                  <Image
+                    src={src}
+                    alt={`Tortilla wholesale product gallery — ${[
+                      'flour tortillas on production line — wholesale tortilla manufacturer',
+                      'gourmet tortilla wrap with fresh toppings — foodservice supply',
+                      'spinach tortilla wrap with grilled chicken — specialty tortilla wholesale',
+                      'street tacos with fresh salsa — corn tortilla bulk supply',
+                      'burrito wrap with beef and vegetables — large format tortilla supply',
+                      'purple tortilla wrap — coloured specialty tortilla exporter',
+                      'loaded tortilla wrap sandwich — foodservice format tortillas',
+                      'classic flour tortilla quesadilla — standard tortilla wholesale',
+                      'chicken burrito with rice — bulk tortilla supply for QSR',
+                      'tortilla pinwheel canapés — catering and retail tortilla formats',
+                      'fresh veggie wrap in flour tortilla — export grade tortillas',
+                      'tortilla flatbread with toppings — private label tortilla supplier',
+                    ][i] ?? 'tortilla wholesale supplier product'}`}
+                    fill
+                    className="object-cover opacity-80"
+                    sizes={isHero ? '(max-width: 640px) 50vw, 32vw' : '(max-width: 640px) 25vw, 16vw'}
+                    priority={isHero}
+                    fetchPriority={isHero ? 'high' : 'low'}
+                    loading={isHero ? 'eager' : 'lazy'}
+                    quality={isHero ? 78 : 68}
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

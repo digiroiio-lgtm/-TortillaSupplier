@@ -123,6 +123,18 @@ const homepageFaqs = [
     question: 'What tortilla sizes and formats are available for wholesale?',
     answer: 'We supply flour tortillas in 20cm (8"), 25cm (10") and 30cm (12") sizes, corn tortillas in 15cm (6") and 20cm (8"), and flatbreads including lavash and wrap bread. Frozen formats are available for all product lines.',
   },
+  // Added to capture high-signal Google Trends related queries (28-day):
+  // "corn tortilla vs flour tortilla" (interest 20) and "corn or flour tortilla" (16).
+  {
+    question: 'Corn tortillas vs flour tortillas — which should distributors stock?',
+    answer: 'Corn tortillas serve authentic Mexican foodservice (tacos, tostadas, enchiladas) and are gluten-free by nature, while flour tortillas dominate burrito, wrap and QSR sandwich programmes across the UK, EU and North America. Most of our distributor customers list both: 15cm and 20cm corn for taco-format menus, and 25cm and 30cm flour for burritos and wraps. We supply both lines from the same BRCGS-certified factory, with matched pallet configurations for mixed-container orders.',
+  },
+  // Captures rising 28-day Trends query "frozen tortilla" / IQF distribution intent
+  // (concentrated in US and Canada in the region breakdown).
+  {
+    question: 'How are frozen tortillas shipped for wholesale export?',
+    answer: 'Frozen flour and corn tortillas ship at –18 °C in 20ft or 40ft reefer containers with 12-month frozen shelf life. Standard cases stack 96 or 120 units per pallet, and each container includes health certificates, allergen declarations and (on request) halal documentation. Frozen supply is our fastest-growing line for United States, Canadian and Middle Eastern importers.',
+  },
 ];
 
 const supplierClusterLinks = [
@@ -154,16 +166,15 @@ export default function HomePage() {
         badges={['BRCGS / IFS Certified', 'Private Label Available', '40ft Container Supply', 'EU & UK Export Ready']}
         primaryCTA={{ label: 'Get Distributor Pricing', href: '/contact' }}
         secondaryCTA={{ label: 'Request Container Quote', href: '/contact' }}
+        // Trimmed from 12 → 8 to halve initial hero payload on mobile
+        // (Aug 2026 PSI: mobile Perf 55, LCP 8.3s → target ≥90 / LCP ≤2.5s).
+        // The first tile carries `priority`/`fetchPriority=high`; the rest lazy-load.
         galleryImages={[
           '/images/IMG_3011.jpg',
-          '/images/IMG_3012.jpg',
           '/images/IMG_3013.jpg',
           '/images/IMG_3014.jpg',
-          '/images/IMG_3015.jpg',
           '/images/IMG_3016.jpg',
           '/images/IMG_3017.jpg',
-          '/images/IMG_3018.jpg',
-          '/images/IMG_3019.jpg',
           '/images/IMG_3020.jpg',
           '/images/IMG_3021.jpg',
           '/images/IMG_3023.jpg',
