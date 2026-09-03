@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -7,6 +8,9 @@ import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
+
+// GA4 measurement ID for the tortillasupplier.com property (stream: "Tortilla Supplier Akış").
+const GA_MEASUREMENT_ID = 'G-R9W0BV1FRL';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -79,6 +83,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <WhatsAppFloatingButton />
         <Analytics />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
