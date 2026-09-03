@@ -63,6 +63,18 @@ export default function USAPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Key US Markets for Wholesale Tortilla Supply</h2>
+          <p className="text-gray-600 text-sm leading-relaxed max-w-3xl mb-6">
+            Distributor and foodservice demand for wholesale tortilla supply is strongest across major food-import and
+            distribution hubs, including California, Texas, New York, Florida, Illinois, New Jersey, Pennsylvania,
+            Georgia, North Carolina, Arizona, Tennessee and Massachusetts. Our export team can quote container and
+            pallet volumes into ports and distribution centres serving these regions.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Frozen &amp; Chilled Products for USA</h2>
@@ -86,7 +98,6 @@ export default function USAPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-400 mt-4 italic">Sample certification display for presentation purposes.</p>
         </div>
       </section>
 
