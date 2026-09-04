@@ -5,18 +5,46 @@ import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
+const PAGE_TITLE = 'How to Store Tortillas: Flour, Corn & Wrap Storage Guide';
+const PAGE_DESCRIPTION =
+  'Store flour tortillas up to 21 days and corn tortillas up to 14 days sealed at +2–4°C, or 9–12 months at −18°C. Ambient, fridge and freezer methods for tortillas and wraps.';
+
 export const metadata: Metadata = {
-  title: { absolute: 'How to Store Tortillas | Storage Guide | TortillaSupplier' },
-  description:
-    'How to store tortillas correctly — ambient, fridge and freezer storage methods for flour and corn tortillas. Best practices for foodservice operators and distributors.',
+  title: { absolute: PAGE_TITLE },
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'How to Store Tortillas | Storage Guide | TortillaSupplier',
-    description:
-      'How to store tortillas correctly — ambient, fridge and freezer storage methods for flour and corn tortillas. Best practices for foodservice operators and distributors.',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: `${BASE_URL}/how-to-store-tortillas`,
   },
   alternates: { canonical: `${BASE_URL}/how-to-store-tortillas` },
 };
+
+// Chilled and frozen figures below are our own product specifications
+// (see src/data/products.ts) rather than generic guidance.
+const storageByType = [
+  {
+    type: 'Flour tortillas',
+    chilled: 'Up to 21 days at +2–4°C',
+    frozen: '9–12 months at −18°C',
+    note:
+      'Flour tortillas hold moisture better than corn and tolerate chilled storage well. Keep the pack sealed — the fat content means they stale quickly once exposed to dry fridge air.',
+  },
+  {
+    type: 'Corn tortillas',
+    chilled: 'Up to 14 days at +2–4°C',
+    frozen: '9–12 months at −18°C',
+    note:
+      'Corn tortillas have a shorter chilled life than flour because they contain no added fat to retain moisture. They stiffen when cold — warm them on a dry pan or griddle before service to restore pliability.',
+  },
+  {
+    type: 'Tortilla wraps & flatbreads',
+    chilled: 'Up to 21 days at +2–4°C (chilled formats)',
+    frozen: '12 months at −18°C (blast-frozen formats)',
+    note:
+      'Large-format wraps and lavash-style flatbreads crack if they dry out. Store flat, never folded, and keep them sealed until the moment of use. Our wrap and flatbread range is supplied blast frozen for a full 12-month life.',
+  },
+];
 
 const storageOptions = [
   {
@@ -66,6 +94,16 @@ const storageOptions = [
 ];
 
 const faqs = [
+  {
+    question: 'How do you store corn tortillas?',
+    answer:
+      'Keep corn tortillas sealed in an airtight container or resealable bag in the refrigerator at +2–4°C, where they keep for up to 14 days — shorter than flour tortillas because corn tortillas contain no added fat to retain moisture. For longer storage, freeze at −18°C. Corn tortillas stiffen when cold, so warm them briefly on a dry pan or griddle before serving to restore pliability.',
+  },
+  {
+    question: 'How do you store tortilla wraps?',
+    answer:
+      'Store tortilla wraps flat and sealed — never folded — in the refrigerator at +2–4°C for up to 21 days, or frozen at −18°C for longer storage. Large-format wraps crack along the fold line if they lose moisture, so keep the pack closed until the point of use and press out excess air before resealing.',
+  },
   {
     question: 'How should I store tortillas after opening?',
     answer:
@@ -129,9 +167,8 @@ const howToSchema = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How to Store Tortillas: Ambient, Fridge and Freezer Guide',
-  description:
-    'How to store flour and corn tortillas correctly. Best practices for ambient, refrigerator and freezer storage for foodservice operators and distributors.',
+  headline: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   url: `${BASE_URL}/how-to-store-tortillas`,
   publisher: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${BASE_URL}/how-to-store-tortillas` },
@@ -161,8 +198,8 @@ export default function HowToStoreTortillasPage() {
           </h1>
           <p className="text-base text-gray-500 leading-relaxed max-w-2xl">
             Proper storage is the most important factor in maximising tortilla shelf life and quality.
-            This guide covers ambient, refrigerator, and freezer storage methods for flour and corn
-            tortillas — for home users, foodservice operators, and wholesale distributors.
+            This guide covers ambient, refrigerator and freezer storage for flour tortillas, corn tortillas
+            and tortilla wraps — for home users, foodservice operators and wholesale distributors.
           </p>
           <div className="flex flex-wrap gap-2 mt-6">
             {['Ambient · 7 days', 'Fridge · 2–3 weeks', 'Freezer · 9–12 months'].map((badge) => (
@@ -176,6 +213,49 @@ export default function HowToStoreTortillasPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+          {/* Direct answer — kept first so search engines and AI assistants can lift it whole */}
+          <div className="bg-[#f4f8f4] border border-[#d6e6d8] rounded-2xl p-6 sm:p-8 max-w-3xl">
+            <h2 className="text-base font-bold text-gray-900 mb-3">Short answer</h2>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+              Store tortillas sealed in an airtight container or resealable bag. In the refrigerator at
+              <strong> +2–4°C</strong>, flour tortillas keep for up to <strong>21 days</strong> and corn tortillas
+              for up to <strong>14 days</strong>. In the freezer at <strong>−18°C</strong>, both keep for
+              <strong> 9–12 months</strong>. At ambient room temperature, use within <strong>7 days</strong> of
+              opening. Never thaw frozen tortillas at room temperature — move them to chilled storage overnight
+              instead.
+            </p>
+          </div>
+
+          {/* Storage by tortilla type */}
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">
+              How to Store Corn Tortillas, Flour Tortillas and Wraps
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed mb-8 max-w-3xl">
+              Storage life differs by tortilla type. Corn tortillas contain no added fat and lose moisture faster
+              than flour tortillas, while large-format wraps and flatbreads crack if they dry out. The figures
+              below are the chilled and frozen shelf lives we specify for our own production.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {storageByType.map((item) => (
+                <div key={item.type} className="bg-white border border-gray-200 rounded-xl p-5">
+                  <h3 className="text-sm font-bold text-gray-900 mb-3">{item.type}</h3>
+                  <dl className="space-y-2 mb-3">
+                    <div className="flex items-baseline gap-2">
+                      <dt className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Chilled</dt>
+                      <dd className="text-sm text-gray-900">{item.chilled}</dd>
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                      <dt className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Frozen</dt>
+                      <dd className="text-sm text-gray-900">{item.frozen}</dd>
+                    </div>
+                  </dl>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Storage methods */}
           <div>

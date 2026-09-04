@@ -171,7 +171,7 @@ const seoPages: SEOPageData[] = [
       { question: 'What pack formats are available for wrap bread?', answer: 'We supply bulk catering packs for foodservice and retail consumer packs. Custom pack counts are available.' },
       { question: 'Is private label available for wrap bread?', answer: 'Yes. Full private label production with custom branding and packaging across all wrap formats.' },
     ],
-    relatedSlugs: ['tortilla-wrap-30cm-12-inch', 'tortilla-wrap-25cm-10-inch', 'wrap-bread-wholesale', 'flatbread-supplier'],
+    relatedSlugs: ['tortilla-wrap-30cm-12-inch', 'tortilla-wrap-25cm-10-inch', 'wrap-bread-wholesale', 'flatbread-supplier', 'private-label-tortillas'],
     showSpecTable: true,
     specTableFilter: 'wrap',
   },
@@ -323,7 +323,7 @@ const seoPages: SEOPageData[] = [
       { question: 'How many 20cm tortillas come in a pack?', answer: 'Retail packs typically contain 10–12 tortillas. Catering packs contain 20–30 tortillas per pack.' },
       { question: 'Is the 20cm flour tortilla available frozen?', answer: 'Yes. Frozen 20cm flour tortillas are available with a 12-month shelf life at -18°C.' },
     ],
-    relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-25cm-10-inch', 'corn-tortilla-15cm-6-inch', 'flour-tortilla-wholesale'],
+    relatedSlugs: ['flour-tortilla-supplier', 'flour-tortilla-25cm-10-inch', 'corn-tortilla-15cm-6-inch', 'flour-tortilla-wholesale', 'private-label-tortillas'],
     showSpecTable: true,
     specTableFilter: 'flour',
     parentSlug: 'flour-tortilla-supplier',
@@ -1416,13 +1416,13 @@ seoPages.push(
 seoPages.push(
   {
     slug: 'restaurant-tortilla-supply',
-    metaTitle: 'Restaurant Tortilla Supply | Wholesale | TortillaSupplier',
+    metaTitle: 'Restaurant Tortilla Supply | Mexican Restaurants & Taco Bars',
     metaDescription: 'Wholesale restaurant tortilla supply. Flour and corn tortillas for Mexican restaurants, taco bars and international dining. All sizes, catering packs, BRCGS certified.',
     heroTitle: 'Restaurant Tortilla Supply',
     heroSubtitle: 'Wholesale flour and corn tortillas for Mexican restaurants, taco bars and international dining operations. All standard sizes, bulk catering packs, consistent quality.',
     heroBadges: ['Restaurant Supply', 'All Sizes', 'Bulk Catering'],
     primaryCTALabel: 'Request Restaurant Quote',
-    introHeading: 'Wholesale Tortilla Supply for Restaurants',
+    introHeading: 'Restaurant Tortilla Supply for Mexican Restaurants and Taco Bars',
     introParagraphs: [
       'We supply wholesale tortillas to Mexican restaurants, taco bars, international dining venues and restaurant groups. Our restaurant range covers all standard sizes — 15cm street taco, 20cm, 25cm and 30cm — in both corn and flour tortilla formats.',
       'Restaurant buyers benefit from consistent batch quality, bulk catering packs, flexible supply quantities and private label options for branded restaurant concepts. BRCGS-certified production ensures food safety compliance for restaurant supply chains.',
