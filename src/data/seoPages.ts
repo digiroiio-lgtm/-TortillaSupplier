@@ -1729,11 +1729,16 @@ seoPages.push(
     slug: 'private-label-tortillas',
     metaTitle: 'Private Label Tortillas | Manufacturer for Importers & Distributors',
     metaDescription: 'Private label tortilla manufacturing for importers and distributors. Custom branding, all tortilla formats, container supply. BRCGS certified. Request a quote.',
-    heroTitle: 'Private Label Tortilla Manufacturing',
+    // H1 is the exact head term. GSC (28d) showed this page taking zero
+    // impressions for "private label tortillas" while its own child
+    // /private-label-flour-tortillas ranked for it at position 20.2 — the
+    // old H1 ("…Tortilla Manufacturing") duplicated
+    // /private-label-tortilla-manufacturer instead of claiming this term.
+    heroTitle: 'Private Label Tortillas',
     heroSubtitle: 'Custom-branded tortillas and flatbreads for importers, distributors and retail buyers. Full private label service covering all formats, packaging options and export markets.',
     heroBadges: ['Private Label', 'All Formats', 'Container Supply', 'BRCGS Certified'],
     primaryCTALabel: 'Request Private Label Quote',
-    introHeading: 'Private Label Tortilla Manufacturing for Importers and Distributors',
+    introHeading: 'Private Label Tortillas for Importers and Distributors',
     introParagraphs: [
       'We manufacture private label tortillas for importers, distributors and retail buyers worldwide. Our private label service covers flour tortillas, corn tortillas, frozen tortillas, wraps and flatbreads — all available with custom branding, label design and packaging.',
       'Private label production is certified under BRCGS, IFS, ISO 22000, HACCP and Halal standards. We work with buyers across the UK, USA, Europe and the Middle East, providing full export documentation and container-volume supply from competitive minimum order quantities.',

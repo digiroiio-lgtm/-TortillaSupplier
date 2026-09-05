@@ -6,8 +6,28 @@ import ContactForm from '@/components/ContactForm';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
 import { SEOPageData } from '@/data/seoPages';
+import { products } from '@/data/products';
 
 const BASE_URL = 'https://tortillasupplier.com';
+
+// Human-readable product categories for Product schema, keyed by the same
+// filter the spec table uses so the two never drift apart.
+const CATEGORY_LABELS: Record<NonNullable<SEOPageData['specTableFilter']>, string> = {
+  flour: 'Flour Tortillas',
+  corn: 'Corn Tortillas',
+  frozen: 'Frozen Tortillas',
+  wrap: 'Wrap Flatbreads',
+  flatbread: 'Flatbreads',
+};
+
+// Pick the catalogue item a product page actually represents: same product
+// type, and same diameter when the slug encodes one (e.g. "…-30cm-12-inch").
+function representativeProduct(page: SEOPageData) {
+  if (!page.specTableFilter) return undefined;
+  const ofType = products.filter((p) => p.type === page.specTableFilter);
+  const cm = page.slug.match(/(\d+)cm/);
+  return (cm && ofType.find((p) => p.diameterCm === Number(cm[1]))) || ofType[0];
+}
 
 // Map slug labels to human-readable text for related links
 function slugToLabel(slug: string): string {
@@ -66,6 +86,14 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
     },
   };
 
+  // No `offers` node: schema.org requires an Offer to carry `price` or
+  // `priceSpecification`, and this is a quote-based B2B catalogue with no
+  // published prices. The previous Offer declared only `priceCurrency`,
+  // which made Product invalid on all 13 product pages and suppressed the
+  // rich result. `image`, `category`, `manufacturer` and `audience` are the
+  // properties we can state factually, and they also give answer engines a
+  // clearer picture of what is sold and to whom.
+  const representative = page.isProductPage ? representativeProduct(page) : undefined;
   const productSchema = page.isProductPage
     ? {
         '@context': 'https://schema.org',
@@ -73,19 +101,20 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
         name: page.heroTitle,
         description: page.heroSubtitle,
         url: `${BASE_URL}/${page.slug}`,
+        ...(representative ? { image: `${BASE_URL}${representative.image}` } : {}),
+        ...(page.specTableFilter ? { category: CATEGORY_LABELS[page.specTableFilter] } : {}),
         brand: {
           '@type': 'Brand',
           name: 'TortillaSupplier',
         },
-        offers: {
-          '@type': 'Offer',
-          availability: 'https://schema.org/InStock',
-          priceCurrency: 'GBP',
-          seller: {
-            '@type': 'Organization',
-            name: 'TortillaSupplier',
-            url: BASE_URL,
-          },
+        manufacturer: {
+          '@type': 'Organization',
+          name: 'TortillaSupplier',
+          url: BASE_URL,
+        },
+        audience: {
+          '@type': 'BusinessAudience',
+          name: 'Food importers, wholesale distributors and foodservice operators',
         },
       }
     : null;
