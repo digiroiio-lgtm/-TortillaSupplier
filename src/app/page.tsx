@@ -139,13 +139,15 @@ const homepageFaqs = [
 
 const supplierClusterLinks = [
   { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
-  { label: 'Tortilla Manufacturer', href: '/tortilla-manufacturing-process' },
+  { label: 'Tortilla Manufacturer', href: '/our-factory' },
+  { label: 'Tortilla Manufacturing Process', href: '/tortilla-manufacturing-process' },
   { label: 'Tortilla Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
   { label: 'Wholesale Tortillas', href: '/tortilla-wholesale' },
   { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
   { label: 'Flour Tortilla Supplier', href: '/flour-tortilla-supplier' },
   { label: 'Corn Tortilla Supplier', href: '/corn-tortilla-supplier' },
-  { label: 'Private Label Tortillas', href: '/private-label-tortilla-manufacturer' },
+  { label: 'Private Label Tortillas', href: '/private-label-tortillas' },
+  { label: 'Private Label Tortilla Manufacturer', href: '/private-label-tortilla-manufacturer' },
   { label: 'Tortilla Exporter', href: '/tortilla-export-supplier' },
   { label: 'Tortilla Distributor', href: '/tortilla-distributor' },
 ];
