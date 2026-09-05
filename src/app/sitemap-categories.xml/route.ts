@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
 import seoPages from '@/data/seoPages';
+import { CONTENT_REVISION } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
-const LAST_MODIFIED = '2026-03-31';
+
+// Every URL in this sitemap is a landing page rendered by SEOLandingPage,
+// whose schema output changed in the current content cycle.
+const LAST_MODIFIED = CONTENT_REVISION;
 
 // Pillar and category-level commercial pages (not individual product size pages)
 const CATEGORY_SLUGS = new Set([
