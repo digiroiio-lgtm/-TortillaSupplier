@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import authors from '@/data/authors';
 import blogPosts from '@/data/blogPosts';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -51,29 +53,17 @@ export default async function AuthorPage({ params }: PageProps) {
       url: BASE_URL,
     },
     url: `${BASE_URL}/author/${author.slug}`,
-    sameAs: [author.linkedIn],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd data={personSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog' }, { label: author.name }]} />
 
       <div className="bg-white">
         {/* Author header */}
         <div className="border-b border-gray-100 py-16 bg-gray-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs text-gray-400 mb-8" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
-              <span>›</span>
-              <Link href="/blog" className="hover:text-gray-600 transition-colors">Blog</Link>
-              <span>›</span>
-              <span className="text-gray-500">{author.name}</span>
-            </nav>
-
             <div className="flex items-center gap-5">
               <div className="w-16 h-16 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
                 {author.initials}

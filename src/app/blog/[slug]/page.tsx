@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
 import { getAuthorByName } from '@/data/authors';
+import Breadcrumb from '@/components/Breadcrumb';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -58,7 +60,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       name: post.author.name,
       jobTitle: post.author.role,
       worksFor: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
-      ...(authorProfile ? { url: `${BASE_URL}/author/${authorProfile.slug}`, sameAs: [authorProfile.linkedIn] } : {}),
+      ...(authorProfile ? { url: `${BASE_URL}/author/${authorProfile.slug}` } : {}),
     },
     publisher: {
       '@type': 'Organization',
@@ -72,24 +74,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      <JsonLd data={articleSchema} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog' }, { label: post.title }]} />
 
       <div className="bg-white">
         {/* Article header */}
         <div className="border-b border-gray-100 py-14 bg-gray-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
-              <span>›</span>
-              <Link href="/blog" className="hover:text-gray-600 transition-colors">Blog</Link>
-              <span>›</span>
-              <span className="text-gray-500 truncate max-w-[200px]">{post.title}</span>
-            </nav>
-
             {/* Meta */}
             <div className="flex items-center gap-3 mb-4">
               <div className="flex items-center gap-1.5 text-xs text-gray-500">

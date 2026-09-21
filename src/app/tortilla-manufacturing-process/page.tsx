@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
+import authors from '@/data/authors';
+
+const guideAuthor = authors.find((a) => a.slug === 'laura-mitchell')!;
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -131,6 +134,12 @@ const articleSchema = {
   description:
     'A step-by-step guide to the industrial tortilla manufacturing process — from ingredient sourcing and dough mixing to baking, blast freezing, and export dispatch.',
   url: `${BASE_URL}/tortilla-manufacturing-process`,
+  author: {
+    '@type': 'Person',
+    name: guideAuthor.name,
+    jobTitle: guideAuthor.jobTitle,
+    url: `${BASE_URL}/author/${guideAuthor.slug}`,
+  },
   publisher: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${BASE_URL}/tortilla-manufacturing-process` },
 };
@@ -167,6 +176,17 @@ export default function TortillaManufacturingProcessPage() {
                 {badge}
               </span>
             ))}
+          </div>
+          <div className="flex items-center gap-2.5 mt-6">
+            <div className="w-8 h-8 rounded-full bg-[#2d7a3a] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+              {guideAuthor.initials}
+            </div>
+            <div>
+              <Link href={`/author/${guideAuthor.slug}`} className="text-xs font-semibold text-gray-900 leading-tight hover:text-[#2d7a3a] transition-colors">
+                {guideAuthor.name}
+              </Link>
+              <p className="text-xs text-gray-400 leading-tight">{guideAuthor.jobTitle}</p>
+            </div>
           </div>
         </div>
       </section>

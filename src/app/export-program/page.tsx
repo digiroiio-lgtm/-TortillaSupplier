@@ -1,8 +1,28 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQAccordion from '@/components/FAQAccordion';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
+
+const exportFAQs = [
+  { question: 'How long does it take to receive pricing?', answer: 'Our export team responds within 1–2 business days after you submit an inquiry with your product, quantity, and destination details.' },
+  { question: 'What documentation is included with every shipment?', answer: 'Every shipment includes a commercial invoice and packing list, health certificate, certificate of origin, allergen declaration, product technical datasheet, phytosanitary certificate where required, cold chain temperature log, and halal certificate upon request.' },
+  { question: 'What are typical production and dispatch lead times?', answer: 'Lead times are typically 2–6 weeks from order confirmation. Frozen products are loaded into refrigerated containers for dispatch.' },
+  { question: 'What container sizes are available?', answer: 'We supply in 20ft and 40ft reefer container shipments for bulk orders, with mixed pallets available to test multiple SKUs in a single shipment.' },
+  { question: 'Can I request samples before placing a full order?', answer: 'Yes — sample packs are available for new buyers to evaluate product quality before placing their first order.' },
+];
+
+const exportFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: exportFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 export const metadata: Metadata = {
   title: { absolute: 'Export Programme | Tortilla Wholesale | TortillaSupplier' },
@@ -47,6 +67,7 @@ const steps = [
 export default function ExportProgramPage() {
   return (
     <>
+      <JsonLd data={exportFaqSchema} />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Export Programme' }]} />
 
       <section className="bg-[#FAFAF8] border-b border-gray-200 py-14">
@@ -122,6 +143,40 @@ export default function ExportProgramPage() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* FAQ */}
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="max-w-3xl">
+              <FAQAccordion items={exportFAQs} />
+            </div>
+          </div>
+
+          {/* Related links */}
+          <div>
+            <h2 className="text-base font-bold text-gray-900 mb-4">Related Pages</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Factory', href: '/our-factory' },
+                { label: 'Certifications', href: '/certifications' },
+                { label: 'Tortilla Guide', href: '/tortilla-guide' },
+                { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+                { label: 'Manufacturing Process', href: '/tortilla-manufacturing-process' },
+                { label: 'Shelf Life Guide', href: '/tortilla-shelf-life' },
+                { label: 'Tortilla Calories', href: '/tortilla-calories' },
+                { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-1.5 bg-white border border-gray-200 text-xs font-medium text-gray-700 rounded-full hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* CTA */}

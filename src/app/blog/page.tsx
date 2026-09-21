@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blogPosts';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -25,6 +26,20 @@ function formatDate(iso: string) {
   });
 }
 
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Tortilla Supplier Blog',
+  url: `${BASE_URL}/blog`,
+  publisher: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
+  blogPost: blogPosts.map((post) => ({
+    '@type': 'BlogPosting',
+    headline: post.title,
+    url: `${BASE_URL}/blog/${post.slug}`,
+    datePublished: post.publishDate,
+  })),
+};
+
 export default function BlogIndexPage() {
   const sorted = [...blogPosts].sort(
     (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
@@ -33,6 +48,7 @@ export default function BlogIndexPage() {
 
   return (
     <div className="bg-white">
+      <JsonLd data={blogSchema} />
       {/* Page header */}
       <div className="border-b border-gray-100 py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

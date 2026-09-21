@@ -61,7 +61,8 @@ const organizationSchema = {
     email: 'info@tortillasupplier.com',
     availableLanguage: 'English',
   },
-  sameAs: [],
+  sameAs: ['https://www.linkedin.com/company/tortillasupplier'],
+  knowsAbout: ['Flour tortillas', 'Corn tortillas', 'Frozen tortillas', 'Wrap flatbreads', 'Lavash flatbreads'],
   description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets. Private label available.',
 };
 

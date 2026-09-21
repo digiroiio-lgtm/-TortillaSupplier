@@ -1,8 +1,28 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQAccordion from '@/components/FAQAccordion';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
+
+const factoryFAQs = [
+  { question: 'How are frozen tortillas processed at the factory?', answer: 'Frozen products pass through blast-freezing tunnels immediately after baking, rapidly reducing temperature to −18°C, then move to on-site cold storage held at −18°C until dispatch.' },
+  { question: 'How is product traceability maintained?', answer: 'All batches are traced through our production management system, giving full traceability from raw material intake to finished goods dispatch.' },
+  { question: 'What quality checks are performed during production?', answer: 'Our QC team performs regular checks on dough consistency, product dimensions, bake colour and packaging integrity at every stage of production.' },
+  { question: 'Can private label packaging be produced at the factory?', answer: 'Yes — our packaging team handles both standard wholesale formats and custom private label packaging.' },
+  { question: 'What export documentation is prepared for shipments?', answer: 'Our export documentation team prepares health certificates, allergen declarations and certificates of origin for every international shipment.' },
+];
+
+const factoryFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: factoryFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 export const metadata: Metadata = {
   title: { absolute: 'Our Factory | Tortilla Manufacturing | TortillaSupplier' },
@@ -20,6 +40,7 @@ export const metadata: Metadata = {
 export default function OurFactoryPage() {
   return (
     <>
+      <JsonLd data={factoryFaqSchema} />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Our Factory' }]} />
 
       <section className="bg-[#FAFAF8] border-b border-gray-200 py-14">
@@ -110,6 +131,38 @@ export default function OurFactoryPage() {
                 label packaging. The export documentation team prepares health certificates, allergen
                 declarations, and certificates of origin for every international shipment.
               </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="max-w-3xl">
+              <FAQAccordion items={factoryFAQs} />
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-base font-bold text-gray-900 mb-4">Related Pages</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Certifications', href: '/certifications' },
+                { label: 'Export Programme', href: '/export-program' },
+                { label: 'Tortilla Guide', href: '/tortilla-guide' },
+                { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+                { label: 'Manufacturing Process', href: '/tortilla-manufacturing-process' },
+                { label: 'Shelf Life Guide', href: '/tortilla-shelf-life' },
+                { label: 'Tortilla Calories', href: '/tortilla-calories' },
+                { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-1.5 bg-white border border-gray-200 text-xs font-medium text-gray-700 rounded-full hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 

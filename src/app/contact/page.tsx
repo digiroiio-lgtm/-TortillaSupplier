@@ -1,6 +1,25 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQAccordion from '@/components/FAQAccordion';
+import JsonLd from '@/components/JsonLd';
+
+const contactFAQs = [
+  { question: 'How quickly will I get a response?', answer: 'Our export team responds within 1–2 business days with pricing and product information.' },
+  { question: 'What information should I include in my inquiry?', answer: 'Include the products you need, target quantities, and destination country so our team can prepare accurate container pricing.' },
+  { question: 'Which markets do you export to?', answer: 'We export to the United Kingdom, United States, European Union, and Middle East & GCC markets.' },
+  { question: 'Can I reach the export team on WhatsApp?', answer: 'Yes — you can message our export team directly on WhatsApp for a faster response.' },
+];
+
+const contactFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: contactFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 export const metadata: Metadata = {
   title: { absolute: 'Contact | Wholesale Tortilla Pricing | TortillaSupplier' },
@@ -16,6 +35,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactFaqSchema} />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
       <section className="bg-[#FAFAF8] border-b border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,6 +73,11 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-16 max-w-3xl">
+            <h2 className="text-xl font-bold text-[#1a1a1a] mb-6">Frequently Asked Questions</h2>
+            <FAQAccordion items={contactFAQs} />
           </div>
         </div>
       </section>

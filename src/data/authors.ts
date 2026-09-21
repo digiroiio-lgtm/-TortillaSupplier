@@ -6,7 +6,6 @@ export interface Author {
   pageTitle: string;
   bio: string;
   expertise: string[];
-  linkedIn: string;
   initials: string;
 }
 
@@ -24,7 +23,6 @@ const authors: Author[] = [
       'Import & export regulations',
       'Wholesale sourcing strategy',
     ],
-    linkedIn: 'https://www.linkedin.com/company/tortillasupplier',
     initials: 'DO',
   },
   {
@@ -40,7 +38,6 @@ const authors: Author[] = [
       'Food manufacturing standards',
       'Private label production',
     ],
-    linkedIn: 'https://www.linkedin.com/company/tortillasupplier',
     initials: 'LM',
   },
   {
@@ -56,7 +53,6 @@ const authors: Author[] = [
       'Retail category insights',
       'B2B sourcing intelligence',
     ],
-    linkedIn: 'https://www.linkedin.com/company/tortillasupplier',
     initials: 'AR',
   },
 ];

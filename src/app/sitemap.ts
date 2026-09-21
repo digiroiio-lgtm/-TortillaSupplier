@@ -48,6 +48,12 @@ const SUPPORT_SLUGS = new Set([
   'frozen-tortilla-export',
   'tortilla-export-supplier',
   'container-tortilla-supply',
+  'importing-tortillas-to-uk',
+  // Private label cluster
+  'private-label-tortillas',
+  'private-label-flour-tortillas',
+  'private-label-corn-tortillas',
+  'private-label-tortillas-uk',
   // Foodservice cluster
   'restaurant-tortilla-supply',
   'qsr-tortilla-supplier',

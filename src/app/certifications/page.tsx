@@ -1,8 +1,28 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQAccordion from '@/components/FAQAccordion';
+import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
+
+const certFAQs = [
+  { question: 'What food safety certifications does TortillaSupplier hold?', answer: 'Our facility holds BRCGS, IFS, ISO 22000, HACCP and Halal certifications.' },
+  { question: 'Do I need BRCGS or IFS certification from my supplier?', answer: 'BRCGS is required by most UK and European supermarket private label programmes, while IFS is widely required by European retail buyers, particularly in DACH and Southern Europe markets.' },
+  { question: 'Is Halal certification available?', answer: 'Yes — our facility holds Halal certification, and Halal certificates can be provided upon request for each shipment, supporting buyers serving Middle Eastern, Southeast Asian and Muslim-majority markets.' },
+  { question: 'How can I request certification documents?', answer: 'Wholesale buyers and private label customers can request copies of our current certification documents as part of the supplier onboarding process by contacting our export team.' },
+  { question: 'Is ISO 22000 recognised by institutional buyers?', answer: 'Yes — ISO 22000 is internationally recognised and often required by institutional and government buyers.' },
+];
+
+const certFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: certFAQs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 export const metadata: Metadata = {
   title: { absolute: 'Food Safety Certifications | TortillaSupplier' },
@@ -53,6 +73,7 @@ const certifications = [
 export default function CertificationsPage() {
   return (
     <>
+      <JsonLd data={certFaqSchema} />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About Us', href: '/about' }, { label: 'Certifications' }]} />
 
       <section className="bg-[#FAFAF8] border-b border-gray-200 py-14">
@@ -89,6 +110,38 @@ export default function CertificationsPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="max-w-3xl">
+              <FAQAccordion items={certFAQs} />
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-base font-bold text-gray-900 mb-4">Related Pages</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Our Factory', href: '/our-factory' },
+                { label: 'Export Programme', href: '/export-program' },
+                { label: 'Tortilla Guide', href: '/tortilla-guide' },
+                { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+                { label: 'Manufacturing Process', href: '/tortilla-manufacturing-process' },
+                { label: 'Shelf Life Guide', href: '/tortilla-shelf-life' },
+                { label: 'Tortilla Calories', href: '/tortilla-calories' },
+                { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-1.5 bg-white border border-gray-200 text-xs font-medium text-gray-700 rounded-full hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 bg-gray-50 rounded-2xl p-8">
