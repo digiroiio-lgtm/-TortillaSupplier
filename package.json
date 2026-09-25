@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run check:sitemap",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:sitemap": "node scripts/check-sitemap-routes.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
-import { blogPostLastMod, lastModFor } from '@/data/contentRevision';
+import { authorPageLastMod, blogPostLastMod, lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -26,7 +26,7 @@ export function GET() {
   );
 
   const authorEntries = authors.map((author) =>
-    urlEntry(`${BASE_URL}/author/${author.slug}`, lastModFor(`/author/${author.slug}`), '0.6')
+    urlEntry(`${BASE_URL}/author/${author.slug}`, authorPageLastMod(), '0.6')
   );
 
   const allEntries = [blogIndexEntry, ...postEntries, ...authorEntries];
