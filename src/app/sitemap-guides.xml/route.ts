@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { lastModFor } from '@/data/contentRevision';
+import { staticPagesIn } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -12,22 +12,9 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
   </url>`;
 }
 
-const guidePages = [
-  { path: '/tortilla-guide', priority: '0.9' },
-  { path: '/tortilla-size-chart', priority: '0.9' },
-  { path: '/tortilla-manufacturing-process', priority: '0.8' },
-  { path: '/tortilla-shelf-life', priority: '0.8' },
-  { path: '/tortilla-calories', priority: '0.8' },
-  { path: '/how-to-store-tortillas', priority: '0.8' },
-  { path: '/our-factory', priority: '0.7' },
-  { path: '/certifications', priority: '0.8' },
-  { path: '/export-program', priority: '0.8' },
-  { path: '/about', priority: '0.7' },
-];
-
 export function GET() {
-  const entries = guidePages.map(({ path, priority }) =>
-    urlEntry(`${BASE_URL}${path}`, lastModFor(path), priority)
+  const entries = staticPagesIn('guides').map(([path, page]) =>
+    urlEntry(`${BASE_URL}${path}`, page.lastmod, page.priority.toFixed(1), page.changefreq),
   );
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

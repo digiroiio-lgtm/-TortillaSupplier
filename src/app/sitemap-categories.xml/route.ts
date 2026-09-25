@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import seoPages from '@/data/seoPages';
-import { landingPageLastMod, lastModFor } from '@/data/contentRevision';
+import { landingPageLastMod, staticPagesIn } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -67,12 +67,10 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
 }
 
 export function GET() {
-  // Static high-priority landing pages
-  const staticEntries = [
-    urlEntry(`${BASE_URL}/tortilla-supplier-uk`, lastModFor('/tortilla-supplier-uk'), '0.9'),
-    urlEntry(`${BASE_URL}/tortilla-supplier-usa`, lastModFor('/tortilla-supplier-usa'), '0.9'),
-    urlEntry(`${BASE_URL}/tortilla-supplier-europe`, lastModFor('/tortilla-supplier-europe'), '0.9'),
-  ];
+  // Static market pages
+  const staticEntries = staticPagesIn('categories').map(([path, page]) =>
+    urlEntry(`${BASE_URL}${path}`, page.lastmod, page.priority.toFixed(1), page.changefreq),
+  );
 
   const categoryEntries = seoPages
     .filter((p) => CATEGORY_SLUGS.has(p.slug))

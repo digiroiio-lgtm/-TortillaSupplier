@@ -16,10 +16,10 @@
 //   * BASELINE_REVISION  — pages that really have not changed since March.
 //   * CONTENT_REVISION   — the last change to the shared SEOLandingPage
 //                          template, which every /[slug] page inherits.
-//   * PAGE_REVISIONS     — one entry per static route. When you ship a real
-//                          content change to a page, bump its entry; when you
-//                          create one (e.g. a market hub), add it or the
-//                          build fails. Never bump on a build that changed
+//   * STATIC_PAGES       — one line per static route. When you ship a real
+//                          content change to a page, bump its lastmod; when
+//                          you create one (e.g. a market hub), add its line
+//                          or the build fails. Never bump on a build that changed
 //                          nothing; an always-current lastmod is as useless
 //                          as a frozen one.
 //   * updatedDate        — optional per-record field on seoPages and
@@ -28,55 +28,62 @@
 export const BASELINE_REVISION = '2026-03-31';
 export const CONTENT_REVISION = '2026-09-05';
 
-// Every static route must be listed here, even if it is unchanged since
-// March. There is deliberately no fallback: an unlisted path throws, so a new
-// page (e.g. a market hub) fails the build instead of silently shipping with
-// a false "unchanged since March" date. scripts/check-sitemap-routes.mjs
-// (run on prebuild) also fails when a page.tsx exists without an entry here
-// or without a URL in src/app/sitemap.ts, and when an entry has no page.
+// One line per static route. The sitemaps are generated from this registry,
+// so adding a page (e.g. a market hub) means adding exactly one line here:
+// sitemap.xml lists it, and `group` also puts it in that sub-sitemap.
+// scripts/check-sitemap-routes.mjs (run on prebuild) fails the build when a
+// page.tsx has no entry here, or an entry has no page.tsx.
 //
-// Dates taken from each route's last content commit in git history.
-const PAGE_REVISIONS: Record<string, string> = {
-  '': CONTENT_REVISION,               // homepage: FAQ + schema + LCP work
-  '/how-to-store-tortillas': CONTENT_REVISION,
-  '/tortilla-supplier-usa': CONTENT_REVISION,
-  '/blog': '2026-04-04',              // new post + listing changes
-  '/contact': '2026-04-02',           // title rewrites
-  '/export-program': '2026-04-02',
-  '/frozen-tortilla-supplier': '2026-04-02',
-  '/our-factory': '2026-04-02',
-  '/tortilla-calories': '2026-04-02',
-  '/tortilla-guide': '2026-04-02',
-  // Unchanged since the March baseline.
-  '/about': BASELINE_REVISION,
-  '/certifications': BASELINE_REVISION,
-  '/cookie-policy': BASELINE_REVISION,
-  '/privacy-policy': BASELINE_REVISION,
-  '/products': BASELINE_REVISION,
-  '/terms-of-service': BASELINE_REVISION,
-  '/tortilla-manufacturing-process': BASELINE_REVISION,
-  '/tortilla-shelf-life': BASELINE_REVISION,
-  '/tortilla-size-chart': BASELINE_REVISION,
-  '/tortilla-supplier-europe': BASELINE_REVISION,
-  '/tortilla-supplier-uk': BASELINE_REVISION,
-  // Dynamic templates.
-  '/author/[slug]': BASELINE_REVISION,
+// lastmod values come from each route's last content commit in git history.
+export type SitemapGroup = 'products' | 'guides' | 'categories' | 'blog';
+
+export interface StaticPage {
+  lastmod: string;
+  priority: number;
+  changefreq: 'weekly' | 'monthly' | 'yearly';
+  /** Sub-sitemap this page is also listed in, besides sitemap.xml. */
+  group?: SitemapGroup;
+}
+
+export const STATIC_PAGES: Record<string, StaticPage> = {
+  '': { lastmod: CONTENT_REVISION, priority: 1.0, changefreq: 'weekly' }, // FAQ + schema + LCP work
+  '/products': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'weekly', group: 'products' },
+  '/frozen-tortilla-supplier': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'products' },
+  '/contact': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly' },
+  '/blog': { lastmod: '2026-04-04', priority: 0.8, changefreq: 'weekly', group: 'blog' },
+  // Market pages
+  '/tortilla-supplier-uk': { lastmod: BASELINE_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  '/tortilla-supplier-usa': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  '/tortilla-supplier-europe': { lastmod: BASELINE_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  // Company pages
+  '/about': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/our-factory': { lastmod: '2026-04-02', priority: 0.7, changefreq: 'monthly', group: 'guides' },
+  '/certifications': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/export-program': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  // Authority and guide content
+  '/tortilla-size-chart': { lastmod: BASELINE_REVISION, priority: 0.9, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-manufacturing-process': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-guide': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-shelf-life': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-calories': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/how-to-store-tortillas': { lastmod: CONTENT_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  // Legal pages
+  '/privacy-policy': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
+  '/terms-of-service': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
+  '/cookie-policy': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
 };
 
-/** lastmod for a static route, e.g. '' (homepage) or '/about'. */
-export function lastModFor(path: string): string {
-  const date = PAGE_REVISIONS[path];
-  if (!date) {
-    throw new Error(
-      `No lastmod registered for "${path}" — add it to PAGE_REVISIONS in src/data/contentRevision.ts`,
-    );
-  }
-  return date;
+/** Static pages that also belong in the given sub-sitemap, as [path, page]. */
+export function staticPagesIn(group: SitemapGroup): Array<[string, StaticPage]> {
+  return Object.entries(STATIC_PAGES).filter(([, page]) => page.group === group);
 }
+
+// Last change to the /author/[slug] template.
+const AUTHOR_TEMPLATE_REVISION = BASELINE_REVISION;
 
 /** lastmod for an /author/[slug] page. */
 export function authorPageLastMod(): string {
-  return lastModFor('/author/[slug]');
+  return AUTHOR_TEMPLATE_REVISION;
 }
 
 /** lastmod for a /[slug] landing page rendered by SEOLandingPage. */

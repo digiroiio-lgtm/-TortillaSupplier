@@ -2,13 +2,9 @@ import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
-import { authorPageLastMod, blogPostLastMod, landingPageLastMod, lastModFor } from '@/data/contentRevision';
+import { STATIC_PAGES, authorPageLastMod, blogPostLastMod, landingPageLastMod } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
-
-// Every date comes from contentRevision.ts so the five sitemaps cannot
-// disagree about a URL.
-const lastMod = (path: string) => new Date(lastModFor(path));
 
 // Pillar pages: highest-value commercial landing pages
 const PILLAR_SLUGS = new Set([
@@ -82,33 +78,16 @@ const SUPPORT_SLUGS = new Set([
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: lastMod(''), priority: 1.0, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/products`, lastModified: lastMod('/products'), priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/contact`, lastModified: lastMod('/contact'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/blog`, lastModified: lastMod('/blog'), priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/tortilla-supplier-uk`, lastModified: lastMod('/tortilla-supplier-uk'), priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-supplier-usa`, lastModified: lastMod('/tortilla-supplier-usa'), priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-supplier-europe`, lastModified: lastMod('/tortilla-supplier-europe'), priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/frozen-tortilla-supplier`, lastModified: lastMod('/frozen-tortilla-supplier'), priority: 0.9, changeFrequency: 'monthly' },
-    // Company pages
-    { url: `${BASE_URL}/about`, lastModified: lastMod('/about'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/our-factory`, lastModified: lastMod('/our-factory'), priority: 0.7, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/certifications`, lastModified: lastMod('/certifications'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/export-program`, lastModified: lastMod('/export-program'), priority: 0.8, changeFrequency: 'monthly' },
-    // Authority content pages
-    { url: `${BASE_URL}/tortilla-size-chart`, lastModified: lastMod('/tortilla-size-chart'), priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-manufacturing-process`, lastModified: lastMod('/tortilla-manufacturing-process'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-guide`, lastModified: lastMod('/tortilla-guide'), priority: 0.9, changeFrequency: 'monthly' },
-    // Guide cluster pages
-    { url: `${BASE_URL}/tortilla-shelf-life`, lastModified: lastMod('/tortilla-shelf-life'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-calories`, lastModified: lastMod('/tortilla-calories'), priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/how-to-store-tortillas`, lastModified: lastMod('/how-to-store-tortillas'), priority: 0.8, changeFrequency: 'monthly' },
-    // Legal pages
-    { url: `${BASE_URL}/privacy-policy`, lastModified: lastMod('/privacy-policy'), priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${BASE_URL}/terms-of-service`, lastModified: lastMod('/terms-of-service'), priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${BASE_URL}/cookie-policy`, lastModified: lastMod('/cookie-policy'), priority: 0.3, changeFrequency: 'yearly' },
-  ];
+  // Static routes, dates and priorities all come from STATIC_PAGES in
+  // contentRevision.ts so the five sitemaps cannot disagree about a URL.
+  const staticPages: MetadataRoute.Sitemap = Object.entries(STATIC_PAGES).map(
+    ([path, page]) => ({
+      url: `${BASE_URL}${path}`,
+      lastModified: new Date(page.lastmod),
+      priority: page.priority,
+      changeFrequency: page.changefreq,
+    }),
+  );
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,

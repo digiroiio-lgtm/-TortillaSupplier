@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import seoPages from '@/data/seoPages';
-import { landingPageLastMod, lastModFor } from '@/data/contentRevision';
+import { landingPageLastMod, staticPagesIn } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -27,10 +27,9 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
 }
 
 export function GET() {
-  const staticProductPages = [
-    urlEntry(`${BASE_URL}/products`, lastModFor('/products'), '0.9', 'weekly'),
-    urlEntry(`${BASE_URL}/frozen-tortilla-supplier`, lastModFor('/frozen-tortilla-supplier'), '0.9'),
-  ];
+  const staticProductPages = staticPagesIn('products').map(([path, page]) =>
+    urlEntry(`${BASE_URL}${path}`, page.lastmod, page.priority.toFixed(1), page.changefreq),
+  );
 
   const dynamicProductPages = seoPages
     .filter((p) => PRODUCT_SLUGS.has(p.slug))
