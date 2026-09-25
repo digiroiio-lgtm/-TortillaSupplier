@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
-import { BASELINE_REVISION } from '@/data/contentRevision';
+import { blogPostLastMod, lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -15,18 +15,18 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
 }
 
 export function GET() {
-  const blogIndexEntry = urlEntry(`${BASE_URL}/blog`, BASELINE_REVISION, '0.8', 'weekly');
+  const blogIndexEntry = urlEntry(`${BASE_URL}/blog`, lastModFor('/blog'), '0.8', 'weekly');
 
   const postEntries = blogPosts.map((post) =>
     urlEntry(
       `${BASE_URL}/blog/${post.slug}`,
-      post.publishDate.slice(0, 10),
+      blogPostLastMod(post),
       '0.7'
     )
   );
 
   const authorEntries = authors.map((author) =>
-    urlEntry(`${BASE_URL}/author/${author.slug}`, BASELINE_REVISION, '0.6')
+    urlEntry(`${BASE_URL}/author/${author.slug}`, lastModFor(`/author/${author.slug}`), '0.6')
   );
 
   const allEntries = [blogIndexEntry, ...postEntries, ...authorEntries];

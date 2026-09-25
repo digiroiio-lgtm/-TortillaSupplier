@@ -1,12 +1,8 @@
 import { NextResponse } from 'next/server';
 import seoPages from '@/data/seoPages';
-import { CONTENT_REVISION } from '@/data/contentRevision';
+import { landingPageLastMod, lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
-
-// Every URL in this sitemap is a landing page rendered by SEOLandingPage,
-// whose schema output changed in the current content cycle.
-const LAST_MODIFIED = CONTENT_REVISION;
 
 // Pillar and category-level commercial pages (not individual product size pages)
 const CATEGORY_SLUGS = new Set([
@@ -61,10 +57,10 @@ const REGIONAL_SLUGS = new Set([
   'tortilla-supplier-saudi-arabia',
 ]);
 
-function urlEntry(loc: string, priority: string, changefreq = 'monthly') {
+function urlEntry(loc: string, lastmod: string, priority: string, changefreq = 'monthly') {
   return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${LAST_MODIFIED}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
@@ -73,18 +69,18 @@ function urlEntry(loc: string, priority: string, changefreq = 'monthly') {
 export function GET() {
   // Static high-priority landing pages
   const staticEntries = [
-    urlEntry(`${BASE_URL}/tortilla-supplier-uk`, '0.9'),
-    urlEntry(`${BASE_URL}/tortilla-supplier-usa`, '0.9'),
-    urlEntry(`${BASE_URL}/tortilla-supplier-europe`, '0.9'),
+    urlEntry(`${BASE_URL}/tortilla-supplier-uk`, lastModFor('/tortilla-supplier-uk'), '0.9'),
+    urlEntry(`${BASE_URL}/tortilla-supplier-usa`, lastModFor('/tortilla-supplier-usa'), '0.9'),
+    urlEntry(`${BASE_URL}/tortilla-supplier-europe`, lastModFor('/tortilla-supplier-europe'), '0.9'),
   ];
 
   const categoryEntries = seoPages
     .filter((p) => CATEGORY_SLUGS.has(p.slug))
-    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, '0.9'));
+    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, landingPageLastMod(p), '0.9'));
 
   const regionalEntries = seoPages
     .filter((p) => REGIONAL_SLUGS.has(p.slug))
-    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, '0.8'));
+    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, landingPageLastMod(p), '0.8'));
 
   const allEntries = [...staticEntries, ...categoryEntries, ...regionalEntries];
 

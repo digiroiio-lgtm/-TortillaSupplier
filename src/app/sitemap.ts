@@ -2,24 +2,13 @@ import { MetadataRoute } from 'next';
 import seoPages from '@/data/seoPages';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
-import { BASELINE_REVISION, CONTENT_REVISION } from '@/data/contentRevision';
+import { blogPostLastMod, landingPageLastMod, lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
-// Dates live in one module so the five sitemaps cannot drift apart again.
-const LAST_MODIFIED = new Date(BASELINE_REVISION);
-const CONTENT_REVISED = new Date(CONTENT_REVISION);
-
-// Static routes whose content changed in this cycle. Every /[slug] landing
-// page is covered separately below because they share a template that changed.
-const REVISED_PATHS = new Set([
-  '',                          // homepage: FAQ + schema + LCP work
-  '/how-to-store-tortillas',
-  '/tortilla-supplier-usa',
-]);
-
-const lastModFor = (path: string) =>
-  REVISED_PATHS.has(path) ? CONTENT_REVISED : LAST_MODIFIED;
+// Every date comes from contentRevision.ts so the five sitemaps cannot
+// disagree about a URL.
+const lastMod = (path: string) => new Date(lastModFor(path));
 
 // Pillar pages: highest-value commercial landing pages
 const PILLAR_SLUGS = new Set([
@@ -94,45 +83,43 @@ const SUPPORT_SLUGS = new Set([
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: lastModFor(''), priority: 1.0, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/products`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/contact`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/blog`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/tortilla-supplier-uk`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-supplier-usa`, lastModified: lastModFor('/tortilla-supplier-usa'), priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-supplier-europe`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/frozen-tortilla-supplier`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
+    { url: BASE_URL, lastModified: lastMod(''), priority: 1.0, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/products`, lastModified: lastMod('/products'), priority: 0.8, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/contact`, lastModified: lastMod('/contact'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/blog`, lastModified: lastMod('/blog'), priority: 0.8, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/tortilla-supplier-uk`, lastModified: lastMod('/tortilla-supplier-uk'), priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-supplier-usa`, lastModified: lastMod('/tortilla-supplier-usa'), priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-supplier-europe`, lastModified: lastMod('/tortilla-supplier-europe'), priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/frozen-tortilla-supplier`, lastModified: lastMod('/frozen-tortilla-supplier'), priority: 0.9, changeFrequency: 'monthly' },
     // Company pages
-    { url: `${BASE_URL}/about`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/our-factory`, lastModified: LAST_MODIFIED, priority: 0.7, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/certifications`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/export-program`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/about`, lastModified: lastMod('/about'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/our-factory`, lastModified: lastMod('/our-factory'), priority: 0.7, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/certifications`, lastModified: lastMod('/certifications'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/export-program`, lastModified: lastMod('/export-program'), priority: 0.8, changeFrequency: 'monthly' },
     // Authority content pages
-    { url: `${BASE_URL}/tortilla-size-chart`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-manufacturing-process`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-guide`, lastModified: LAST_MODIFIED, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-size-chart`, lastModified: lastMod('/tortilla-size-chart'), priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-manufacturing-process`, lastModified: lastMod('/tortilla-manufacturing-process'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-guide`, lastModified: lastMod('/tortilla-guide'), priority: 0.9, changeFrequency: 'monthly' },
     // Guide cluster pages
-    { url: `${BASE_URL}/tortilla-shelf-life`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/tortilla-calories`, lastModified: LAST_MODIFIED, priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/how-to-store-tortillas`, lastModified: lastModFor('/how-to-store-tortillas'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-shelf-life`, lastModified: lastMod('/tortilla-shelf-life'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/tortilla-calories`, lastModified: lastMod('/tortilla-calories'), priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/how-to-store-tortillas`, lastModified: lastMod('/how-to-store-tortillas'), priority: 0.8, changeFrequency: 'monthly' },
     // Legal pages
-    { url: `${BASE_URL}/privacy-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${BASE_URL}/terms-of-service`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
-    { url: `${BASE_URL}/cookie-policy`, lastModified: LAST_MODIFIED, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/privacy-policy`, lastModified: lastMod('/privacy-policy'), priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/terms-of-service`, lastModified: lastMod('/terms-of-service'), priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/cookie-policy`, lastModified: lastMod('/cookie-policy'), priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.publishDate),
+    lastModified: new Date(blogPostLastMod(post)),
     priority: 0.7,
     changeFrequency: 'monthly' as const,
   }));
 
-  // All landing pages render through the shared SEOLandingPage template,
-  // whose schema output changed in this cycle, so they share CONTENT_REVISED.
   const dynamicPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
     url: `${BASE_URL}/${page.slug}`,
-    lastModified: CONTENT_REVISED,
+    lastModified: new Date(landingPageLastMod(page)),
     priority: PILLAR_SLUGS.has(page.slug)
       ? 0.9
       : REGIONAL_SLUGS.has(page.slug)
@@ -145,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const authorPages: MetadataRoute.Sitemap = authors.map((author) => ({
     url: `${BASE_URL}/author/${author.slug}`,
-    lastModified: LAST_MODIFIED,
+    lastModified: lastMod(`/author/${author.slug}`),
     priority: 0.6,
     changeFrequency: 'monthly' as const,
   }));

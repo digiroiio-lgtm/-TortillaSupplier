@@ -1,12 +1,8 @@
 import { NextResponse } from 'next/server';
 import seoPages from '@/data/seoPages';
-import { CONTENT_REVISION } from '@/data/contentRevision';
+import { landingPageLastMod, lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
-
-// Every URL in this sitemap is a landing page rendered by SEOLandingPage,
-// whose schema output changed in the current content cycle.
-const LAST_MODIFIED = CONTENT_REVISION;
 
 // Product size pages from seoPages
 const PRODUCT_SLUGS = new Set([
@@ -21,10 +17,10 @@ const PRODUCT_SLUGS = new Set([
   'flatbread-30cm-12-inch',
 ]);
 
-function urlEntry(loc: string, priority: string, changefreq = 'monthly') {
+function urlEntry(loc: string, lastmod: string, priority: string, changefreq = 'monthly') {
   return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${LAST_MODIFIED}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
@@ -32,13 +28,13 @@ function urlEntry(loc: string, priority: string, changefreq = 'monthly') {
 
 export function GET() {
   const staticProductPages = [
-    urlEntry(`${BASE_URL}/products`, '0.9', 'weekly'),
-    urlEntry(`${BASE_URL}/frozen-tortilla-supplier`, '0.9'),
+    urlEntry(`${BASE_URL}/products`, lastModFor('/products'), '0.9', 'weekly'),
+    urlEntry(`${BASE_URL}/frozen-tortilla-supplier`, lastModFor('/frozen-tortilla-supplier'), '0.9'),
   ];
 
   const dynamicProductPages = seoPages
     .filter((p) => PRODUCT_SLUGS.has(p.slug))
-    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, '0.8'));
+    .map((p) => urlEntry(`${BASE_URL}/${p.slug}`, landingPageLastMod(p), '0.8'));
 
   const allEntries = [...staticProductPages, ...dynamicProductPages];
 

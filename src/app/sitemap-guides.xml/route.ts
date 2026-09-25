@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { BASELINE_REVISION, CONTENT_REVISION } from '@/data/contentRevision';
+import { lastModFor } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -12,24 +12,22 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
   </url>`;
 }
 
-// Only the storage guide was rewritten in this cycle; the rest are unchanged
-// since March and keep their real date rather than a blanket bump.
 const guidePages = [
-  { path: '/tortilla-guide', priority: '0.9', lastmod: BASELINE_REVISION },
-  { path: '/tortilla-size-chart', priority: '0.9', lastmod: BASELINE_REVISION },
-  { path: '/tortilla-manufacturing-process', priority: '0.8', lastmod: BASELINE_REVISION },
-  { path: '/tortilla-shelf-life', priority: '0.8', lastmod: BASELINE_REVISION },
-  { path: '/tortilla-calories', priority: '0.8', lastmod: BASELINE_REVISION },
-  { path: '/how-to-store-tortillas', priority: '0.8', lastmod: CONTENT_REVISION },
-  { path: '/our-factory', priority: '0.7', lastmod: BASELINE_REVISION },
-  { path: '/certifications', priority: '0.8', lastmod: BASELINE_REVISION },
-  { path: '/export-program', priority: '0.8', lastmod: BASELINE_REVISION },
-  { path: '/about', priority: '0.7', lastmod: BASELINE_REVISION },
+  { path: '/tortilla-guide', priority: '0.9' },
+  { path: '/tortilla-size-chart', priority: '0.9' },
+  { path: '/tortilla-manufacturing-process', priority: '0.8' },
+  { path: '/tortilla-shelf-life', priority: '0.8' },
+  { path: '/tortilla-calories', priority: '0.8' },
+  { path: '/how-to-store-tortillas', priority: '0.8' },
+  { path: '/our-factory', priority: '0.7' },
+  { path: '/certifications', priority: '0.8' },
+  { path: '/export-program', priority: '0.8' },
+  { path: '/about', priority: '0.7' },
 ];
 
 export function GET() {
-  const entries = guidePages.map(({ path, priority, lastmod }) =>
-    urlEntry(`${BASE_URL}${path}`, lastmod, priority)
+  const entries = guidePages.map(({ path, priority }) =>
+    urlEntry(`${BASE_URL}${path}`, lastModFor(path), priority)
   );
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
