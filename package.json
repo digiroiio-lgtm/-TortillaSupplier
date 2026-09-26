@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "check:sitemap": "node scripts/check-sitemap-routes.mjs"
+    "check:sitemap": "node scripts/check-sitemap-routes.mjs",
+    "report:gsc-clusters": "node scripts/gsc-cluster-report.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
