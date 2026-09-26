@@ -15,7 +15,8 @@
 // Keep the dates honest:
 //   * BASELINE_REVISION  — pages that really have not changed since March.
 //   * CONTENT_REVISION   — the last change to the shared SEOLandingPage
-//                          template, which every /[slug] page inherits.
+//                          template and FAQAccordion, which every /[slug]
+//                          page and the FAQ-bearing static pages inherit.
 //   * STATIC_PAGES       — one line per static route. When you ship a real
 //                          content change to a page, bump its lastmod; when
 //                          you create one (e.g. a market hub), add its line
@@ -26,7 +27,7 @@
 //                          blogPosts for edits to a single landing page/post.
 
 export const BASELINE_REVISION = '2026-03-31';
-export const CONTENT_REVISION = '2026-09-05';
+export const CONTENT_REVISION = '2026-09-26';
 
 // One line per static route. The sitemaps are generated from this registry,
 // so adding a page (e.g. a market hub) means adding exactly one line here:
@@ -46,15 +47,15 @@ export interface StaticPage {
 }
 
 export const STATIC_PAGES: Record<string, StaticPage> = {
-  '': { lastmod: CONTENT_REVISION, priority: 1.0, changefreq: 'weekly' }, // FAQ + schema + LCP work
+  '': { lastmod: CONTENT_REVISION, priority: 1.0, changefreq: 'weekly' }, // FAQ answers now server-rendered
   '/products': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'weekly', group: 'products' },
-  '/frozen-tortilla-supplier': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'products' },
+  '/frozen-tortilla-supplier': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'products' },
   '/contact': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly' },
   '/blog': { lastmod: '2026-04-04', priority: 0.8, changefreq: 'weekly', group: 'blog' },
   // Market pages
-  '/tortilla-supplier-uk': { lastmod: BASELINE_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  '/tortilla-supplier-uk': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
   '/tortilla-supplier-usa': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
-  '/tortilla-supplier-europe': { lastmod: BASELINE_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  '/tortilla-supplier-europe': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
   // Company pages
   '/about': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/our-factory': { lastmod: '2026-04-02', priority: 0.7, changefreq: 'monthly', group: 'guides' },
@@ -66,7 +67,7 @@ export const STATIC_PAGES: Record<string, StaticPage> = {
   '/tortilla-guide': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'guides' },
   '/tortilla-shelf-life': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/tortilla-calories': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
-  '/how-to-store-tortillas': { lastmod: CONTENT_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/how-to-store-tortillas': { lastmod: '2026-09-05', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   // Legal pages
   '/privacy-policy': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
   '/terms-of-service': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },

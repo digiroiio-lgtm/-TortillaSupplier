@@ -27,61 +27,6 @@ export const metadata: Metadata = {
 
 const BASE_URL = 'https://tortillasupplier.com';
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do you supply tortillas for distributors?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We are a BRCGS-certified tortilla manufacturer supplying wholesale distributors, food importers and foodservice operators globally. We offer full container loads, private label production and export documentation for all major markets.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the minimum order quantity (MOQ) for wholesale tortillas?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our standard minimum order is one full pallet, with container supply (20ft and 40ft) available for larger wholesale orders. Contact our export team for exact MOQ figures by product type.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you provide private label tortillas?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We offer full private label tortilla manufacturing including custom packaging design, branded labelling and retail-ready formats. Our factory operates to IFS and BRCGS standards, suitable for major retailer approval.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you export tortillas internationally?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We export flour tortillas, corn tortillas and frozen tortillas to the UK, EU, USA, Canada, the Middle East and Australia. All shipments include full export documentation, certificates of origin and halal certification on request.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What tortilla certifications do you hold?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our tortilla factory holds BRCGS Global Food Safety, IFS Food, ISO 22000 and HACCP certifications. Halal certification is available. All certificates can be provided upon request as part of our standard export documentation pack.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What tortilla sizes and formats are available for wholesale?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We supply flour tortillas in 20cm (8"), 25cm (10") and 30cm (12") sizes, corn tortillas in 15cm (6") and 20cm (8"), and flatbreads including lavash and wrap bread. Frozen formats are available for all product lines.',
-      },
-    },
-  ],
-};
-
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -136,6 +81,18 @@ const homepageFaqs = [
     answer: 'Frozen flour and corn tortillas ship at –18 °C in 20ft or 40ft reefer containers with 12-month frozen shelf life. Standard cases stack 96 or 120 units per pallet, and each container includes health certificates, allergen declarations and (on request) halal documentation. Frozen supply is our fastest-growing line for United States, Canadian and Middle Eastern importers.',
   },
 ];
+
+// Generated from homepageFaqs so the FAQPage markup always matches the
+// visible FAQ (a hand-written copy had drifted to 6 of the 8 questions).
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 const supplierClusterLinks = [
   { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
