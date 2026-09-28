@@ -1,0 +1,78 @@
+# Notifies IndexNow about URLs changed by a production deployment.
+#
+# Vercel's GitHub integration reports each deployment back to GitHub; when a
+# production deployment succeeds (the new content is live), this job diffs
+# src/app/sitemap.ts between the previously deployed commit and this one and
+# submits only the added, updated and removed URLs.
+#
+# It runs outside the Vercel build, and IndexNow failures never fail the job,
+# so a deploy can never be blocked by it.
+#
+# Setup: add repository secret INDEXNOW_KEY (same value as the INDEXNOW_KEY
+# environment variable in Vercel, which serves /{key}.txt). Optional
+# repository variable INDEXNOW_SITE_URL overrides the site origin.
+
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: 'Previous commit SHA (diff mode)'
+        required: false
+      to:
+        description: 'New commit SHA (diff mode, defaults to the checked-out commit)'
+        required: false
+      urls:
+        description: 'Space-separated URLs to submit instead of a diff (e.g. a deleted page)'
+        required: false
+
+permissions:
+  contents: read
+  deployments: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       startsWith(github.event.deployment.environment, 'Production'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Submit changed URLs
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_SITE_URL: ${{ vars.INDEXNOW_SITE_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOY_SHA: ${{ github.event.deployment.sha }}
+          DEPLOY_ID: ${{ github.event.deployment.id }}
+          DEPLOY_ENVIRONMENT: ${{ github.event.deployment.environment }}
+          INPUT_FROM: ${{ inputs.from }}
+          INPUT_TO: ${{ inputs.to }}
+          INPUT_URLS: ${{ inputs.urls }}
+        run: |
+          set -f
+          args=()
+          [ -n "$INPUT_FROM" ] && args+=(--from "$INPUT_FROM")
+          [ -n "$INPUT_TO" ] && args+=(--to "$INPUT_TO")
+          for u in $INPUT_URLS; do args+=(--url "$u"); done
+          npm run -s indexnow -- "${args[@]}"

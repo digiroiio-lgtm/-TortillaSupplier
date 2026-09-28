@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "eslint",
     "check:sitemap": "node scripts/check-sitemap-routes.mjs",
-    "report:gsc-clusters": "node scripts/gsc-cluster-report.mjs"
+    "report:gsc-clusters": "node scripts/gsc-cluster-report.mjs",
+    "test": "node --import tsx --test 'src/**/*.test.ts'",
+    "indexnow": "node --import tsx scripts/indexnow-deploy.mts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -25,6 +27,7 @@
     "eslint": "^9",
     "eslint-config-next": "^15.3.0",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
