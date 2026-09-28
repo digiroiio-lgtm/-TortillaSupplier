@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import blogPosts from '@/data/blogPosts';
 import authors from '@/data/authors';
-import { BASELINE_REVISION } from '@/data/contentRevision';
+import { authorPageLastMod, blogPostLastMod, staticPagesIn } from '@/data/contentRevision';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -15,21 +15,23 @@ function urlEntry(loc: string, lastmod: string, priority: string, changefreq = '
 }
 
 export function GET() {
-  const blogIndexEntry = urlEntry(`${BASE_URL}/blog`, BASELINE_REVISION, '0.8', 'weekly');
+  const blogIndexEntries = staticPagesIn('blog').map(([path, page]) =>
+    urlEntry(`${BASE_URL}${path}`, page.lastmod, page.priority.toFixed(1), page.changefreq),
+  );
 
   const postEntries = blogPosts.map((post) =>
     urlEntry(
       `${BASE_URL}/blog/${post.slug}`,
-      post.publishDate.slice(0, 10),
+      blogPostLastMod(post),
       '0.7'
     )
   );
 
   const authorEntries = authors.map((author) =>
-    urlEntry(`${BASE_URL}/author/${author.slug}`, BASELINE_REVISION, '0.6')
+    urlEntry(`${BASE_URL}/author/${author.slug}`, authorPageLastMod(), '0.6')
   );
 
-  const allEntries = [blogIndexEntry, ...postEntries, ...authorEntries];
+  const allEntries = [...blogIndexEntries, ...postEntries, ...authorEntries];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

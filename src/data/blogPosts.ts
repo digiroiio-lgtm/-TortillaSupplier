@@ -17,6 +17,8 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   publishDate: string;
+  /** Last substantive content edit; drives sitemap lastmod and dateModified. */
+  updatedDate?: string;
   readTime: number;
   author: { name: string; role: string };
   reviewer?: { name: string; role: string };
@@ -36,6 +38,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A practical guide for distributors and food importers on choosing the right wholesale tortilla supplier — covering certifications, cold chain, private label, and export documentation.',
     publishDate: '2026-03-14',
+    updatedDate: '2026-04-04',
     readTime: 5,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -93,6 +96,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'Compare frozen and chilled tortilla formats for international distribution. Learn which option suits long-haul import logistics and how distributors can minimise supply chain risk.',
     publishDate: '2026-03-16',
+    updatedDate: '2026-04-04',
     readTime: 4,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
@@ -160,6 +164,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A guide to tortilla sizes for foodservice operators and distributors — from 15 cm street taco format to 30 cm burrito tortillas. Learn which format fits your menu and import programme.',
     publishDate: '2026-03-19',
+    updatedDate: '2026-04-04',
     readTime: 4,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
@@ -227,6 +232,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'Discover how tortillas evolved from an ancient Mesoamerican staple into a global food format used by restaurants, street vendors, and major chains across every continent.',
     publishDate: '2026-03-21',
+    updatedDate: '2026-04-04',
     readTime: 7,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -290,6 +296,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'Learn why frozen tortillas have become the preferred supply format for restaurant chains and distributors across Europe and Asia — from shelf life and consistency to cold-chain logistics.',
     publishDate: '2026-03-24',
+    updatedDate: '2026-04-04',
     readTime: 6,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -345,6 +352,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'Explore why tortillas have become an essential product category for food distributors worldwide — from street food trends and private label opportunities to logistics efficiency.',
     publishDate: '2026-03-26',
+    updatedDate: '2026-04-04',
     readTime: 6,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
@@ -392,6 +400,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A complete guide for wholesale tortilla buyers covering supplier certifications, product formats, container shipment logistics, private label options and what to ask before placing an order.',
     publishDate: '2026-03-28',
+    updatedDate: '2026-04-04',
     readTime: 8,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -468,6 +477,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'Learn how private label tortilla programmes work — from MOQs and packaging design to certifications and retailer compliance. A complete guide for supermarket buyers and food distributors.',
     publishDate: '2026-03-30',
+    updatedDate: '2026-04-04',
     readTime: 6,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
@@ -529,6 +539,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A practical guide for UK importers and distributors sourcing tortillas internationally — covering customs, cold chain, food safety certifications, and supplier selection.',
     publishDate: '2026-03-31',
+    updatedDate: '2026-04-04',
     readTime: 6,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -597,6 +608,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A behind-the-scenes look at the frozen tortilla supply chain — from manufacturing and cold-chain logistics to warehouse storage and foodservice delivery.',
     publishDate: '2026-03-31',
+    updatedDate: '2026-04-04',
     readTime: 5,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -650,6 +662,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'An analysis of tortilla market growth drivers — from street food culture and QSR expansion to private label retail and frozen distribution trends across Europe and Asia.',
     publishDate: '2026-03-31',
+    updatedDate: '2026-04-04',
     readTime: 6,
     author: { name: 'Alex Romero', role: 'Global Food Market Analyst' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },

@@ -19,6 +19,18 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    // IndexNow key file: /{INDEXNOW_KEY}.txt is answered by the route handler,
+    // which returns the key only when it matches the env var (else 404).
+    // Plain-array rewrites run after static routes, so /robots.txt and
+    // /llms.txt are never affected (they are also shorter than 8 chars).
+    return [
+      {
+        source: '/:key([A-Za-z0-9-]{8,128})\\.txt',
+        destination: '/api/indexnow-key/:key',
+      },
+    ];
+  },
   async headers() {
     // GA4 (measurement ID G-R9W0BV1FRL) requires googletagmanager.com to load
     // the gtag.js script, and google-analytics.com (plus regional endpoints

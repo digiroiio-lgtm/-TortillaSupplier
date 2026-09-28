@@ -26,6 +26,8 @@ export interface SEOPageData {
   parentSlug?: string;
   parentLabel?: string;
   isProductPage?: boolean;
+  /** Last substantive edit to this page's copy; defaults to the template revision. */
+  updatedDate?: string;
 }
 
 const seoPages: SEOPageData[] = [

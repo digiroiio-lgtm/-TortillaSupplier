@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `${BASE_URL}/blog/${slug}`,
       type: 'article',
       publishedTime: post.publishDate,
+      modifiedTime: post.updatedDate ?? post.publishDate,
     },
     alternates: { canonical: `${BASE_URL}/blog/${slug}` },
   };
@@ -53,6 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishDate,
+    dateModified: post.updatedDate ?? post.publishDate,
     author: {
       '@type': 'Person',
       name: post.author.name,
