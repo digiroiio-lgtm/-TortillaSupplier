@@ -49,6 +49,5 @@ export default function robots(): MetadataRoute.Robots {
       'https://tortillasupplier.com/sitemap-categories.xml',
       'https://tortillasupplier.com/sitemap-blog.xml',
     ],
-    host: 'https://tortillasupplier.com',
   };
 }

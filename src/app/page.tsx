@@ -27,20 +27,15 @@ export const metadata: Metadata = {
 
 const BASE_URL = 'https://tortillasupplier.com';
 
-const productSchema = {
+// Quote-based wholesale catalogue: there is no published price or product
+// rating to support a Product rich result. Describe the page itself instead.
+const webPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Wholesale Tortillas',
+  '@type': 'WebPage',
+  name: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier',
   description: 'BRCGS-certified wholesale flour tortillas, corn tortillas and frozen tortillas for distributors and food importers. Private label available.',
-  brand: { '@type': 'Brand', name: 'TortillaSupplier' },
   url: BASE_URL,
   image: `${BASE_URL}/images/og-default.png`,
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'GBP',
-    availability: 'https://schema.org/InStock',
-    seller: { '@type': 'Organization', name: 'TortillaSupplier' },
-  },
 };
 
 const homepageFaqs = [
@@ -115,7 +110,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <JsonLd data={productSchema} />
+      <JsonLd data={webPageSchema} />
 
       {/* Hero */}
       <HeroSection

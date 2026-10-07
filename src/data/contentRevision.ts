@@ -47,8 +47,8 @@ export interface StaticPage {
 }
 
 export const STATIC_PAGES: Record<string, StaticPage> = {
-  '': { lastmod: CONTENT_REVISION, priority: 1.0, changefreq: 'weekly' }, // FAQ answers now server-rendered
-  '/products': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'weekly', group: 'products' },
+  '': { lastmod: '2026-10-07', priority: 1.0, changefreq: 'weekly' }, // Quote-only homepage schema
+  '/products': { lastmod: '2026-10-07', priority: 0.8, changefreq: 'weekly', group: 'products' }, // Product format directory
   '/frozen-tortilla-supplier': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'products' },
   '/contact': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly' },
   '/blog': { lastmod: '2026-04-04', priority: 0.8, changefreq: 'weekly', group: 'blog' },
