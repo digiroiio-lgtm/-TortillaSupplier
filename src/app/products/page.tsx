@@ -5,9 +5,11 @@ import ProductCard from '@/components/ProductCard';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
 import { products } from '@/data/products';
+import seoPages from '@/data/seoPages';
 import Link from 'next/link';
 
 const BASE_URL = 'https://tortillasupplier.com';
+const productPages = seoPages.filter((page) => page.isProductPage);
 
 export const metadata: Metadata = {
   title: { absolute: 'Wholesale Tortillas & Flatbreads | TortillaSupplier' },
@@ -25,13 +27,13 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Wholesale Tortilla & Flatbread Products',
   url: `${BASE_URL}/products`,
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Flour Tortillas', url: `${BASE_URL}/flour-tortilla-supplier` },
-    { '@type': 'ListItem', position: 2, name: 'Corn Tortillas', url: `${BASE_URL}/corn-tortilla-supplier` },
-    { '@type': 'ListItem', position: 3, name: 'Frozen Tortillas', url: `${BASE_URL}/frozen-flour-tortilla-supplier` },
-    { '@type': 'ListItem', position: 4, name: 'Wrap Bread', url: `${BASE_URL}/wrap-bread-supplier` },
-    { '@type': 'ListItem', position: 5, name: 'Flatbreads', url: `${BASE_URL}/flatbread-supplier` },
-  ],
+  // Keep the catalogue markup and visible links on the same source of truth.
+  itemListElement: productPages.map((page, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: page.heroTitle,
+    url: `${BASE_URL}/${page.slug}`,
+  })),
 };
 
 export default function ProductsPage() {
@@ -46,6 +48,25 @@ export default function ProductsPage() {
         primaryCTA={{ label: 'Request a Quote', href: '/contact' }}
         secondaryCTA={{ label: 'Frozen Products', href: '/frozen-tortilla-supplier' }}
       />
+
+      <section className="py-12 bg-[#FAFAF8] border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Browse Product Formats</h2>
+          <p className="text-gray-500 text-sm mb-6">Compare tortilla sizes, flatbread formats and foodservice applications before requesting a quote.</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {productPages.map((page) => (
+              <li key={page.slug}>
+                <Link
+                  href={`/${page.slug}`}
+                  className="block h-full px-4 py-3 bg-white border border-gray-200 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] hover:text-[#2d7a3a] transition-colors"
+                >
+                  {page.heroTitle}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
