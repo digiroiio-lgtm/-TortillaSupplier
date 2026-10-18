@@ -7,7 +7,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'Export Programme | Tortilla Wholesale | TortillaSupplier' },
   description:
-    'Our wholesale tortilla export programme is designed for distributors, importers and foodservice buyers. Container pricing, private label, and full documentation support.',
+    'Our wholesale tortilla export programme for distributors, importers and foodservice buyers: container pricing, private label and full documentation support.',
   openGraph: {
     title: 'Export Programme | Tortilla Wholesale | TortillaSupplier',
     description:

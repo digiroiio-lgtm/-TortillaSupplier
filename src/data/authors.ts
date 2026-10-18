@@ -16,7 +16,7 @@ const authors: Author[] = [
     name: 'Daniel Ortega',
     jobTitle: 'Export & International Trade Specialist',
     pageTitle: 'Daniel Ortega | Export & Trade Specialist | TortillaSupplier',
-    bio: 'Daniel Ortega is an international food export specialist focused on tortilla and flatbread supply chains across Europe and North America. With over a decade of experience in cross-border food trade, he advises distributors on container logistics, import regulations, and building resilient wholesale supply programmes.',
+    bio: 'Daniel Ortega is a food export specialist in tortilla and flatbread supply chains across Europe and North America, advising on logistics and import rules.',
     expertise: [
       'International food export',
       'Distributor supply chains',
@@ -32,7 +32,7 @@ const authors: Author[] = [
     name: 'Laura Mitchell',
     jobTitle: 'Food Manufacturing & Quality Specialist',
     pageTitle: 'Laura Mitchell | Food Quality Specialist | TortillaSupplier',
-    bio: 'Laura Mitchell is a food manufacturing and quality assurance specialist with deep expertise in tortilla and flatbread production. She guides buyers through international certification frameworks — including BRCGS, IFS, and halal compliance — and advises on product formats for retail and foodservice channels.',
+    bio: 'Laura Mitchell is a food manufacturing and QA specialist in tortilla and flatbread production, guiding buyers through BRCGS, IFS and halal certification.',
     expertise: [
       'BRCGS & IFS certification',
       'Halal compliance',
@@ -48,7 +48,7 @@ const authors: Author[] = [
     name: 'Alex Romero',
     jobTitle: 'Global Food Market Analyst',
     pageTitle: 'Alex Romero | Food Market Analyst | TortillaSupplier',
-    bio: 'Alex Romero is a global food market analyst specialising in the tortilla, flatbread, and wrap category. He tracks distribution channel shifts, demand trends, and competitive dynamics to help importers and distributors make informed sourcing decisions.',
+    bio: 'Alex Romero is a global food market analyst specialising in tortillas, flatbreads and wraps, tracking channel shifts and demand for importers and distributors.',
     expertise: [
       'Tortilla market growth trends',
       'Distribution channel analysis',

@@ -7,7 +7,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'About TortillaSupplier | Wholesale Tortilla Manufacturer' },
   description:
-    'Learn about TortillaSupplier — a BRCGS-certified wholesale tortilla and flatbread manufacturer supplying distributors, importers and foodservice operators across the UK, USA and Europe.',
+    'TortillaSupplier is a BRCGS-certified wholesale tortilla and flatbread manufacturer supplying distributors, importers and foodservice in the UK, USA and Europe.',
   openGraph: {
     title: 'About TortillaSupplier | Wholesale Tortilla Manufacturer',
     description:

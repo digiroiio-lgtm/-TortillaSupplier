@@ -7,7 +7,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 
 const PAGE_TITLE = 'How to Store Tortillas: Flour, Corn & Wrap Storage Guide';
 const PAGE_DESCRIPTION =
-  'Store flour tortillas up to 21 days and corn tortillas up to 14 days sealed at +2–4°C, or 9–12 months at −18°C. Ambient, fridge and freezer methods for tortillas and wraps.';
+  'Flour tortillas keep up to 21 days and corn up to 14 days sealed at +2–4°C, or 9–12 months at −18°C. Ambient, fridge and freezer storage methods.';
 
 export const metadata: Metadata = {
   title: { absolute: PAGE_TITLE },

@@ -7,7 +7,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'Our Factory | Tortilla Manufacturing | TortillaSupplier' },
   description:
-    'Tour our tortilla manufacturing facility — automated production lines, cold chain infrastructure, and quality control systems designed for international wholesale supply.',
+    'Tour our tortilla factory: automated production lines, cold chain infrastructure and quality control systems built for international wholesale supply.',
   openGraph: {
     title: 'Our Factory | Tortilla Manufacturing | TortillaSupplier',
     description:
