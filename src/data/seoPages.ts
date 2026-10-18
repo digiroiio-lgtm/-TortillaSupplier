@@ -1058,7 +1058,7 @@ const seoPages: SEOPageData[] = [
   },
   {
     slug: 'importing-tortillas-to-uk',
-    metaTitle: 'Importing Tortillas to the UK | Wholesale Supplier | TortillaSupplier',
+    metaTitle: 'Importing Tortillas to the UK | TortillaSupplier',
     metaDescription: 'Importing tortillas to the UK from a BRCGS-certified supplier: flour, corn and frozen formats with full UK import documentation and container supply.',
     heroTitle: 'Importing Tortillas to the UK',
     heroSubtitle: 'Wholesale tortilla supply for UK importers and distributors. BRCGS-certified production, full UK import documentation, cold chain logistics and competitive container pricing.',
@@ -1729,7 +1729,7 @@ seoPages.push(
   // ─── PRIVATE LABEL CLUSTER ───────────────────────────────────────────────────
   {
     slug: 'private-label-tortillas',
-    metaTitle: 'Private Label Tortillas | Manufacturer for Importers & Distributors',
+    metaTitle: 'Private Label Tortillas | Manufacturer for Importers',
     metaDescription: 'Private label tortilla manufacturing for importers and distributors. Custom branding, all tortilla formats, container supply. BRCGS certified. Request a quote.',
     // H1 is the exact head term. GSC (28d) showed this page taking zero
     // impressions for "private label tortillas" while its own child
