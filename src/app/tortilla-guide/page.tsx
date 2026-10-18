@@ -8,11 +8,11 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'The Complete Tortilla Guide | TortillaSupplier' },
   description:
-    'The complete guide to tortillas for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice applications, supplier selection and import logistics.',
+    'The complete tortilla guide for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice uses, supplier selection and import logistics.',
   openGraph: {
     title: 'The Complete Tortilla Guide | TortillaSupplier',
     description:
-      'The complete guide to tortillas for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice applications, supplier selection and import logistics.',
+      'The complete tortilla guide for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice uses, supplier selection and import logistics.',
     url: `${BASE_URL}/tortilla-guide`,
   },
   alternates: { canonical: `${BASE_URL}/tortilla-guide` },
@@ -91,7 +91,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'The Complete Tortilla Guide for Wholesale Buyers',
   description:
-    'The complete guide to tortillas for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice applications, supplier selection and import logistics.',
+    'The complete tortilla guide for wholesale buyers: types, sizes, flour vs corn, fresh vs frozen, foodservice uses, supplier selection and import logistics.',
   url: `${BASE_URL}/tortilla-guide`,
   publisher: { '@type': 'Organization', name: 'TortillaSupplier', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${BASE_URL}/tortilla-guide` },

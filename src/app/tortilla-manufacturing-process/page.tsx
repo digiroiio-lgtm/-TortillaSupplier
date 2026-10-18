@@ -8,11 +8,11 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'Tortilla Manufacturing Process | TortillaSupplier' },
   description:
-    'How tortillas are made: a step-by-step guide to the tortilla manufacturing process — from ingredient mixing and dough pressing to baking, freezing, and export packaging.',
+    'How tortillas are made, step by step: from ingredient mixing and dough pressing to baking, freezing and export packaging.',
   openGraph: {
     title: 'Tortilla Manufacturing Process | TortillaSupplier',
     description:
-      'How tortillas are made: a step-by-step guide to the tortilla manufacturing process — from ingredient mixing and dough pressing to baking, freezing, and export packaging.',
+      'How tortillas are made, step by step: from ingredient mixing and dough pressing to baking, freezing and export packaging.',
     url: `${BASE_URL}/tortilla-manufacturing-process`,
   },
   alternates: { canonical: `${BASE_URL}/tortilla-manufacturing-process` },

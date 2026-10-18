@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blogPosts';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -33,6 +34,7 @@ export default function BlogIndexPage() {
 
   return (
     <div className="bg-white">
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
       {/* Page header */}
       <div className="border-b border-gray-100 py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

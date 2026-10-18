@@ -35,7 +35,7 @@ const seoPages: SEOPageData[] = [
   {
     slug: 'tortilla-supplier',
     metaTitle: 'Wholesale Tortilla Supplier for Importers | TortillaSupplier',
-    metaDescription: 'Leading tortilla supplier for wholesale buyers. Flour tortillas, corn tortillas, frozen wraps and flatbreads. Export-ready, BRCGS certified, private label available.',
+    metaDescription: 'Leading wholesale tortilla supplier: flour and corn tortillas, frozen wraps and flatbreads. Export-ready, BRCGS certified, private label available.',
     heroTitle: 'Wholesale Tortilla Supplier',
     heroSubtitle: 'Flour and corn tortillas, frozen wraps and flatbreads for global B2B buyers. Export-ready, BRCGS certified, private label manufacturing available.',
     heroBadges: ['Export Ready', 'BRCGS Certified', 'Private Label'],
@@ -180,7 +180,7 @@ const seoPages: SEOPageData[] = [
   {
     slug: 'tortilla-wholesale',
     metaTitle: 'Tortilla Wholesale for Importers | TortillaSupplier',
-    metaDescription: 'Wholesale tortilla supply for distributors and importers. Bulk flour and corn tortillas, frozen wraps and flatbreads. Competitive wholesale pricing, BRCGS certified.',
+    metaDescription: 'Wholesale tortilla supply for distributors and importers: bulk flour and corn tortillas, frozen wraps and flatbreads. BRCGS certified, competitive pricing.',
     heroTitle: 'Tortilla Wholesale Supply',
     heroSubtitle: 'Bulk tortilla and flatbread supply for wholesale distributors, food importers and buying groups. Competitive pricing, export-ready, full documentation.',
     heroBadges: ['Bulk Supply', 'Distributor Pricing', 'Export Ready'],
@@ -1059,7 +1059,7 @@ const seoPages: SEOPageData[] = [
   {
     slug: 'importing-tortillas-to-uk',
     metaTitle: 'Importing Tortillas to the UK | Wholesale Supplier | TortillaSupplier',
-    metaDescription: 'Importing tortillas to the UK from a BRCGS-certified supplier. Flour tortillas, corn tortillas and frozen formats with full UK import documentation and container supply.',
+    metaDescription: 'Importing tortillas to the UK from a BRCGS-certified supplier: flour, corn and frozen formats with full UK import documentation and container supply.',
     heroTitle: 'Importing Tortillas to the UK',
     heroSubtitle: 'Wholesale tortilla supply for UK importers and distributors. BRCGS-certified production, full UK import documentation, cold chain logistics and competitive container pricing.',
     heroBadges: ['UK Import Ready', 'BRCGS Certified', 'Full Documentation'],
@@ -1294,7 +1294,7 @@ seoPages.push(
   {
     slug: 'tortilla-import-distributor',
     metaTitle: 'Tortilla Import Distributor | Wholesale | TortillaSupplier',
-    metaDescription: 'Tortilla import distributor supply. Wholesale flour and corn tortillas for food importers and regional distributors. Export-ready, BRCGS certified, full documentation.',
+    metaDescription: 'Tortilla import distributor supply: wholesale flour and corn tortillas for food importers and regional distributors. Export-ready, BRCGS certified.',
     heroTitle: 'Tortilla Import Distributor Supply',
     heroSubtitle: 'Wholesale tortillas for food importers and regional distributors. Flour tortillas, corn tortillas and frozen formats with full export documentation and competitive container pricing.',
     heroBadges: ['Import Ready', 'Full Documentation', 'Container Supply'],
@@ -1324,7 +1324,7 @@ seoPages.push(
   {
     slug: 'frozen-tortilla-export',
     metaTitle: 'Frozen Tortilla Export Supplier | TortillaSupplier',
-    metaDescription: 'Frozen tortilla export supplier. Frozen flour and corn tortillas for international distributors and importers. 12-month shelf life, BRCGS certified, container-ready.',
+    metaDescription: 'Frozen tortilla export supplier: frozen flour and corn tortillas for international distributors and importers. 12-month shelf life, BRCGS certified.',
     heroTitle: 'Frozen Tortilla Export Supplier',
     heroSubtitle: 'Wholesale frozen flour and corn tortillas for international buyers. 12-month shelf life, cold-chain export capability, full documentation for all destination markets.',
     heroBadges: ['Frozen Export', '12-Month Shelf Life', 'Cold Chain Ready'],
@@ -1355,7 +1355,7 @@ seoPages.push(
   {
     slug: 'tortilla-export-supplier',
     metaTitle: 'Tortilla Export Supplier | Wholesale | TortillaSupplier',
-    metaDescription: 'Tortilla export supplier for international buyers. Wholesale flour and corn tortillas for export to UK, Europe, USA and Middle East. BRCGS certified, full documentation.',
+    metaDescription: 'Tortilla export supplier for international buyers: wholesale flour and corn tortillas for the UK, Europe, USA and Middle East. BRCGS certified.',
     heroTitle: 'Tortilla Export Supplier',
     heroSubtitle: 'Wholesale tortilla export for international buyers. Flour and corn tortillas, frozen formats and flatbreads exported worldwide with full documentation and certified production.',
     heroBadges: ['Export Specialist', 'BRCGS Certified', 'Global Supply'],
@@ -1385,7 +1385,7 @@ seoPages.push(
   {
     slug: 'container-tortilla-supply',
     metaTitle: 'Container Tortilla Supply | FCL Export | TortillaSupplier',
-    metaDescription: 'Container tortilla supply for importers and distributors. Full container loads of wholesale flour and corn tortillas. Frozen and ambient formats, BRCGS certified.',
+    metaDescription: 'Container tortilla supply for importers and distributors: full loads of wholesale flour and corn tortillas, frozen and ambient formats, BRCGS certified.',
     heroTitle: 'Container Tortilla Supply',
     heroSubtitle: 'Full container load wholesale tortilla supply for importers and distributors. FCL and LCL options for flour tortillas, corn tortillas and frozen formats worldwide.',
     heroBadges: ['FCL & LCL Available', 'Container Pricing', 'Export Ready'],
@@ -1419,7 +1419,7 @@ seoPages.push(
   {
     slug: 'restaurant-tortilla-supply',
     metaTitle: 'Restaurant Tortilla Supply | Mexican Restaurants & Taco Bars',
-    metaDescription: 'Wholesale restaurant tortilla supply. Flour and corn tortillas for Mexican restaurants, taco bars and international dining. All sizes, catering packs, BRCGS certified.',
+    metaDescription: 'Wholesale restaurant tortilla supply: flour and corn tortillas for Mexican restaurants, taco bars and dining chains. All sizes, catering packs, BRCGS certified.',
     heroTitle: 'Restaurant Tortilla Supply',
     heroSubtitle: 'Wholesale flour and corn tortillas for Mexican restaurants, taco bars and international dining operations. All standard sizes, bulk catering packs, consistent quality.',
     heroBadges: ['Restaurant Supply', 'All Sizes', 'Bulk Catering'],
@@ -1544,7 +1544,7 @@ seoPages.push(
   {
     slug: 'mexican-tortilla-supplier',
     metaTitle: 'Mexican Tortilla Supplier | Wholesale | TortillaSupplier',
-    metaDescription: 'Wholesale Mexican tortilla supplier. Authentic corn and flour tortillas for Mexican restaurants, foodservice and retail. All sizes, BRCGS certified, export ready.',
+    metaDescription: 'Wholesale Mexican tortilla supplier: authentic corn and flour tortillas for Mexican restaurants, foodservice and retail. All sizes, BRCGS certified.',
     heroTitle: 'Mexican Tortilla Supplier',
     heroSubtitle: 'Wholesale authentic corn and flour tortillas for Mexican restaurants, foodservice operators and retail buyers. Traditional formats, certified production, global export.',
     heroBadges: ['Authentic Formats', 'Corn & Flour', 'Export Ready'],
@@ -1578,7 +1578,7 @@ seoPages.push(
   {
     slug: 'tortilla-supplier-canada',
     metaTitle: 'Tortilla Supplier Canada | Wholesale | TortillaSupplier',
-    metaDescription: 'Wholesale tortilla supplier for Canada. Flour and corn tortillas, wraps and flatbreads for Canadian food distributors and importers. Export-ready, BRCGS certified.',
+    metaDescription: 'Wholesale tortilla supplier for Canada: flour and corn tortillas, wraps and flatbreads for Canadian distributors and importers. Export-ready, BRCGS certified.',
     heroTitle: 'Tortilla Supplier for the Canadian Market',
     heroSubtitle: 'Wholesale flour and corn tortillas, frozen wraps and flatbreads for Canadian food distributors and importers. Export-ready with full documentation.',
     heroBadges: ['Canada Supply', 'Export Ready', 'Full Documentation'],
@@ -1638,7 +1638,7 @@ seoPages.push(
   {
     slug: 'tortilla-supplier-middle-east',
     metaTitle: 'Tortilla Supplier Middle East | Halal | TortillaSupplier',
-    metaDescription: 'Wholesale tortilla supplier for the Middle East. Halal-certified flour and corn tortillas, wraps and flatbreads for Middle Eastern food distributors. Export-ready.',
+    metaDescription: 'Wholesale tortilla supplier for the Middle East: Halal-certified flour and corn tortillas, wraps and flatbreads for food distributors. Export-ready.',
     heroTitle: 'Tortilla Supplier for the Middle East',
     heroSubtitle: 'Halal-certified wholesale tortillas and flatbreads for Middle Eastern food distributors and importers. Full export documentation, competitive container pricing.',
     heroBadges: ['Halal Certified', 'Middle East Supply', 'Container Export'],
@@ -1698,7 +1698,7 @@ seoPages.push(
   {
     slug: 'tortilla-supplier-saudi-arabia',
     metaTitle: 'Tortilla Supplier Saudi Arabia | Halal | TortillaSupplier',
-    metaDescription: 'Wholesale tortilla supplier for Saudi Arabia. Halal-certified flour and corn tortillas for Saudi food distributors and importers. Export-ready with full documentation.',
+    metaDescription: 'Wholesale tortilla supplier for Saudi Arabia: Halal-certified flour and corn tortillas for distributors and importers, with full export documentation.',
     heroTitle: 'Tortilla Supplier for Saudi Arabia',
     heroSubtitle: 'Halal-certified wholesale tortillas and flatbreads for Saudi Arabian food distributors and importers. Competitive container pricing, full halal documentation.',
     heroBadges: ['Saudi Arabia Supply', 'Halal Certified', 'Container Export'],

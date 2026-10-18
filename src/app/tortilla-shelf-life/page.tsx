@@ -8,11 +8,11 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'Tortilla Shelf Life Guide | TortillaSupplier' },
   description:
-    'How long do tortillas last? Complete shelf life guide for flour, corn and frozen tortillas — ambient, chilled and frozen formats for foodservice and wholesale buyers.',
+    'How long do tortillas last? Shelf life guide for flour, corn and frozen tortillas: ambient, chilled and frozen formats for foodservice and wholesale.',
   openGraph: {
     title: 'Tortilla Shelf Life Guide | TortillaSupplier',
     description:
-      'How long do tortillas last? Complete shelf life guide for flour, corn and frozen tortillas — ambient, chilled and frozen formats for foodservice and wholesale buyers.',
+      'How long do tortillas last? Shelf life guide for flour, corn and frozen tortillas: ambient, chilled and frozen formats for foodservice and wholesale.',
     url: `${BASE_URL}/tortilla-shelf-life`,
   },
   alternates: { canonical: `${BASE_URL}/tortilla-shelf-life` },

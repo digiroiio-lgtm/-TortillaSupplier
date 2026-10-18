@@ -7,7 +7,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 export const metadata: Metadata = {
   title: { absolute: 'Food Safety Certifications | TortillaSupplier' },
   description:
-    'TortillaSupplier holds BRCGS, IFS, ISO 22000, HACCP and Halal certifications. Learn how our food safety standards support international wholesale and private label buyers.',
+    'TortillaSupplier holds BRCGS, IFS, ISO 22000, HACCP and Halal certifications. See how our food safety standards support wholesale and private label buyers.',
   openGraph: {
     title: 'Food Safety Certifications | TortillaSupplier',
     description:

@@ -11,7 +11,7 @@ const BASE_URL = 'https://tortillasupplier.com';
 
 export const metadata: Metadata = {
   title: { absolute: 'Wholesale Tortillas & Flatbreads | TortillaSupplier' },
-  description: 'Wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads for B2B buyers. Private label manufacturing, BRCGS certified, export-ready supply to UK, USA and Europe.',
+  description: 'Wholesale flour, corn and frozen tortillas and flatbreads for B2B buyers. Private label, BRCGS certified, export-ready supply to the UK, USA and Europe.',
   openGraph: {
     title: 'Wholesale Tortillas & Flatbreads | TortillaSupplier',
     description: 'Wholesale flour tortillas, corn tortillas, frozen tortillas and flatbreads for B2B buyers. Private label manufacturing, BRCGS certified, export-ready supply.',
