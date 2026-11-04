@@ -10,7 +10,7 @@
     "lint": "eslint",
     "check:sitemap": "node scripts/check-sitemap-routes.mjs",
     "report:gsc-clusters": "node scripts/gsc-cluster-report.mjs",
-    "test": "node --import tsx --test 'src/**/*.test.ts'",
+    "test": "node --import tsx --test",
     "indexnow": "node --import tsx scripts/indexnow-deploy.mts"
   },
   "dependencies": {
