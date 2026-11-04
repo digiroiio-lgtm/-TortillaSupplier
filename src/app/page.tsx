@@ -1,3 +1,4 @@
+import SitelinksSection from '@/components/SitelinksSection';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
@@ -160,6 +161,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <SitelinksSection />
 
       {/* Distributor countries — social proof */}
       <DistributorTrustSection />

@@ -101,6 +101,7 @@ export default function Navbar() {
             </Link>
             <NavDropdown label="Suppliers" links={suppliersLinks} />
             <NavDropdown label="Wholesale" links={wholesaleLinks} />
+            <Link href="/private-label-tortillas" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">Private Label</Link>
             <Link href="/tortilla-supplier-uk" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
               UK
             </Link>
@@ -110,6 +111,7 @@ export default function Navbar() {
             <Link href="/tortilla-supplier-europe" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
               Europe
             </Link>
+            <Link href="/about" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">About</Link>
             <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors">
               Blog
             </Link>
@@ -191,6 +193,8 @@ export default function Navbar() {
           <Link href="/tortilla-supplier-uk" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>UK</Link>
           <Link href="/tortilla-supplier-usa" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>USA</Link>
           <Link href="/tortilla-supplier-europe" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Europe</Link>
+          <Link href="/private-label-tortillas" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Private Label</Link>
+          <Link href="/about" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/contact" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link href="/blog" className="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50" onClick={() => setMenuOpen(false)}>Blog</Link>
           <div className="pt-2 pb-1">
