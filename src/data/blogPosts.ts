@@ -535,11 +535,11 @@ const blogPosts: BlogPost[] = [
     title: 'Importing Tortillas to the UK: A Practical Guide for Buyers',
     excerpt:
       'The UK is one of the fastest-growing markets for tortillas and wraps. Here is a practical guide for importers and distributors looking to source tortillas from international suppliers.',
-    metaTitle: 'UK Tortilla Import Guide for Buyers | TortillaSupplier',
+    metaTitle: 'Wholesale Tortilla Supplier UK: Import Guide for Buyers',
     metaDescription:
-      'A practical guide for UK importers and distributors sourcing tortillas abroad: customs, cold chain, food safety certifications and supplier selection.',
+      'Sourcing wholesale Mexican tortillas for the UK? Customs, costs, cold chain, BRCGS, MOQs and lead times — plus how to get container pricing from a certified supplier.',
     publishDate: '2026-03-31',
-    updatedDate: '2026-04-04',
+    updatedDate: '2026-11-08',
     readTime: 6,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -547,6 +547,9 @@ const blogPosts: BlogPost[] = [
       { label: 'Tortilla Importer Supply', href: '/tortilla-importer-supply' },
       { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
       { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
+      { label: 'Corn Tortillas Wholesale', href: '/corn-tortilla-wholesale' },
+      { label: 'Private Label Tortillas UK', href: '/private-label-tortillas-uk' },
+      { label: 'Bulk Tortilla Wraps', href: '/bulk-tortilla-wraps' },
     ],
     sections: [
       {
@@ -593,6 +596,26 @@ const blogPosts: BlogPost[] = [
           'Frozen supply capability with reliable cold-chain logistics',
           'Private label capability for own-brand programmes',
         ],
+      },
+      {
+        heading: 'Wholesale Mexican Tortillas for UK Buyers: What You Can Source',
+        body: 'UK importers and distributors typically source a mix of flour and corn tortillas to cover retail, foodservice and Mexican restaurant customers. The most requested wholesale formats for the UK are:',
+        tableData: {
+          headers: ['Product', 'Sizes', 'Typical UK Use', 'Format'],
+          rows: [
+            ['Flour tortilla wraps', '25cm (10") · 30cm (12")', 'Sandwich chains, food-to-go, supermarkets', 'Ambient or frozen'],
+            ['Flour tortillas', '20cm (8")', 'Fajitas, quesadillas, retail packs', 'Ambient or frozen'],
+            ['Corn tortillas', '15cm (6") · 20cm (8")', 'Mexican restaurants, taco bars', 'Frozen recommended'],
+          ],
+        },
+      },
+      {
+        heading: 'Minimum Orders and Lead Times',
+        body: 'Wholesale tortilla orders are pallet-based, typically starting at one full pallet per SKU, with full 20ft or 40ft containers giving the best unit cost. Standard lead times are 2–6 weeks from order confirmation. Private label programmes take longer for the first run — usually 4–8 weeks — because artwork approval and packaging print add 2–4 weeks.',
+      },
+      {
+        heading: 'Getting Container Pricing for the UK',
+        body: 'To get an accurate landed-cost quotation, send your supplier the product sizes, estimated monthly volume, ambient or frozen preference, and whether you need private label packaging. You can request UK container pricing from our export team using the quote form on this page — we reply within 24–48 hours.',
       },
     ],
     conclusion:

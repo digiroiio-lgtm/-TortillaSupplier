@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
 import { getAuthorByName } from '@/data/authors';
+import InlineQuoteSection from '@/components/InlineQuoteSection';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -247,38 +248,19 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* In-article CTA */}
-          <div className="mt-12 p-8 bg-[#0a0a0a] rounded-2xl text-center">
-            <p className="text-xs font-semibold text-[#2d7a3a] uppercase tracking-widest mb-3">
-              Get Started
-            </p>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Import Tortillas Directly from a Certified Manufacturer
-            </h3>
-            <p className="text-sm text-gray-400 mb-4 max-w-md mx-auto leading-relaxed">
-              Our export team responds within 1–2 business days with pricing and sample availability.
-            </p>
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-gray-500 mb-6">
-              <li>✓ MOQ: 1 container</li>
-              <li>✓ Private label available</li>
-              <li>✓ Frozen or fresh supply</li>
-              <li>✓ BRCGS · IFS · Halal certified</li>
-            </ul>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Link
-                href="/contact"
-                className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
-              >
-                Request Distributor Pricing →
-              </Link>
-              <a
-                href="https://wa.me/905531229372?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm"
-              >
-                WhatsApp Sales
-              </a>
-            </div>
+          <div className="mt-12">
+            <InlineQuoteSection
+              location="blog"
+              eyebrow="Get Started"
+              heading="Import Tortillas Directly from a Certified Manufacturer"
+              intro="Tell us your sizes, volume and destination — our export team replies within 24–48 hours with pricing and sample availability."
+              points={[
+                'Pallet and container supply',
+                'Private label available',
+                'Frozen or ambient formats',
+                'BRCGS · IFS · Halal certified',
+              ]}
+            />
           </div>
 
           {/* Related resources — internal links per post */}

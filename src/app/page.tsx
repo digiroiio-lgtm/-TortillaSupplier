@@ -108,6 +108,11 @@ const supplierClusterLinks = [
   { label: 'Private Label Tortilla Manufacturer', href: '/private-label-tortilla-manufacturer' },
   { label: 'Tortilla Exporter', href: '/tortilla-export-supplier' },
   { label: 'Tortilla Distributor', href: '/tortilla-distributor' },
+  { label: 'Bulk Tortilla Wraps', href: '/bulk-tortilla-wraps' },
+  { label: 'Corn Tortillas Wholesale', href: '/corn-tortilla-wholesale' },
+  { label: 'Private Label Flour Tortillas', href: '/private-label-flour-tortillas' },
+  { label: 'Restaurant & Foodservice Tortillas', href: '/restaurant-tortilla-supply' },
+  { label: 'Tortilla Supplier UK', href: '/tortilla-supplier-uk' },
 ];
 
 
