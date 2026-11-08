@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
 import InlineQuoteSection, { QuoteJumpBanner } from '@/components/InlineQuoteSection';
+import BuyerGuideCTA from '@/components/BuyerGuideCTA';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -386,6 +387,8 @@ export default function HowToStoreTortillasPage() {
               'Private label available',
             ]}
           />
+
+          <BuyerGuideCTA ctaId="storage_guide_buyer_guide" />
 
           {/* Related links */}
           <div>

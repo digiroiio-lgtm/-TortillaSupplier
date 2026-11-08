@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
 import { getAuthorByName } from '@/data/authors';
 import InlineQuoteSection from '@/components/InlineQuoteSection';
+import BuyerGuideCTA from '@/components/BuyerGuideCTA';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -249,6 +250,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* In-article CTA */}
           <div className="mt-12">
+            <BuyerGuideCTA ctaId="blog_buyer_guide" />
+          </div>
+
+          <div className="mt-8">
             <InlineQuoteSection
               location="blog"
               eyebrow="Get Started"

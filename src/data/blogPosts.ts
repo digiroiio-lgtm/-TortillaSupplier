@@ -400,7 +400,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'A guide for wholesale tortilla buyers: supplier certifications, product formats, container logistics, private label options and what to ask before ordering.',
     publishDate: '2026-03-28',
-    updatedDate: '2026-04-04',
+    updatedDate: '2026-11-08',
     readTime: 8,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
     reviewer: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
@@ -477,7 +477,7 @@ const blogPosts: BlogPost[] = [
     metaDescription:
       'How private label tortilla programmes work, from MOQs and packaging design to certifications and retailer compliance. A guide for supermarket buyers.',
     publishDate: '2026-03-30',
-    updatedDate: '2026-04-04',
+    updatedDate: '2026-11-08',
     readTime: 6,
     author: { name: 'Laura Mitchell', role: 'Food Manufacturing & Quality Specialist' },
     reviewer: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },
@@ -741,6 +741,7 @@ const blogPosts: BlogPost[] = [
     metaTitle: 'Wholesale Tortilla Supplier & Manufacturer for Distributors',
     metaDescription:
       'Looking for a reliable tortilla supplier? Learn how distributors choose wholesale tortilla manufacturers, certifications to check, and container supply options.',
+    updatedDate: '2026-11-08',
     publishDate: '2026-04-04',
     readTime: 8,
     author: { name: 'Daniel Ortega', role: 'Export & International Trade Specialist' },

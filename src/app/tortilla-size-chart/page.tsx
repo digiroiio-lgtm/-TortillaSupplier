@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import JsonLd from '@/components/JsonLd';
 import InlineQuoteSection, { QuoteJumpBanner } from '@/components/InlineQuoteSection';
+import BuyerGuideCTA from '@/components/BuyerGuideCTA';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -311,6 +312,8 @@ export default function TortillaSizeChartPage() {
               'Private label available',
             ]}
           />
+
+          <BuyerGuideCTA ctaId="size_chart_buyer_guide" />
 
           {/* Related links */}
           <div>

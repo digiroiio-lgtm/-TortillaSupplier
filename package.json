@@ -11,7 +11,8 @@
     "check:sitemap": "node scripts/check-sitemap-routes.mjs",
     "report:gsc-clusters": "node scripts/gsc-cluster-report.mjs",
     "test": "node --import tsx --test",
-    "indexnow": "node --import tsx scripts/indexnow-deploy.mts"
+    "indexnow": "node --import tsx scripts/indexnow-deploy.mts",
+    "build:buyer-guide": "node --import tsx scripts/build-buyer-guide.mts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
