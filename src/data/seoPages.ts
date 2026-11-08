@@ -56,7 +56,7 @@ const seoPages: SEOPageData[] = [
       { question: 'Do you offer private label tortilla production?', answer: 'Yes. Private label manufacturing is available for all product lines. We can produce to your brand specification with custom labelling and packaging.' },
       { question: 'Which markets do you export to?', answer: 'We export to the UK, USA, Europe and the Middle East. Our export team provides full documentation for all destination markets.' },
       { question: 'What certifications do you hold?', answer: 'We hold BRCGS, IFS, ISO 22000, HACCP and Halal certifications. Documentation is provided with every shipment.' },
-      { question: 'What is the minimum order quantity?', answer: 'MOQ varies by product and format. Please contact our team with your specific requirements for a tailored quotation.' },
+      { question: 'What is the minimum order quantity?', answer: 'Our MOQ is one full pallet per SKU. Mixed pallets are available, and full 20ft or 40ft containers give the best unit price. Contact us for a tailored quotation.' },
     ],
     relatedSlugs: ['flour-tortilla-supplier', 'corn-tortilla-supplier', 'frozen-tortilla-supplier', 'tortilla-wholesale'],
     showSpecTable: true,
@@ -197,7 +197,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Private Label Wholesale', description: 'White-label and private label production for distributors retailing under their own brand.' },
     ],
     faqs: [
-      { question: 'What is the minimum wholesale order quantity?', answer: 'MOQ varies by product. We can discuss pallet minimums and container quantities based on your distribution requirements. Please contact us for specific pricing.' },
+      { question: 'What is the minimum wholesale order quantity?', answer: 'Our MOQ is one full pallet per SKU, with container quantities available for larger distribution requirements. Please contact us for specific pricing.' },
       { question: 'Do you supply mixed pallets?', answer: 'Yes. Mixed pallet configurations combining multiple SKUs are available for distributors who require product range flexibility.' },
       { question: 'Do you offer distributor pricing tiers?', answer: 'Yes. Volume-based pricing tiers are available. Contact our wholesale team with your annual volume to discuss pricing.' },
       { question: 'What documentation is provided with wholesale orders?', answer: 'Full export documentation including health certificates, packing lists, certificates of origin and allergen declarations.' },
@@ -352,7 +352,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Volume Pricing', description: 'Competitive wholesale pricing with volume tiers for regular distribution orders.' },
     ],
     faqs: [
-      { question: 'What is the minimum wholesale order for flour tortillas?', answer: 'MOQ is based on pallet quantities. Please contact our wholesale team with your requirements for specific pricing.' },
+      { question: 'What is the minimum wholesale order for flour tortillas?', answer: 'Our MOQ is one full pallet per SKU. Please contact our wholesale team with your requirements for specific pricing.' },
       { question: 'Can I order mixed pallets of different flour tortilla sizes?', answer: 'Yes. Mixed pallets combining 20cm, 25cm and 30cm flour tortillas are available for wholesale orders.' },
       { question: 'Do you offer volume discount pricing for flour tortillas?', answer: 'Yes. Volume-based pricing is available. Please contact us with your expected monthly or annual volumes.' },
     ],
@@ -506,7 +506,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Volume Pricing', description: 'Competitive wholesale pricing with volume tiers for regular buyers.' },
     ],
     faqs: [
-      { question: 'What is the minimum wholesale order for corn tortillas?', answer: 'MOQ is pallet-based. Contact our wholesale team for specific pricing and minimum pallet quantities.' },
+      { question: 'What is the minimum wholesale order for corn tortillas?', answer: 'Our MOQ is one full pallet per SKU. Contact our wholesale team for specific pricing.' },
       { question: 'Are mixed pallets of 15cm and 20cm available?', answer: 'Yes. Mixed pallet orders are available for both corn tortilla sizes.' },
       { question: 'Do you supply corn tortillas wholesale to the UK?', answer: 'Yes. We supply UK importers and distributors with frozen and ambient corn tortillas, BRCGS certified, with full UK import documentation including health certificate and certificate of origin.' },
       { question: 'What is the shelf life of wholesale corn tortillas?', answer: 'Frozen corn tortillas keep for 9–12 months at −18°C. Chilled corn tortillas keep for up to 14 days once stored at +2–4°C.' },
@@ -659,7 +659,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Private Label Wholesale', description: 'Private label wrap production for wholesale buyers.' },
     ],
     faqs: [
-      { question: 'What is the minimum order for wholesale wrap bread?', answer: 'MOQ is pallet-based. Contact our wholesale team for pricing and minimums.' },
+      { question: 'What is the minimum order for wholesale wrap bread?', answer: 'Our MOQ is one full pallet per SKU. Contact our wholesale team for pricing.' },
       { question: 'Can I order mixed pallets of different wrap sizes?', answer: 'Yes. Mixed pallets combining 25cm and 30cm wraps are available.' },
     ],
     relatedSlugs: ['wrap-bread-supplier', 'tortilla-wrap-30cm-12-inch', 'tortilla-wrap-25cm-10-inch', 'tortilla-wholesale'],
@@ -749,7 +749,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Consistent Quality', description: 'BRCGS-certified production for consistent lavash quality across batches.' },
     ],
     faqs: [
-      { question: 'What is the minimum order for wholesale lavash flatbreads?', answer: 'MOQ is pallet-based. Contact our wholesale team for current pricing and minimums.' },
+      { question: 'What is the minimum order for wholesale lavash flatbreads?', answer: 'Our MOQ is one full pallet per SKU. Contact our wholesale team for current pricing.' },
       { question: 'Can lavash be combined with other flatbreads on a pallet?', answer: 'Yes. Mixed pallets combining lavash and other flatbread formats are available.' },
     ],
     relatedSlugs: ['lavash-flatbread-supplier', 'flatbread-supplier', 'wrap-bread-wholesale', 'tortilla-wholesale'],
@@ -902,7 +902,7 @@ const seoPages: SEOPageData[] = [
       { question: 'Is halal-certified tortilla supply available for France?', answer: 'Yes. Halal-certified production is available across all product lines, relevant for French halal distributors.' },
       { question: 'What certifications do you hold for French retail supply?', answer: 'We hold BRCGS and IFS Food certifications, which are widely accepted by French retailers and foodservice chains.' },
       { question: 'Can you provide private label tortillas with French-language labelling?', answer: 'Yes. Private label production with French-language labelling is available. Our team can assist with label compliance for French retail regulations.' },
-      { question: 'What is the minimum order for tortilla supply to France?', answer: 'MOQ varies by product and format. Contact us with your requirements for a tailored quote and logistics plan for France.' },
+      { question: 'What is the minimum order for tortilla supply to France?', answer: 'Our MOQ is one full pallet per SKU. Contact us with your requirements for a tailored quote and logistics plan for France.' },
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-spain', 'tortilla-supplier-germany', 'tortilla-wholesale'],
     showSpecTable: true,
@@ -964,7 +964,7 @@ const seoPages: SEOPageData[] = [
       { question: 'Is private label available with Italian labelling?', answer: 'Yes. Private label production with Italian-language labelling is available.' },
       { question: 'What certifications do you hold for Italian market supply?', answer: 'We hold BRCGS and IFS Food certifications, which meet the compliance requirements of Italian retailers and foodservice operators.' },
       { question: 'Can you supply frozen tortillas to Italy?', answer: 'Yes. Frozen flour and corn tortillas are available with a 12-month shelf life at -18°C, suitable for Italian import and distribution.' },
-      { question: 'What is the minimum order for tortilla supply to Italy?', answer: 'MOQ varies by product format. Contact us with your requirements for a tailored Italy supply quote.' },
+      { question: 'What is the minimum order for tortilla supply to Italy?', answer: 'Our MOQ is one full pallet per SKU. Contact us with your requirements for a tailored Italy supply quote.' },
     ],
     relatedSlugs: ['tortilla-supplier-europe', 'tortilla-supplier-spain', 'tortilla-supplier-france', 'tortilla-wholesale'],
     showSpecTable: true,
@@ -993,7 +993,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Bulk Pricing Tiers', description: 'Competitive bulk pricing with volume tiers for regular large-quantity buyers.' },
     ],
     faqs: [
-      { question: 'What is the minimum bulk order quantity?', answer: 'For bulk container supply, minimum is a full pallet per SKU. Contact us to discuss container minimums.' },
+      { question: 'What is the minimum bulk order quantity?', answer: 'Our MOQ is one full pallet per SKU. Full 20ft or 40ft containers give the best unit price for bulk buyers.' },
       { question: 'Can I mix different tortilla formats in a container order?', answer: 'Yes. Mixed container configurations combining multiple product formats are available.' },
       { question: 'What documentation is included with bulk tortilla orders?', answer: 'Full export documentation including packing list, health certificate, certificate of origin and allergen declarations.' },
     ],
@@ -1023,7 +1023,7 @@ const seoPages: SEOPageData[] = [
     ],
     faqs: [
       { question: 'What types of B2B buyers do you supply?', answer: 'We supply food importers, wholesale distributors, foodservice operators, food manufacturers and private label buyers.' },
-      { question: 'What is the minimum order for wholesale supply?', answer: 'MOQ is product-specific. Please contact our B2B team with your requirements for a tailored quote.' },
+      { question: 'What is the minimum order for wholesale supply?', answer: 'Our MOQ is one full pallet per SKU. Please contact our B2B team with your requirements for a tailored quote.' },
       { question: 'Do you supply wholesale tortillas on a recurring basis?', answer: 'Yes. Scheduled supply programmes are available for B2B buyers with regular ordering needs.' },
     ],
     relatedSlugs: ['tortilla-wholesale', 'bulk-tortilla-supplier', 'tortilla-distributor', 'tortilla-supplier'],
@@ -1051,7 +1051,7 @@ const seoPages: SEOPageData[] = [
       { title: 'Competitive Label MOQ', description: 'Private label available from competitive minimum order quantities.' },
     ],
     faqs: [
-      { question: 'What is the minimum order for private label tortillas?', answer: 'Private label MOQ varies by format. Contact us with your brand and product requirements for a specific quote.' },
+      { question: 'What is the minimum order for private label tortillas?', answer: 'Our MOQ is one full pallet per SKU, including private label. Contact us with your brand and product requirements for a specific quote.' },
       { question: 'Can you develop a custom tortilla recipe for our brand?', answer: 'Yes. Custom recipe development is available for private label buyers who require unique product specifications.' },
       { question: 'Do you help with label design for private label tortillas?', answer: 'Yes. Our packaging team can assist with label design to your brand guidelines.' },
       { question: 'What certifications can be referenced on a private label product?', answer: 'BRCGS, IFS, ISO 22000, HACCP and Halal certifications can be referenced on private label packaging where applicable.' },
@@ -1531,7 +1531,7 @@ seoPages.push(
     introParagraphs: [
       'We supply bulk tortilla wraps to sandwich chains, cafés, foodservice distributors and food-to-go operators. Our 25cm (10") and 30cm (12") flour tortilla wraps are available in high-count bulk catering packs for volume operations.',
       'Bulk wrap tortillas are available in ambient and frozen formats. Private label wrap production with custom branding is available from competitive order quantities for distributors and foodservice brands.',
-      'Orders are pallet-based, and full 20ft or 40ft container loads give the best unit price for importers. Lead times are typically 2–6 weeks from order confirmation, and every shipment includes full export documentation.',
+      'Our MOQ is one full pallet per SKU, and full 20ft or 40ft container loads give the best unit price for importers. Lead times are typically 2–6 weeks from order confirmation, and every shipment includes full export documentation.',
     ],
     features: [
       { title: '25cm & 30cm Bulk Wraps', description: 'Both standard wrap sizes available in bulk catering packs from a single supplier.' },
@@ -1544,7 +1544,7 @@ seoPages.push(
       { question: 'Are frozen bulk wraps available for distribution?', answer: 'Yes. Frozen wrap tortillas with 12-month shelf life are available for foodservice distribution and import.' },
       { question: 'Can you supply private label bulk wraps?', answer: 'Yes. Private label bulk wrap tortillas with custom branding are available.' },
       { question: 'What counts are available in bulk wrap packs?', answer: 'Catering packs typically contain 20–24 wraps per pack. Custom configurations are available on request.' },
-      { question: 'What is the minimum order for bulk tortilla wraps?', answer: 'MOQ is pallet-based, typically one full pallet per SKU. Full container loads offer the most competitive pricing for importers.' },
+      { question: 'What is the minimum order for bulk tortilla wraps?', answer: 'Our MOQ is one full pallet per SKU. Full container loads offer the most competitive pricing for importers.' },
       { question: 'How long does a bulk wrap order take?', answer: 'Lead times are typically 2–6 weeks from order confirmation, depending on the production schedule, packaging and shipping route.' },
     ],
     relatedSlugs: ['wrap-tortilla-supplier', 'wrap-bread-wholesale', 'flour-tortilla-supplier', 'tortilla-foodservice-supplier', 'tortilla-wrap-30cm-12-inch', 'tortilla-wrap-25cm-10-inch'],
@@ -1772,7 +1772,7 @@ seoPages.push(
     faqs: [
       { question: 'What is a private label tortilla?', answer: 'A private label tortilla is manufactured by a producer but sold under a buyer\'s own brand. The importer or distributor owns the brand while the manufacturer handles production.' },
       { question: 'What tortilla types are available for private label?', answer: 'We offer private label flour tortillas (20cm, 25cm, 30cm), corn tortillas (15cm, 20cm), frozen tortillas, wrap flatbreads and lavash-style flatbreads.' },
-      { question: 'What is the minimum order quantity for private label tortillas?', answer: 'MOQ varies by product format. Please contact our team with your brand and volume requirements for a tailored quotation.' },
+      { question: 'What is the minimum order quantity for private label tortillas?', answer: 'Our MOQ is one full pallet per SKU, including private label. Please contact our team with your brand and volume requirements for a tailored quotation.' },
       { question: 'What packaging options are available for private label?', answer: 'We offer retail flow-wrap packs, foodservice bulk bags and catering cartons. Custom label design support is included.' },
       { question: 'Which export markets do you serve for private label?', answer: 'We export private label tortillas to the UK, USA, Europe and the Middle East with full documentation for each destination.' },
       { question: 'How do I start a private label tortilla brand?', answer: 'Contact our team with your product requirements, target market and volume. We will prepare a private label quote including product specification, packaging design and pricing.' },
@@ -1790,7 +1790,7 @@ seoPages.push(
   {
     slug: 'private-label-flour-tortillas',
     metaTitle: 'Private Label Flour Tortillas & Wraps | BRCGS Manufacturer',
-    metaDescription: 'Private label tortillas made to your spec: flour tortillas and wraps in 20cm, 25cm and 30cm, retail or foodservice packs. Pallet-based MOQ, BRCGS certified, export ready.',
+    metaDescription: 'Private label tortillas made to your spec: flour tortillas and wraps in 20cm, 25cm and 30cm, retail or foodservice packs. MOQ 1 pallet, BRCGS certified, export ready.',
     updatedDate: '2026-11-08',
     heroTitle: 'Private Label Flour Tortillas',
     heroSubtitle: 'Custom-branded flour tortillas in 20cm, 25cm and 30cm for distributors, retailers and foodservice brands. Full private label service with export documentation.',
@@ -1801,7 +1801,7 @@ seoPages.push(
       'We manufacture private label flour tortillas for distributors, importers and retail buyers. Our flour tortilla range is available in 20cm (8"), 25cm (10") and 30cm (12") in both ambient and frozen formats. All sizes can be produced under your own brand with custom label design and packaging.',
       'Private label flour tortilla production is BRCGS, IFS and ISO 22000 certified. We supply container volumes to buyers across the UK, USA and Europe with full export documentation included as standard.',
       'How a private label programme works: (1) you share your target sizes, volumes and market; (2) we agree the specification and send samples; (3) your artwork is approved and packaging printed, which usually takes 2–4 weeks; (4) the first production run ships, typically 4–8 weeks after order including packaging setup; (5) repeat orders run on standard lead times of 2–6 weeks.',
-      'MOQ is pallet-based. Repeat orders generally start at one full pallet per SKU, while the first order usually needs 2–5 pallets to cover the minimum packaging print run.',
+      'Our MOQ is one full pallet per SKU, including private label orders. Full container loads give the best unit price.',
     ],
     features: [
       { title: 'Three Standard Sizes', description: '20cm (8"), 25cm (10") and 30cm (12") flour tortillas covering every foodservice and retail application.' },
@@ -1814,7 +1814,7 @@ seoPages.push(
     faqs: [
       { question: 'What sizes of private label flour tortillas do you offer?', answer: 'We offer private label flour tortillas in 20cm (8"), 25cm (10") and 30cm (12") — the most widely used sizes across foodservice, QSR and retail.' },
       { question: 'Are private label flour tortillas available frozen?', answer: 'Yes. All flour tortilla sizes are available in frozen format with a 12-month shelf life at -18°C, suitable for export and long-haul distribution.' },
-      { question: 'What is the MOQ for private label flour tortillas?', answer: 'MOQ is pallet-based. Repeat orders generally start at one full pallet per SKU; the first order usually needs 2–5 pallets to cover the minimum packaging print run. Send your volumes for an exact quotation.' },
+      { question: 'What is the MOQ for private label flour tortillas?', answer: 'Our MOQ is one full pallet per SKU, including private label orders. Send your volumes for an exact quotation.' },
       { question: 'How long does a private label tortilla order take?', answer: 'The first run typically takes 4–8 weeks, including 2–4 weeks for artwork approval and packaging print. Repeat orders usually ship in 2–6 weeks.' },
       { question: 'Can I get samples before placing a private label order?', answer: 'Yes. We send product samples so you can approve the specification before artwork and packaging are produced.' },
       { question: 'Can you make private label tortillas for UK supermarkets?', answer: 'Yes. Our BRCGS certification is the standard most UK retailers require, and we provide allergen declarations and specification sheets for own-label approval.' },
@@ -1854,7 +1854,7 @@ seoPages.push(
     faqs: [
       { question: 'What sizes of private label corn tortillas do you offer?', answer: 'We offer private label corn tortillas in 15cm (6") — used for street tacos and traditional Mexican dishes — and 20cm (8") for quesadillas and general foodservice.' },
       { question: 'Are your corn tortillas gluten free?', answer: 'Our corn tortillas are produced from corn masa. Please contact us for full allergen specifications and cross-contamination protocols.' },
-      { question: 'What is the MOQ for private label corn tortillas?', answer: 'MOQ varies by size and packaging format. Contact us with your requirements for a tailored private label quotation.' },
+      { question: 'What is the MOQ for private label corn tortillas?', answer: 'Our MOQ is one full pallet per SKU, including private label. Contact us with your requirements for a tailored private label quotation.' },
       { question: 'Can you supply private label corn tortillas to the UK?', answer: 'Yes. We supply private label corn tortillas to UK importers with full export documentation and cold-chain logistics where required.' },
     ],
     relatedSlugs: [

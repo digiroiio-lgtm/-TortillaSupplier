@@ -432,7 +432,7 @@ const blogPosts: BlogPost[] = [
             ['Export logistics', 'Not available', 'Limited', 'Full container FCL / LCL'],
             ['Certifications', 'Basic / none', 'ISO 22000', 'BRCGS · IFS · Halal'],
             ['Private label', 'Rarely', 'Sometimes', 'Standard offering'],
-            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 container'],
+            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 pallet (container for best price)'],
           ],
         },
       },
@@ -446,7 +446,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Container Pricing and Minimum Orders',
-        body: 'Most wholesale tortilla suppliers price in container quantities — typically 20-foot or 40-foot refrigerated containers. A 20-foot reefer holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units, with cost efficiency improvements of 35–40% over pallet-based shipping. Minimum order quantities (MOQs) vary by supplier but generally start at 2–5 pallets for mixed orders and scale up for dedicated SKU shipments. Buyers should request full container pricing that includes product cost, cold chain packaging, export documentation, and incoterms (typically EXW, FOB, or CIF).',
+        body: 'Most wholesale tortilla suppliers price in container quantities — typically 20-foot or 40-foot refrigerated containers. A 20-foot reefer holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units, with cost efficiency improvements of 35–40% over pallet-based shipping. Minimum order quantities (MOQs) vary by supplier; ours is one full pallet per SKU, with mixed pallets available. Buyers should request full container pricing that includes product cost, cold chain packaging, export documentation, and incoterms (typically EXW, FOB, or CIF).',
       },
       {
         heading: 'Export Documentation',
@@ -515,7 +515,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Minimum Order Quantities',
-        body: 'Private label programmes typically require higher minimum order quantities than standard wholesale orders due to the costs associated with custom packaging production. MOQs generally start at one full pallet per SKU for repeat orders, but the initial packaging setup often requires a minimum print run that translates to 2–5 pallets. Buyers should discuss MOQs early in the process to ensure the programme is commercially viable at their expected volumes.',
+        body: 'Many suppliers require higher minimum order quantities for private label because of custom packaging costs. Our MOQ is one full pallet per SKU for both standard and private label orders. Buyers should discuss MOQs early in the process to ensure the programme is commercially viable at their expected volumes.',
       },
       {
         heading: 'Packaging and Label Compliance',
@@ -611,7 +611,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Minimum Orders and Lead Times',
-        body: 'Wholesale tortilla orders are pallet-based, typically starting at one full pallet per SKU, with full 20ft or 40ft containers giving the best unit cost. Standard lead times are 2–6 weeks from order confirmation. Private label programmes take longer for the first run — usually 4–8 weeks — because artwork approval and packaging print add 2–4 weeks.',
+        body: 'Our MOQ is one full pallet per SKU, with full 20ft or 40ft containers giving the best unit cost. Standard lead times are 2–6 weeks from order confirmation. Private label programmes take longer for the first run — usually 4–8 weeks — because artwork approval and packaging print add 2–4 weeks.',
       },
       {
         heading: 'Getting Container Pricing for the UK',
@@ -782,7 +782,7 @@ const blogPosts: BlogPost[] = [
             ['Export logistics', 'Not available', 'Limited', 'Full container FCL / LCL'],
             ['Certifications', 'Basic / none', 'ISO 22000', 'BRCGS · IFS · Halal'],
             ['Private label', 'Rarely', 'Sometimes', 'Standard offering'],
-            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 container'],
+            ['MOQ', 'Low (pallet)', 'Medium (1–3 pallets)', '1 pallet (container for best price)'],
           ],
         },
       },
@@ -822,7 +822,7 @@ const blogPosts: BlogPost[] = [
           'Custom packaging design and brand development',
           'Label compliance for UK, EU, and USA target markets',
           'Full product range available under contract production',
-          'MOQ from 1 container per SKU',
+          'MOQ from 1 pallet per SKU',
           'BRCGS/IFS-certified production for retailer compliance',
         ],
       },
@@ -846,12 +846,12 @@ const blogPosts: BlogPost[] = [
           'What certifications should a tortilla manufacturer have? Common certifications include BRCGS, IFS, ISO 22000, HACCP, and Halal certification depending on the export market.',
           'What tortilla format is best for international distribution? Frozen tortillas are typically preferred for international distribution because they offer longer shelf life and more stable logistics.',
           'How many tortillas fit in a container shipment? A 20-foot reefer container holds approximately 800,000 tortillas; a 40-foot container up to 1.2 million units.',
-          'What is the MOQ for private label tortillas? Private label programmes typically start from 1 container per SKU, with custom packaging produced in parallel.',
+          'What is the MOQ for private label tortillas? Our private label MOQ is one full pallet per SKU, with custom packaging produced in parallel.',
         ],
       },
     ],
     conclusion:
-      'Selecting the right tortilla supplier is a strategic decision for distributors. With the global tortilla market forecast to exceed $45 billion by 2030 and the UK market alone at £350M, the commercial opportunity is substantial. A strong supplier partnership provides consistent product supply, scalable production capacity, reliable export logistics, certified food safety standards, and flexible private label options. Import tortillas directly from a certified manufacturer — MOQ 1 container, private label available, frozen or fresh supply. Request distributor pricing today.',
+      'Selecting the right tortilla supplier is a strategic decision for distributors. With the global tortilla market forecast to exceed $45 billion by 2030 and the UK market alone at £350M, the commercial opportunity is substantial. A strong supplier partnership provides consistent product supply, scalable production capacity, reliable export logistics, certified food safety standards, and flexible private label options. Import tortillas directly from a certified manufacturer — MOQ 1 pallet, private label available, frozen or fresh supply. Request distributor pricing today.',
     tags: [
       'tortilla supplier',
       'wholesale tortilla supplier',

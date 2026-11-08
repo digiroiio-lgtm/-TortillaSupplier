@@ -276,7 +276,7 @@ export default function TortillaSizeChartPage() {
               },
               {
                 heading: 'For Private Label & Retail',
-                body: 'Private label is available across all sizes. We supply custom-branded packaging for retail, foodservice, and wholesale buyers. MOQ and lead times vary by format.',
+                body: 'Private label is available across all sizes. We supply custom-branded packaging for retail, foodservice, and wholesale buyers. MOQ is one full pallet per SKU; lead times vary by format.',
               },
             ].map((card) => (
               <div key={card.heading} className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
