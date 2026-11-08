@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
+import InlineQuoteSection, { QuoteJumpBanner } from '@/components/InlineQuoteSection';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -227,6 +228,12 @@ export default function HowToStoreTortillasPage() {
             </p>
           </div>
 
+          <QuoteJumpBanner
+            ctaId="storage_guide_banner"
+            text="Buying for a restaurant, distributor or retailer? Get wholesale pricing on frozen tortillas with 9–12 month shelf life."
+            cta="Get Bulk Pricing"
+          />
+
           {/* Storage by tortilla type */}
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-3">
@@ -367,6 +374,19 @@ export default function HowToStoreTortillasPage() {
             </div>
           </div>
 
+          <InlineQuoteSection
+            location="storage_guide"
+            eyebrow="For Restaurants & Distributors"
+            heading="Need Tortillas That Keep? Get Wholesale Frozen Pricing"
+            intro="We supply frozen flour and corn tortillas by the pallet and container, with full cold-chain documentation and storage instructions for your team."
+            points={[
+              '9–12 month shelf life at −18°C',
+              'BRCGS-certified factory',
+              'Pallet and 20ft / 40ft container loads',
+              'Private label available',
+            ]}
+          />
+
           {/* Related links */}
           <div>
             <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides</h2>
@@ -399,9 +419,9 @@ export default function HowToStoreTortillasPage() {
               Every container shipment includes temperature logs, health certificates, and storage instructions. 9–12 month shelf life at −18°C.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/contact" className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              <a href="#quote" data-cta="storage_guide_footer" className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm">
                 Request Pricing
-              </Link>
+              </a>
               <Link href="/frozen-tortilla-supplier" className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm">
                 Frozen Tortilla Supply
               </Link>

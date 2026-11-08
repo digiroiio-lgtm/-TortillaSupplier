@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
 const WA_NUMBER = '905531229372';
@@ -8,14 +9,29 @@ const WA_MESSAGE = encodeURIComponent(
 );
 const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
 
-export default function ContactForm() {
+interface ContactFormProps {
+  /** Where this form sits (e.g. "storage_guide"). Reported to GA4 and in the inquiry email. */
+  location?: string;
+  submitLabel?: string;
+}
+
+export default function ContactForm({ location = 'contact_form', submitLabel = 'Get Wholesale Pricing' }: ContactFormProps = {}) {
   const [form, setForm] = useState({
     name: '', company: '', country: '', email: '', phone: '', product: '', volume: '', privateLabel: '', message: ''
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
   const recaptchaReady = useRef(false);
+  const startedRef = useRef(false);
+
+  // Fire once, on the first interaction with any field
+  const handleFirstFocus = () => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent('inquiry_form_start', { form_location: location, page_path: window.location.pathname });
+  };
 
   // Load reCAPTCHA v3 script once if the site key is configured
   useEffect(() => {
@@ -73,6 +89,7 @@ export default function ContactForm() {
           // Honeypot: always empty on genuine submissions (bots fill it)
           _gotcha: '',
           recaptchaToken,
+          source: `${window.location.pathname} (${location})`,
         }),
       });
 
@@ -81,14 +98,13 @@ export default function ContactForm() {
         throw new Error(data?.error ?? 'Submission failed. Please try again.');
       }
 
-      // Google Analytics conversion event
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'inquiry_submit', {
-          event_category: 'engagement',
-          event_label: form.company || form.name,
-          value: 1,
-        });
-      }
+      // Google Analytics conversion event (no personal data — GA terms forbid PII)
+      trackEvent('inquiry_submit', {
+        form_location: location,
+        page_path: window.location.pathname,
+        product: form.product || 'unspecified',
+        value: 1,
+      });
 
       setSubmitted(true);
     } catch (err) {
@@ -131,7 +147,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} onFocus={handleFirstFocus} className="space-y-4">
       {/* Honeypot — hidden from real users, bots fill it in */}
       <input
         type="text"
@@ -150,23 +166,23 @@ export default function ContactForm() {
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Company *</label>
-          <input required name="company" value={form.company} onChange={handleChange}
+          <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
+          <input name="company" value={form.company} onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Country *</label>
-          <input required name="country" value={form.country} onChange={handleChange}
+          <input required name="country" autoComplete="country-name" value={form.country} onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-          <input required type="email" name="email" value={form.email} onChange={handleChange}
+          <input required type="email" autoComplete="email" name="email" value={form.email} onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp</label>
-          <input name="phone" value={form.phone} onChange={handleChange}
+          <input name="phone" type="tel" autoComplete="tel" value={form.phone} onChange={handleChange}
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
         </div>
         <div>
@@ -188,36 +204,51 @@ export default function ContactForm() {
         <input name="volume" value={form.volume} onChange={handleChange} placeholder="e.g. 5,000 units / month"
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
       </div>
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Private Label Required?</label>
-        <div className="flex gap-4">
-          {['Yes', 'No', 'Not sure yet'].map((opt) => (
-            <label key={opt} className="flex items-center gap-2 cursor-pointer">
-              <input
-                type="radio"
-                name="privateLabel"
-                value={opt}
-                checked={form.privateLabel === opt}
-                onChange={handleChange}
-                className="accent-[#2d7a3a]"
-              />
-              <span className="text-sm text-gray-700">{opt}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-        <textarea name="message" value={form.message} onChange={handleChange} rows={4}
-          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
-      </div>
+      {showDetails ? (
+        <>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Private Label Required?</label>
+            <div className="flex gap-4">
+              {['Yes', 'No', 'Not sure yet'].map((opt) => (
+                <label key={opt} className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="privateLabel"
+                    value={opt}
+                    checked={form.privateLabel === opt}
+                    onChange={handleChange}
+                    className="accent-[#2d7a3a]"
+                  />
+                  <span className="text-sm text-gray-700">{opt}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea name="message" value={form.message} onChange={handleChange} rows={4}
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2d7a3a]/30 focus:border-[#2d7a3a]" />
+          </div>
+        </>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setShowDetails(true)}
+          className="block text-sm font-medium text-[#2d7a3a] hover:underline"
+        >
+          + Add private label needs or a message (optional)
+        </button>
+      )}
       <button
         type="submit"
         disabled={loading}
         className="w-full sm:w-auto px-8 py-3 bg-[#2d7a3a] text-white font-semibold rounded-md hover:bg-[#245f2d] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {loading ? 'Sending…' : 'Send Inquiry'}
+        {loading ? 'Sending…' : submitLabel}
       </button>
+      <p className="text-xs text-gray-500">
+        Free, no-obligation quote. Our export team replies within 24–48 hours.
+      </p>
       {error && (
         <p className="text-sm text-red-600 mt-2">{error}</p>
       )}

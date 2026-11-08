@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import JsonLd from '@/components/JsonLd';
+import InlineQuoteSection, { QuoteJumpBanner } from '@/components/InlineQuoteSection';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -204,6 +205,12 @@ export default function TortillaSizeChartPage() {
             </div>
           </div>
 
+          <QuoteJumpBanner
+            ctaId="size_chart_banner"
+            text="Sourcing a specific size for your menu or shelf? Get wholesale pricing on any diameter, from 15cm to 30cm."
+            cta="Get Pricing by Size"
+          />
+
           {/* Per-size deep dive */}
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-8">Tortilla Sizes Explained</h2>
@@ -292,6 +299,19 @@ export default function TortillaSizeChartPage() {
             </div>
           </div>
 
+          <InlineQuoteSection
+            location="size_chart"
+            eyebrow="Wholesale Supply"
+            heading="Get Pricing for the Sizes You Need"
+            intro="Tell us the diameters and monthly volume — we will send pallet and container pricing for flour, corn or frozen formats."
+            points={[
+              'All sizes: 15cm, 20cm, 25cm, 30cm',
+              'Flour, corn and frozen formats',
+              'BRCGS-certified factory',
+              'Private label available',
+            ]}
+          />
+
           {/* Related links */}
           <div>
             <h2 className="text-base font-bold text-gray-900 mb-4">Related Guides & Product Pages</h2>
@@ -326,12 +346,13 @@ export default function TortillaSizeChartPage() {
               All sizes available in pallet and container quantities. Frozen formats export-ready with full cold-chain documentation.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link
-                href="/contact"
+              <a
+                href="#quote"
+                data-cta="size_chart_footer"
                 className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
               >
                 Request Pricing
-              </Link>
+              </a>
               <Link
                 href="/tortilla-supplier"
                 className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm"
