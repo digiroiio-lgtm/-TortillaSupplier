@@ -196,7 +196,18 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Wholesale 
 </section>
 </body></html>`;
 
-const { chromium } = await import('playwright');
+// Playwright is not a project dependency, so it is loaded by a runtime name:
+// the type check and the site build must not try to resolve it.
+interface PdfPage {
+  setContent(html: string, opts: { waitUntil: 'load' }): Promise<void>;
+  pdf(opts: Record<string, unknown>): Promise<Buffer>;
+}
+interface PdfBrowser {
+  newPage(): Promise<PdfPage>;
+  close(): Promise<void>;
+}
+const PLAYWRIGHT = 'playwright';
+const { chromium } = (await import(PLAYWRIGHT)) as { chromium: { launch(): Promise<PdfBrowser> } };
 const browser = await chromium.launch();
 const page = await browser.newPage();
 await page.setContent(html, { waitUntil: 'load' });
