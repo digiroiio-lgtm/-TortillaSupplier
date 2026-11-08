@@ -182,7 +182,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request a Quote</h3>
-            <ContactForm />
+            <ContactForm location="landing_page" />
           </div>
         </div>
       </section>

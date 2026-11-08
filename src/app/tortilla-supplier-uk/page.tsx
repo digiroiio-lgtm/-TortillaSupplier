@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const ukFAQs = [
   { question: 'What tortilla formats do you supply to UK buyers?', answer: 'We supply chilled and frozen flour tortillas (20cm, 25cm, 30cm), corn tortillas (15cm, 20cm) and frozen wrap flatbreads to UK buyers. All formats are available with private label packaging.' },
-  { question: 'What is the minimum order quantity for UK supply?', answer: 'MOQ varies by product format. Please contact our team with your requirements for a specific MOQ and pricing guide.' },
+  { question: 'What is the minimum order quantity for UK supply?', answer: 'Our MOQ is one full pallet per SKU. Mixed pallets are available, and full containers give the best unit price. Contact our team for a pricing guide.' },
   { question: 'Do you supply to UK supermarkets and retail?', answer: 'Yes, we can supply both foodservice formats and retail-ready packs. Private label packaging with UK-compliant labelling is available.' },
   { question: 'What certifications do you hold for UK supply?', answer: 'We hold BRCGS, IFS, ISO 22000 and HACCP certifications. Full documentation including health certificates and allergen declarations are provided.' },
   { question: 'Can you supply frozen tortillas to UK cold stores?', answer: 'Yes. We have frozen logistics capability for UK delivery. Products are exported at -18°C with full cold chain documentation.' },
