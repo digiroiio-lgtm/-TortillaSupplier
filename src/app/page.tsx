@@ -16,11 +16,11 @@ import JsonLd from '@/components/JsonLd';
 import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier' },
-  description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
+  title: { absolute: 'Wholesale Tortilla Supplier | Flour, Corn & Private Label' },
+  description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label and container export. BRCGS certified. Request a quote.',
   openGraph: {
-    title: 'Wholesale Tortilla Supplier & Manufacturer | TortillaSupplier',
-    description: 'BRCGS-certified wholesale tortilla supplier for distributors and importers. Flour, corn and frozen tortillas for UK, USA and European markets.',
+    title: 'Wholesale Tortilla Supplier | Flour, Corn & Private Label',
+    description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label and container export. BRCGS certified. Request a quote.',
     url: 'https://tortillasupplier.com',
   },
   alternates: { canonical: 'https://tortillasupplier.com' },

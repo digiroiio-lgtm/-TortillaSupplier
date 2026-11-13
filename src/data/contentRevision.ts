@@ -47,7 +47,7 @@ export interface StaticPage {
 }
 
 export const STATIC_PAGES: Record<string, StaticPage> = {
-  '': { lastmod: CONTENT_REVISION, priority: 1.0, changefreq: 'weekly' }, // FAQ answers now server-rendered
+  '': { lastmod: '2026-11-13', priority: 1.0, changefreq: 'weekly' }, // title/description rewrite
   '/products': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'weekly', group: 'products' },
   '/frozen-tortilla-supplier': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'products' },
   '/contact': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly' },
@@ -67,7 +67,7 @@ export const STATIC_PAGES: Record<string, StaticPage> = {
   '/tortilla-guide': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'guides' },
   '/tortilla-shelf-life': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/tortilla-calories': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
-  '/how-to-store-tortillas': { lastmod: '2026-09-05', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/how-to-store-tortillas': { lastmod: '2026-11-13', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   // Legal pages
   '/privacy-policy': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
   '/terms-of-service': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
