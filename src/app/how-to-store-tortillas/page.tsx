@@ -5,9 +5,9 @@ import JsonLd from '@/components/JsonLd';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
-const PAGE_TITLE = 'How to Store Tortillas: Flour, Corn & Wrap Storage Guide';
+const PAGE_TITLE = 'How to Store Tortillas (Fridge, Freezer, Pantry) – Guide';
 const PAGE_DESCRIPTION =
-  'Flour tortillas keep up to 21 days and corn up to 14 days sealed at +2–4°C, or 9–12 months at −18°C. Ambient, fridge and freezer storage methods.';
+  'How long do tortillas last? Sealed in the fridge: flour up to 21 days, corn up to 14. Frozen at −18°C: 9–12 months. Can you refreeze them? Step-by-step answers.';
 
 export const metadata: Metadata = {
   title: { absolute: PAGE_TITLE },
@@ -139,6 +139,21 @@ const faqs = [
     answer:
       'Foodservice operators should store unopened frozen tortillas at −18°C until required. Transfer to chilled storage (2–4°C) 12–24 hours before service to thaw. Keep thawed tortillas sealed at 2–4°C and use within 3–5 days. Never leave tortillas at ambient temperature for extended periods during service — use heated holders or warming equipment to maintain temperature in active service.',
   },
+  {
+    question: 'Do tortillas need to be refrigerated?',
+    answer:
+      'Unopened ambient tortillas can stay in a cool, dry cupboard until the best-before date. Once opened, refrigerate them in an airtight bag to extend life to about 2–3 weeks for flour and up to 2 weeks for corn. Frozen tortillas should stay at −18°C until needed.',
+  },
+  {
+    question: 'Can you refreeze tortillas after thawing?',
+    answer:
+      'Yes, if they were thawed in the fridge (2–4°C) and never left at room temperature for long. Refreezing is safe but softens the texture, so freeze in small, sealed portions and only refreeze once. Do not refreeze tortillas that sat out for more than a couple of hours.',
+  },
+  {
+    question: 'Can you freeze tortilla wraps?',
+    answer:
+      'Yes. Separate the wraps with baking paper, seal them in a freezer bag and freeze flat. Commercially blast-frozen wraps keep 12 months at −18°C. Thaw in the fridge overnight and keep the pack sealed until use so the wraps do not crack.',
+  },
 ];
 
 const faqSchema = {
@@ -208,6 +223,22 @@ export default function HowToStoreTortillasPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Buyer callout: converts informational traffic into quote requests */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold text-gray-900">Buying tortillas for a restaurant, shop or distribution business?</span>{' '}
+            We supply flour and corn tortillas in bulk, fresh or frozen, with private label available.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex justify-center px-5 py-2.5 bg-[#2d7a3a] text-white text-sm font-semibold rounded-lg hover:bg-[#256830] transition-colors whitespace-nowrap"
+          >
+            Get a Wholesale Quote
+          </Link>
         </div>
       </section>
 
