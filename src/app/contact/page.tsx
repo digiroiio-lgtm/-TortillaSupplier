@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -29,7 +30,31 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <h2 className="text-xl font-bold text-[#1a1a1a] mb-6">Send an Inquiry</h2>
+              <div className="mb-8 p-5 bg-[#FAFAF8] border border-gray-200 rounded-xl">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">For a faster, more accurate quote, tell us:</h3>
+                <ul className="space-y-1.5 text-sm text-gray-600 list-disc pl-5">
+                  <li>Product type: flour, corn, wrap, flatbread, fresh or frozen</li>
+                  <li>Size and pack format (for example 20cm, 25cm, 30cm; retail or catering pack)</li>
+                  <li>Expected volume per month, or pallets and containers per order</li>
+                  <li>Destination country and port or delivery address</li>
+                  <li>Standard range or private label (with your branding requirements)</li>
+                </ul>
+                <p className="mt-3 text-xs text-gray-500">
+                  Not sure about sizes or storage? See the{' '}
+                  <Link href="/tortilla-size-chart" className="text-[#2d7a3a] hover:underline">tortilla size chart</Link>
+                  {' '}and{' '}
+                  <Link href="/tortilla-shelf-life" className="text-[#2d7a3a] hover:underline">shelf life guide</Link>.
+                </p>
+              </div>
               <ContactForm />
+              <div className="mt-8">
+                <h3 className="text-sm font-semibold text-gray-900 mb-3">What happens next</h3>
+                <ol className="space-y-2 text-sm text-gray-600 list-decimal pl-5">
+                  <li>Our export team reviews your requirements.</li>
+                  <li>We reply within 1–2 business days with pricing and product information.</li>
+                  <li>We agree specifications, packaging and documentation for your market.</li>
+                </ol>
+              </div>
             </div>
             <div>
               <h2 className="text-xl font-bold text-[#1a1a1a] mb-6">Contact Information</h2>
