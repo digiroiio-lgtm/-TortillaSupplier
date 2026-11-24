@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import BuyerPathways from '@/components/BuyerPathways';
 import JsonLd from '@/components/JsonLd';
 import InlineQuoteSection from '@/components/InlineQuoteSection';
 import BuyerGuideCTA from '@/components/BuyerGuideCTA';
@@ -439,6 +440,11 @@ export default function HowToStoreTortillasPage() {
               ))}
             </div>
           </div>
+
+          {/* Buyer pathways */}
+
+          <BuyerPathways />
+
 
           {/* CTA */}
           <div className="p-8 bg-[#0a0a0a] rounded-2xl text-center">

@@ -28,6 +28,10 @@
 
 export const BASELINE_REVISION = '2026-03-31';
 export const CONTENT_REVISION = '2026-09-26';
+// Last change to the shared SEOLandingPage template (guide links, market
+// links). Kept separate from CONTENT_REVISION so pages that do not render
+// through that template are not marked as modified.
+export const LANDING_TEMPLATE_REVISION = '2026-11-24';
 
 // One line per static route. The sitemaps are generated from this registry,
 // so adding a page (e.g. a market hub) means adding exactly one line here:
@@ -63,12 +67,12 @@ export const STATIC_PAGES: Record<string, StaticPage> = {
   '/certifications': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/export-program': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   // Authority and guide content
-  '/tortilla-size-chart': { lastmod: '2026-11-08', priority: 0.9, changefreq: 'monthly', group: 'guides' },
-  '/tortilla-manufacturing-process': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-size-chart': { lastmod: '2026-11-24', priority: 0.9, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-manufacturing-process': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/tortilla-guide': { lastmod: '2026-11-08', priority: 0.9, changefreq: 'monthly', group: 'guides' },
-  '/tortilla-shelf-life': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
-  '/tortilla-calories': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
-  '/how-to-store-tortillas': { lastmod: '2026-11-13', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-shelf-life': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-calories': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/how-to-store-tortillas': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   // Legal pages
   '/privacy-policy': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
   '/terms-of-service': { lastmod: BASELINE_REVISION, priority: 0.3, changefreq: 'yearly' },
@@ -90,7 +94,10 @@ export function authorPageLastMod(): string {
 
 /** lastmod for a /[slug] landing page rendered by SEOLandingPage. */
 export function landingPageLastMod(page: { updatedDate?: string }): string {
-  return page.updatedDate ?? CONTENT_REVISION;
+  // A page-level edit counts only if it is newer than the template change.
+  return page.updatedDate && page.updatedDate > LANDING_TEMPLATE_REVISION
+    ? page.updatedDate
+    : LANDING_TEMPLATE_REVISION;
 }
 
 /** lastmod for a /blog/[slug] post: its last real edit, else publish date. */

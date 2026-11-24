@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import BuyerPathways from '@/components/BuyerPathways';
 import ProductSpecTable from '@/components/ProductSpecTable';
 import JsonLd from '@/components/JsonLd';
 import InlineQuoteSection, { QuoteJumpBanner } from '@/components/InlineQuoteSection';
@@ -340,6 +341,11 @@ export default function TortillaSizeChartPage() {
               ))}
             </div>
           </div>
+
+          {/* Buyer pathways */}
+
+          <BuyerPathways />
+
 
           {/* CTA */}
           <div className="p-8 bg-[#0a0a0a] rounded-2xl text-center">

@@ -50,6 +50,11 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const authorProfile = getAuthorByName(post.author.name);
 
+  const postIndex = blogPosts.findIndex((p) => p.slug === slug);
+  const moreArticles = [1, 2, 3]
+    .map((offset) => blogPosts[(postIndex + offset) % blogPosts.length])
+    .filter((p) => p.slug !== slug);
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -267,6 +272,26 @@ export default async function BlogPostPage({ params }: PageProps) {
               ]}
             />
           </div>
+
+          {/* More articles: next three posts in publishing order, so every post
+              is linked from three others rather than only from the blog index. */}
+          {moreArticles.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-gray-100">
+              <h3 className="text-sm font-semibold text-gray-700 mb-3">More Articles</h3>
+              <ul className="space-y-2">
+                {moreArticles.map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      href={`/blog/${p.slug}`}
+                      className="text-sm text-gray-600 hover:text-[#2d7a3a] transition-colors"
+                    >
+                      {p.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Related resources — internal links per post */}
           {post.relatedLinks && post.relatedLinks.length > 0 && (
