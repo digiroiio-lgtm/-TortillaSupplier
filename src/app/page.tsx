@@ -17,10 +17,10 @@ import { certifications } from '@/data/certifications';
 
 export const metadata: Metadata = {
   title: { absolute: 'Wholesale Tortilla Supplier | Flour, Corn & Private Label' },
-  description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label and container export. BRCGS certified. Request a quote.',
+  description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label, container export. BRCGS certified. Request a quote.',
   openGraph: {
     title: 'Wholesale Tortilla Supplier | Flour, Corn & Private Label',
-    description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label and container export. BRCGS certified. Request a quote.',
+    description: 'Wholesale tortilla supplier for importers and distributors: flour, corn and frozen tortillas, private label, container export. BRCGS certified. Request a quote.',
     url: 'https://tortillasupplier.com',
   },
   alternates: { canonical: 'https://tortillasupplier.com' },

@@ -7,6 +7,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
 import { SEOPageData } from '@/data/seoPages';
 import seoPages from '@/data/seoPages';
+import blogPosts from '@/data/blogPosts';
+import BuyerPathways from '@/components/BuyerPathways';
 import { products } from '@/data/products';
 
 // Informational guides every landing page points to. Landing pages used to
@@ -32,6 +34,31 @@ function marketLabel(slug: string): string {
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(' ')
   );
+}
+
+// Which articles are worth reading from which landing pages. First match
+// wins per rule; duplicates are removed and the list is capped at three.
+// Gives the money pages a deeper-reading path and gives the articles
+// inbound links from the pages that rank for the same topic.
+const ARTICLE_RULES: Array<[RegExp, string[]]> = [
+  [/^(importing-tortillas-to-uk|tortilla-importer-supply|tortilla-import-distributor|tortilla-supplier-uk|tortilla-export-supplier)$/, ['importing-tortillas-uk', 'frozen-tortilla-supply-chain']],
+  [/^(tortilla-supplier|tortilla-wholesale-supplier|bulk-tortilla-supplier)$/, ['how-to-choose-tortilla-supplier', 'tortilla-supplier-guide', 'wholesale-tortilla-supplier-distributors']],
+  [/^(tortilla-wholesale|tortilla-distributor|flour-tortilla-distributor|corn-tortilla-distributor|flour-tortilla-wholesale|corn-tortilla-wholesale)$/, ['wholesale-tortilla-supplier-distributors', 'why-distributors-carry-tortillas']],
+  [/private-label/, ['private-label-tortillas']],
+  [/frozen/, ['frozen-tortilla-supply-chain', 'frozen-vs-fresh-tortillas', 'frozen-tortillas-global-foodservice']],
+  [/(restaurant|qsr|catering|foodservice|burrito|street-taco|mexican|frying)/, ['tortillas-most-versatile-bread', 'frozen-tortillas-global-foodservice', 'tortilla-sizes-foodservice']],
+  [/\d+cm/, ['tortilla-sizes-foodservice', 'frozen-vs-fresh-tortillas']],
+];
+
+function articlesFor(slug: string) {
+  const wanted: string[] = [];
+  for (const [rule, slugs] of ARTICLE_RULES) {
+    if (rule.test(slug)) for (const s of slugs) if (!wanted.includes(s)) wanted.push(s);
+  }
+  return wanted
+    .map((s) => blogPosts.find((p) => p.slug === s))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p))
+    .slice(0, 3);
 }
 
 // Regional hubs that sit outside seoPages but belong in the market list.
@@ -80,6 +107,22 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
   // Country pages (/tortilla-supplier-<market>) link to each other and the
   // three regional hubs so no market page depends on the footer alone.
   const isMarketPage = page.slug.startsWith('tortilla-supplier-');
+  const articles = articlesFor(page.slug);
+
+  // Same-category pages: parent, siblings under the same parent, and children.
+  // Product pages used to depend on the footer for inbound links; this makes
+  // each category a connected cluster. Pages already in relatedSlugs are
+  // skipped so the same link is never shown twice.
+  const family = seoPages
+    .filter(
+      (p) =>
+        p.slug !== page.slug &&
+        !page.relatedSlugs.includes(p.slug) &&
+        (p.slug === page.parentSlug ||
+          p.parentSlug === page.slug ||
+          (page.parentSlug && p.parentSlug === page.parentSlug)),
+    )
+    .slice(0, 10);
   const otherMarkets = isMarketPage
     ? [
         ...MARKET_HUBS,
@@ -226,10 +269,27 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BuyerPathways
+            excludeHref={`/${page.slug}`}
+            showQuote={false}
+            heading="Who we supply"
+            intro="Find the supply option closest to your business."
+          />
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request a Quote</h3>
+            <h3 className="text-2xl font-bold text-[#1a1a1a] mb-3">Request a Quote</h3>
+            <p className="text-sm text-gray-500 mb-6">
+              BRCGS, IFS, ISO 22000, HACCP and Halal certified production. See our{' '}
+              <Link href="/certifications" className="text-[#2d7a3a] hover:underline">certifications</Link>,{' '}
+              <Link href="/our-factory" className="text-[#2d7a3a] hover:underline">factory</Link> and{' '}
+              <Link href="/export-program" className="text-[#2d7a3a] hover:underline">export programme</Link>.
+            </p>
             <ContactForm />
           </div>
         </div>
@@ -255,7 +315,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
       )}
 
       <section className="py-8 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-track="guide_link_click">
           <h3 className="text-sm font-semibold text-gray-700 mb-3">Helpful Guides</h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {GUIDE_LINKS.map((g) => (
@@ -272,6 +332,42 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
           </ul>
         </div>
       </section>
+
+      {articles.length > 0 && (
+        <section className="py-8 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-track="article_link_click">
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Articles</h3>
+            <ul className="space-y-2">
+              {articles.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/blog/${a.slug}`} className="text-sm text-gray-600 hover:text-[#2d7a3a] transition-colors">
+                    {a.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {family.length > 0 && (
+        <section className="py-8 bg-[#FAFAF8] border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">More in This Category</h3>
+            <div className="flex flex-wrap gap-3">
+              {family.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/${p.slug}`}
+                  className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors"
+                >
+                  {slugToLabel(p.slug)}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {page.relatedSlugs.length > 0 && (
         <section className="py-8 bg-[#FAFAF8] border-t border-gray-100">

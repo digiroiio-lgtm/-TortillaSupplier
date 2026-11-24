@@ -13,6 +13,7 @@ const productLinks = [
   { label: 'Wrap Tortillas', href: '/wrap-tortilla-supplier' },
   { label: 'Wrap Bread', href: '/wrap-bread-supplier' },
   { label: 'Flatbread', href: '/flatbread-supplier' },
+  { label: 'Wrap Flatbread', href: '/wrap-flatbread-supplier' },
   { label: 'Lavash Flatbread', href: '/lavash-flatbread-supplier' },
   { label: 'Mexican Tortillas', href: '/mexican-tortilla-supplier' },
 ];

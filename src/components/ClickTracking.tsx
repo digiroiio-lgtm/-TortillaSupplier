@@ -8,7 +8,9 @@ import { useEffect } from 'react';
 // document covers every link on every page (including the footer, floating
 // WhatsApp button and links added later), so no per-link wiring is needed.
 //
-// Events: whatsapp_click, email_click, phone_click, cta_click.
+// Events: whatsapp_click, email_click, phone_click, cta_click, plus the
+// named groups below (buyer_pathway_click, guide_link_click, article_link_click)
+// for any block marked with a data-track attribute.
 // Mark the ones you care about as key events in GA4 (Admin > Events).
 // No personal data is sent: the email address or phone number itself is
 // never included, only the page, the link text and where on the page it sat.
@@ -49,10 +51,16 @@ export default function ClickTracking() {
         } catch {
           return;
         }
+        const group = anchor.closest('[data-track]')?.getAttribute('data-track');
         if (url.hostname === 'wa.me' || url.hostname.endsWith('whatsapp.com')) {
           eventName = 'whatsapp_click';
         } else if (url.origin === window.location.origin && url.pathname === '/contact') {
           eventName = 'cta_click';
+        } else if (group && url.origin === window.location.origin) {
+          // Marked link groups (buyer pathways, guides, related articles):
+          // lets GA4 show which pages and blocks actually send buyers onward.
+          eventName = group;
+          Object.assign(params, { link_url: url.pathname });
         }
       }
       if (eventName) window.gtag('event', eventName, params);
