@@ -6,7 +6,40 @@ import ContactForm from '@/components/ContactForm';
 import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd from '@/components/JsonLd';
 import { SEOPageData } from '@/data/seoPages';
+import seoPages from '@/data/seoPages';
 import { products } from '@/data/products';
+
+// Informational guides every landing page points to. Landing pages used to
+// link only to /products and /contact, so the guides (which earn most of the
+// site's impressions) received no links from the pages that sell.
+const GUIDE_LINKS = [
+  { label: 'Tortilla Size Chart', href: '/tortilla-size-chart', note: 'Diameters in cm and inches' },
+  { label: 'Tortilla Shelf Life', href: '/tortilla-shelf-life', note: 'Ambient, chilled and frozen' },
+  { label: 'How to Store Tortillas', href: '/how-to-store-tortillas', note: 'Fridge, freezer and pantry' },
+  { label: 'How Tortillas Are Made', href: '/tortilla-manufacturing-process', note: 'Our production process' },
+  { label: 'Tortilla Buyer\'s Guide', href: '/tortilla-guide', note: 'Sourcing reference for buyers' },
+];
+
+// Display names for market pages. Everything else is title-cased from the slug.
+const MARKET_LABELS: Record<string, string> = { uae: 'UAE', usa: 'USA', uk: 'United Kingdom' };
+
+function marketLabel(slug: string): string {
+  const key = slug.replace('tortilla-supplier-', '');
+  return (
+    MARKET_LABELS[key] ??
+    key
+      .split('-')
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ')
+  );
+}
+
+// Regional hubs that sit outside seoPages but belong in the market list.
+const MARKET_HUBS = [
+  { label: 'United Kingdom', href: '/tortilla-supplier-uk' },
+  { label: 'USA', href: '/tortilla-supplier-usa' },
+  { label: 'Europe', href: '/tortilla-supplier-europe' },
+];
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -44,6 +77,21 @@ interface SEOLandingPageProps {
 }
 
 export default function SEOLandingPage({ page }: SEOLandingPageProps) {
+  // Country pages (/tortilla-supplier-<market>) link to each other and the
+  // three regional hubs so no market page depends on the footer alone.
+  const isMarketPage = page.slug.startsWith('tortilla-supplier-');
+  const otherMarkets = isMarketPage
+    ? [
+        ...MARKET_HUBS,
+        ...seoPages
+          .filter((p) => p.slug.startsWith('tortilla-supplier-') && p.slug !== page.slug)
+          .map((p) => ({
+            label: marketLabel(p.slug),
+            href: `/${p.slug}`,
+          })),
+      ]
+    : [];
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -184,6 +232,44 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
             <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Request a Quote</h3>
             <ContactForm />
           </div>
+        </div>
+      </section>
+
+      {isMarketPage && (
+        <section className="py-8 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Other Markets We Supply</h3>
+            <div className="flex flex-wrap gap-3">
+              {otherMarkets.map((m) => (
+                <Link
+                  key={m.href}
+                  href={m.href}
+                  className="px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:border-[#2d7a3a] transition-colors"
+                >
+                  {m.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-8 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Helpful Guides</h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            {GUIDE_LINKS.map((g) => (
+              <li key={g.href}>
+                <Link
+                  href={g.href}
+                  className="block h-full px-4 py-3 border border-gray-200 rounded-lg hover:border-[#2d7a3a] transition-colors"
+                >
+                  <span className="block text-sm font-medium text-gray-900">{g.label}</span>
+                  <span className="block text-xs text-gray-500">{g.note}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

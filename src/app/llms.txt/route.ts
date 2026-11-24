@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import blogPosts from '@/data/blogPosts';
 
 // /llms.txt — an emerging convention (see llmstxt.org) that gives large
 // language models and answer engines a concise, high-signal map of the
@@ -6,6 +7,12 @@ import { NextResponse } from 'next/server';
 // isn't a permission gate, it's a discovery aid so LLMs can find the
 // canonical B2B pages instead of guessing from the sitemap.
 const BASE_URL = 'https://tortillasupplier.com';
+
+// One line per article, generated from the blog data so the file never
+// drifts from what is actually published.
+const articleLines = blogPosts
+  .map((p) => `- [${p.title}](${BASE_URL}/blog/${p.slug}): ${p.excerpt}`)
+  .join('\n');
 
 const body = `# TortillaSupplier
 
@@ -31,6 +38,17 @@ const body = `# TortillaSupplier
 - [Wrap Bread Supplier](${BASE_URL}/wrap-bread-supplier): Wrap and flatbread formats.
 - [Flatbread Supplier](${BASE_URL}/flatbread-supplier): Lavash-style and wrap flatbreads.
 
+## Buyer segments
+- [Restaurant Tortilla Supply](${BASE_URL}/restaurant-tortilla-supply): Corn and flour tortillas for restaurants and taco bars.
+- [QSR Tortilla Supplier](${BASE_URL}/qsr-tortilla-supplier): Supply for quick-service chains.
+- [Catering Tortilla Supply](${BASE_URL}/catering-tortilla-supply): Catering packs.
+- [Foodservice Tortilla Supplier](${BASE_URL}/tortilla-foodservice-supplier): Foodservice distributors and operators.
+- [Bulk Tortilla Wraps](${BASE_URL}/bulk-tortilla-wraps): 25cm and 30cm wraps in catering packs.
+- [Private Label Flour Tortillas](${BASE_URL}/private-label-flour-tortillas): Custom-branded flour tortillas.
+- [Private Label Corn Tortillas](${BASE_URL}/private-label-corn-tortillas): Custom-branded corn tortillas.
+- [Tortilla Importer Supply](${BASE_URL}/tortilla-importer-supply): Supply for importers, documentation and cold chain.
+- [Importing Tortillas to the UK](${BASE_URL}/importing-tortillas-to-uk): UK import documentation and container supply.
+
 ## Regional supply pages
 - [UK Tortilla Supplier](${BASE_URL}/tortilla-supplier-uk)
 - [USA Tortilla Supplier](${BASE_URL}/tortilla-supplier-usa)
@@ -53,6 +71,9 @@ const body = `# TortillaSupplier
 - [Tortilla Shelf Life](${BASE_URL}/tortilla-shelf-life): Ambient and frozen shelf life data.
 - [How to Store Tortillas](${BASE_URL}/how-to-store-tortillas): Cold-chain and ambient guidance for distributors.
 - [Tortilla Calories](${BASE_URL}/tortilla-calories): Nutrition data across sizes and formats.
+
+## Articles
+${articleLines}
 
 ## Optional
 - [Blog](${BASE_URL}/blog): Editorial coverage of tortilla sourcing, trends and export markets.

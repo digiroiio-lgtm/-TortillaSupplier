@@ -1,137 +1,106 @@
 import Link from 'next/link';
 
+// Every internal link appears once. The previous footer repeated 19 links
+// across overlapping keyword columns (90 links, 70 unique), which diluted
+// the signal and read as over-optimised. Columns now follow how a buyer
+// thinks: what they need, what size, what business they run, how they buy.
+
 const productLinks = [
-  { label: 'Flour Tortilla 30cm', href: '/flour-tortilla-30cm-12-inch' },
-  { label: 'Flour Tortilla 25cm', href: '/flour-tortilla-25cm-10-inch' },
-  { label: 'Flour Tortilla 20cm', href: '/flour-tortilla-20cm-8-inch' },
-  { label: 'Corn Tortilla 15cm', href: '/corn-tortilla-15cm-6-inch' },
-  { label: 'Corn Tortilla 20cm', href: '/corn-tortilla-20cm-8-inch' },
-  { label: 'Frozen Flour Tortilla', href: '/frozen-flour-tortilla-supplier' },
-  { label: 'Wrap Flatbread', href: '/wrap-flatbread-supplier' },
+  { label: 'All Products', href: '/products' },
+  { label: 'Flour Tortillas', href: '/flour-tortilla-supplier' },
+  { label: 'Corn Tortillas', href: '/corn-tortilla-supplier' },
+  { label: 'Frozen Tortillas', href: '/frozen-tortilla-supplier' },
+  { label: 'Wrap Tortillas', href: '/wrap-tortilla-supplier' },
+  { label: 'Wrap Bread', href: '/wrap-bread-supplier' },
+  { label: 'Flatbread', href: '/flatbread-supplier' },
   { label: 'Lavash Flatbread', href: '/lavash-flatbread-supplier' },
+  { label: 'Mexican Tortillas', href: '/mexican-tortilla-supplier' },
 ];
 
-const supplierLinks = [
-  { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
-  { label: 'Flour Tortilla Supplier', href: '/flour-tortilla-supplier' },
-  { label: 'Corn Tortilla Supplier', href: '/corn-tortilla-supplier' },
-  { label: 'Frozen Tortilla Supplier', href: '/frozen-tortilla-supplier' },
-  { label: 'Flatbread Supplier', href: '/flatbread-supplier' },
-  { label: 'Tortilla Distributor', href: '/tortilla-distributor' },
-  { label: 'Foodservice Supplier', href: '/tortilla-foodservice-supplier' },
-  { label: 'Burrito Tortilla', href: '/burrito-tortilla-supplier' },
+const sizeLinks = [
+  { label: '15 cm (6") Corn', href: '/corn-tortilla-15cm-6-inch' },
+  { label: '20 cm (8") Corn', href: '/corn-tortilla-20cm-8-inch' },
+  { label: '20 cm (8") Flour', href: '/flour-tortilla-20cm-8-inch' },
+  { label: '25 cm (10") Flour', href: '/flour-tortilla-25cm-10-inch' },
+  { label: '30 cm (12") Flour', href: '/flour-tortilla-30cm-12-inch' },
+  { label: 'Frozen Flour Tortilla', href: '/frozen-flour-tortilla-supplier' },
+  { label: 'Frozen Corn Tortilla', href: '/frozen-corn-tortilla-supplier' },
+  { label: 'Tortilla Size Chart', href: '/tortilla-size-chart' },
+];
+
+const industryLinks = [
+  { label: 'Foodservice', href: '/tortilla-foodservice-supplier' },
+  { label: 'Restaurants', href: '/restaurant-tortilla-supply' },
+  { label: 'QSR Chains', href: '/qsr-tortilla-supplier' },
+  { label: 'Catering', href: '/catering-tortilla-supply' },
+  { label: 'Street Taco', href: '/street-taco-tortilla-wholesale' },
+  { label: 'Burrito', href: '/burrito-tortilla-supplier' },
+  { label: 'Frying & Tostada', href: '/frying-tortilla-supplier' },
+  { label: 'Bulk Wraps', href: '/bulk-tortilla-wraps' },
 ];
 
 const wholesaleLinks = [
   { label: 'Tortilla Wholesale', href: '/tortilla-wholesale' },
-  { label: 'Bulk Tortilla Supplier', href: '/bulk-tortilla-supplier' },
+  { label: 'Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
+  { label: 'Bulk Supplier', href: '/bulk-tortilla-supplier' },
+  { label: 'Distributor Supply', href: '/tortilla-distributor' },
   { label: 'Private Label', href: '/private-label-tortillas' },
-  { label: 'Importer Supply', href: '/tortilla-importer-supply' },
-  { label: 'Wrap Bread Wholesale', href: '/wrap-bread-wholesale' },
-  { label: 'Street Taco Wholesale', href: '/street-taco-tortilla-wholesale' },
-  { label: 'Wrap Tortilla Supplier', href: '/wrap-tortilla-supplier' },
-  { label: 'Frying Tortillas', href: '/frying-tortilla-supplier' },
-];
-
-const privateLabelLinks = [
-  { label: 'Private Label Tortillas', href: '/private-label-tortillas' },
-  { label: 'Private Label Flour Tortillas', href: '/private-label-flour-tortillas' },
-  { label: 'Private Label Corn Tortillas', href: '/private-label-corn-tortillas' },
-  { label: 'Private Label Tortillas UK', href: '/private-label-tortillas-uk' },
+  { label: 'Private Label Flour', href: '/private-label-flour-tortillas' },
+  { label: 'Private Label Corn', href: '/private-label-corn-tortillas' },
+  { label: 'Private Label UK', href: '/private-label-tortillas-uk' },
   { label: 'Private Label Manufacturer', href: '/private-label-tortilla-manufacturer' },
 ];
 
-const regionLinks = [
-  { label: 'Supplier UK', href: '/tortilla-supplier-uk' },
-  { label: 'Supplier USA', href: '/tortilla-supplier-usa' },
-  { label: 'Supplier Europe', href: '/tortilla-supplier-europe' },
-  { label: 'Supplier Spain', href: '/tortilla-supplier-spain' },
-  { label: 'Supplier Germany', href: '/tortilla-supplier-germany' },
-  { label: 'Supplier France', href: '/tortilla-supplier-france' },
-  { label: 'Supplier Netherlands', href: '/tortilla-supplier-netherlands' },
-  { label: 'Supplier Italy', href: '/tortilla-supplier-italy' },
-  { label: 'Supplier Canada', href: '/tortilla-supplier-canada' },
-  { label: 'Supplier Australia', href: '/tortilla-supplier-australia' },
-  { label: 'Supplier Middle East', href: '/tortilla-supplier-middle-east' },
-  { label: 'Supplier UAE', href: '/tortilla-supplier-uae' },
-  { label: 'Supplier Saudi Arabia', href: '/tortilla-supplier-saudi-arabia' },
-];
-
-const commercialLinks = [
-  { label: 'Tortilla Manufacturer', href: '/tortilla-supplier' },
-  { label: 'Mexican Tortilla Supplier', href: '/mexican-tortilla-supplier' },
-  { label: 'Flatbread Manufacturer', href: '/flatbread-supplier' },
-  { label: 'Tortilla Factory', href: '/our-factory' },
-  { label: 'Tortilla Wholesale Supplier', href: '/tortilla-wholesale-supplier' },
-  { label: 'Frozen Tortilla Wholesale', href: '/frozen-tortilla-supplier' },
-];
-
-const companyLinks = [
-  { label: 'About TortillaSupplier', href: '/about' },
-  { label: 'Our Factory', href: '/our-factory' },
-  { label: 'Food Safety Certifications', href: '/certifications' },
+const importExportLinks = [
+  { label: 'Importer Supply', href: '/tortilla-importer-supply' },
+  { label: 'Import Distributor', href: '/tortilla-import-distributor' },
+  { label: 'Importing to the UK', href: '/importing-tortillas-to-uk' },
+  { label: 'Export Supplier', href: '/tortilla-export-supplier' },
+  { label: 'Frozen Export', href: '/frozen-tortilla-export' },
+  { label: 'Container Supply', href: '/container-tortilla-supply' },
   { label: 'Export Programme', href: '/export-program' },
 ];
 
-const resourceLinks = [
-  { label: 'All Articles', href: '/blog' },
-  { label: 'Tortilla Supplier Guide', href: '/blog/tortilla-supplier-guide' },
-  { label: 'Private Label Tortillas', href: '/blog/private-label-tortillas' },
-  { label: 'Importing Tortillas to UK', href: '/blog/importing-tortillas-uk' },
-  { label: 'Frozen Supply Chain', href: '/blog/frozen-tortilla-supply-chain' },
-  { label: 'Tortilla Market Growth', href: '/blog/tortilla-market-growth' },
+const regionLinks = [
+  { label: 'United Kingdom', href: '/tortilla-supplier-uk' },
+  { label: 'USA', href: '/tortilla-supplier-usa' },
+  { label: 'Europe', href: '/tortilla-supplier-europe' },
+  { label: 'Spain', href: '/tortilla-supplier-spain' },
+  { label: 'Germany', href: '/tortilla-supplier-germany' },
+  { label: 'France', href: '/tortilla-supplier-france' },
+  { label: 'Netherlands', href: '/tortilla-supplier-netherlands' },
+  { label: 'Italy', href: '/tortilla-supplier-italy' },
+  { label: 'Canada', href: '/tortilla-supplier-canada' },
+  { label: 'Australia', href: '/tortilla-supplier-australia' },
+  { label: 'Middle East', href: '/tortilla-supplier-middle-east' },
+  { label: 'UAE', href: '/tortilla-supplier-uae' },
+  { label: 'Saudi Arabia', href: '/tortilla-supplier-saudi-arabia' },
+];
+
+const companyLinks = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Our Factory', href: '/our-factory' },
+  { label: 'Certifications', href: '/certifications' },
+  { label: 'Contact & Quotes', href: '/contact' },
+  { label: 'Tortilla Supplier', href: '/tortilla-supplier' },
 ];
 
 const guideLinks = [
-  { label: 'Tortilla Guide', href: '/tortilla-guide' },
-  { label: 'Tortilla Sizes', href: '/tortilla-size-chart' },
-  { label: 'Tortilla Shelf Life', href: '/tortilla-shelf-life' },
-  { label: 'Tortilla Calories', href: '/tortilla-calories' },
+  { label: 'Buyer\'s Guide', href: '/tortilla-guide' },
+  { label: 'Shelf Life', href: '/tortilla-shelf-life' },
   { label: 'How to Store Tortillas', href: '/how-to-store-tortillas' },
   { label: 'How Tortillas Are Made', href: '/tortilla-manufacturing-process' },
+  { label: 'Tortilla Calories', href: '/tortilla-calories' },
+  { label: 'All Articles', href: '/blog' },
+  { label: 'Choosing a Supplier', href: '/blog/how-to-choose-tortilla-supplier' },
+  { label: 'Frozen Supply Chain', href: '/blog/frozen-tortilla-supply-chain' },
+  { label: 'Market Growth', href: '/blog/tortilla-market-growth' },
 ];
 
 const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms of Service', href: '/terms-of-service' },
   { label: 'Cookie Policy', href: '/cookie-policy' },
-];
-
-// ─── New SEO cluster columns ──────────────────────────────────────────────────
-
-const sizeLinks = [
-  { label: '15 cm (6") Tortilla', href: '/corn-tortilla-15cm-6-inch' },
-  { label: '20 cm (8") Tortilla', href: '/flour-tortilla-20cm-8-inch' },
-  { label: '25 cm (10") Tortilla', href: '/flour-tortilla-25cm-10-inch' },
-  { label: '30 cm (12") Tortilla', href: '/flour-tortilla-30cm-12-inch' },
-  { label: 'Street Taco Tortilla', href: '/street-taco-tortilla-wholesale' },
-  { label: 'Burrito Size Tortilla', href: '/burrito-tortilla-supplier' },
-];
-
-const importLinks = [
-  { label: 'Tortilla Import Supplier', href: '/tortilla-importer-supply' },
-  { label: 'Tortilla Import Distributor', href: '/tortilla-import-distributor' },
-  { label: 'Frozen Tortilla Export', href: '/frozen-tortilla-export' },
-  { label: 'Tortilla Export Supplier', href: '/tortilla-export-supplier' },
-  { label: 'Container Tortilla Supply', href: '/container-tortilla-supply' },
-];
-
-const foodserviceLinks = [
-  { label: 'Foodservice Tortilla Supplier', href: '/tortilla-foodservice-supplier' },
-  { label: 'Restaurant Tortilla Supply', href: '/restaurant-tortilla-supply' },
-  { label: 'QSR Tortilla Supplier', href: '/qsr-tortilla-supplier' },
-  { label: 'Catering Tortilla Supply', href: '/catering-tortilla-supply' },
-  { label: 'Bulk Tortilla Wraps', href: '/bulk-tortilla-wraps' },
-];
-
-const typeLinks = [
-  { label: 'Flour Tortillas', href: '/flour-tortilla-supplier' },
-  { label: 'Corn Tortillas', href: '/corn-tortilla-supplier' },
-  { label: 'Frozen Tortillas', href: '/frozen-tortilla-supplier' },
-  { label: 'Soft Tortilla Wraps', href: '/wrap-tortilla-supplier' },
-  { label: 'Mexican Tortillas', href: '/mexican-tortilla-supplier' },
-  { label: 'Flatbread Wraps', href: '/wrap-flatbread-supplier' },
-  { label: 'Lavash Flatbread', href: '/lavash-flatbread-supplier' },
 ];
 
 function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
@@ -186,7 +155,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Main grid — Brand + core clusters */}
+        {/* Main grid: brand + product-led columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 py-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
@@ -216,26 +185,17 @@ export default function Footer() {
           </div>
 
           <FooterColumn title="Products" links={productLinks} />
-          <FooterColumn title="Suppliers" links={supplierLinks} />
-          <FooterColumn title="Wholesale" links={wholesaleLinks} />
-          <FooterColumn title="Regions" links={regionLinks} />
+          <FooterColumn title="By Size & Format" links={sizeLinks} />
+          <FooterColumn title="By Industry" links={industryLinks} />
+          <FooterColumn title="Wholesale & Private Label" links={wholesaleLinks} />
         </div>
 
-        {/* SEO cluster grid — new keyword clusters */}
+        {/* Secondary grid: trade, markets, company, guides */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-t border-gray-100">
-          <FooterColumn title="Tortilla Sizes" links={sizeLinks} />
-          <FooterColumn title="Tortilla Import" links={importLinks} />
-          <FooterColumn title="Foodservice Tortillas" links={foodserviceLinks} />
-          <FooterColumn title="Tortilla Types" links={typeLinks} />
-        </div>
-
-        {/* Secondary grid — Private Label merged in */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-10 border-t border-gray-100">
-          <FooterColumn title="Private Label" links={privateLabelLinks} />
+          <FooterColumn title="Import & Export" links={importExportLinks} />
+          <FooterColumn title="Markets" links={regionLinks} />
           <FooterColumn title="Company" links={companyLinks} />
-          <FooterColumn title="Guides" links={guideLinks} />
-          <FooterColumn title="Resources" links={resourceLinks} />
-          <FooterColumn title="Commercial" links={commercialLinks} />
+          <FooterColumn title="Guides & Resources" links={guideLinks} />
         </div>
 
         {/* Bottom bar */}
