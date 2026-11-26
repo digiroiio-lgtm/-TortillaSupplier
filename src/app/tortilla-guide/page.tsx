@@ -57,7 +57,7 @@ const faqs = [
   {
     question: 'What is the minimum order quantity for wholesale tortillas?',
     answer:
-      'Minimum order quantities vary by supplier. Pallet-level orders start from approximately 1,000–2,000 cases depending on product type. Container-volume orders (20ft or 40ft reefer) are the standard for international distributors and importers. Contact our export team for current container pricing and lead times.',
+      'Minimum order quantities vary by supplier. Our MOQ is one full pallet per SKU; container-volume orders (20ft or 40ft reefer) give international distributors and importers the best unit price. Contact our export team for current container pricing and lead times.',
   },
   {
     question: 'Are tortillas suitable for halal and vegan diets?',
@@ -498,8 +498,8 @@ export default function TortillaGuidePage() {
                   markets where the tortilla category is still developing and national brand presence is limited.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  Private label tortilla orders typically require a minimum order quantity (MOQ) — usually
-                  at least one pallet for a trial order, and container volumes for ongoing supply. Lead time
+                  Private label tortilla orders typically require a minimum order quantity (MOQ). Ours is one
+                  full pallet per SKU, with container volumes giving the best price for ongoing supply. Lead time
                   for the first private label run includes packaging artwork preparation, approval, and
                   pre-production sample sign-off — typically 4–8 weeks ahead of the first production date.
                 </p>

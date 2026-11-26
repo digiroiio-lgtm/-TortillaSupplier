@@ -89,7 +89,7 @@ export default function AboutPage() {
                 { label: 'Product Range', value: 'Flour, corn, frozen, flatbread, lavash' },
                 { label: 'Private Label', value: 'Available — custom packaging & labelling' },
                 { label: 'Export Experience', value: '20+ countries supplied' },
-                { label: 'Minimum Order', value: 'From 2 pallets (mixed SKU available)' },
+                { label: 'Minimum Order', value: '1 pallet per SKU (mixed pallets available)' },
                 { label: 'Lead Time', value: '2–6 weeks (4–8 weeks for private label first run)' },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between items-start gap-4 py-4 border-b border-gray-100 last:border-0">

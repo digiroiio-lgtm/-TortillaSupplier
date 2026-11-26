@@ -290,7 +290,7 @@ export default function SEOLandingPage({ page }: SEOLandingPageProps) {
               <Link href="/our-factory" className="text-[#2d7a3a] hover:underline">factory</Link> and{' '}
               <Link href="/export-program" className="text-[#2d7a3a] hover:underline">export programme</Link>.
             </p>
-            <ContactForm />
+            <ContactForm location="landing_page" />
           </div>
         </div>
       </section>

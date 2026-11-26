@@ -54,21 +54,22 @@ export const STATIC_PAGES: Record<string, StaticPage> = {
   '': { lastmod: '2026-11-13', priority: 1.0, changefreq: 'weekly' }, // title/description rewrite
   '/products': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'weekly', group: 'products' },
   '/frozen-tortilla-supplier': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'products' },
+  '/tortilla-buyer-guide': { lastmod: '2026-11-08', priority: 0.7, changefreq: 'monthly', group: 'guides' },
   '/contact': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly' },
   '/blog': { lastmod: '2026-04-04', priority: 0.8, changefreq: 'weekly', group: 'blog' },
   // Market pages
-  '/tortilla-supplier-uk': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
+  '/tortilla-supplier-uk': { lastmod: '2026-11-08', priority: 0.9, changefreq: 'monthly', group: 'categories' },
   '/tortilla-supplier-usa': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
   '/tortilla-supplier-europe': { lastmod: CONTENT_REVISION, priority: 0.9, changefreq: 'monthly', group: 'categories' },
   // Company pages
-  '/about': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
+  '/about': { lastmod: '2026-11-08', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/our-factory': { lastmod: '2026-04-02', priority: 0.7, changefreq: 'monthly', group: 'guides' },
   '/certifications': { lastmod: BASELINE_REVISION, priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/export-program': { lastmod: '2026-04-02', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   // Authority and guide content
   '/tortilla-size-chart': { lastmod: '2026-11-24', priority: 0.9, changefreq: 'monthly', group: 'guides' },
   '/tortilla-manufacturing-process': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
-  '/tortilla-guide': { lastmod: '2026-04-02', priority: 0.9, changefreq: 'monthly', group: 'guides' },
+  '/tortilla-guide': { lastmod: '2026-11-08', priority: 0.9, changefreq: 'monthly', group: 'guides' },
   '/tortilla-shelf-life': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/tortilla-calories': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },
   '/how-to-store-tortillas': { lastmod: '2026-11-24', priority: 0.8, changefreq: 'monthly', group: 'guides' },

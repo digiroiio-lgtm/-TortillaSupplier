@@ -34,12 +34,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/api/',
+        // /downloads/ holds the gated buyer's guide PDF; keep it out of search.
+        disallow: ['/api/', '/downloads/'],
       },
       ...AI_BOTS.map((userAgent) => ({
         userAgent,
         allow: '/',
-        disallow: '/api/',
+        disallow: ['/api/', '/downloads/'],
       })),
     ],
     sitemap: [

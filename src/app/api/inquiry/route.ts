@@ -14,19 +14,30 @@ function buildEmailText(fields: {
   volume?: string;
   privateLabel?: string;
   message?: string;
+  source?: string;
 }): string {
   const lines = [
     `Full Name:                  ${fields.name}`,
-    `Company:                    ${fields.company}`,
+    `Company:                    ${fields.company || '—'}`,
     `Country:                    ${fields.country}`,
     `Email:                      ${fields.email}`,
     fields.phone        ? `Phone / WhatsApp:           ${fields.phone}`        : null,
     fields.product      ? `Product of Interest:        ${fields.product}`      : null,
     fields.volume       ? `Estimated Monthly Volume:   ${fields.volume}`       : null,
     fields.privateLabel ? `Private Label Required:     ${fields.privateLabel}` : null,
+    fields.source       ? `Submitted From:             ${fields.source}`       : null,
     fields.message      ? `\nMessage:\n${fields.message}`                       : null,
   ];
   return lines.filter(Boolean).join('\n');
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function buildEmailHtml(fields: {
@@ -39,30 +50,36 @@ function buildEmailHtml(fields: {
   volume?: string;
   privateLabel?: string;
   message?: string;
+  source?: string;
 }): string {
   const rows = [
     ['Full Name', fields.name],
-    ['Company', fields.company],
+    ['Company', fields.company || '—'],
     ['Country', fields.country],
-    ['Email', `<a href="mailto:${fields.email}">${fields.email}</a>`],
+    ['Email', fields.email],
     fields.phone        ? ['Phone / WhatsApp', fields.phone]        : null,
     fields.product      ? ['Product of Interest', fields.product]   : null,
     fields.volume       ? ['Est. Monthly Volume', fields.volume]     : null,
     fields.privateLabel ? ['Private Label', fields.privateLabel]     : null,
+    fields.source       ? ['Submitted From', fields.source]          : null,
   ].filter(Boolean) as [string, string][];
 
   const tableRows = rows
     .map(
       ([label, value]) =>
         `<tr><td style="padding:6px 12px;font-weight:600;white-space:nowrap;color:#555;">${label}</td>` +
-        `<td style="padding:6px 12px;color:#111;">${value}</td></tr>`
+        `<td style="padding:6px 12px;color:#111;">${
+          label === 'Email'
+            ? `<a href="mailto:${escapeHtml(value)}">${escapeHtml(value)}</a>`
+            : escapeHtml(value)
+        }</td></tr>`
     )
     .join('');
 
   const messageSection = fields.message
     ? `<div style="margin-top:20px;padding:12px;background:#f9f9f9;border-left:3px solid #2d7a3a;border-radius:4px;">
         <strong style="display:block;margin-bottom:6px;color:#555;">Message</strong>
-        <p style="margin:0;color:#111;white-space:pre-wrap;">${fields.message}</p>
+        <p style="margin:0;color:#111;white-space:pre-wrap;">${escapeHtml(fields.message)}</p>
        </div>`
     : '';
 
@@ -128,8 +145,10 @@ export async function POST(request: NextRequest) {
     const volume      = typeof body.volume  === 'string' ? body.volume.trim()  : undefined;
     const privateLabel = typeof body.privateLabel === 'string' ? body.privateLabel.trim() : undefined;
     const message     = typeof body.message === 'string' ? body.message.trim() : undefined;
+    const source      = typeof body.source  === 'string' ? body.source.trim().slice(0, 200) : undefined;
 
-    if (!name || !company || !country || !email) {
+    // Company is optional — fewer required fields means more completed inquiries.
+    if (!name || !country || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
@@ -151,7 +170,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const fields = { name, company, country, email, phone, product, volume, privateLabel, message };
+    const fields = { name, company, country, email, phone, product, volume, privateLabel, message, source };
 
     // ── Email delivery ────────────────────────────────────────────────────────
     const resendApiKey = process.env.RESEND_API_KEY;
