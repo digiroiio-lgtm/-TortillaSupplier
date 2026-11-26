@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
-const WA_NUMBER = '905531229372';
+const WA_NUMBER = '905353998999';
 const WA_MESSAGE = encodeURIComponent(
   'Hello, I just submitted a distributor inquiry on TortillaSupplier.com'
 );
