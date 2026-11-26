@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
   title: { absolute: 'Contact | Wholesale Tortilla Pricing | TortillaSupplier' },
@@ -65,7 +66,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-700 mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/905531229372" target="_blank" rel="noopener noreferrer" className="text-sm text-[#2d7a3a] hover:underline">+90 553 122 93 72</a>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-[#2d7a3a] hover:underline">{WHATSAPP_DISPLAY}</a>
                 </div>
                 <div className="mt-6 p-4 bg-[#FAFAF8] border border-gray-200 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2">Export Markets</h3>
