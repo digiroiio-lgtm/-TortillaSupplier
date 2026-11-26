@@ -10,6 +10,7 @@
 import { writeFileSync } from 'node:fs';
 import { products } from '../src/data/products';
 import { certifications } from '../src/data/certifications';
+import { WHATSAPP_DISPLAY, WHATSAPP_URL } from '../src/lib/whatsapp';
 
 const OUT = 'public/downloads/tortilla-wholesale-buyer-guide.pdf';
 const YEAR = new Date().getFullYear();
@@ -190,7 +191,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><title>Wholesale 
   <div class="cta">
     <h2>Get your container pricing</h2>
     <p>Request a quote: <a href="https://tortillasupplier.com/contact">tortillasupplier.com/contact</a></p>
-    <p>Email: <a href="mailto:info@tortillasupplier.com">info@tortillasupplier.com</a> · WhatsApp: <a href="https://wa.me/905531229372">+90 553 122 93 72</a></p>
+    <p>Email: <a href="mailto:info@tortillasupplier.com">info@tortillasupplier.com</a> · WhatsApp: <a href="${WHATSAPP_URL}">${WHATSAPP_DISPLAY}</a></p>
     <p style="color:#bbb;font-size:9pt;margin:0">Our export team replies within 24–48 hours.</p>
   </div>
 </section>
