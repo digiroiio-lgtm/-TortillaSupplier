@@ -1,12 +1,8 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { WHATSAPP_URL as WA_URL } from '@/lib/whatsapp';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
-const WA_NUMBER = '905353998999';
-const WA_MESSAGE = encodeURIComponent(
-  'Hello, I just submitted a distributor inquiry on TortillaSupplier.com'
-);
-const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
 
 export default function ContactForm() {
   const [form, setForm] = useState({

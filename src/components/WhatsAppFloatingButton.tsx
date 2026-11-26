@@ -1,8 +1,9 @@
 'use client';
+import { WHATSAPP_URL } from '@/lib/whatsapp';
 export default function WhatsAppFloatingButton() {
   return (
     <a
-      href="https://wa.me/905353998999?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-[#25D366] rounded-full shadow-lg hover:bg-[#20c45a] transition-colors"

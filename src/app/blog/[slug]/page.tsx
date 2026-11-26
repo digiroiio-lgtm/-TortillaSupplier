@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import blogPosts from '@/data/blogPosts';
 import { getAuthorByName } from '@/data/authors';
+import { WHATSAPP_URL } from '@/lib/whatsapp';
 
 const BASE_URL = 'https://tortillasupplier.com';
 
@@ -276,7 +277,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 Request Distributor Pricing →
               </Link>
               <a
-                href="https://wa.me/905353998999?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm"

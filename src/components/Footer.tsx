@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from '@/lib/whatsapp';
 
 // Every internal link appears once. The previous footer repeated 19 links
 // across overlapping keyword columns (90 links, 70 unique), which diluted
@@ -176,11 +177,11 @@ export default function Footer() {
                 info@tortillasupplier.com
               </a>
               <a
-                href="https://wa.me/905353998999?text=Hello%2C%20I%20am%20interested%20in%20wholesale%20tortilla%20supply.%20Could%20you%20send%20container%20pricing%3F"
+                href={WHATSAPP_URL}
                 target="_blank" rel="noopener noreferrer"
                 className="block text-sm text-gray-500 hover:text-gray-900 transition-colors"
               >
-                WhatsApp: +90 535 399 89 99
+                WhatsApp: {WHATSAPP_DISPLAY}
               </a>
             </div>
           </div>
